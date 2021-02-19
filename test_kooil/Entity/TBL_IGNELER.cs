@@ -24,7 +24,6 @@ namespace test_kooil.Entity
         public string IGNEKOD { get; set; }
         public Nullable<decimal> ADETFIYATI { get; set; }
         public string EBAT { get; set; }
-        public byte[] FOTOGRAF { get; set; }
         public string ISILISLEMFORMUL { get; set; }
         public string NOT { get; set; }
     

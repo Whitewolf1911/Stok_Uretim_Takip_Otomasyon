@@ -23,7 +23,6 @@
           <Property Name="IGNEKOD" Type="varchar" MaxLength="40" />
           <Property Name="ADETFIYATI" Type="decimal" Precision="18" Scale="2" />
           <Property Name="EBAT" Type="varchar" MaxLength="25" />
-          <Property Name="FOTOGRAF" Type="image" />
           <Property Name="ISILISLEMFORMUL" Type="varchar" MaxLength="50" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
         </EntityType>
@@ -141,7 +140,6 @@
           <Property Name="IGNEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="ADETFIYATI" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="EBAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="FOTOGRAF" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="ISILISLEMFORMUL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBL_SIPARIS" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_IGNELER" ToRole="TBL_SIPARIS" />
@@ -263,7 +261,6 @@
                 <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
                 <ScalarProperty Name="ADETFIYATI" ColumnName="ADETFIYATI" />
                 <ScalarProperty Name="EBAT" ColumnName="EBAT" />
-                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
                 <ScalarProperty Name="ISILISLEMFORMUL" ColumnName="ISILISLEMFORMUL" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
               </MappingFragment>

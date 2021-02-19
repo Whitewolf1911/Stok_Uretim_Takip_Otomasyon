@@ -33,6 +33,24 @@ namespace test_kooil.Formlar
             db.SaveChanges();
             XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
+            if (siradakiAsamaSorgu == DialogResult.Yes) {
+
+                // siparis asamasi +1 
+                //int asama = (from s in db.TBL_SIPARIS
+                //             where s.SIPARISNOID == preslenenUrun.SIPARISNO
+                //             select s.SIPARISASAMASI).First().Value;
+
+                //asama = asama + 1;
+                var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
+                deger.SIPARISASAMASI += 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+                db.SaveChanges();
+             
+            }
+            else {
+                // do nothing
+            }
+            this.Close();
 
 
         }
@@ -52,6 +70,7 @@ namespace test_kooil.Formlar
             lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
             lookUp_Siparis.Properties.DataSource = preslencekUrunler;
+
 
         }
 

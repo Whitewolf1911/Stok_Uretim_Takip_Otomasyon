@@ -64,14 +64,14 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.Btn_Guncelle);
             this.groupControl1.Location = new System.Drawing.Point(973, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(203, 521);
+            this.groupControl1.Size = new System.Drawing.Size(211, 521);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl1.Text = "Pres Kontrol Paneli";
             // 
             // Btn_PresEkle
             // 
-            this.Btn_PresEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_PresEkle.Location = new System.Drawing.Point(14, 90);
+            this.Btn_PresEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_PresEkle.ImageOptions.Image")));
+            this.Btn_PresEkle.Location = new System.Drawing.Point(14, 44);
             this.Btn_PresEkle.Name = "Btn_PresEkle";
             this.Btn_PresEkle.Size = new System.Drawing.Size(174, 48);
             this.Btn_PresEkle.TabIndex = 2;
@@ -81,16 +81,17 @@ namespace test_kooil.Formlar
             // Btn_PresRapor
             // 
             this.Btn_PresRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_PresRapor.ImageOptions.Image")));
-            this.Btn_PresRapor.Location = new System.Drawing.Point(14, 226);
+            this.Btn_PresRapor.Location = new System.Drawing.Point(14, 175);
             this.Btn_PresRapor.Name = "Btn_PresRapor";
             this.Btn_PresRapor.Size = new System.Drawing.Size(174, 48);
             this.Btn_PresRapor.TabIndex = 1;
             this.Btn_PresRapor.Text = "Pres Raporlari";
+            this.Btn_PresRapor.Click += new System.EventHandler(this.Btn_PresRapor_Click);
             // 
             // Btn_Guncelle
             // 
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
-            this.Btn_Guncelle.Location = new System.Drawing.Point(14, 158);
+            this.Btn_Guncelle.Location = new System.Drawing.Point(14, 109);
             this.Btn_Guncelle.Name = "Btn_Guncelle";
             this.Btn_Guncelle.Size = new System.Drawing.Size(174, 48);
             this.Btn_Guncelle.TabIndex = 0;
@@ -105,7 +106,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_Pres";
-            this.Text = "Frm_Pres";
+            this.Text = "Pres";
             this.Load += new System.EventHandler(this.Frm_Pres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

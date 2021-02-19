@@ -139,6 +139,12 @@
     <Compile Include="Formlar\Frm_PresEkle.Designer.cs">
       <DependentUpon>Frm_PresEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_PresRaporlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_PresRaporlari.Designer.cs">
+      <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniIgneEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_PresEkle.resx">
       <DependentUpon>Frm_PresEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_PresRaporlari.resx">
+      <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>

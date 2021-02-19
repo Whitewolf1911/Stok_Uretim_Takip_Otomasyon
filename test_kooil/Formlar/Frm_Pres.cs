@@ -21,6 +21,7 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_PresEkle ekleEkrani;
+        Frm_PresRaporlari presRapor;
         void listele() {
             var preslencekUrunler = (from x in db.TBL_SIPARIS
                                      select new
@@ -51,6 +52,16 @@ namespace test_kooil.Formlar
                 ekleEkrani.Show();
             }
 
+        }
+
+        private void Btn_PresRapor_Click(object sender, EventArgs e)
+        {
+            if (presRapor == null || presRapor.IsDisposed)
+            {
+                presRapor = new Frm_PresRaporlari();
+                presRapor.MdiParent = this.ParentForm;
+                presRapor.Show();
+            }
         }
     }
 }
