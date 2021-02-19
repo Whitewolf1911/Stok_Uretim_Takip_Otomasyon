@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c4ed28d1162424dacbb1a92daa6de10" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_kooil_testModel.sysdiagram" Width="1.5" PointX="9.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_IGNELER" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_PERSONEL" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_SIPARIS" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_STOK" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_kooil_testModel.FK_TBL_SIPARIS_TBL_IGNELER" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KANALACMA" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KONTROL" Width="1.5" PointX="5.625" PointY="1.125" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_PRES" Width="1.5" PointX="7.375" PointY="3.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

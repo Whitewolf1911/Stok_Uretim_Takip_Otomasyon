@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_kooil_testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TBL_IGNELER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGNEKOD" Type="varchar" MaxLength="40" />
+          <Property Name="ADETFIYATI" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="EBAT" Type="varchar" MaxLength="25" />
+          <Property Name="FOTOGRAF" Type="image" />
+          <Property Name="ISILISLEMFORMUL" Type="varchar" MaxLength="50" />
+          <Property Name="NOT" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TBL_KANALACMA">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="int" Nullable="false" />
+          <Property Name="IGNEKODU" Type="varchar" MaxLength="50" />
+          <Property Name="ISLENENMIKTAR" Type="int" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="NOT" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TBL_KONTROL">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="int" Nullable="false" />
+          <Property Name="IGNEKODU" Type="varchar" MaxLength="50" />
+          <Property Name="ISLENENMIKTAR" Type="int" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="NOT" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TBL_PERSONEL">
+          <Key>
+            <PropertyRef Name="KULLANICIADI" />
+          </Key>
+          <Property Name="KULLANICIADI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="25" />
+          <Property Name="AD" Type="varchar" MaxLength="25" />
+          <Property Name="SOYAD" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="TBL_PRES">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="RAPORID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGNEKODU" Type="varchar" MaxLength="50" />
+          <Property Name="ISLENENMIKTAR" Type="int" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="NOT" Type="varchar" MaxLength="100" />
+          <Property Name="SIPARISNO" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_SIPARIS">
+          <Key>
+            <PropertyRef Name="SIPARISNOID" />
+          </Key>
+          <Property Name="SIPARISNOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGNETIPI" Type="int" />
+          <Property Name="SIPARISTARIHI" Type="date" />
+          <Property Name="ISTENILENTARIH" Type="date" />
+          <Property Name="MUSTERI" Type="varchar" MaxLength="50" />
+          <Property Name="URUNADETI" Type="int" />
+          <Property Name="SIPARISASAMASI" Type="tinyint" />
+          <Property Name="TOPLAMTUTAR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NOTLAR" Type="varchar" MaxLength="75" />
+          <Property Name="AKTIF" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBL_STOK">
+          <Key>
+            <PropertyRef Name="IGNEKOD" />
+          </Key>
+          <Property Name="IGNEKOD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGNEADI" Type="varchar" MaxLength="30" />
+          <Property Name="STOKADET" Type="int" />
+        </EntityType>
+        <Association Name="FK_TBL_SIPARIS_TBL_IGNELER">
+          <End Role="TBL_IGNELER" Type="Self.TBL_IGNELER" Multiplicity="0..1" />
+          <End Role="TBL_SIPARIS" Type="Self.TBL_SIPARIS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_IGNELER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBL_SIPARIS">
+              <PropertyRef Name="IGNETIPI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_kooil_testModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_KANALACMA" EntityType="Self.TBL_KANALACMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_KONTROL" EntityType="Self.TBL_KONTROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_PERSONEL" EntityType="Self.TBL_PERSONEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_PRES" EntityType="Self.TBL_PRES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_STOK" EntityType="Self.TBL_STOK" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBL_SIPARIS_TBL_IGNELER" Association="Self.FK_TBL_SIPARIS_TBL_IGNELER">
+            <End Role="TBL_IGNELER" EntitySet="TBL_IGNELER" />
+            <End Role="TBL_SIPARIS" EntitySet="TBL_SIPARIS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_kooil_testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBL_IGNELER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGNEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ADETFIYATI" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EBAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="FOTOGRAF" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ISILISLEMFORMUL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBL_SIPARIS" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_IGNELER" ToRole="TBL_SIPARIS" />
+        </EntityType>
+        <EntityType Name="TBL_PERSONEL">
+          <Key>
+            <PropertyRef Name="KULLANICIADI" />
+          </Key>
+          <Property Name="KULLANICIADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="AD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="SOYAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_SIPARIS">
+          <Key>
+            <PropertyRef Name="SIPARISNOID" />
+          </Key>
+          <Property Name="SIPARISNOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGNETIPI" Type="Int32" />
+          <Property Name="SIPARISTARIHI" Type="DateTime" Precision="0" />
+          <Property Name="ISTENILENTARIH" Type="DateTime" Precision="0" />
+          <Property Name="MUSTERI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="URUNADETI" Type="Int32" />
+          <Property Name="SIPARISASAMASI" Type="Byte" />
+          <Property Name="TOPLAMTUTAR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOTLAR" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="AKTIF" Type="Boolean" />
+          <NavigationProperty Name="TBL_IGNELER" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_SIPARIS" ToRole="TBL_IGNELER" />
+        </EntityType>
+        <EntityType Name="TBL_STOK">
+          <Key>
+            <PropertyRef Name="IGNEKOD" />
+          </Key>
+          <Property Name="IGNEKOD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGNEADI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="STOKADET" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_TBL_SIPARIS_TBL_IGNELER">
+          <End Role="TBL_IGNELER" Type="Self.TBL_IGNELER" Multiplicity="0..1" />
+          <End Role="TBL_SIPARIS" Type="Self.TBL_SIPARIS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_IGNELER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBL_SIPARIS">
+              <PropertyRef Name="IGNETIPI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_kooil_testEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" />
+          <EntitySet Name="TBL_PERSONEL" EntityType="Self.TBL_PERSONEL" />
+          <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" />
+          <EntitySet Name="TBL_STOK" EntityType="Self.TBL_STOK" />
+          <AssociationSet Name="FK_TBL_SIPARIS_TBL_IGNELER" Association="Self.FK_TBL_SIPARIS_TBL_IGNELER">
+            <End Role="TBL_IGNELER" EntitySet="TBL_IGNELER" />
+            <End Role="TBL_SIPARIS" EntitySet="TBL_SIPARIS" />
+          </AssociationSet>
+          <EntitySet Name="TBL_KANALACMA" EntityType="DB_kooil_testModel.TBL_KANALACMA" />
+          <EntitySet Name="TBL_KONTROL" EntityType="DB_kooil_testModel.TBL_KONTROL" />
+          <EntitySet Name="TBL_PRES" EntityType="DB_kooil_testModel.TBL_PRES" />
+        </EntityContainer>
+        <EntityType Name="TBL_KANALACMA">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="Int32" Nullable="false" />
+          <Property Name="IGNEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ISLENENMIKTAR" Type="Int32" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_KONTROL">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="Int32" Nullable="false" />
+          <Property Name="IGNEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ISLENENMIKTAR" Type="Int32" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_PRES">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="IGNEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ISLENENMIKTAR" Type="Int32" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISNO" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_kooil_testModelStoreContainer" CdmEntityContainer="DB_kooil_testEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_IGNELER">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
+              <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
+                <ScalarProperty Name="ADETFIYATI" ColumnName="ADETFIYATI" />
+                <ScalarProperty Name="EBAT" ColumnName="EBAT" />
+                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+                <ScalarProperty Name="ISILISLEMFORMUL" ColumnName="ISILISLEMFORMUL" />
+                <ScalarProperty Name="NOT" ColumnName="NOT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_PERSONEL">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_PERSONEL">
+              <MappingFragment StoreEntitySet="TBL_PERSONEL">
+                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SIPARIS">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SIPARIS">
+              <MappingFragment StoreEntitySet="TBL_SIPARIS">
+                <ScalarProperty Name="SIPARISNOID" ColumnName="SIPARISNOID" />
+                <ScalarProperty Name="IGNETIPI" ColumnName="IGNETIPI" />
+                <ScalarProperty Name="SIPARISTARIHI" ColumnName="SIPARISTARIHI" />
+                <ScalarProperty Name="ISTENILENTARIH" ColumnName="ISTENILENTARIH" />
+                <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
+                <ScalarProperty Name="URUNADETI" ColumnName="URUNADETI" />
+                <ScalarProperty Name="SIPARISASAMASI" ColumnName="SIPARISASAMASI" />
+                <ScalarProperty Name="TOPLAMTUTAR" ColumnName="TOPLAMTUTAR" />
+                <ScalarProperty Name="NOTLAR" ColumnName="NOTLAR" />
+                <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_STOK">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_STOK">
+              <MappingFragment StoreEntitySet="TBL_STOK">
+                <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
+                <ScalarProperty Name="IGNEADI" ColumnName="IGNEADI" />
+                <ScalarProperty Name="STOKADET" ColumnName="STOKADET" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_KANALACMA">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_KANALACMA">
+              <MappingFragment StoreEntitySet="TBL_KANALACMA">
+                <ScalarProperty Name="NOT" ColumnName="NOT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
+                <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
+                <ScalarProperty Name="SIPARISID" ColumnName="SIPARISID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_KONTROL">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_KONTROL">
+              <MappingFragment StoreEntitySet="TBL_KONTROL">
+                <ScalarProperty Name="NOT" ColumnName="NOT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
+                <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
+                <ScalarProperty Name="SIPARISID" ColumnName="SIPARISID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_PRES">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_PRES">
+              <MappingFragment StoreEntitySet="TBL_PRES">
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
+                <ScalarProperty Name="NOT" ColumnName="NOT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
+                <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
