@@ -25,14 +25,20 @@ namespace test_kooil.Formlar
         void listele() {
             var preslencekUrunler = (from x in db.TBL_SIPARIS
                                      select new
-                                     {   x.SIPARISNOID,   
+                                     {   SiparisNo = x.SIPARISNOID,   
                                          x.TBL_IGNELER.IGNEKOD,
                                          IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI
+                                         x.NOTLAR,
+                                         x.SIPARISASAMASI,
+                                         x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID);
+                                     }).ToList().OrderByDescending(x => x.SiparisNo);
             
-            gridControl1.DataSource = preslencekUrunler.Where(x => x.SIPARISASAMASI == 1);
+            gridControl1.DataSource = preslencekUrunler.Where(x => x.AKTIF ==true);
+
+            gridView1.Columns[4].Visible = false; //siparis asamasi sutunu gozukmeyecek.
+            gridView1.Columns[5].Visible = false;
+
         }
         private void Frm_Pres_Load(object sender, EventArgs e)
         {
@@ -62,6 +68,28 @@ namespace test_kooil.Formlar
                 presRapor.MdiParent = this.ParentForm;
                 presRapor.Show();
             }
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            
+                txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();             
+                txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+                
+                
+           
+           
+
         }
     }
 }

@@ -36,18 +36,23 @@ namespace test_kooil.Formlar
             this.Btn_PresEkle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_PresRapor = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_sipNot = new System.Windows.Forms.RichTextBox();
+            this.txt_sipIgneTur = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sipIgneTur.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 12);
+            this.gridControl1.Location = new System.Drawing.Point(4, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(955, 521);
+            this.gridControl1.Size = new System.Drawing.Size(963, 521);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -56,22 +61,27 @@ namespace test_kooil.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.txt_sipIgneTur);
+            this.groupControl1.Controls.Add(this.txt_sipNot);
             this.groupControl1.Controls.Add(this.Btn_PresEkle);
             this.groupControl1.Controls.Add(this.Btn_PresRapor);
             this.groupControl1.Controls.Add(this.Btn_Guncelle);
             this.groupControl1.Location = new System.Drawing.Point(973, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(211, 521);
+            this.groupControl1.Size = new System.Drawing.Size(249, 521);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Pres Kontrol Paneli";
             // 
             // Btn_PresEkle
             // 
             this.Btn_PresEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_PresEkle.ImageOptions.Image")));
-            this.Btn_PresEkle.Location = new System.Drawing.Point(14, 44);
+            this.Btn_PresEkle.Location = new System.Drawing.Point(35, 43);
             this.Btn_PresEkle.Name = "Btn_PresEkle";
             this.Btn_PresEkle.Size = new System.Drawing.Size(174, 48);
             this.Btn_PresEkle.TabIndex = 2;
@@ -81,7 +91,7 @@ namespace test_kooil.Formlar
             // Btn_PresRapor
             // 
             this.Btn_PresRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_PresRapor.ImageOptions.Image")));
-            this.Btn_PresRapor.Location = new System.Drawing.Point(14, 175);
+            this.Btn_PresRapor.Location = new System.Drawing.Point(35, 174);
             this.Btn_PresRapor.Name = "Btn_PresRapor";
             this.Btn_PresRapor.Size = new System.Drawing.Size(174, 48);
             this.Btn_PresRapor.TabIndex = 1;
@@ -91,18 +101,51 @@ namespace test_kooil.Formlar
             // Btn_Guncelle
             // 
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
-            this.Btn_Guncelle.Location = new System.Drawing.Point(14, 109);
+            this.Btn_Guncelle.Location = new System.Drawing.Point(35, 108);
             this.Btn_Guncelle.Name = "Btn_Guncelle";
             this.Btn_Guncelle.Size = new System.Drawing.Size(174, 48);
             this.Btn_Guncelle.TabIndex = 0;
             this.Btn_Guncelle.Text = "Listeyi Yenile";
             this.Btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
+            // txt_sipNot
+            // 
+            this.txt_sipNot.Location = new System.Drawing.Point(66, 367);
+            this.txt_sipNot.Name = "txt_sipNot";
+            this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
+            this.txt_sipNot.TabIndex = 3;
+            this.txt_sipNot.Text = "";
+            // 
+            // txt_sipIgneTur
+            // 
+            this.txt_sipIgneTur.Location = new System.Drawing.Point(66, 267);
+            this.txt_sipIgneTur.Name = "txt_sipIgneTur";
+            this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
+            this.txt_sipIgneTur.TabIndex = 4;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(17, 270);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(30, 16);
+            this.labelControl1.TabIndex = 5;
+            this.labelControl1.Text = "Igne:";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(5, 332);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(74, 16);
+            this.labelControl2.TabIndex = 6;
+            this.labelControl2.Text = "Siparis Notu:";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
+            // 
             // Frm_Pres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 545);
+            this.ClientSize = new System.Drawing.Size(1216, 545);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_Pres";
@@ -112,6 +155,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sipIgneTur.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +169,9 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.SimpleButton Btn_Guncelle;
         private DevExpress.XtraEditors.SimpleButton Btn_PresEkle;
         private DevExpress.XtraEditors.SimpleButton Btn_PresRapor;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txt_sipIgneTur;
+        private System.Windows.Forms.RichTextBox txt_sipNot;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

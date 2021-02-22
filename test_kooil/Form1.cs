@@ -20,6 +20,8 @@ namespace test_kooil
         Frm_YeniSiparis frmYeniSiparis;
         Frm_YeniIgneEkle frmIgneEkle;
         Frm_Pres frmPres;
+        Frm_ArkaSiyirma frmArkaSiyir;
+        Frm_SiparisKontrol frmSiparisKontrol;
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
@@ -59,6 +61,27 @@ namespace test_kooil
 
                 frmIgneEkle = new Frm_YeniIgneEkle();
                 frmIgneEkle.Show();
+            }
+        }
+
+        private void Btn_arkaSiyirma_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmArkaSiyir == null || frmArkaSiyir.IsDisposed) {
+
+                frmArkaSiyir = new Frm_ArkaSiyirma();
+                frmArkaSiyir.MdiParent = this;
+                frmArkaSiyir.Show();
+            }
+        }
+
+        private void Btn_SiparisDurum_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmSiparisKontrol == null || frmSiparisKontrol.IsDisposed)
+            {
+
+                frmSiparisKontrol = new Frm_SiparisKontrol();
+                frmSiparisKontrol.MdiParent = this;
+                frmSiparisKontrol.Show();
             }
         }
     }

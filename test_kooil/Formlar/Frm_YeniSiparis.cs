@@ -43,22 +43,28 @@ namespace test_kooil.Formlar
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             //EKLE BUTONU
-            TBL_SIPARIS yeniSiparis = new TBL_SIPARIS();
-            yeniSiparis.AKTIF = true;
-            int ignetipi = int.Parse(lookUpEdit_IgneCesit.EditValue.ToString());
-            yeniSiparis.IGNETIPI = ignetipi;
-            yeniSiparis.MUSTERI = txt_Musteri.Text;
-            yeniSiparis.URUNADETI = int.Parse(num_Adet.Value.ToString());
-            yeniSiparis.NOTLAR = txt_Not.Text;
-            yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue ;
-            yeniSiparis.ISTENILENTARIH = (DateTime?)date_IstenilenTarih.EditValue;
-            yeniSiparis.SIPARISASAMASI = 1;
-            var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
-            igneFiyati.ToString();
-            yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati); 
-            db.TBL_SIPARIS.Add(yeniSiparis);
-            db.SaveChanges();
-            XtraMessageBox.Show("Yeni Siparis Sisteme Eklendi. ", "Yeni Siparis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                TBL_SIPARIS yeniSiparis = new TBL_SIPARIS();
+                yeniSiparis.AKTIF = true;
+                int ignetipi = int.Parse(lookUpEdit_IgneCesit.EditValue.ToString());
+                yeniSiparis.IGNETIPI = ignetipi;
+                yeniSiparis.MUSTERI = txt_Musteri.Text;
+                yeniSiparis.URUNADETI = int.Parse(num_Adet.Value.ToString());
+                yeniSiparis.NOTLAR = txt_Not.Text;
+                yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue;
+                yeniSiparis.ISTENILENTARIH = (DateTime?)date_IstenilenTarih.EditValue;
+                yeniSiparis.SIPARISASAMASI = 1;
+                var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
+                igneFiyati.ToString();
+                yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);
+                db.TBL_SIPARIS.Add(yeniSiparis);
+                db.SaveChanges();
+                XtraMessageBox.Show("Yeni Siparis Sisteme Eklendi. ", "Yeni Siparis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch {
+                XtraMessageBox.Show("Lutfen Bos Alan birakmayiniz. ", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

@@ -21,37 +21,40 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();        
         private void simpleButton1_Click(object sender, EventArgs e)
         { // EKLE BUTONU
-            TBL_PRES preslenenUrun = new TBL_PRES();
-            preslenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == preslenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-            preslenenUrun.IGNEKODU = igneKodu.ToString();
-            preslenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            preslenenUrun.TARIH = date_BasimTarihi.DateTime;
-            preslenenUrun.NOT = text_Not.Text;
-            preslenenUrun.RAPORLAYAN = text_Raporlayan.Text;
-            db.TBL_PRES.Add(preslenenUrun);
-            db.SaveChanges();
-            XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes) {
-
-                // siparis asamasi +1 
-                //int asama = (from s in db.TBL_SIPARIS
-                //             where s.SIPARISNOID == preslenenUrun.SIPARISNO
-                //             select s.SIPARISASAMASI).First().Value;
-
-                //asama = asama + 1;
-                var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
-                deger.SIPARISASAMASI += 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+            
+            
+                TBL_PRES preslenenUrun = new TBL_PRES();
+                preslenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == preslenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+                preslenenUrun.IGNEKODU = igneKodu.ToString();
+                preslenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                preslenenUrun.TARIH = date_BasimTarihi.DateTime;
+                preslenenUrun.NOT = text_Not.Text;
+                preslenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+                db.TBL_PRES.Add(preslenenUrun);
                 db.SaveChanges();
-             
-            }
-            else {
-                // do nothing
-            }
-            this.Close();
+                XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+
+                    //pres islemi tamamlandiysa siradaki asamaya gecsin
+                    //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
+
+                    var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
+                    deger.SIPARISASAMASI += 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+                    db.SaveChanges();
+
+                }
+                else
+                {
+                    // do nothing
+                }
+                this.Close();
+            
+            
 
         }
 

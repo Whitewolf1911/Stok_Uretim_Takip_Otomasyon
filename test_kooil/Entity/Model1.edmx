@@ -15,6 +15,18 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="TBL_ARKASIYIR">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="RAPORID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGNEKODU" Type="varchar" MaxLength="50" />
+          <Property Name="ISLENENMIKTAR" Type="int" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="NOT" Type="varchar" MaxLength="100" />
+          <Property Name="SIPARISNO" Type="int" />
+        </EntityType>
         <EntityType Name="TBL_IGNELER">
           <Key>
             <PropertyRef Name="ID" />
@@ -28,14 +40,15 @@
         </EntityType>
         <EntityType Name="TBL_KANALACMA">
           <Key>
-            <PropertyRef Name="SIPARISID" />
+            <PropertyRef Name="RAPORID" />
           </Key>
-          <Property Name="SIPARISID" Type="int" Nullable="false" />
+          <Property Name="RAPORID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IGNEKODU" Type="varchar" MaxLength="50" />
           <Property Name="ISLENENMIKTAR" Type="int" />
           <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
           <Property Name="TARIH" Type="date" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
+          <Property Name="SIPARISNO" Type="int" />
         </EntityType>
         <EntityType Name="TBL_KONTROL">
           <Key>
@@ -106,6 +119,7 @@
         </Association>
         <EntityContainer Name="DB_kooil_testModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_ARKASIYIR" EntityType="Self.TBL_ARKASIYIR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_KANALACMA" EntityType="Self.TBL_KANALACMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_KONTROL" EntityType="Self.TBL_KONTROL" Schema="dbo" store:Type="Tables" />
@@ -202,17 +216,19 @@
           <EntitySet Name="TBL_KANALACMA" EntityType="DB_kooil_testModel.TBL_KANALACMA" />
           <EntitySet Name="TBL_KONTROL" EntityType="DB_kooil_testModel.TBL_KONTROL" />
           <EntitySet Name="TBL_PRES" EntityType="DB_kooil_testModel.TBL_PRES" />
+          <EntitySet Name="TBL_ARKASIYIR" EntityType="DB_kooil_testModel.TBL_ARKASIYIR" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
-            <PropertyRef Name="SIPARISID" />
+            <PropertyRef Name="RAPORID" />
           </Key>
-          <Property Name="SIPARISID" Type="Int32" Nullable="false" />
           <Property Name="IGNEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ISLENENMIKTAR" Type="Int32" />
           <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISNO" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_KONTROL">
           <Key>
@@ -235,6 +251,18 @@
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISNO" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_ARKASIYIR">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGNEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ISLENENMIKTAR" Type="Int32" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SIPARISNO" Type="Int32" />
         </EntityType>
       </Schema>
@@ -304,12 +332,13 @@
           <EntitySetMapping Name="TBL_KANALACMA">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_KANALACMA">
               <MappingFragment StoreEntitySet="TBL_KANALACMA">
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
                 <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
                 <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
-                <ScalarProperty Name="SIPARISID" ColumnName="SIPARISID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -335,6 +364,19 @@
                 <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
                 <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
                 <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_ARKASIYIR">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_ARKASIYIR">
+              <MappingFragment StoreEntitySet="TBL_ARKASIYIR">
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="NOT" ColumnName="NOT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="ISLENENMIKTAR" ColumnName="ISLENENMIKTAR" />
+                <ScalarProperty Name="IGNEKODU" ColumnName="IGNEKODU" />
+                <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

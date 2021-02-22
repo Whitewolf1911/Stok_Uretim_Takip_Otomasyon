@@ -34,10 +34,21 @@ namespace test_kooil.Formlar
             yeniIgne.ADETFIYATI = num_AdetFiyat.Value;
             yeniIgne.NOT = txt_Not.Text;
             yeniIgne.EBAT = txt_ebat.Text;
-            db.TBL_IGNELER.Add(yeniIgne);
-            db.SaveChanges();
-            XtraMessageBox.Show("Igne Sisteme Eklendi.", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+
+            if (txt_IgneKodu.Text != null)
+            {
+                db.TBL_IGNELER.Add(yeniIgne);
+                db.SaveChanges();
+                XtraMessageBox.Show("Igne Sisteme Eklendi.", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else { 
+                
+                XtraMessageBox.Show("Lutfen Igne Kodunu Giriniz", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
 
         }
     }

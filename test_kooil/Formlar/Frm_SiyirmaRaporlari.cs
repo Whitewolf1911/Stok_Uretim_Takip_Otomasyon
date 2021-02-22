@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_kooil.Entity;
 
+
 namespace test_kooil.Formlar
 {
-    public partial class Frm_PresRaporlari : Form
+    public partial class Frm_SiyirmaRaporlari : Form
     {
-        public Frm_PresRaporlari()
+        public Frm_SiyirmaRaporlari()
         {
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
-        
-        void listele() {
-            var veriler = (from x in db.TBL_PRES
+        void listele()
+        {
+            var veriler = (from x in db.TBL_ARKASIYIR
                            select new
                            {
                                x.SIPARISNO,
@@ -39,10 +40,6 @@ namespace test_kooil.Formlar
         {
             listele();
         }
-        private void Frm_PresRaporlari_Load(object sender, EventArgs e)
-        {
-            listele();
-        }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -52,7 +49,11 @@ namespace test_kooil.Formlar
             txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
             txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString();
             txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+        }
 
+        private void Frm_SiyirmaRaporlari_Load(object sender, EventArgs e)
+        {
+            listele();
         }
     }
 }

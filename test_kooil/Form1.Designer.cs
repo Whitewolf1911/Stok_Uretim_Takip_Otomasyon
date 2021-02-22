@@ -34,7 +34,7 @@ namespace test_kooil
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_SiparisDurum = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
@@ -42,7 +42,7 @@ namespace test_kooil
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_pres = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_arkaSiyirma = new DevExpress.XtraBars.BarButtonItem();
             this.asam = new DevExpress.XtraBars.BarButtonItem();
             this.A = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
@@ -63,6 +63,7 @@ namespace test_kooil
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -89,7 +90,7 @@ namespace test_kooil
             this.ribbonControl1.SearchEditItem,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.barButtonItem3,
+            this.Btn_SiparisDurum,
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
@@ -97,7 +98,7 @@ namespace test_kooil
             this.barButtonItem8,
             this.barButtonItem9,
             this.Btn_pres,
-            this.barButtonItem12,
+            this.Btn_arkaSiyirma,
             this.asam,
             this.A,
             this.barButtonItem16,
@@ -117,15 +118,16 @@ namespace test_kooil
             this.barButtonItem31,
             this.barButtonItem32,
             this.barButtonItem33,
-            this.barButtonItem10});
+            this.barButtonItem10,
+            this.barButtonItem12});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 33;
+            this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
-            this.ribbonControl1.Size = new System.Drawing.Size(1236, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1417, 183);
             // 
             // barButtonItem1
             // 
@@ -144,13 +146,14 @@ namespace test_kooil
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
-            // barButtonItem3
+            // Btn_SiparisDurum
             // 
-            this.barButtonItem3.Caption = "Siparis Durum Kontrol";
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.Btn_SiparisDurum.Caption = "Siparis Durum Kontrol";
+            this.Btn_SiparisDurum.Id = 3;
+            this.Btn_SiparisDurum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisDurum.ImageOptions.Image")));
+            this.Btn_SiparisDurum.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisDurum.ImageOptions.LargeImage")));
+            this.Btn_SiparisDurum.Name = "Btn_SiparisDurum";
+            this.Btn_SiparisDurum.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SiparisDurum_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -207,13 +210,14 @@ namespace test_kooil
             this.Btn_pres.Name = "Btn_pres";
             this.Btn_pres.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_pres_ItemClick);
             // 
-            // barButtonItem12
+            // Btn_arkaSiyirma
             // 
-            this.barButtonItem12.Caption = "2. Arka Siyirma";
-            this.barButtonItem12.Id = 11;
-            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.Btn_arkaSiyirma.Caption = "2. Arka Siyirma";
+            this.Btn_arkaSiyirma.Id = 11;
+            this.Btn_arkaSiyirma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_arkaSiyirma.ImageOptions.Image")));
+            this.Btn_arkaSiyirma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_arkaSiyirma.ImageOptions.LargeImage")));
+            this.Btn_arkaSiyirma.Name = "Btn_arkaSiyirma";
+            this.Btn_arkaSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_arkaSiyirma_ItemClick);
             // 
             // asam
             // 
@@ -326,8 +330,8 @@ namespace test_kooil
             // 
             this.Btn_YeniIgneEkle.Caption = "Yeni Igne Ekle";
             this.Btn_YeniIgneEkle.Id = 26;
-            this.Btn_YeniIgneEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.Image")));
-            this.Btn_YeniIgneEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.LargeImage")));
+            this.Btn_YeniIgneEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_YeniIgneEkle.ImageOptions.Image")));
+            this.Btn_YeniIgneEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_YeniIgneEkle.ImageOptions.LargeImage")));
             this.Btn_YeniIgneEkle.Name = "Btn_YeniIgneEkle";
             this.Btn_YeniIgneEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_YeniIgneEkle_ItemClick);
             // 
@@ -379,6 +383,14 @@ namespace test_kooil
             this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
             this.barButtonItem10.Name = "barButtonItem10";
             // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "Gunluk Hareketler";
+            this.barButtonItem12.Id = 33;
+            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -392,8 +404,9 @@ namespace test_kooil
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Btn_SiparisDurum);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPageGroup6
@@ -419,7 +432,7 @@ namespace test_kooil
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_pres);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_arkaSiyirma);
             this.ribbonPageGroup2.ItemLinks.Add(this.asam);
             this.ribbonPageGroup2.ItemLinks.Add(this.A);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
@@ -494,7 +507,7 @@ namespace test_kooil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 759);
+            this.ClientSize = new System.Drawing.Size(1417, 846);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
@@ -513,7 +526,7 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem Btn_SiparisDurum;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
@@ -525,7 +538,7 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem Btn_pres;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem Btn_arkaSiyirma;
         private DevExpress.XtraBars.BarButtonItem asam;
         private DevExpress.XtraBars.BarButtonItem A;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
@@ -554,6 +567,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
     }
 }
 

@@ -12,14 +12,14 @@ namespace test_kooil.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_KANALACMA
+    public partial class TBL_ARKASIYIR
     {
+        public int RAPORID { get; set; }
         public string IGNEKODU { get; set; }
         public Nullable<int> ISLENENMIKTAR { get; set; }
         public string RAPORLAYAN { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public string NOT { get; set; }
-        public int RAPORID { get; set; }
         public Nullable<int> SIPARISNO { get; set; }
     }
 }
