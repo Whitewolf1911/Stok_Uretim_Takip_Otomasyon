@@ -44,8 +44,12 @@ namespace test_kooil.Formlar
                     //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
 
                     var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
+                if (deger.SIPARISASAMASI < 2) {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                     deger.SIPARISASAMASI += 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
-                    db.SaveChanges();
+
+
+                }
+                db.SaveChanges();
 
                 }
                 else

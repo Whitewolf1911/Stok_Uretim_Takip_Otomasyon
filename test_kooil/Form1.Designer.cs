@@ -127,7 +127,7 @@ namespace test_kooil
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
-            this.ribbonControl1.Size = new System.Drawing.Size(1417, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
             // 
             // barButtonItem1
             // 
@@ -507,7 +507,7 @@ namespace test_kooil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 846);
+            this.ClientSize = new System.Drawing.Size(1473, 846);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";

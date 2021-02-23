@@ -33,13 +33,13 @@ namespace test_kooil.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_sipIgneTur = new DevExpress.XtraEditors.TextEdit();
+            this.txt_sipNot = new System.Windows.Forms.RichTextBox();
             this.Btn_PresEkle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_PresRapor = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_sipNot = new System.Windows.Forms.RichTextBox();
-            this.txt_sipIgneTur = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -52,7 +52,7 @@ namespace test_kooil.Formlar
             this.gridControl1.Location = new System.Drawing.Point(4, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(963, 521);
+            this.gridControl1.Size = new System.Drawing.Size(1114, 604);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -72,11 +72,44 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.Btn_PresEkle);
             this.groupControl1.Controls.Add(this.Btn_PresRapor);
             this.groupControl1.Controls.Add(this.Btn_Guncelle);
-            this.groupControl1.Location = new System.Drawing.Point(973, 12);
+            this.groupControl1.Location = new System.Drawing.Point(1124, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(249, 521);
+            this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Pres Kontrol Paneli";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(5, 332);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(74, 16);
+            this.labelControl2.TabIndex = 6;
+            this.labelControl2.Text = "Siparis Notu:";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(17, 270);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(30, 16);
+            this.labelControl1.TabIndex = 5;
+            this.labelControl1.Text = "Igne:";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            // 
+            // txt_sipIgneTur
+            // 
+            this.txt_sipIgneTur.Location = new System.Drawing.Point(66, 267);
+            this.txt_sipIgneTur.Name = "txt_sipIgneTur";
+            this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
+            this.txt_sipIgneTur.TabIndex = 4;
+            // 
+            // txt_sipNot
+            // 
+            this.txt_sipNot.Location = new System.Drawing.Point(66, 367);
+            this.txt_sipNot.Name = "txt_sipNot";
+            this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
+            this.txt_sipNot.TabIndex = 3;
+            this.txt_sipNot.Text = "";
             // 
             // Btn_PresEkle
             // 
@@ -108,44 +141,11 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle.Text = "Listeyi Yenile";
             this.Btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
-            // txt_sipNot
-            // 
-            this.txt_sipNot.Location = new System.Drawing.Point(66, 367);
-            this.txt_sipNot.Name = "txt_sipNot";
-            this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
-            this.txt_sipNot.TabIndex = 3;
-            this.txt_sipNot.Text = "";
-            // 
-            // txt_sipIgneTur
-            // 
-            this.txt_sipIgneTur.Location = new System.Drawing.Point(66, 267);
-            this.txt_sipIgneTur.Name = "txt_sipIgneTur";
-            this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
-            this.txt_sipIgneTur.TabIndex = 4;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(17, 270);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 16);
-            this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Igne:";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(5, 332);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 16);
-            this.labelControl2.TabIndex = 6;
-            this.labelControl2.Text = "Siparis Notu:";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
-            // 
             // Frm_Pres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 545);
+            this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_Pres";
