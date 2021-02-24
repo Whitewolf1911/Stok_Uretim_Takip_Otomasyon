@@ -127,6 +127,9 @@
     <Compile Include="Entity\TBL_PRES.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_RAPOR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_SIPARIS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -150,12 +153,6 @@
     </Compile>
     <Compile Include="Formlar\Frm_ArkaSiyirma.Designer.cs">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formlar\Frm_GunlukHareketler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\Frm_GunlukHareketler.Designer.cs">
-      <DependentUpon>Frm_GunlukHareketler.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.cs">
       <SubType>Form</SubType>
@@ -186,6 +183,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_PresRaporlari.Designer.cs">
       <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_RaporOzet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_RaporOzet.Designer.cs">
+      <DependentUpon>Frm_RaporOzet.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_SiparisKontrol.cs">
       <SubType>Form</SubType>
@@ -226,9 +229,6 @@
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\Frm_GunlukHareketler.resx">
-      <DependentUpon>Frm_GunlukHareketler.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_IgneTurleri.resx">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_PresRaporlari.resx">
       <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_RaporOzet.resx">
+      <DependentUpon>Frm_RaporOzet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiparisKontrol.resx">
       <DependentUpon>Frm_SiparisKontrol.cs</DependentUpon>

@@ -22,6 +22,7 @@ namespace test_kooil
         Frm_Pres frmPres;
         Frm_ArkaSiyirma frmArkaSiyir;
         Frm_SiparisKontrol frmSiparisKontrol;
+        Frm_RaporOzet frmRapor;
         
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -83,6 +84,17 @@ namespace test_kooil
                 frmSiparisKontrol = new Frm_SiparisKontrol();
                 frmSiparisKontrol.MdiParent = this;
                 frmSiparisKontrol.Show();
+            }
+        }
+
+        private void Btn_GunlukHareketler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmRapor == null || frmRapor.IsDisposed)
+            {
+
+                frmRapor = new Frm_RaporOzet();
+                frmRapor.MdiParent = this;
+                frmRapor.Show();
             }
         }
     }

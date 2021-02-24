@@ -34,7 +34,26 @@ namespace test_kooil.Formlar
             siyrilanUrun.RAPORLAYAN = text_Raporlayan.Text;
             db.TBL_ARKASIYIR.Add(siyrilanUrun);
             db.SaveChanges();
+
+            // ADDING TBL_RAPOR
+
+            TBL_RAPOR rapor = new TBL_RAPOR();
+            rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+            rapor.IGNEKODU = igneKodu.ToString();
+            rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+            rapor.TARIH = date_BasimTarihi.DateTime;
+            rapor.NOT = text_Not.Text;
+            rapor.RAPORLAYAN = text_Raporlayan.Text;
+            rapor.ISLEM = "Arka Sıyırma";
+
+            db.TBL_RAPOR.Add(rapor);
+            db.SaveChanges();
+
+
+
             XtraMessageBox.Show("Arka Siyirma Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
 
 
             DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);

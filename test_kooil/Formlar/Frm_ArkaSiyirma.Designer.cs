@@ -60,34 +60,34 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 3;
-            this.groupControl1.Text = "Arka Siyirma Paneli";
+            this.groupControl1.Text = "Arka Sıyırma Paneli";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 453);
+            this.labelControl2.Location = new System.Drawing.Point(22, 413);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 16);
+            this.labelControl2.Size = new System.Drawing.Size(78, 16);
             this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "Siparis Notu:";
+            this.labelControl2.Text = "Sipariş Notu :";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 385);
+            this.labelControl1.Location = new System.Drawing.Point(22, 345);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 16);
+            this.labelControl1.Size = new System.Drawing.Size(34, 16);
             this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "Igne:";
+            this.labelControl1.Text = "İğne :";
             // 
             // txt_sipIgneTur
             // 
-            this.txt_sipIgneTur.Location = new System.Drawing.Point(73, 382);
+            this.txt_sipIgneTur.Location = new System.Drawing.Point(113, 342);
             this.txt_sipIgneTur.Name = "txt_sipIgneTur";
             this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
             this.txt_sipIgneTur.TabIndex = 8;
             // 
             // txt_sipNot
             // 
-            this.txt_sipNot.Location = new System.Drawing.Point(103, 453);
+            this.txt_sipNot.Location = new System.Drawing.Point(113, 413);
             this.txt_sipNot.Name = "txt_sipNot";
             this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
             this.txt_sipNot.TabIndex = 7;
@@ -100,7 +100,7 @@ namespace test_kooil.Formlar
             this.Btn_SiyirmaEkle.Name = "Btn_SiyirmaEkle";
             this.Btn_SiyirmaEkle.Size = new System.Drawing.Size(174, 48);
             this.Btn_SiyirmaEkle.TabIndex = 2;
-            this.Btn_SiyirmaEkle.Text = "Islenen Urun Ekle";
+            this.Btn_SiyirmaEkle.Text = "İşlenen Ürün Ekle";
             this.Btn_SiyirmaEkle.Click += new System.EventHandler(this.Btn_SiyirmaEkle_Click);
             // 
             // Btn_SiyirmaRapor
@@ -110,7 +110,7 @@ namespace test_kooil.Formlar
             this.Btn_SiyirmaRapor.Name = "Btn_SiyirmaRapor";
             this.Btn_SiyirmaRapor.Size = new System.Drawing.Size(174, 48);
             this.Btn_SiyirmaRapor.TabIndex = 1;
-            this.Btn_SiyirmaRapor.Text = "Siyirma Raporlari";
+            this.Btn_SiyirmaRapor.Text = "Sıyırma Raporları";
             this.Btn_SiyirmaRapor.Click += new System.EventHandler(this.Btn_SiyirmaRapor_Click);
             // 
             // Btn_Guncelle
@@ -147,7 +147,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_ArkaSiyirma";
-            this.Text = "Arka Siyirma ";
+            this.Text = "Arka Sıyırma";
             this.Load += new System.EventHandler(this.Frm_ArkaSiyirma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

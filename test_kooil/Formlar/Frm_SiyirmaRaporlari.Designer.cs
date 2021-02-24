@@ -52,6 +52,7 @@ namespace test_kooil.Formlar
             this.txt_Tarih = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
@@ -72,6 +73,7 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.Btn_Yazdir);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txt_IslenenAdet);
@@ -95,7 +97,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(337, 604);
             this.groupControl1.TabIndex = 5;
-            this.groupControl1.Text = "Ozellikler";
+            this.groupControl1.Text = "Özellikler";
             // 
             // pictureEdit6
             // 
@@ -227,7 +229,7 @@ namespace test_kooil.Formlar
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(80, 16);
             this.labelControl4.TabIndex = 5;
-            this.labelControl4.Text = "Islenen Adet :";
+            this.labelControl4.Text = "İşlenen Adet :";
             // 
             // labelControl3
             // 
@@ -241,9 +243,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl2.Location = new System.Drawing.Point(76, 48);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(54, 16);
+            this.labelControl2.Size = new System.Drawing.Size(63, 16);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "SiparisNo";
+            this.labelControl2.Text = "Sipariş No:";
             // 
             // labelControl1
             // 
@@ -251,12 +253,12 @@ namespace test_kooil.Formlar
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 16);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Igne Kodu :";
+            this.labelControl1.Text = "İğne Kodu :";
             // 
             // Btn_Yenile
             // 
             this.Btn_Yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yenile.ImageOptions.Image")));
-            this.Btn_Yenile.Location = new System.Drawing.Point(13, 540);
+            this.Btn_Yenile.Location = new System.Drawing.Point(13, 478);
             this.Btn_Yenile.Name = "Btn_Yenile";
             this.Btn_Yenile.Size = new System.Drawing.Size(143, 47);
             this.Btn_Yenile.TabIndex = 1;
@@ -298,6 +300,16 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // Btn_Yazdir
+            // 
+            this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Yazdir.Location = new System.Drawing.Point(13, 541);
+            this.Btn_Yazdir.Name = "Btn_Yazdir";
+            this.Btn_Yazdir.Size = new System.Drawing.Size(143, 47);
+            this.Btn_Yazdir.TabIndex = 21;
+            this.Btn_Yazdir.Text = "Yazdır";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
+            // 
             // Frm_SiyirmaRaporlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,7 +318,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_SiyirmaRaporlari";
-            this.Text = "Arka Siyirma Rapor";
+            this.Text = "Arka Sıyırma Rapor";
             this.Load += new System.EventHandler(this.Frm_SiyirmaRaporlari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -353,5 +365,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.DateEdit txt_Tarih;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton Btn_Yazdir;
     }
 }

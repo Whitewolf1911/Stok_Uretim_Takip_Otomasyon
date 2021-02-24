@@ -22,7 +22,8 @@ namespace test_kooil.Formlar
         private void simpleButton1_Click(object sender, EventArgs e)
         { // EKLE BUTONU
             
-            
+                //ADDING TO TBL_PRES
+
                 TBL_PRES preslenenUrun = new TBL_PRES();
                 preslenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
                 var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == preslenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
@@ -33,9 +34,30 @@ namespace test_kooil.Formlar
                 preslenenUrun.RAPORLAYAN = text_Raporlayan.Text;
                 db.TBL_PRES.Add(preslenenUrun);
                 db.SaveChanges();
-                XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // ADDING TO TBL_RAPORLAR
+
+            TBL_RAPOR rapor = new TBL_RAPOR();
+            rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+            rapor.IGNEKODU = igneKodu.ToString();
+            rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+            rapor.TARIH = date_BasimTarihi.DateTime;
+            rapor.NOT = text_Not.Text;
+            rapor.RAPORLAYAN = text_Raporlayan.Text;
+            rapor.ISLEM = "PRES";
+            db.TBL_RAPOR.Add(rapor);
+            db.SaveChanges();
 
 
+            XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+      
+
+              
+
+                
+
+            //TODO bu sorguya gerek kaldi mi ???
                 DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
                 if (siradakiAsamaSorgu == DialogResult.Yes)
                 {

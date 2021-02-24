@@ -34,5 +34,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_KONTROL> TBL_KONTROL { get; set; }
         public virtual DbSet<TBL_PRES> TBL_PRES { get; set; }
         public virtual DbSet<TBL_ARKASIYIR> TBL_ARKASIYIR { get; set; }
+        public virtual DbSet<TBL_RAPOR> TBL_RAPOR { get; set; }
     }
 }
