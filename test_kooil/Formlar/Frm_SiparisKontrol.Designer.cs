@@ -52,6 +52,7 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -71,6 +72,7 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.Btn_Yazdir);
             this.groupControl1.Controls.Add(this.pictureEdit7);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.pictureEdit5);
@@ -211,6 +213,8 @@ namespace test_kooil.Formlar
             // 
             this.txt_asama.Location = new System.Drawing.Point(167, 199);
             this.txt_asama.Name = "txt_asama";
+            this.txt_asama.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_asama.Properties.Appearance.Options.UseBackColor = true;
             this.txt_asama.Size = new System.Drawing.Size(143, 22);
             this.txt_asama.TabIndex = 13;
             // 
@@ -264,7 +268,7 @@ namespace test_kooil.Formlar
             // Btn_Guncelle
             // 
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
-            this.Btn_Guncelle.Location = new System.Drawing.Point(124, 504);
+            this.Btn_Guncelle.Location = new System.Drawing.Point(136, 484);
             this.Btn_Guncelle.Name = "Btn_Guncelle";
             this.Btn_Guncelle.Size = new System.Drawing.Size(174, 48);
             this.Btn_Guncelle.TabIndex = 0;
@@ -287,6 +291,16 @@ namespace test_kooil.Formlar
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            // 
+            // Btn_Yazdir
+            // 
+            this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
+            this.Btn_Yazdir.Location = new System.Drawing.Point(136, 538);
+            this.Btn_Yazdir.Name = "Btn_Yazdir";
+            this.Btn_Yazdir.Size = new System.Drawing.Size(174, 47);
+            this.Btn_Yazdir.TabIndex = 29;
+            this.Btn_Yazdir.Text = "Yazdir";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // Frm_SiparisKontrol
             // 
@@ -342,5 +356,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit7;
+        private DevExpress.XtraEditors.SimpleButton Btn_Yazdir;
     }
 }

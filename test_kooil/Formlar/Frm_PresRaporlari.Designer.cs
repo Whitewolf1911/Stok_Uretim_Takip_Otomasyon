@@ -52,6 +52,7 @@ namespace test_kooil.Formlar
             this.txt_Tarih = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
@@ -72,6 +73,7 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.Btn_Yazdir);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txt_IslenenAdet);
@@ -298,6 +300,16 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // Btn_Yazdir
+            // 
+            this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Yazdir.Location = new System.Drawing.Point(6, 470);
+            this.Btn_Yazdir.Name = "Btn_Yazdir";
+            this.Btn_Yazdir.Size = new System.Drawing.Size(143, 47);
+            this.Btn_Yazdir.TabIndex = 21;
+            this.Btn_Yazdir.Text = "Yazdir";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
+            // 
             // Frm_PresRaporlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,5 +365,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.DateEdit txt_Tarih;
+        private DevExpress.XtraEditors.SimpleButton Btn_Yazdir;
     }
 }

@@ -22,6 +22,7 @@ namespace test_kooil
         Frm_Pres frmPres;
         Frm_ArkaSiyirma frmArkaSiyir;
         Frm_SiparisKontrol frmSiparisKontrol;
+        
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu

@@ -63,7 +63,8 @@ namespace test_kooil
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_GunlukHareketler = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -119,9 +120,10 @@ namespace test_kooil
             this.barButtonItem32,
             this.barButtonItem33,
             this.barButtonItem10,
-            this.barButtonItem12});
+            this.Btn_GunlukHareketler,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 34;
+            this.ribbonControl1.MaxItemId = 35;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -383,13 +385,20 @@ namespace test_kooil
             this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
             this.barButtonItem10.Name = "barButtonItem10";
             // 
-            // barButtonItem12
+            // Btn_GunlukHareketler
             // 
-            this.barButtonItem12.Caption = "Gunluk Hareketler";
-            this.barButtonItem12.Id = 33;
-            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.Btn_GunlukHareketler.Caption = "Gunluk Hareketler";
+            this.Btn_GunlukHareketler.Id = 33;
+            this.Btn_GunlukHareketler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_GunlukHareketler.ImageOptions.Image")));
+            this.Btn_GunlukHareketler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_GunlukHareketler.ImageOptions.LargeImage")));
+            this.Btn_GunlukHareketler.Name = "Btn_GunlukHareketler";
+            // 
+            // barButtonItem3
+            // 
+            //this.barButtonItem3.Caption = "test";
+            //this.barButtonItem3.Id = 34;
+            //this.barButtonItem3.Name = "barButtonItem3";
+            //this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -406,7 +415,7 @@ namespace test_kooil
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.Btn_SiparisDurum);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem10);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Btn_GunlukHareketler);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPageGroup6
@@ -567,7 +576,8 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem Btn_GunlukHareketler;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Columns;
+﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
@@ -40,7 +41,7 @@ namespace test_kooil.Formlar
                            }).ToList().OrderByDescending(x => x.SiparisNo);
 
             gridControl1.DataSource = veriler.Where(x => x.AKTIF == true);
-
+            
             //renklendirmeler ve sutun gizlemeler
             gridView1.Columns[1].AppearanceCell.BackColor = Color.Green;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
@@ -57,7 +58,7 @@ namespace test_kooil.Formlar
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)
         {
-
+            listele();
         }
        
         private void Frm_SiparisKontrol_Load(object sender, EventArgs e)
@@ -86,13 +87,15 @@ namespace test_kooil.Formlar
 
                 int asamaDeger = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISASAMASI").ToString());
 
+
+                
                 if (asamaDeger == 1)
                 {
                     txt_asama.Text = "Preste";
                 }
-                else
+                else if (asamaDeger == 2)
                 {
-                    txt_asama.Text = "baska iste";
+                    txt_asama.Text = "Arka Siyirmada";
                 }
 
             }
@@ -107,6 +110,38 @@ namespace test_kooil.Formlar
         private void labelControl4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowGridPreview(GridControl grid)
+        {
+            // Check whether the GridControl can be previewed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+
+            // Open the Preview window.
+            grid.ShowPrintPreview();
+        }
+
+        private void PrintGrid(GridControl grid)
+        {
+            // Check whether the GridControl can be printed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+
+            // Print.
+            grid.Print();
+        }
+
+        private void Btn_Yazdir_Click(object sender, EventArgs e)
+        {
+            ShowGridPreview(gridControl1);
+            PrintGrid(gridControl1);
         }
     }
 }

@@ -45,7 +45,10 @@ namespace test_kooil.Formlar
 
                     var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
                 if (deger.SIPARISASAMASI < 2) {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                    deger.SIPARISASAMASI += 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+                    deger.SIPARISASAMASI = 2; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+
+
+                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune gecerim
 
 
                 }
