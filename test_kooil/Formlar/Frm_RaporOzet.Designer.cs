@@ -96,7 +96,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 7;
-            this.groupControl1.Text = "Ozet";
+            this.groupControl1.Text = "Özet";
             // 
             // Btn_Yazdir
             // 
@@ -105,7 +105,8 @@ namespace test_kooil.Formlar
             this.Btn_Yazdir.Name = "Btn_Yazdir";
             this.Btn_Yazdir.Size = new System.Drawing.Size(174, 47);
             this.Btn_Yazdir.TabIndex = 29;
-            this.Btn_Yazdir.Text = "Yazdir";
+            this.Btn_Yazdir.Text = "Yazdır";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // pictureEdit7
             // 
@@ -200,7 +201,7 @@ namespace test_kooil.Formlar
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(47, 16);
             this.labelControl5.TabIndex = 16;
-            this.labelControl5.Text = "Musteri:";
+            this.labelControl5.Text = "Müşteri:";
             // 
             // txt_musteri
             // 
@@ -213,9 +214,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl4.Location = new System.Drawing.Point(65, 202);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(75, 16);
+            this.labelControl4.Size = new System.Drawing.Size(79, 16);
             this.labelControl4.TabIndex = 14;
-            this.labelControl4.Text = "Urun Asama:";
+            this.labelControl4.Text = "Ürün Aşama :";
             // 
             // txt_asama
             // 
@@ -230,9 +231,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl3.Location = new System.Drawing.Point(65, 68);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(63, 16);
+            this.labelControl3.Size = new System.Drawing.Size(67, 16);
             this.labelControl3.TabIndex = 12;
-            this.labelControl3.Text = "Siparis No:";
+            this.labelControl3.Text = "Sipariş No :";
             // 
             // txt_sipNo
             // 
@@ -245,17 +246,17 @@ namespace test_kooil.Formlar
             // 
             this.labelControl2.Location = new System.Drawing.Point(65, 324);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 16);
+            this.labelControl2.Size = new System.Drawing.Size(24, 16);
             this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "Islem Notu";
+            this.labelControl2.Text = "Not:";
             // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(64, 161);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(55, 16);
+            this.labelControl1.Size = new System.Drawing.Size(59, 16);
             this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "Igne Tipi:";
+            this.labelControl1.Text = "İğne Tipi :";
             // 
             // txt_sipIgneTur
             // 
@@ -305,7 +306,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_RaporOzet";
-            this.Text = "Rapor Ozet";
+            this.Text = "Rapor Özet";
             this.Load += new System.EventHandler(this.Frm_RaporOzet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

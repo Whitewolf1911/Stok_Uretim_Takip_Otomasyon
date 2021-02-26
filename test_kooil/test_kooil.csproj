@@ -112,16 +112,34 @@
     <Compile Include="Entity\TBL_ARKASIYIR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_BILEME.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_DILCAKMA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_IGNELER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_ISILISLEM.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_KANALACMA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_KANALBUYUTME.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_KONTROL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_PERSONEL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_POLISAJ1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_POLISAJ2.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_PRES.cs">
@@ -134,6 +152,15 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_STOK.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_TEMPER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_UCSIYIRMA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_YIKAMA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_YOLKOPYALA.cs">
@@ -211,6 +238,24 @@
     <Compile Include="Formlar\Frm_SiyirmaRaporlari.Designer.cs">
       <DependentUpon>Frm_SiyirmaRaporlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirma.Designer.cs">
+      <DependentUpon>Frm_UcSiyirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirmaEkle.Designer.cs">
+      <DependentUpon>Frm_UcSiyirmaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirmaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UcSiyirmaRapor.Designer.cs">
+      <DependentUpon>Frm_UcSiyirmaRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniIgneEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiyirmaRaporlari.resx">
       <DependentUpon>Frm_SiyirmaRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UcSiyirma.resx">
+      <DependentUpon>Frm_UcSiyirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UcSiyirmaEkle.resx">
+      <DependentUpon>Frm_UcSiyirmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UcSiyirmaRapor.resx">
+      <DependentUpon>Frm_UcSiyirmaRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>

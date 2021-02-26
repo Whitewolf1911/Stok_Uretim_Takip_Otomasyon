@@ -80,6 +80,7 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.Btn_UcSiyirma = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -123,9 +124,10 @@ namespace test_kooil
             this.barButtonItem10,
             this.Btn_GunlukHareketler,
             this.barButtonItem3,
-            this.barButtonItem12});
+            this.barButtonItem12,
+            this.Btn_UcSiyirma});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 37;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -453,7 +455,7 @@ namespace test_kooil
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_pres);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_arkaSiyirma);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_YolKopyala);
-            this.ribbonPageGroup2.ItemLinks.Add(this.A);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_UcSiyirma);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem18);
@@ -523,6 +525,15 @@ namespace test_kooil
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // Btn_UcSiyirma
+            // 
+            this.Btn_UcSiyirma.Caption = "4. Uç Sıyırma";
+            this.Btn_UcSiyirma.Id = 37;
+            this.Btn_UcSiyirma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.Image")));
+            this.Btn_UcSiyirma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.LargeImage")));
+            this.Btn_UcSiyirma.Name = "Btn_UcSiyirma";
+            this.Btn_UcSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UcSiyirma_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -590,6 +601,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_GunlukHareketler;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem Btn_UcSiyirma;
     }
 }
 

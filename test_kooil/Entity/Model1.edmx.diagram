@@ -12,11 +12,20 @@
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_STOK" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="DB_kooil_testModel.FK_TBL_SIPARIS_TBL_IGNELER" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KANALACMA" Width="1.5" PointX="8.875" PointY="3.5" />
-        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KONTROL" Width="1.5" PointX="5.625" PointY="1.125" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KONTROL" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_PRES" Width="1.5" PointX="5.625" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_ARKASIYIR" Width="1.5" PointX="7.25" PointY="3.5" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_RAPOR" Width="1.5" PointX="5.375" PointY="6.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_YOLKOPYALA" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_BILEME" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_DILCAKMA" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_ISILISLEM" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KANALBUYUTME" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_POLISAJ1" Width="1.5" PointX="6.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_POLISAJ2" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_TEMPER" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_UCSIYIRMA" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_YIKAMA" Width="1.5" PointX="0.75" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

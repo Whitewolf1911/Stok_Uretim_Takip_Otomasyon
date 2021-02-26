@@ -24,6 +24,7 @@ namespace test_kooil
         Frm_SiparisKontrol frmSiparisKontrol;
         Frm_RaporOzet frmRapor;
         Frm_YolKopyala frmKopyala;
+        Frm_UcSiyirma frmUcSiyir;
         
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -106,6 +107,18 @@ namespace test_kooil
                 frmKopyala = new Frm_YolKopyala();
                 frmKopyala.MdiParent = this;
                 frmKopyala.Show();
+
+            }
+        }
+
+        private void Btn_UcSiyirma_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmUcSiyir == null || frmUcSiyir.IsDisposed)
+            {
+
+                frmUcSiyir = new Frm_UcSiyirma();
+                frmUcSiyir.MdiParent = this;
+                frmUcSiyir.Show();
 
             }
         }

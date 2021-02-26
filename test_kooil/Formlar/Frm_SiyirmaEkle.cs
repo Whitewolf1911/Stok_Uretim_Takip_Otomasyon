@@ -84,9 +84,10 @@ namespace test_kooil.Formlar
                                          x.SIPARISNOID,
                                          IgneKodu = x.TBL_IGNELER.IGNEKOD,
                                          IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI
+                                         x.SIPARISASAMASI,
+                                         x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.SIPARISASAMASI == 2);
+                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
 
             lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";

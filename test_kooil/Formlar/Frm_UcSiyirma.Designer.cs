@@ -1,7 +1,7 @@
 ﻿
 namespace test_kooil.Formlar
 {
-    partial class Frm_YolKopyala
+    partial class Frm_UcSiyirma
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace test_kooil.Formlar
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_YolKopyala));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_UcSiyirma));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -59,7 +59,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Location = new System.Drawing.Point(1133, 12);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
-            this.groupControl1.TabIndex = 5;
+            this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Yol Kopyalama";
             // 
             // labelControl2
@@ -129,7 +129,7 @@ namespace test_kooil.Formlar
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1123, 604);
-            this.gridControl1.TabIndex = 4;
+            this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -138,18 +138,18 @@ namespace test_kooil.Formlar
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged_1);
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // Frm_YolKopyala
+            // Frm_UcSiyirma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
-            this.Name = "Frm_YolKopyala";
-            this.Text = "Yol Kopyalama";
-            this.Load += new System.EventHandler(this.Frm_YolKopyala_Load);
+            this.Name = "Frm_UcSiyirma";
+            this.Text = "Uç Sıyırma";
+            this.Load += new System.EventHandler(this.Frm_UcSiyirma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

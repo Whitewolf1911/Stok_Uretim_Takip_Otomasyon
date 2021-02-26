@@ -36,5 +36,14 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_ARKASIYIR> TBL_ARKASIYIR { get; set; }
         public virtual DbSet<TBL_RAPOR> TBL_RAPOR { get; set; }
         public virtual DbSet<TBL_YOLKOPYALA> TBL_YOLKOPYALA { get; set; }
+        public virtual DbSet<TBL_BILEME> TBL_BILEME { get; set; }
+        public virtual DbSet<TBL_DILCAKMA> TBL_DILCAKMA { get; set; }
+        public virtual DbSet<TBL_ISILISLEM> TBL_ISILISLEM { get; set; }
+        public virtual DbSet<TBL_KANALBUYUTME> TBL_KANALBUYUTME { get; set; }
+        public virtual DbSet<TBL_POLISAJ1> TBL_POLISAJ1 { get; set; }
+        public virtual DbSet<TBL_POLISAJ2> TBL_POLISAJ2 { get; set; }
+        public virtual DbSet<TBL_TEMPER> TBL_TEMPER { get; set; }
+        public virtual DbSet<TBL_UCSIYIRMA> TBL_UCSIYIRMA { get; set; }
+        public virtual DbSet<TBL_YIKAMA> TBL_YIKAMA { get; set; }
     }
 }
