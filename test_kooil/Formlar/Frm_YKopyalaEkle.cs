@@ -12,30 +12,33 @@ using test_kooil.Entity;
 
 namespace test_kooil.Formlar
 {
-    public partial class Frm_SiyirmaEkle : Form
+    public partial class Frm_YKopyalaEkle : Form
     {
-        public Frm_SiyirmaEkle()
+        public Frm_YKopyalaEkle()
         {
             InitializeComponent();
         }
-
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {    //KAYDET BUTONU
-            TBL_ARKASIYIR siyrilanUrun = new TBL_ARKASIYIR();
+      
+        private void Btn_Kaydet_Click(object sender, EventArgs e)
+        {
+            // EKLE BUTONU
 
-            siyrilanUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == siyrilanUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-            siyrilanUrun.IGNEKODU = igneKodu.ToString();
-            siyrilanUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            siyrilanUrun.TARIH = date_BasimTarihi.DateTime;
-            siyrilanUrun.NOT = text_Not.Text;
-            siyrilanUrun.RAPORLAYAN = text_Raporlayan.Text;
-            db.TBL_ARKASIYIR.Add(siyrilanUrun);
+            //ADDING TO TBL_PRES
+
+            TBL_YOLKOPYALA islenenUrun = new TBL_YOLKOPYALA();
+            islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+            islenenUrun.IGNEKODU = igneKodu.ToString();
+            islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+            islenenUrun.TARIH = date_BasimTarihi.DateTime;
+            islenenUrun.NOT = text_Not.Text;
+            islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+            db.TBL_YOLKOPYALA.Add(islenenUrun);
             db.SaveChanges();
 
-            // ADDING TBL_RAPOR
+            // ADDING TO TBL_RAPORLAR
 
             TBL_RAPOR rapor = new TBL_RAPOR();
             rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
@@ -44,18 +47,20 @@ namespace test_kooil.Formlar
             rapor.TARIH = date_BasimTarihi.DateTime;
             rapor.NOT = text_Not.Text;
             rapor.RAPORLAYAN = text_Raporlayan.Text;
-            rapor.ISLEM = "Arka Sıyırma";
-
+            rapor.ISLEM = "Yol Kopyalama";
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 
 
-
-            XtraMessageBox.Show("Arka Siyirma Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            XtraMessageBox.Show("Yol Kopyalama Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
+
+
+
+
+            //TODO bu sorguya gerek kaldi mi ???
             DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
             if (siradakiAsamaSorgu == DialogResult.Yes)
             {
@@ -63,8 +68,16 @@ namespace test_kooil.Formlar
                 //pres islemi tamamlandiysa siradaki asamaya gecsin
                 //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
 
-                var deger = db.TBL_SIPARIS.Find(siyrilanUrun.SIPARISNO);
-                deger.SIPARISASAMASI = 2 ; //siparis asamasini ayarla
+                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+                if (deger.SIPARISASAMASI < 3)
+                {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
+                    deger.SIPARISASAMASI = 3; //siparis asamasini guncelle 
+
+
+                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune gecerim
+
+
+                }
                 db.SaveChanges();
 
             }
@@ -74,28 +87,36 @@ namespace test_kooil.Formlar
             }
             this.Close();
 
+
         }
 
-        private void Frm_SiyirmaEkle_Load(object sender, EventArgs e)
+        private void Frm_YKopyalaEkle_Load(object sender, EventArgs e)
         {
-            var siyrilcakUrunler = (from x in db.TBL_SIPARIS
+            var islenecekUrunler = (from x in db.TBL_SIPARIS
                                      select new
                                      {
                                          x.SIPARISNOID,
                                          IgneKodu = x.TBL_IGNELER.IGNEKOD,
                                          IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI
+                                         x.SIPARISASAMASI,
+                                         x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.SIPARISASAMASI == 2);
+                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
 
             lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
-            lookUp_Siparis.Properties.DataSource = siyrilcakUrunler;
-
+            lookUp_Siparis.Properties.DataSource = islenecekUrunler;
             lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
 
             lookUp_Siparis.Properties.Columns[3].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
+
+
+        }
+
+        private void Btn_iptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

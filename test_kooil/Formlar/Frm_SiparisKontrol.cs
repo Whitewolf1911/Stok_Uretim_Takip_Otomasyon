@@ -98,18 +98,15 @@ namespace test_kooil.Formlar
                     txt_asama.Text = "Arka Siyirmada";
                 }
 
+                //TODO Diger asamalar eklenecek.
+
             }
                 
-
-            
-            
-            
-            
+                      
         }
 
         private void labelControl4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ShowGridPreview(GridControl grid)

@@ -23,6 +23,7 @@ namespace test_kooil
         Frm_ArkaSiyirma frmArkaSiyir;
         Frm_SiparisKontrol frmSiparisKontrol;
         Frm_RaporOzet frmRapor;
+        Frm_YolKopyala frmKopyala;
         
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -95,6 +96,17 @@ namespace test_kooil
                 frmRapor = new Frm_RaporOzet();
                 frmRapor.MdiParent = this;
                 frmRapor.Show();
+            }
+        }
+
+        private void Btn_YolKopyala_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmKopyala == null || frmKopyala.IsDisposed) {
+
+                frmKopyala = new Frm_YolKopyala();
+                frmKopyala.MdiParent = this;
+                frmKopyala.Show();
+
             }
         }
     }

@@ -43,7 +43,7 @@ namespace test_kooil
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_pres = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_arkaSiyirma = new DevExpress.XtraBars.BarButtonItem();
-            this.asam = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_YolKopyala = new DevExpress.XtraBars.BarButtonItem();
             this.A = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
@@ -65,6 +65,7 @@ namespace test_kooil
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GunlukHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -79,7 +80,6 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +101,7 @@ namespace test_kooil
             this.barButtonItem9,
             this.Btn_pres,
             this.Btn_arkaSiyirma,
-            this.asam,
+            this.Btn_YolKopyala,
             this.A,
             this.barButtonItem16,
             this.barButtonItem17,
@@ -223,13 +223,14 @@ namespace test_kooil
             this.Btn_arkaSiyirma.Name = "Btn_arkaSiyirma";
             this.Btn_arkaSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_arkaSiyirma_ItemClick);
             // 
-            // asam
+            // Btn_YolKopyala
             // 
-            this.asam.Caption = "3. Yol Kopyalama";
-            this.asam.Id = 12;
-            this.asam.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("asam.ImageOptions.Image")));
-            this.asam.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("asam.ImageOptions.LargeImage")));
-            this.asam.Name = "asam";
+            this.Btn_YolKopyala.Caption = "3. Yol Kopyalama";
+            this.Btn_YolKopyala.Id = 12;
+            this.Btn_YolKopyala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_YolKopyala.ImageOptions.Image")));
+            this.Btn_YolKopyala.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_YolKopyala.ImageOptions.LargeImage")));
+            this.Btn_YolKopyala.Name = "Btn_YolKopyala";
+            this.Btn_YolKopyala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_YolKopyala_ItemClick);
             // 
             // A
             // 
@@ -291,7 +292,7 @@ namespace test_kooil
             // 
             // barButtonItem22
             // 
-            this.barButtonItem22.Caption = "11. Yıkama";
+            this.barButtonItem22.Caption = "12. Yıkama";
             this.barButtonItem22.Id = 20;
             this.barButtonItem22.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.Image")));
             this.barButtonItem22.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.LargeImage")));
@@ -299,7 +300,7 @@ namespace test_kooil
             // 
             // barButtonItem23
             // 
-            this.barButtonItem23.Caption = "12. Bileme";
+            this.barButtonItem23.Caption = "13. Bileme";
             this.barButtonItem23.Id = 21;
             this.barButtonItem23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.Image")));
             this.barButtonItem23.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.LargeImage")));
@@ -307,7 +308,7 @@ namespace test_kooil
             // 
             // barButtonItem24
             // 
-            this.barButtonItem24.Caption = "13. Kontrol";
+            this.barButtonItem24.Caption = "14. Kontrol";
             this.barButtonItem24.Id = 22;
             this.barButtonItem24.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.Image")));
             this.barButtonItem24.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.LargeImage")));
@@ -401,6 +402,14 @@ namespace test_kooil
             this.barButtonItem3.Id = 35;
             this.barButtonItem3.Name = "barButtonItem3";
             // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "10. Isıl İşlem";
+            this.barButtonItem12.Id = 36;
+            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -443,7 +452,7 @@ namespace test_kooil
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_pres);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_arkaSiyirma);
-            this.ribbonPageGroup2.ItemLinks.Add(this.asam);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_YolKopyala);
             this.ribbonPageGroup2.ItemLinks.Add(this.A);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
@@ -514,14 +523,6 @@ namespace test_kooil
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barButtonItem12
-            // 
-            this.barButtonItem12.Caption = "10. Isıl İşlem";
-            this.barButtonItem12.Id = 36;
-            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,7 +559,7 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem Btn_pres;
         private DevExpress.XtraBars.BarButtonItem Btn_arkaSiyirma;
-        private DevExpress.XtraBars.BarButtonItem asam;
+        private DevExpress.XtraBars.BarButtonItem Btn_YolKopyala;
         private DevExpress.XtraBars.BarButtonItem A;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;

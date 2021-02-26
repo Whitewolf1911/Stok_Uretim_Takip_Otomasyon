@@ -95,13 +95,18 @@ namespace test_kooil.Formlar
                                          x.SIPARISNOID,
                                          IgneKodu = x.TBL_IGNELER.IGNEKOD,
                                          IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI
+                                         x.SIPARISASAMASI,
+                                         x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.SIPARISASAMASI == 1);
+                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
 
             lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
             lookUp_Siparis.Properties.DataSource = preslencekUrunler;
+            lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
+
+            lookUp_Siparis.Properties.Columns[3].Visible = false;
+            lookUp_Siparis.Properties.Columns[4].Visible = false;
 
 
         }
@@ -109,6 +114,81 @@ namespace test_kooil.Formlar
         private void Btn_iptal_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureEdit5_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_BasimTarihi_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit4_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit3_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_Not_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_Raporlayan_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void num_IslenenAdet_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lookUp_Siparis_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -73,8 +73,13 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
-            txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null &&
+                gridView1.GetFocusedRowCellValue("NOTLAR") != null) {
+
+                     txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+                     txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+            }
+            
 
         }
     }

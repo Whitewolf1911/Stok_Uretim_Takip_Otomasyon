@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_kooil.Entity;
 
-
 namespace test_kooil.Formlar
 {
-    public partial class Frm_SiyirmaRaporlari : Form
+    public partial class Frm_YKopyalamaRapor : Form
     {
-        public Frm_SiyirmaRaporlari()
+        public Frm_YKopyalamaRapor()
         {
             InitializeComponent();
         }
@@ -52,7 +51,7 @@ namespace test_kooil.Formlar
             txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
         }
 
-        
+
         private void ShowGridPreview(GridControl grid)
         {
             // Check whether the GridControl can be previewed.
@@ -83,10 +82,11 @@ namespace test_kooil.Formlar
             ShowGridPreview(gridControl1);
             PrintGrid(gridControl1);
         }
-        private void Frm_SiyirmaRaporlari_Load(object sender, EventArgs e)
+        private void Frm_YKopyalamaRapor_Load(object sender, EventArgs e)
         {
             listele();
         }
 
+       
     }
 }

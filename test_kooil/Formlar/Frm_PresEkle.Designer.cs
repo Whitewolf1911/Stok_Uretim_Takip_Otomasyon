@@ -68,6 +68,7 @@ namespace test_kooil.Formlar
             this.lookUp_Siparis.Properties.NullText = "Siparis Seciniz";
             this.lookUp_Siparis.Size = new System.Drawing.Size(336, 22);
             this.lookUp_Siparis.TabIndex = 0;
+            this.lookUp_Siparis.EditValueChanged += new System.EventHandler(this.lookUp_Siparis_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -76,6 +77,7 @@ namespace test_kooil.Formlar
             this.labelControl1.Size = new System.Drawing.Size(48, 16);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Siparis :";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // num_IslenenAdet
             // 
@@ -88,6 +90,7 @@ namespace test_kooil.Formlar
             this.num_IslenenAdet.Name = "num_IslenenAdet";
             this.num_IslenenAdet.Size = new System.Drawing.Size(180, 22);
             this.num_IslenenAdet.TabIndex = 2;
+            this.num_IslenenAdet.ValueChanged += new System.EventHandler(this.num_IslenenAdet_ValueChanged);
             // 
             // labelControl2
             // 
@@ -96,6 +99,7 @@ namespace test_kooil.Formlar
             this.labelControl2.Size = new System.Drawing.Size(80, 16);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Islenen Adet :";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl3
             // 
@@ -104,6 +108,7 @@ namespace test_kooil.Formlar
             this.labelControl3.Size = new System.Drawing.Size(73, 16);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Raporlayan :";
+            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // text_Raporlayan
             // 
@@ -111,6 +116,7 @@ namespace test_kooil.Formlar
             this.text_Raporlayan.Name = "text_Raporlayan";
             this.text_Raporlayan.Size = new System.Drawing.Size(180, 22);
             this.text_Raporlayan.TabIndex = 5;
+            this.text_Raporlayan.EditValueChanged += new System.EventHandler(this.text_Raporlayan_EditValueChanged);
             // 
             // labelControl5
             // 
@@ -119,6 +125,7 @@ namespace test_kooil.Formlar
             this.labelControl5.Size = new System.Drawing.Size(28, 16);
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "Not :";
+            this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
             // 
             // text_Not
             // 
@@ -127,6 +134,7 @@ namespace test_kooil.Formlar
             this.text_Not.Size = new System.Drawing.Size(204, 168);
             this.text_Not.TabIndex = 9;
             this.text_Not.Text = "";
+            this.text_Not.TextChanged += new System.EventHandler(this.text_Not_TextChanged);
             // 
             // pictureEdit1
             // 
@@ -139,6 +147,7 @@ namespace test_kooil.Formlar
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(63, 59);
             this.pictureEdit1.TabIndex = 10;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             // 
             // pictureEdit2
             // 
@@ -151,6 +160,7 @@ namespace test_kooil.Formlar
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Size = new System.Drawing.Size(52, 52);
             this.pictureEdit2.TabIndex = 11;
+            this.pictureEdit2.EditValueChanged += new System.EventHandler(this.pictureEdit2_EditValueChanged);
             // 
             // pictureEdit3
             // 
@@ -163,6 +173,7 @@ namespace test_kooil.Formlar
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit3.Size = new System.Drawing.Size(52, 52);
             this.pictureEdit3.TabIndex = 12;
+            this.pictureEdit3.EditValueChanged += new System.EventHandler(this.pictureEdit3_EditValueChanged);
             // 
             // pictureEdit4
             // 
@@ -175,6 +186,7 @@ namespace test_kooil.Formlar
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit4.Size = new System.Drawing.Size(52, 52);
             this.pictureEdit4.TabIndex = 13;
+            this.pictureEdit4.EditValueChanged += new System.EventHandler(this.pictureEdit4_EditValueChanged);
             // 
             // simpleButton1
             // 
@@ -188,7 +200,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_iptal
             // 
-            this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_iptal.ImageOptions.Image")));
             this.Btn_iptal.Location = new System.Drawing.Point(387, 502);
             this.Btn_iptal.Name = "Btn_iptal";
             this.Btn_iptal.Size = new System.Drawing.Size(172, 61);
@@ -203,6 +215,7 @@ namespace test_kooil.Formlar
             this.labelControl4.Size = new System.Drawing.Size(39, 16);
             this.labelControl4.TabIndex = 16;
             this.labelControl4.Text = "Tarih :";
+            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // pictureEdit5
             // 
@@ -215,6 +228,7 @@ namespace test_kooil.Formlar
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit5.Size = new System.Drawing.Size(52, 52);
             this.pictureEdit5.TabIndex = 17;
+            this.pictureEdit5.EditValueChanged += new System.EventHandler(this.pictureEdit5_EditValueChanged);
             // 
             // date_BasimTarihi
             // 
@@ -227,6 +241,7 @@ namespace test_kooil.Formlar
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_BasimTarihi.Size = new System.Drawing.Size(180, 22);
             this.date_BasimTarihi.TabIndex = 18;
+            this.date_BasimTarihi.EditValueChanged += new System.EventHandler(this.date_BasimTarihi_EditValueChanged);
             // 
             // Frm_PresEkle
             // 
