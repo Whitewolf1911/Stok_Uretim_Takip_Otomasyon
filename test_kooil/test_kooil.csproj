@@ -172,11 +172,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmDilCakmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmDilCakmaEkle.Designer.cs">
+      <DependentUpon>FrmDilCakmaEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmKanalAcma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\FrmKanalAcma.Designer.cs">
       <DependentUpon>FrmKanalAcma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmPolisaj1Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmPolisaj1Rapor.Designer.cs">
+      <DependentUpon>FrmPolisaj1Rapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_ArkaSiyirma.cs">
       <SubType>Form</SubType>
@@ -184,17 +196,113 @@
     <Compile Include="Formlar\Frm_ArkaSiyirma.Designer.cs">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_DilCakma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_DilCakma.Designer.cs">
+      <DependentUpon>Frm_DilCakma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_DilCakmaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_DilCakmaRapor.Designer.cs">
+      <DependentUpon>Frm_DilCakmaRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.Designer.cs">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_IsilIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_IsilIslem.Designer.cs">
+      <DependentUpon>Frm_IsilIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_IsilIslemEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_IsilIslemEkle.Designer.cs">
+      <DependentUpon>Frm_IsilIslemEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_IsilIslemRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_IsilIslemRapor.Designer.cs">
+      <DependentUpon>Frm_IsilIslemRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcma.Designer.cs">
+      <DependentUpon>Frm_KanalAcma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcmaEkle.Designer.cs">
+      <DependentUpon>Frm_KanalAcmaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcmaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalAcmaRapor.Designer.cs">
+      <DependentUpon>Frm_KanalAcmaRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutme.Designer.cs">
+      <DependentUpon>Frm_KanalBuyutme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutmeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutmeEkle.Designer.cs">
+      <DependentUpon>Frm_KanalBuyutmeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutmeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_KanalBuyutmeRapor.Designer.cs">
+      <DependentUpon>Frm_KanalBuyutmeRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_Kontrol.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\Frm_Kontrol.Designer.cs">
       <DependentUpon>Frm_Kontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj1.Designer.cs">
+      <DependentUpon>Frm_Polisaj1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj1Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj1Ekle.Designer.cs">
+      <DependentUpon>Frm_Polisaj1Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2.Designer.cs">
+      <DependentUpon>Frm_Polisaj2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2Ekle.Designer.cs">
+      <DependentUpon>Frm_Polisaj2Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Polisaj2Rapor.Designer.cs">
+      <DependentUpon>Frm_Polisaj2Rapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_Pres.cs">
       <SubType>Form</SubType>
@@ -292,11 +400,65 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmDilCakmaEkle.resx">
+      <DependentUpon>FrmDilCakmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmPolisaj1Rapor.resx">
+      <DependentUpon>FrmPolisaj1Rapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_DilCakma.resx">
+      <DependentUpon>Frm_DilCakma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_DilCakmaRapor.resx">
+      <DependentUpon>Frm_DilCakmaRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_IgneTurleri.resx">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_IsilIslem.resx">
+      <DependentUpon>Frm_IsilIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_IsilIslemEkle.resx">
+      <DependentUpon>Frm_IsilIslemEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_IsilIslemRapor.resx">
+      <DependentUpon>Frm_IsilIslemRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalAcma.resx">
+      <DependentUpon>Frm_KanalAcma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalAcmaEkle.resx">
+      <DependentUpon>Frm_KanalAcmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalAcmaRapor.resx">
+      <DependentUpon>Frm_KanalAcmaRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalBuyutme.resx">
+      <DependentUpon>Frm_KanalBuyutme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalBuyutmeEkle.resx">
+      <DependentUpon>Frm_KanalBuyutmeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_KanalBuyutmeRapor.resx">
+      <DependentUpon>Frm_KanalBuyutmeRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Polisaj1.resx">
+      <DependentUpon>Frm_Polisaj1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Polisaj1Ekle.resx">
+      <DependentUpon>Frm_Polisaj1Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Polisaj2.resx">
+      <DependentUpon>Frm_Polisaj2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Polisaj2Ekle.resx">
+      <DependentUpon>Frm_Polisaj2Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Polisaj2Rapor.resx">
+      <DependentUpon>Frm_Polisaj2Rapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Pres.resx">
       <DependentUpon>Frm_Pres.cs</DependentUpon>

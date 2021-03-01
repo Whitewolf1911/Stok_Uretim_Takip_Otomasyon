@@ -45,11 +45,11 @@ namespace test_kooil
             this.Btn_arkaSiyirma = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_YolKopyala = new DevExpress.XtraBars.BarButtonItem();
             this.A = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_KanalAcma = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_kanalBuyutme = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Polisaj1 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_DilCakma = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_polisaj2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
@@ -65,7 +65,8 @@ namespace test_kooil
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GunlukHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_IsilIslem = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_UcSiyirma = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -80,7 +81,6 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.Btn_UcSiyirma = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -104,11 +104,11 @@ namespace test_kooil
             this.Btn_arkaSiyirma,
             this.Btn_YolKopyala,
             this.A,
-            this.barButtonItem16,
-            this.barButtonItem17,
-            this.barButtonItem18,
-            this.barButtonItem19,
-            this.barButtonItem20,
+            this.Btn_KanalAcma,
+            this.Btn_kanalBuyutme,
+            this.Btn_Polisaj1,
+            this.Btn_DilCakma,
+            this.Btn_polisaj2,
             this.barButtonItem21,
             this.barButtonItem22,
             this.barButtonItem23,
@@ -124,7 +124,7 @@ namespace test_kooil
             this.barButtonItem10,
             this.Btn_GunlukHareketler,
             this.barButtonItem3,
-            this.barButtonItem12,
+            this.Btn_IsilIslem,
             this.Btn_UcSiyirma});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 38;
@@ -244,45 +244,50 @@ namespace test_kooil
             this.A.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("A.ImageOptions.LargeImage")));
             this.A.Name = "A";
             // 
-            // barButtonItem16
+            // Btn_KanalAcma
             // 
-            this.barButtonItem16.Caption = "5. Kanal Açma";
-            this.barButtonItem16.Id = 14;
-            this.barButtonItem16.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.Image")));
-            this.barButtonItem16.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.LargeImage")));
-            this.barButtonItem16.Name = "barButtonItem16";
+            this.Btn_KanalAcma.Caption = "5. Kanal Açma";
+            this.Btn_KanalAcma.Id = 14;
+            this.Btn_KanalAcma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_KanalAcma.ImageOptions.Image")));
+            this.Btn_KanalAcma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_KanalAcma.ImageOptions.LargeImage")));
+            this.Btn_KanalAcma.Name = "Btn_KanalAcma";
+            this.Btn_KanalAcma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
-            // barButtonItem17
+            // Btn_kanalBuyutme
             // 
-            this.barButtonItem17.Caption = "6. Kanal Büyütme";
-            this.barButtonItem17.Id = 15;
-            this.barButtonItem17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
-            this.barButtonItem17.Name = "barButtonItem17";
+            this.Btn_kanalBuyutme.Caption = "6. Kanal Büyütme";
+            this.Btn_kanalBuyutme.Id = 15;
+            this.Btn_kanalBuyutme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_kanalBuyutme.ImageOptions.Image")));
+            this.Btn_kanalBuyutme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_kanalBuyutme.ImageOptions.LargeImage")));
+            this.Btn_kanalBuyutme.Name = "Btn_kanalBuyutme";
+            this.Btn_kanalBuyutme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_kanalBuyutme_ItemClick);
             // 
-            // barButtonItem18
+            // Btn_Polisaj1
             // 
-            this.barButtonItem18.Caption = "7. Polisaj1";
-            this.barButtonItem18.Id = 16;
-            this.barButtonItem18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.Image")));
-            this.barButtonItem18.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.LargeImage")));
-            this.barButtonItem18.Name = "barButtonItem18";
+            this.Btn_Polisaj1.Caption = "7. Polisaj1";
+            this.Btn_Polisaj1.Id = 16;
+            this.Btn_Polisaj1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Polisaj1.ImageOptions.Image")));
+            this.Btn_Polisaj1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Polisaj1.ImageOptions.LargeImage")));
+            this.Btn_Polisaj1.Name = "Btn_Polisaj1";
+            this.Btn_Polisaj1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Polisaj1_ItemClick);
             // 
-            // barButtonItem19
+            // Btn_DilCakma
             // 
-            this.barButtonItem19.Caption = "8. Dil Çakma";
-            this.barButtonItem19.Id = 17;
-            this.barButtonItem19.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.ImageOptions.Image")));
-            this.barButtonItem19.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.ImageOptions.LargeImage")));
-            this.barButtonItem19.Name = "barButtonItem19";
+            this.Btn_DilCakma.Caption = "8. Dil Çakma";
+            this.Btn_DilCakma.Id = 17;
+            this.Btn_DilCakma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_DilCakma.ImageOptions.Image")));
+            this.Btn_DilCakma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_DilCakma.ImageOptions.LargeImage")));
+            this.Btn_DilCakma.Name = "Btn_DilCakma";
+            this.Btn_DilCakma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_DilCakma_ItemClick);
             // 
-            // barButtonItem20
+            // Btn_polisaj2
             // 
-            this.barButtonItem20.Caption = "9. Polisaj2";
-            this.barButtonItem20.Id = 18;
-            this.barButtonItem20.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.Image")));
-            this.barButtonItem20.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.LargeImage")));
-            this.barButtonItem20.Name = "barButtonItem20";
+            this.Btn_polisaj2.Caption = "9. Polisaj2";
+            this.Btn_polisaj2.Id = 18;
+            this.Btn_polisaj2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_polisaj2.ImageOptions.Image")));
+            this.Btn_polisaj2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_polisaj2.ImageOptions.LargeImage")));
+            this.Btn_polisaj2.Name = "Btn_polisaj2";
+            this.Btn_polisaj2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_polisaj2_ItemClick);
             // 
             // barButtonItem21
             // 
@@ -404,13 +409,23 @@ namespace test_kooil
             this.barButtonItem3.Id = 35;
             this.barButtonItem3.Name = "barButtonItem3";
             // 
-            // barButtonItem12
+            // Btn_IsilIslem
             // 
-            this.barButtonItem12.Caption = "10. Isıl İşlem";
-            this.barButtonItem12.Id = 36;
-            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.Btn_IsilIslem.Caption = "10. Isıl İşlem";
+            this.Btn_IsilIslem.Id = 36;
+            this.Btn_IsilIslem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.Btn_IsilIslem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.Btn_IsilIslem.Name = "Btn_IsilIslem";
+            this.Btn_IsilIslem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_IsilIslem_ItemClick);
+            // 
+            // Btn_UcSiyirma
+            // 
+            this.Btn_UcSiyirma.Caption = "4. Uç Sıyırma";
+            this.Btn_UcSiyirma.Id = 37;
+            this.Btn_UcSiyirma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UcSiyirma.ImageOptions.Image")));
+            this.Btn_UcSiyirma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_UcSiyirma.ImageOptions.LargeImage")));
+            this.Btn_UcSiyirma.Name = "Btn_UcSiyirma";
+            this.Btn_UcSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UcSiyirma_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -456,12 +471,12 @@ namespace test_kooil
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_arkaSiyirma);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_YolKopyala);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_UcSiyirma);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem18);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem19);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem20);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_KanalAcma);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_kanalBuyutme);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Polisaj1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_DilCakma);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_polisaj2);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_IsilIslem);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem21);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem22);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem23);
@@ -525,15 +540,6 @@ namespace test_kooil
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // Btn_UcSiyirma
-            // 
-            this.Btn_UcSiyirma.Caption = "4. Uç Sıyırma";
-            this.Btn_UcSiyirma.Id = 37;
-            this.Btn_UcSiyirma.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.Image")));
-            this.Btn_UcSiyirma.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.ImageOptions.LargeImage")));
-            this.Btn_UcSiyirma.Name = "Btn_UcSiyirma";
-            this.Btn_UcSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UcSiyirma_ItemClick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -572,11 +578,11 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_arkaSiyirma;
         private DevExpress.XtraBars.BarButtonItem Btn_YolKopyala;
         private DevExpress.XtraBars.BarButtonItem A;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem Btn_KanalAcma;
+        private DevExpress.XtraBars.BarButtonItem Btn_kanalBuyutme;
+        private DevExpress.XtraBars.BarButtonItem Btn_Polisaj1;
+        private DevExpress.XtraBars.BarButtonItem Btn_DilCakma;
+        private DevExpress.XtraBars.BarButtonItem Btn_polisaj2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
@@ -600,7 +606,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem Btn_GunlukHareketler;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem Btn_IsilIslem;
         private DevExpress.XtraBars.BarButtonItem Btn_UcSiyirma;
     }
 }

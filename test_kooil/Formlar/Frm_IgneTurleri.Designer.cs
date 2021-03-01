@@ -102,7 +102,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Ozellikler";
+            this.groupControl1.Text = "Özellikler";
             // 
             // pictureEdit5
             // 
@@ -213,9 +213,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl4.Location = new System.Drawing.Point(81, 223);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 16);
+            this.labelControl4.Size = new System.Drawing.Size(56, 16);
             this.labelControl4.TabIndex = 5;
-            this.labelControl4.Text = "Isil Islem :";
+            this.labelControl4.Text = "Isıl İşlem:";
             // 
             // labelControl3
             // 
@@ -229,9 +229,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl2.Location = new System.Drawing.Point(83, 105);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(68, 16);
+            this.labelControl2.Size = new System.Drawing.Size(72, 16);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "BirimFiyati :";
+            this.labelControl2.Text = "Birim Fiyatı :";
             // 
             // labelControl1
             // 
@@ -239,7 +239,7 @@ namespace test_kooil.Formlar
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(62, 16);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "IgneKodu :";
+            this.labelControl1.Text = "İğne Kodu:";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // Btn_Yenile
@@ -260,7 +260,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_IgneTurleri";
-            this.Text = "Igne Turleri";
+            this.Text = "İğne Türleri";
             this.Load += new System.EventHandler(this.Frm_IgneTurleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

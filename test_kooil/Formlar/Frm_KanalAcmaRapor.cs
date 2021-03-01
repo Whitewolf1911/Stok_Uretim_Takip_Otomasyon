@@ -10,18 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_kooil.Entity;
 
+
 namespace test_kooil.Formlar
 {
-    public partial class Frm_YKopyalamaRapor : Form
+    public partial class Frm_KanalAcmaRapor : Form
     {
-        public Frm_YKopyalamaRapor()
+        public Frm_KanalAcmaRapor()
         {
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele()
         {
-            var veriler = (from x in db.TBL_YOLKOPYALA  // change this !!!
+            var veriler = (from x in db.TBL_KANALACMA
                            select new
                            {
                                x.SIPARISNO,
@@ -38,10 +39,34 @@ namespace test_kooil.Formlar
         }
         private void Btn_Yenile_Click(object sender, EventArgs e)
         {
+            listele();       
+        }
+
+        private void Frm_KanalAcmaRapor_Load(object sender, EventArgs e)
+        {
             listele();
         }
 
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
+                gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
+                gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
+                gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
+                gridView1.GetFocusedRowCellValue("TARIH") != null &&
+                gridView1.GetFocusedRowCellValue("NOT") != null
+                )
+            {
 
+                txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
+                txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString();
+                txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
+                txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
+                txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString();
+                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+
+            }
+        }
         private void ShowGridPreview(GridControl grid)
         {
             // Check whether the GridControl can be previewed.
@@ -72,31 +97,6 @@ namespace test_kooil.Formlar
             ShowGridPreview(gridControl1);
             PrintGrid(gridControl1);
         }
-        private void Frm_YKopyalamaRapor_Load(object sender, EventArgs e)
-        {
-            listele();
-        }
-
-        private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
-                gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
-                gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
-                gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
-                gridView1.GetFocusedRowCellValue("TARIH") != null &&
-                gridView1.GetFocusedRowCellValue("NOT") != null
-                )
-            {
-
-                txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
-                txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString();
-                txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
-                txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
-                txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString();
-                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
-
-
-            }
-        }
+        
     }
 }

@@ -21,7 +21,7 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele()
         {
-            var veriler = (from x in db.TBL_ARKASIYIR
+            var veriler = (from x in db.TBL_UCSIYIRMA
                            select new
                            {
                                x.SIPARISNO,

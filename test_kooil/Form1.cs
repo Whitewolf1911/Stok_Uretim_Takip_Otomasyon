@@ -25,7 +25,12 @@ namespace test_kooil
         Frm_RaporOzet frmRapor;
         Frm_YolKopyala frmKopyala;
         Frm_UcSiyirma frmUcSiyir;
-        
+        Frm_KanalAcma frmKanalAcma;
+        Frm_KanalBuyutme frmkanalbuyut;
+        Frm_Polisaj1 frmpoli1;
+        Frm_DilCakma frmDilCak;
+        Frm_Polisaj2 frmPolisaj2;
+        Frm_IsilIslem frmIsilIslem;
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
@@ -119,6 +124,80 @@ namespace test_kooil
                 frmUcSiyir = new Frm_UcSiyirma();
                 frmUcSiyir.MdiParent = this;
                 frmUcSiyir.Show();
+
+            }
+        }
+
+        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //Kanal acma butonu
+        {
+            if (frmKanalAcma == null || frmKanalAcma.IsDisposed)
+            {
+
+                frmKanalAcma = new Frm_KanalAcma();
+                frmKanalAcma.MdiParent = this;
+                frmKanalAcma.Show();
+
+            }
+
+        }
+
+        private void Btn_kanalBuyutme_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmkanalbuyut == null || frmkanalbuyut.IsDisposed)
+            {
+
+                frmkanalbuyut = new Frm_KanalBuyutme();
+                frmkanalbuyut.MdiParent = this;
+                frmkanalbuyut.Show();
+
+            }
+        }
+
+        private void Btn_Polisaj1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmpoli1 == null || frmpoli1.IsDisposed)
+            {
+
+                frmpoli1 = new Frm_Polisaj1();
+                frmpoli1.MdiParent = this;
+                frmpoli1.Show();
+
+            }
+        }
+
+        private void Btn_DilCakma_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmDilCak == null || frmDilCak.IsDisposed)
+            {
+
+                frmDilCak = new Frm_DilCakma();
+                frmDilCak.MdiParent = this;
+                frmDilCak.Show();
+
+            }
+        }
+
+        private void Btn_polisaj2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmPolisaj2 == null || frmPolisaj2.IsDisposed)
+            {
+
+                frmPolisaj2 = new Frm_Polisaj2();
+                frmPolisaj2.MdiParent = this;
+                frmPolisaj2.Show();
+
+            }
+        }
+
+        private void Btn_IsilIslem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmIsilIslem == null || frmIsilIslem.IsDisposed)
+            {
+
+                frmIsilIslem = new Frm_IsilIslem();
+                frmIsilIslem.MdiParent = this;
+                frmIsilIslem.Show();
 
             }
         }

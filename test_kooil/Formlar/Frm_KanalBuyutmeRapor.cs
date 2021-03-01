@@ -12,16 +12,16 @@ using test_kooil.Entity;
 
 namespace test_kooil.Formlar
 {
-    public partial class Frm_YKopyalamaRapor : Form
+    public partial class Frm_KanalBuyutmeRapor : Form
     {
-        public Frm_YKopyalamaRapor()
+        public Frm_KanalBuyutmeRapor()
         {
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele()
         {
-            var veriler = (from x in db.TBL_YOLKOPYALA  // change this !!!
+            var veriler = (from x in db.TBL_KANALBUYUTME
                            select new
                            {
                                x.SIPARISNO,
@@ -36,12 +36,6 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = veriler;
 
         }
-        private void Btn_Yenile_Click(object sender, EventArgs e)
-        {
-            listele();
-        }
-
-
         private void ShowGridPreview(GridControl grid)
         {
             // Check whether the GridControl can be previewed.
@@ -72,12 +66,13 @@ namespace test_kooil.Formlar
             ShowGridPreview(gridControl1);
             PrintGrid(gridControl1);
         }
-        private void Frm_YKopyalamaRapor_Load(object sender, EventArgs e)
+
+        private void Frm_KanalBuyutmeRapor_Load(object sender, EventArgs e)
         {
             listele();
         }
 
-        private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
                 gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
@@ -97,6 +92,11 @@ namespace test_kooil.Formlar
 
 
             }
+        }
+
+        private void Btn_Yenile_Click(object sender, EventArgs e)
+        {
+            listele();
         }
     }
 }
