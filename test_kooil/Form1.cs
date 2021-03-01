@@ -31,6 +31,9 @@ namespace test_kooil
         Frm_DilCakma frmDilCak;
         Frm_Polisaj2 frmPolisaj2;
         Frm_IsilIslem frmIsilIslem;
+        Frm_Temper frmTemper;
+        Frm_Yikama frmYikama;
+        Frm_Bileme frmBileme;
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
@@ -198,6 +201,47 @@ namespace test_kooil
                 frmIsilIslem = new Frm_IsilIslem();
                 frmIsilIslem.MdiParent = this;
                 frmIsilIslem.Show();
+
+            }
+        }
+
+        private void Btn_Temper_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmTemper == null || frmTemper.IsDisposed)
+            {
+
+                frmTemper = new Frm_Temper();
+                frmTemper.MdiParent = this;
+                frmTemper.Show();
+
+            }
+        }
+
+        private void barButtonItem30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void Btn_Yikama_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmYikama == null || frmYikama.IsDisposed)
+            {
+
+                frmYikama = new Frm_Yikama();
+                frmYikama.MdiParent = this;
+                frmYikama.Show();
+
+            }
+        }
+
+        private void Btn_Bileme_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmBileme == null || frmBileme.IsDisposed)
+            {
+
+                frmBileme = new Frm_Bileme();
+                frmBileme.MdiParent = this;
+                frmBileme.Show();
 
             }
         }

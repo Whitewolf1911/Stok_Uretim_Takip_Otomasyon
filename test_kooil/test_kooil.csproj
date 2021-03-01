@@ -196,6 +196,24 @@
     <Compile Include="Formlar\Frm_ArkaSiyirma.Designer.cs">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_Bileme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Bileme.Designer.cs">
+      <DependentUpon>Frm_Bileme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_BilemeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_BilemeEkle.Designer.cs">
+      <DependentUpon>Frm_BilemeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_BilemeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_BilemeRapor.Designer.cs">
+      <DependentUpon>Frm_BilemeRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_DilCakma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +364,24 @@
     <Compile Include="Formlar\Frm_SiyirmaRaporlari.Designer.cs">
       <DependentUpon>Frm_SiyirmaRaporlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_Temper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Temper.Designer.cs">
+      <DependentUpon>Frm_Temper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_TemperEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_TemperEkle.Designer.cs">
+      <DependentUpon>Frm_TemperEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_TemperRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_TemperRapor.Designer.cs">
+      <DependentUpon>Frm_TemperRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_UcSiyirma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +411,24 @@
     </Compile>
     <Compile Include="Formlar\Frm_YeniSiparis.Designer.cs">
       <DependentUpon>Frm_YeniSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Yikama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Yikama.Designer.cs">
+      <DependentUpon>Frm_Yikama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_YikamaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YikamaEkle.Designer.cs">
+      <DependentUpon>Frm_YikamaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_YikamaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YikamaRapor.Designer.cs">
+      <DependentUpon>Frm_YikamaRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_YKopyalaEkle.cs">
       <SubType>Form</SubType>
@@ -408,6 +462,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Bileme.resx">
+      <DependentUpon>Frm_Bileme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_BilemeEkle.resx">
+      <DependentUpon>Frm_BilemeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_BilemeRapor.resx">
+      <DependentUpon>Frm_BilemeRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_DilCakma.resx">
       <DependentUpon>Frm_DilCakma.cs</DependentUpon>
@@ -481,6 +544,15 @@
     <EmbeddedResource Include="Formlar\Frm_SiyirmaRaporlari.resx">
       <DependentUpon>Frm_SiyirmaRaporlari.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Temper.resx">
+      <DependentUpon>Frm_Temper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_TemperEkle.resx">
+      <DependentUpon>Frm_TemperEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_TemperRapor.resx">
+      <DependentUpon>Frm_TemperRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UcSiyirma.resx">
       <DependentUpon>Frm_UcSiyirma.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,6 +567,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniSiparis.resx">
       <DependentUpon>Frm_YeniSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Yikama.resx">
+      <DependentUpon>Frm_Yikama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YikamaEkle.resx">
+      <DependentUpon>Frm_YikamaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YikamaRapor.resx">
+      <DependentUpon>Frm_YikamaRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YKopyalaEkle.resx">
       <DependentUpon>Frm_YKopyalaEkle.cs</DependentUpon>

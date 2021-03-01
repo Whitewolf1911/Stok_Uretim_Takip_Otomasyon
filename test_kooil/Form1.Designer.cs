@@ -50,9 +50,9 @@ namespace test_kooil
             this.Btn_Polisaj1 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_DilCakma = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_polisaj2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Temper = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Yikama = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Bileme = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
@@ -109,9 +109,9 @@ namespace test_kooil
             this.Btn_Polisaj1,
             this.Btn_DilCakma,
             this.Btn_polisaj2,
-            this.barButtonItem21,
-            this.barButtonItem22,
-            this.barButtonItem23,
+            this.Btn_Temper,
+            this.Btn_Yikama,
+            this.Btn_Bileme,
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem27,
@@ -289,29 +289,32 @@ namespace test_kooil
             this.Btn_polisaj2.Name = "Btn_polisaj2";
             this.Btn_polisaj2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_polisaj2_ItemClick);
             // 
-            // barButtonItem21
+            // Btn_Temper
             // 
-            this.barButtonItem21.Caption = "11. Temper";
-            this.barButtonItem21.Id = 19;
-            this.barButtonItem21.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.ImageOptions.Image")));
-            this.barButtonItem21.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.ImageOptions.LargeImage")));
-            this.barButtonItem21.Name = "barButtonItem21";
+            this.Btn_Temper.Caption = "11. Temper";
+            this.Btn_Temper.Id = 19;
+            this.Btn_Temper.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Temper.ImageOptions.Image")));
+            this.Btn_Temper.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Temper.ImageOptions.LargeImage")));
+            this.Btn_Temper.Name = "Btn_Temper";
+            this.Btn_Temper.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Temper_ItemClick);
             // 
-            // barButtonItem22
+            // Btn_Yikama
             // 
-            this.barButtonItem22.Caption = "12. Yıkama";
-            this.barButtonItem22.Id = 20;
-            this.barButtonItem22.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.Image")));
-            this.barButtonItem22.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.LargeImage")));
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.Btn_Yikama.Caption = "12. Yıkama";
+            this.Btn_Yikama.Id = 20;
+            this.Btn_Yikama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yikama.ImageOptions.Image")));
+            this.Btn_Yikama.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Yikama.ImageOptions.LargeImage")));
+            this.Btn_Yikama.Name = "Btn_Yikama";
+            this.Btn_Yikama.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Yikama_ItemClick);
             // 
-            // barButtonItem23
+            // Btn_Bileme
             // 
-            this.barButtonItem23.Caption = "13. Bileme";
-            this.barButtonItem23.Id = 21;
-            this.barButtonItem23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.Image")));
-            this.barButtonItem23.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.LargeImage")));
-            this.barButtonItem23.Name = "barButtonItem23";
+            this.Btn_Bileme.Caption = "13. Bileme";
+            this.Btn_Bileme.Id = 21;
+            this.Btn_Bileme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.Image")));
+            this.Btn_Bileme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.LargeImage")));
+            this.Btn_Bileme.Name = "Btn_Bileme";
+            this.Btn_Bileme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Bileme_ItemClick);
             // 
             // barButtonItem24
             // 
@@ -357,11 +360,12 @@ namespace test_kooil
             // 
             // barButtonItem30
             // 
-            this.barButtonItem30.Caption = "Stok Ekle";
+            this.barButtonItem30.Caption = "Stok Güncelle";
             this.barButtonItem30.Id = 28;
             this.barButtonItem30.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.Image")));
             this.barButtonItem30.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));
             this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
             // barButtonItem31
             // 
@@ -413,8 +417,8 @@ namespace test_kooil
             // 
             this.Btn_IsilIslem.Caption = "10. Isıl İşlem";
             this.Btn_IsilIslem.Id = 36;
-            this.Btn_IsilIslem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.Btn_IsilIslem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.Btn_IsilIslem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_IsilIslem.ImageOptions.Image")));
+            this.Btn_IsilIslem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_IsilIslem.ImageOptions.LargeImage")));
             this.Btn_IsilIslem.Name = "Btn_IsilIslem";
             this.Btn_IsilIslem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_IsilIslem_ItemClick);
             // 
@@ -455,7 +459,6 @@ namespace test_kooil
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem29);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem30);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem31);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // ribbonPage2
@@ -477,9 +480,9 @@ namespace test_kooil
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_DilCakma);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_polisaj2);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_IsilIslem);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem21);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem22);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem23);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Temper);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Yikama);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Bileme);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem24);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
@@ -583,9 +586,9 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_Polisaj1;
         private DevExpress.XtraBars.BarButtonItem Btn_DilCakma;
         private DevExpress.XtraBars.BarButtonItem Btn_polisaj2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
+        private DevExpress.XtraBars.BarButtonItem Btn_Temper;
+        private DevExpress.XtraBars.BarButtonItem Btn_Yikama;
+        private DevExpress.XtraBars.BarButtonItem Btn_Bileme;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
