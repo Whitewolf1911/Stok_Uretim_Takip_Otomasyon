@@ -37,6 +37,10 @@ namespace test_kooil.Formlar
             lookUpEdit_IgneCesit.Properties.ValueMember = "ID";
             lookUpEdit_IgneCesit.Properties.DisplayMember = "IGNEKOD";
             lookUpEdit_IgneCesit.Properties.DataSource = igneler.ToList();
+            lookUpEdit_IgneCesit.Properties.PopulateColumns();
+            lookUpEdit_IgneCesit.Properties.Columns[0].Visible = false;
+
+
 
         }
 

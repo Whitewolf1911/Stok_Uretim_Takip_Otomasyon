@@ -47,6 +47,8 @@ namespace test_kooil.Formlar
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.txt_IsilIslem = new System.Windows.Forms.RichTextBox();
+            this.btn_fotoEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.picBox_Igne = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -55,21 +57,22 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.num_AdetFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Igne)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Iptal
             // 
-            this.Btn_Iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btn_Iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Iptal.ImageOptions.Image")));
             this.Btn_Iptal.Location = new System.Drawing.Point(389, 511);
             this.Btn_Iptal.Name = "Btn_Iptal";
             this.Btn_Iptal.Size = new System.Drawing.Size(172, 61);
             this.Btn_Iptal.TabIndex = 32;
-            this.Btn_Iptal.Text = "Iptal";
+            this.Btn_Iptal.Text = "İptal";
             this.Btn_Iptal.Click += new System.EventHandler(this.Btn_Iptal_Click);
             // 
             // Btn_Kaydet
             // 
-            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
             this.Btn_Kaydet.Location = new System.Drawing.Point(15, 511);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
             this.Btn_Kaydet.Size = new System.Drawing.Size(172, 61);
@@ -147,7 +150,7 @@ namespace test_kooil.Formlar
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(69, 16);
             this.labelControl3.TabIndex = 23;
-            this.labelControl3.Text = "Adet Fiyati :";
+            this.labelControl3.Text = "Adet Fiyatı :";
             // 
             // labelControl2
             // 
@@ -163,7 +166,7 @@ namespace test_kooil.Formlar
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 16);
             this.labelControl1.TabIndex = 20;
-            this.labelControl1.Text = "Igne Kodu :";
+            this.labelControl1.Text = "İğne Kodu :";
             // 
             // txt_ebat
             // 
@@ -198,7 +201,7 @@ namespace test_kooil.Formlar
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(111, 16);
             this.labelControl4.TabIndex = 36;
-            this.labelControl4.Text = "Isil Islem Formulu :";
+            this.labelControl4.Text = "Isıl İşlem Formulü :";
             // 
             // pictureEdit5
             // 
@@ -220,11 +223,33 @@ namespace test_kooil.Formlar
             this.txt_IsilIslem.TabIndex = 38;
             this.txt_IsilIslem.Text = "";
             // 
+            // btn_fotoEkle
+            // 
+            this.btn_fotoEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_fotoEkle.Location = new System.Drawing.Point(532, 261);
+            this.btn_fotoEkle.Name = "btn_fotoEkle";
+            this.btn_fotoEkle.Size = new System.Drawing.Size(184, 57);
+            this.btn_fotoEkle.TabIndex = 39;
+            this.btn_fotoEkle.Text = "Resim Ekle";
+            this.btn_fotoEkle.Click += new System.EventHandler(this.btn_fotoEkle_Click);
+            // 
+            // picBox_Igne
+            // 
+            this.picBox_Igne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_Igne.Location = new System.Drawing.Point(475, 34);
+            this.picBox_Igne.Name = "picBox_Igne";
+            this.picBox_Igne.Size = new System.Drawing.Size(241, 199);
+            this.picBox_Igne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Igne.TabIndex = 40;
+            this.picBox_Igne.TabStop = false;
+            // 
             // Frm_YeniIgneEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 584);
+            this.ClientSize = new System.Drawing.Size(751, 584);
+            this.Controls.Add(this.picBox_Igne);
+            this.Controls.Add(this.btn_fotoEkle);
             this.Controls.Add(this.txt_IsilIslem);
             this.Controls.Add(this.pictureEdit5);
             this.Controls.Add(this.labelControl4);
@@ -244,7 +269,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl1);
             this.Name = "Frm_YeniIgneEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yeni Igne Ekle";
+            this.Text = "Yeni İğne Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
@@ -253,6 +278,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.num_AdetFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Igne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +302,7 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
         private System.Windows.Forms.RichTextBox txt_IsilIslem;
+        private DevExpress.XtraEditors.SimpleButton btn_fotoEkle;
+        private System.Windows.Forms.PictureBox picBox_Igne;
     }
 }

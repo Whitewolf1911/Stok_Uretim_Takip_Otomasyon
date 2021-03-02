@@ -10,42 +10,43 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_kooil.Entity;
 
-
 namespace test_kooil.Formlar
 {
-    public partial class Frm_RaporOzet : Form
+    public partial class Frm_KontrolRapor : Form
     {
-        public Frm_RaporOzet()
+        public Frm_KontrolRapor()
         {
             InitializeComponent();
         }
-
         DB_kooil_testEntities db = new DB_kooil_testEntities();
-
-        void listele() {
-
-            var veriler = (from x in db.TBL_RAPOR
+        void listele()
+        {
+            var veriler = (from x in db.TBL_KONTROL  // change this !!!
                            select new
                            {
                                x.SIPARISNO,
-                               x.ISLEM,
+                               x.RAPORLAYAN,
                                x.IGNEKODU,
                                x.ISLENENMIKTAR,
                                x.TARIH,
-                               x.RAPORLAYAN,
-                               x.NOT,
+                               x.NOT
 
+                           }).ToList().OrderByDescending(x => x.TARIH);
 
-                           });
-            gridControl1.DataSource = veriler.ToList().OrderByDescending(x => x.TARIH);
+            gridControl1.DataSource = veriler;
 
-        
         }
 
-        private void Frm_RaporOzet_Load(object sender, EventArgs e)
+        private void Frm_KontrolRapor_Load(object sender, EventArgs e)
         {
             listele();
         }
+
+        private void Btn_Yenile_Click(object sender, EventArgs e)
+        {
+            listele();
+        }
+
         private void ShowGridPreview(GridControl grid)
         {
             // Check whether the GridControl can be previewed.
@@ -71,7 +72,6 @@ namespace test_kooil.Formlar
             // Print.
             grid.Print();
         }
-
         private void Btn_Yazdir_Click(object sender, EventArgs e)
         {
             ShowGridPreview(gridControl1);
@@ -80,33 +80,24 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
+                gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
+                gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
+                gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
+                gridView1.GetFocusedRowCellValue("TARIH") != null &&
+                gridView1.GetFocusedRowCellValue("NOT") != null
+                )
+            {
 
-            if (    gridView1.GetFocusedRowCellValue("NOT") != null &&
-                    gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
-                    gridView1.GetFocusedRowCellValue("ISLEM") != null &&
-                    gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
-                    gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
-                    gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
-                    gridView1.GetFocusedRowCellValue("TARIH") != null 
-
-
-
-                ) {
-
-                txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+                txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
                 txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString();
-                txt_islem.Text = gridView1.GetFocusedRowCellValue("ISLEM").ToString();
-                txt_adet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
-                txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
-                txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
-                date_tarih.EditValue = gridView1.GetFocusedRowCellValue("TARIH");
+                txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
+                txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
+                txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString();
+                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
 
 
             }
-           
-
-
-
         }
     }
 }

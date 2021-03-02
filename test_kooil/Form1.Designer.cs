@@ -53,7 +53,7 @@ namespace test_kooil
             this.Btn_Temper = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_Yikama = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_Bileme = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Kontrol = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_YeniIgneEkle = new DevExpress.XtraBars.BarButtonItem();
@@ -112,7 +112,7 @@ namespace test_kooil
             this.Btn_Temper,
             this.Btn_Yikama,
             this.Btn_Bileme,
-            this.barButtonItem24,
+            this.Btn_Kontrol,
             this.barButtonItem25,
             this.barButtonItem27,
             this.Btn_YeniIgneEkle,
@@ -311,18 +311,19 @@ namespace test_kooil
             // 
             this.Btn_Bileme.Caption = "13. Bileme";
             this.Btn_Bileme.Id = 21;
-            this.Btn_Bileme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.Image")));
-            this.Btn_Bileme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.LargeImage")));
+            this.Btn_Bileme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Bileme.ImageOptions.Image")));
+            this.Btn_Bileme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Bileme.ImageOptions.LargeImage")));
             this.Btn_Bileme.Name = "Btn_Bileme";
             this.Btn_Bileme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Bileme_ItemClick);
             // 
-            // barButtonItem24
+            // Btn_Kontrol
             // 
-            this.barButtonItem24.Caption = "14. Kontrol";
-            this.barButtonItem24.Id = 22;
-            this.barButtonItem24.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.Image")));
-            this.barButtonItem24.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.LargeImage")));
-            this.barButtonItem24.Name = "barButtonItem24";
+            this.Btn_Kontrol.Caption = "14. Kontrol";
+            this.Btn_Kontrol.Id = 22;
+            this.Btn_Kontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.Image")));
+            this.Btn_Kontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.LargeImage")));
+            this.Btn_Kontrol.Name = "Btn_Kontrol";
+            this.Btn_Kontrol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Kontrol_ItemClick);
             // 
             // barButtonItem25
             // 
@@ -483,7 +484,7 @@ namespace test_kooil
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Temper);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Yikama);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Bileme);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem24);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Kontrol);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage4
@@ -589,7 +590,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_Temper;
         private DevExpress.XtraBars.BarButtonItem Btn_Yikama;
         private DevExpress.XtraBars.BarButtonItem Btn_Bileme;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
+        private DevExpress.XtraBars.BarButtonItem Btn_Kontrol;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;

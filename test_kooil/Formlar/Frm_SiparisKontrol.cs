@@ -79,30 +79,46 @@ namespace test_kooil.Formlar
                  gridView1.GetFocusedRowCellValue("NOTLAR") != null &&
                  gridView1.GetFocusedRowCellValue("SIPARISASAMASI") != null
             ) {
-                    txt_adet.Text = gridView1.GetFocusedRowCellValue("URUNADETI").ToString();
-                    txt_musteri.Text = gridView1.GetFocusedRowCellValue("MUSTERI").ToString();
-                    txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
-                    txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString();
-                    txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+                txt_adet.Text = gridView1.GetFocusedRowCellValue("URUNADETI").ToString();
+                txt_musteri.Text = gridView1.GetFocusedRowCellValue("MUSTERI").ToString();
+                txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+                txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString();
+                txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
 
                 int asamaDeger = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISASAMASI").ToString());
 
 
-                
+
                 if (asamaDeger == 1)
                 {
                     txt_asama.Text = "Preste";
                 }
                 else if (asamaDeger == 2)
                 {
-                    txt_asama.Text = "Arka Siyirmada";
+                    txt_asama.Text = "Arka Sıyırmada";
                 }
+                else if (asamaDeger == 3) 
+                {
+                    txt_asama.Text = "Yol Kopyalamada";
+                }
+                else if (asamaDeger == 4)  { txt_asama.Text = "Uç Sıyırmada"; }
+                else if (asamaDeger == 5) { txt_asama.Text = "Kanal Açmada"; }
+                else if (asamaDeger == 6) { txt_asama.Text = "Kanal Büyütmede"; }
+                else if (asamaDeger == 7) { txt_asama.Text = "Polisaj1 de"; }
+                else if (asamaDeger == 8) { txt_asama.Text = "Dil Çakmada"; }
+                else if (asamaDeger == 9) { txt_asama.Text = "Polisaj2 de"; }
+                else if (asamaDeger == 10) { txt_asama.Text = "Isıl İşlemde"; }
+                else if (asamaDeger == 11) { txt_asama.Text = "Temperde"; }
+                else if (asamaDeger == 12) { txt_asama.Text = "Yıkamada"; }
+                else if (asamaDeger == 13) { txt_asama.Text = "Bilemede"; }
+                else if (asamaDeger == 14) { txt_asama.Text = "Kontrolde"; }
 
-                //TODO Diger asamalar eklenecek.
+
+                
 
             }
-                
-                      
+
+
         }
 
         private void labelControl4_Click(object sender, EventArgs e)

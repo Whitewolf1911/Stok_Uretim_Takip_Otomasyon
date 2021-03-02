@@ -78,7 +78,7 @@ namespace test_kooil.Formlar
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(51, 16);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Musteri :";
+            this.labelControl1.Text = "Müşteri :";
             // 
             // lookUpEdit_IgneCesit
             // 
@@ -88,7 +88,7 @@ namespace test_kooil.Formlar
             this.lookUpEdit_IgneCesit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.lookUpEdit_IgneCesit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_IgneCesit.Properties.NullText = "Igne Tipi Seciniz";
+            this.lookUpEdit_IgneCesit.Properties.NullText = "İğne Tipi Seçiniz";
             this.lookUpEdit_IgneCesit.Size = new System.Drawing.Size(159, 22);
             this.lookUpEdit_IgneCesit.TabIndex = 2;
             // 
@@ -120,7 +120,7 @@ namespace test_kooil.Formlar
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(72, 16);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Igne Cesidi :";
+            this.labelControl2.Text = "İğne Çeşidi :";
             // 
             // labelControl3
             // 
@@ -128,7 +128,7 @@ namespace test_kooil.Formlar
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(85, 16);
             this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Siparis Tarihi :";
+            this.labelControl3.Text = "Sipariş Tarihi :";
             this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // labelControl4
@@ -145,7 +145,7 @@ namespace test_kooil.Formlar
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(91, 16);
             this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "Istenilen Tarih :";
+            this.labelControl5.Text = "İstenilen Tarih :";
             // 
             // num_Adet
             // 
@@ -178,7 +178,7 @@ namespace test_kooil.Formlar
             this.Btn_Vazgec.Name = "Btn_Vazgec";
             this.Btn_Vazgec.Size = new System.Drawing.Size(140, 46);
             this.Btn_Vazgec.TabIndex = 11;
-            this.Btn_Vazgec.Text = "Iptal";
+            this.Btn_Vazgec.Text = "İptal";
             this.Btn_Vazgec.Click += new System.EventHandler(this.Btn_Vazgec_Click);
             // 
             // labelControl6
@@ -296,7 +296,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_Musteri);
             this.Name = "Frm_YeniSiparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yeni Siparis Olustur";
+            this.Text = "Yeni Sipariş Oluştur";
             this.Load += new System.EventHandler(this.Frm_YeniSiparis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Musteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_IgneCesit.Properties)).EndInit();

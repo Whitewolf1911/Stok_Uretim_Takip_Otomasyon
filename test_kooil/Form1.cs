@@ -34,6 +34,7 @@ namespace test_kooil
         Frm_Temper frmTemper;
         Frm_Yikama frmYikama;
         Frm_Bileme frmBileme;
+        Frm_Kontrol frmKontrol;
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
@@ -242,6 +243,18 @@ namespace test_kooil
                 frmBileme = new Frm_Bileme();
                 frmBileme.MdiParent = this;
                 frmBileme.Show();
+
+            }
+        }
+
+        private void Btn_Kontrol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmKontrol == null || frmKontrol.IsDisposed)
+            {
+
+                frmKontrol = new Frm_Kontrol();
+                frmKontrol.MdiParent = this;
+                frmKontrol.Show();
 
             }
         }

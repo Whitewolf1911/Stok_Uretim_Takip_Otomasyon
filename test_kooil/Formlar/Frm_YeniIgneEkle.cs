@@ -51,5 +51,16 @@ namespace test_kooil.Formlar
 
 
         }
+
+        private void btn_fotoEkle_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter= "jpeg|*.jpg|bmp|*.bmp|all files|*.*";
+            DialogResult res = dialog.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                picBox_Igne.Image = Image.FromFile(dialog.FileName);
+            }
+        }
     }
 }

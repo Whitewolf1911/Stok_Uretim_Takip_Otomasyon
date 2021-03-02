@@ -44,7 +44,7 @@ namespace test_kooil.Formlar
             rapor.TARIH = date_BasimTarihi.DateTime;
             rapor.NOT = text_Not.Text;
             rapor.RAPORLAYAN = text_Raporlayan.Text;
-            rapor.ISLEM = "PRES";
+            rapor.ISLEM = "Pres";
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 
