@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,14 @@ namespace test_kooil.Formlar
         {
             this.Close();
         }
-
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
             TBL_IGNELER yeniIgne = new TBL_IGNELER();
@@ -34,17 +42,23 @@ namespace test_kooil.Formlar
             yeniIgne.ADETFIYATI = num_AdetFiyat.Value;
             yeniIgne.NOT = txt_Not.Text;
             yeniIgne.EBAT = txt_ebat.Text;
+            if (picBox_Igne.Image != null) {
+                var foto = ImageToByteArray(picBox_Igne.Image);
+                yeniIgne.FOTO = foto;
+            }
+
+            
 
             if (txt_IgneKodu.Text != null)
             {
                 db.TBL_IGNELER.Add(yeniIgne);
                 db.SaveChanges();
-                XtraMessageBox.Show("Igne Sisteme Eklendi.", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else { 
                 
-                XtraMessageBox.Show("Lutfen Igne Kodunu Giriniz", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Lütfen İğne Kodunu Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 

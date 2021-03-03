@@ -61,6 +61,7 @@
           <Property Name="EBAT" Type="varchar" MaxLength="25" />
           <Property Name="ISILISLEMFORMUL" Type="varchar" MaxLength="50" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
+          <Property Name="FOTO" Type="image" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -302,6 +303,7 @@
           <Property Name="ISILISLEMFORMUL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBL_SIPARIS" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_IGNELER" ToRole="TBL_SIPARIS" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="TBL_PERSONEL">
           <Key>
@@ -575,6 +577,7 @@
           <EntitySetMapping Name="TBL_IGNELER">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
               <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
                 <ScalarProperty Name="ADETFIYATI" ColumnName="ADETFIYATI" />
