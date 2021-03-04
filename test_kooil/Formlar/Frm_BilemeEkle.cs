@@ -45,31 +45,18 @@ namespace test_kooil.Formlar
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 
-            XtraMessageBox.Show("Bileme Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Bileme Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);          
+            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.BILEMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
+            if (deger.SIPARISASAMASI < 13)
 
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
-                if (deger.SIPARISASAMASI < 13)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                    deger.SIPARISASAMASI = 13; //siparis asamasini guncelle 
-
-
-                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune geceriz
+                    deger.SIPARISASAMASI = 13; //siparis asamasini guncelle                  
                 }
                 db.SaveChanges();
 
-            }
-            else
-            {
-                // do nothing
-            }
+           
             this.Close();
 
         }

@@ -64,21 +64,16 @@ namespace test_kooil.Formlar
             rapor.TARIH = date_BasimTarihi.DateTime;
             rapor.NOT = text_Not.Text;
             rapor.RAPORLAYAN = text_Raporlayan.Text;
-            rapor.ISLEM = "Yol Kopyalama";
+            rapor.ISLEM = "Polisaj1";
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 
             XtraMessageBox.Show("Polisaj1 Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
+          
+            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.POLI1SAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
                 if (deger.SIPARISASAMASI < 7)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                     deger.SIPARISASAMASI = 7; //siparis asamasini guncelle 
@@ -88,11 +83,7 @@ namespace test_kooil.Formlar
                 }
                 db.SaveChanges();
 
-            }
-            else
-            {
-                // do nothing
-            }
+          
             this.Close();
         }
 

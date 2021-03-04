@@ -35,32 +35,36 @@ namespace test_kooil.Formlar
         }
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
-            TBL_IGNELER yeniIgne = new TBL_IGNELER();
-
-            yeniIgne.IGNEKOD = txt_IgneKodu.Text;
-            yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
-            yeniIgne.ADETFIYATI = num_AdetFiyat.Value;
-            yeniIgne.NOT = txt_Not.Text;
-            yeniIgne.EBAT = txt_ebat.Text;
-            if (picBox_Igne.Image != null) {
-                var foto = ImageToByteArray(picBox_Igne.Image);
-                yeniIgne.FOTO = foto;
-            }
-
             
-
-            if (txt_IgneKodu.Text != null)
+            try
             {
+                TBL_IGNELER yeniIgne = new TBL_IGNELER();
+
+                yeniIgne.IGNEKOD = txt_IgneKodu.Text;
+                yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
+                yeniIgne.ADETFIYATI = num_AdetFiyat.Value;
+                yeniIgne.NOT = txt_Not.Text;
+                yeniIgne.EBAT = txt_ebat.Text;
+                if (picBox_Igne.Image != null)
+                {
+                    var foto = ImageToByteArray(picBox_Igne.Image);
+                    yeniIgne.FOTO = foto;
+                }
+
+
                 db.TBL_IGNELER.Add(yeniIgne);
                 db.SaveChanges();
                 XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            else { 
-                
+            catch { 
                 XtraMessageBox.Show("Lütfen İğne Kodunu Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+
+
+
 
 
 

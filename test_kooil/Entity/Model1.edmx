@@ -56,12 +56,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IGNEKOD" Type="varchar" MaxLength="40" />
+          <Property Name="IGNEKOD" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="ADETFIYATI" Type="decimal" Precision="18" Scale="2" />
           <Property Name="EBAT" Type="varchar" MaxLength="25" />
           <Property Name="ISILISLEMFORMUL" Type="varchar" MaxLength="50" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
-          <Property Name="FOTO" Type="image" />
+          <Property Name="FOTO" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -183,6 +183,20 @@
           <Property Name="TOPLAMTUTAR" Type="decimal" Precision="18" Scale="2" />
           <Property Name="NOTLAR" Type="varchar" MaxLength="75" />
           <Property Name="AKTIF" Type="bit" />
+          <Property Name="PRESSAYI" Type="int" />
+          <Property Name="ARKASIYIRSAYI" Type="int" />
+          <Property Name="YOLKOPYASAYI" Type="int" />
+          <Property Name="UCSIYIRMASAYI" Type="int" />
+          <Property Name="KANALACMASAYI" Type="int" />
+          <Property Name="KANALBUYUTSAYI" Type="int" />
+          <Property Name="POLI1SAYI" Type="int" />
+          <Property Name="DILCAKMASAYI" Type="int" />
+          <Property Name="POLI2SAYI" Type="int" />
+          <Property Name="ISILISLEMSAYI" Type="int" />
+          <Property Name="TEMPERSAYI" Type="int" />
+          <Property Name="YIKAMASAYI" Type="int" />
+          <Property Name="BILEMESAYI" Type="int" />
+          <Property Name="KONTROLSAYI" Type="int" />
         </EntityType>
         <EntityType Name="TBL_STOK">
           <Key>
@@ -297,7 +311,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IGNEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="IGNEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ADETFIYATI" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="EBAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="ISILISLEMFORMUL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -329,6 +343,20 @@
           <Property Name="NOTLAR" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
           <Property Name="AKTIF" Type="Boolean" />
           <NavigationProperty Name="TBL_IGNELER" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_SIPARIS" ToRole="TBL_IGNELER" />
+          <Property Name="PRESSAYI" Type="Int32" />
+          <Property Name="ARKASIYIRSAYI" Type="Int32" />
+          <Property Name="YOLKOPYASAYI" Type="Int32" />
+          <Property Name="UCSIYIRMASAYI" Type="Int32" />
+          <Property Name="KANALACMASAYI" Type="Int32" />
+          <Property Name="KANALBUYUTSAYI" Type="Int32" />
+          <Property Name="POLI1SAYI" Type="Int32" />
+          <Property Name="DILCAKMASAYI" Type="Int32" />
+          <Property Name="POLI2SAYI" Type="Int32" />
+          <Property Name="ISILISLEMSAYI" Type="Int32" />
+          <Property Name="TEMPERSAYI" Type="Int32" />
+          <Property Name="YIKAMASAYI" Type="Int32" />
+          <Property Name="BILEMESAYI" Type="Int32" />
+          <Property Name="KONTROLSAYI" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_STOK">
           <Key>
@@ -600,6 +628,20 @@
           <EntitySetMapping Name="TBL_SIPARIS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SIPARIS">
               <MappingFragment StoreEntitySet="TBL_SIPARIS">
+                <ScalarProperty Name="KONTROLSAYI" ColumnName="KONTROLSAYI" />
+                <ScalarProperty Name="BILEMESAYI" ColumnName="BILEMESAYI" />
+                <ScalarProperty Name="YIKAMASAYI" ColumnName="YIKAMASAYI" />
+                <ScalarProperty Name="TEMPERSAYI" ColumnName="TEMPERSAYI" />
+                <ScalarProperty Name="ISILISLEMSAYI" ColumnName="ISILISLEMSAYI" />
+                <ScalarProperty Name="POLI2SAYI" ColumnName="POLI2SAYI" />
+                <ScalarProperty Name="DILCAKMASAYI" ColumnName="DILCAKMASAYI" />
+                <ScalarProperty Name="POLI1SAYI" ColumnName="POLI1SAYI" />
+                <ScalarProperty Name="KANALBUYUTSAYI" ColumnName="KANALBUYUTSAYI" />
+                <ScalarProperty Name="KANALACMASAYI" ColumnName="KANALACMASAYI" />
+                <ScalarProperty Name="UCSIYIRMASAYI" ColumnName="UCSIYIRMASAYI" />
+                <ScalarProperty Name="YOLKOPYASAYI" ColumnName="YOLKOPYASAYI" />
+                <ScalarProperty Name="ARKASIYIRSAYI" ColumnName="ARKASIYIRSAYI" />
+                <ScalarProperty Name="PRESSAYI" ColumnName="PRESSAYI" />
                 <ScalarProperty Name="SIPARISNOID" ColumnName="SIPARISNOID" />
                 <ScalarProperty Name="IGNETIPI" ColumnName="IGNETIPI" />
                 <ScalarProperty Name="SIPARISTARIHI" ColumnName="SIPARISTARIHI" />

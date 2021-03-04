@@ -318,7 +318,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmPolisaj1Rapor";
-            this.Text = "FrmPolisaj1Rapor";
+            this.Text = "Polisaj1 Rapor";
             this.Load += new System.EventHandler(this.FrmPolisaj1Rapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

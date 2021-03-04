@@ -35,6 +35,8 @@ namespace test_kooil
         Frm_Yikama frmYikama;
         Frm_Bileme frmBileme;
         Frm_Kontrol frmKontrol;
+        Frm_TamamlananSiparisler frmTamamSiparis;
+        Frm_SiparisDurumKontrol frmSipDkntrol;
 
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
@@ -255,6 +257,30 @@ namespace test_kooil
                 frmKontrol = new Frm_Kontrol();
                 frmKontrol.MdiParent = this;
                 frmKontrol.Show();
+
+            }
+        }
+
+        private void Btn_tamamSiparisler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmTamamSiparis == null || frmTamamSiparis.IsDisposed)
+            {
+
+                frmTamamSiparis = new Frm_TamamlananSiparisler();
+                frmTamamSiparis.MdiParent = this;
+                frmTamamSiparis.Show();
+
+            }
+        }
+
+        private void Btn_sipDurumKontrol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmSipDkntrol == null || frmSipDkntrol.IsDisposed)
+            {
+
+                frmSipDkntrol = new  Frm_SiparisDurumKontrol();
+                //frmSipDkntrol.MdiParent = this;
+                frmSipDkntrol.Show();
 
             }
         }

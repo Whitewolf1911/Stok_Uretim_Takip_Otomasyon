@@ -51,27 +51,19 @@ namespace test_kooil.Formlar
 
 
 
-            XtraMessageBox.Show("Arka Siyirma Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Arka Sıyırma Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+            var deger = db.TBL_SIPARIS.Find(siyrilanUrun.SIPARISNO);
+            deger.BILEMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            if (deger.SIPARISASAMASI < 2)
             {
-
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                var deger = db.TBL_SIPARIS.Find(siyrilanUrun.SIPARISNO);
-                deger.SIPARISASAMASI = 2 ; //siparis asamasini ayarla
-                db.SaveChanges();
-
+                deger.SIPARISASAMASI = 2; //siparis asamasini ayarla
             }
-            else
-            {
-                // do nothing
-            }
+               
+            db.SaveChanges();
+  
             this.Close();
 
         }

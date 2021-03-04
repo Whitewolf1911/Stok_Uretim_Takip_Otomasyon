@@ -47,16 +47,10 @@ namespace test_kooil.Formlar
             db.SaveChanges();
 
             XtraMessageBox.Show("Kanal Acma Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+         
+            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.KANALACMASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
-
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
                 if (deger.SIPARISASAMASI < 4)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                     deger.SIPARISASAMASI = 4; //siparis asamasini guncelle 
@@ -66,11 +60,8 @@ namespace test_kooil.Formlar
                 }
                 db.SaveChanges();
 
-            }
-            else
-            {
-                // do nothing
-            }
+            
+           
             this.Close();
         }
 

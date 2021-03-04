@@ -24,6 +24,20 @@ namespace test_kooil.Entity
         public Nullable<decimal> TOPLAMTUTAR { get; set; }
         public string NOTLAR { get; set; }
         public Nullable<bool> AKTIF { get; set; }
+        public Nullable<int> PRESSAYI { get; set; }
+        public Nullable<int> ARKASIYIRSAYI { get; set; }
+        public Nullable<int> YOLKOPYASAYI { get; set; }
+        public Nullable<int> UCSIYIRMASAYI { get; set; }
+        public Nullable<int> KANALACMASAYI { get; set; }
+        public Nullable<int> KANALBUYUTSAYI { get; set; }
+        public Nullable<int> POLI1SAYI { get; set; }
+        public Nullable<int> DILCAKMASAYI { get; set; }
+        public Nullable<int> POLI2SAYI { get; set; }
+        public Nullable<int> ISILISLEMSAYI { get; set; }
+        public Nullable<int> TEMPERSAYI { get; set; }
+        public Nullable<int> YIKAMASAYI { get; set; }
+        public Nullable<int> BILEMESAYI { get; set; }
+        public Nullable<int> KONTROLSAYI { get; set; }
     
         public virtual TBL_IGNELER TBL_IGNELER { get; set; }
     }

@@ -192,6 +192,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_IgneKodu.Location = new System.Drawing.Point(227, 50);
             this.txt_IgneKodu.Name = "txt_IgneKodu";
+            this.txt_IgneKodu.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.txt_IgneKodu.Size = new System.Drawing.Size(180, 22);
             this.txt_IgneKodu.TabIndex = 35;
             // 
@@ -225,7 +226,7 @@ namespace test_kooil.Formlar
             // 
             // btn_fotoEkle
             // 
-            this.btn_fotoEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_fotoEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_fotoEkle.ImageOptions.Image")));
             this.btn_fotoEkle.Location = new System.Drawing.Point(532, 261);
             this.btn_fotoEkle.Name = "btn_fotoEkle";
             this.btn_fotoEkle.Size = new System.Drawing.Size(184, 57);

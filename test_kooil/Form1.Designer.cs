@@ -62,11 +62,12 @@ namespace test_kooil
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_tamamSiparisler = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GunlukHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_IsilIslem = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_UcSiyirma = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_sipDurumKontrol = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -121,13 +122,14 @@ namespace test_kooil
             this.barButtonItem31,
             this.barButtonItem32,
             this.barButtonItem33,
-            this.barButtonItem10,
+            this.Btn_tamamSiparisler,
             this.Btn_GunlukHareketler,
             this.barButtonItem3,
             this.Btn_IsilIslem,
-            this.Btn_UcSiyirma});
+            this.Btn_UcSiyirma,
+            this.Btn_sipDurumKontrol});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 38;
+            this.ribbonControl1.MaxItemId = 39;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -154,7 +156,7 @@ namespace test_kooil
             // 
             // Btn_SiparisDurum
             // 
-            this.Btn_SiparisDurum.Caption = "Sipariş Durum Kontrol";
+            this.Btn_SiparisDurum.Caption = "Aktif Siparişler";
             this.Btn_SiparisDurum.Id = 3;
             this.Btn_SiparisDurum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisDurum.ImageOptions.Image")));
             this.Btn_SiparisDurum.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisDurum.ImageOptions.LargeImage")));
@@ -320,8 +322,8 @@ namespace test_kooil
             // 
             this.Btn_Kontrol.Caption = "14. Kontrol";
             this.Btn_Kontrol.Id = 22;
-            this.Btn_Kontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.Image")));
-            this.Btn_Kontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.ImageOptions.LargeImage")));
+            this.Btn_Kontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kontrol.ImageOptions.Image")));
+            this.Btn_Kontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Kontrol.ImageOptions.LargeImage")));
             this.Btn_Kontrol.Name = "Btn_Kontrol";
             this.Btn_Kontrol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Kontrol_ItemClick);
             // 
@@ -392,13 +394,14 @@ namespace test_kooil
             this.barButtonItem33.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.ImageOptions.LargeImage")));
             this.barButtonItem33.Name = "barButtonItem33";
             // 
-            // barButtonItem10
+            // Btn_tamamSiparisler
             // 
-            this.barButtonItem10.Caption = "Tamamlanan Siparişler";
-            this.barButtonItem10.Id = 32;
-            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.barButtonItem10.Name = "barButtonItem10";
+            this.Btn_tamamSiparisler.Caption = "Tamamlanan Siparişler";
+            this.Btn_tamamSiparisler.Id = 32;
+            this.Btn_tamamSiparisler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_tamamSiparisler.ImageOptions.Image")));
+            this.Btn_tamamSiparisler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_tamamSiparisler.ImageOptions.LargeImage")));
+            this.Btn_tamamSiparisler.Name = "Btn_tamamSiparisler";
+            this.Btn_tamamSiparisler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_tamamSiparisler_ItemClick);
             // 
             // Btn_GunlukHareketler
             // 
@@ -432,6 +435,15 @@ namespace test_kooil
             this.Btn_UcSiyirma.Name = "Btn_UcSiyirma";
             this.Btn_UcSiyirma.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UcSiyirma_ItemClick);
             // 
+            // Btn_sipDurumKontrol
+            // 
+            this.Btn_sipDurumKontrol.Caption = "Sipariş Durum Kontrol";
+            this.Btn_sipDurumKontrol.Id = 38;
+            this.Btn_sipDurumKontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_sipDurumKontrol.ImageOptions.Image")));
+            this.Btn_sipDurumKontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_sipDurumKontrol.ImageOptions.LargeImage")));
+            this.Btn_sipDurumKontrol.Name = "Btn_sipDurumKontrol";
+            this.Btn_sipDurumKontrol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_sipDurumKontrol_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -446,7 +458,8 @@ namespace test_kooil
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.Btn_SiparisDurum);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Btn_sipDurumKontrol);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Btn_tamamSiparisler);
             this.ribbonPageGroup1.ItemLinks.Add(this.Btn_GunlukHareketler);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -607,11 +620,12 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem Btn_tamamSiparisler;
         private DevExpress.XtraBars.BarButtonItem Btn_GunlukHareketler;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem Btn_IsilIslem;
         private DevExpress.XtraBars.BarButtonItem Btn_UcSiyirma;
+        private DevExpress.XtraBars.BarButtonItem Btn_sipDurumKontrol;
     }
 }
 

@@ -34,7 +34,12 @@ namespace test_kooil.Formlar
                            }
                            );
             gridControl1.DataSource = igneler.ToList();
-          //  gridView1.Columns[5].Visible = false;
+            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+
+            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+
+            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+            //  gridView1.Columns[5].Visible = false;
 
         }
         private void labelControl1_Click(object sender, EventArgs e)
@@ -78,21 +83,16 @@ namespace test_kooil.Formlar
                 pic_IgneFoto.Image = null;
             }
 
-                 
-                
-                
-               
-               
-                
-
-            
-            
-
         }
 
         private void Frm_IgneTurleri_Load(object sender, EventArgs e)
         {
             listele();
+        }
+
+        private void pic_IgneFoto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,23 @@ namespace test_kooil.Formlar
                 yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue;
                 yeniSiparis.ISTENILENTARIH = (DateTime?)date_IstenilenTarih.EditValue;
                 yeniSiparis.SIPARISASAMASI = 1;
+
+                yeniSiparis.ARKASIYIRSAYI = 0;
+                yeniSiparis.BILEMESAYI = 0;
+                yeniSiparis.DILCAKMASAYI = 0;
+                yeniSiparis.ISILISLEMSAYI = 0;
+                yeniSiparis.KANALACMASAYI = 0;
+                yeniSiparis.KANALBUYUTSAYI = 0;
+                yeniSiparis.KONTROLSAYI = 0;
+                yeniSiparis.POLI1SAYI = 0;
+                yeniSiparis.POLI2SAYI = 0;
+                yeniSiparis.PRESSAYI = 0;
+                yeniSiparis.TEMPERSAYI = 0;
+                yeniSiparis.UCSIYIRMASAYI = 0;
+                yeniSiparis.YIKAMASAYI = 0;
+                yeniSiparis.YOLKOPYASAYI = 0;
+
+
                 var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
                 igneFiyati.ToString();
                 yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);

@@ -56,31 +56,16 @@ namespace test_kooil.Formlar
             XtraMessageBox.Show("Uç Sıyırma Raporu Eklendi.", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
+            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.UCSIYIRMASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
                 if (deger.SIPARISASAMASI < 4)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                     deger.SIPARISASAMASI = 4; //siparis asamasini guncelle 
 
-
-                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune gecerim
-
-
                 }
                 db.SaveChanges();
 
-            }
-            else
-            {
-                // do nothing
-            }
             this.Close();
 
 

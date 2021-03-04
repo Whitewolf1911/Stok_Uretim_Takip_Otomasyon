@@ -55,6 +55,8 @@ namespace test_kooil.Formlar
             db.TBL_KONTROL.Add(islenenUrun);
 
             var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.KONTROLSAYI += int.Parse(num_IslenenAdet.Value.ToString());
+
             if (deger.SIPARISASAMASI < 14)
             {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                 deger.SIPARISASAMASI = 14; //siparis asamasini guncelle 
@@ -80,7 +82,7 @@ namespace test_kooil.Formlar
             XtraMessageBox.Show("Kontrol Raporu Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Ürünlerin Tamamı Paketlendi mi ? ? ", "Sipariş Durum", MessageBoxButtons.YesNo);
+            DialogResult siradakiAsamaSorgu = MessageBox.Show("Ürünlerin Tamamı Paketlendi mi ? ", "Sipariş Durum", MessageBoxButtons.YesNo);
             if (siradakiAsamaSorgu == DialogResult.Yes)
             {
 

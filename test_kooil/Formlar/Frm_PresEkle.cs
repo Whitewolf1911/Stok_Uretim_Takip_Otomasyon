@@ -49,38 +49,17 @@ namespace test_kooil.Formlar
             db.SaveChanges();
 
 
-            XtraMessageBox.Show("Pres Raporu Eklendi", "Islem Basarili", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Pres Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-      
+                var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
+                deger.PRESSAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-              
-
-                
-
-            //TODO bu sorguya gerek kaldi mi ???
-                DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-                if (siradakiAsamaSorgu == DialogResult.Yes)
-                {
-
-                    //pres islemi tamamlandiysa siradaki asamaya gecsin
-                    //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
-
-                    var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
-                if (deger.SIPARISASAMASI < 2) {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
+                if (deger.SIPARISASAMASI < 2) {  
                     deger.SIPARISASAMASI = 2; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
-
-
-                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune gecerim
-
 
                 }
                 db.SaveChanges();
-
-                }
-                else
-                {
-                    // do nothing
-                }
+             
                 this.Close();
             
             

@@ -47,29 +47,19 @@ namespace test_kooil.Formlar
 
             XtraMessageBox.Show("Temper Raporu Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Urunler Sonraki Asamaya Hazir mi ? ", "Asama Kontrol", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
 
-                //pres islemi tamamlandiysa siradaki asamaya gecsin
-                //TODO igne bicak platine gore eklencek degeri degistirmek lazim . 
+            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+            deger.TEMPERSAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
                 if (deger.SIPARISASAMASI < 11)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                     deger.SIPARISASAMASI =11; //siparis asamasini guncelle 
 
 
-                    // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune geceriz
+                
                 }
                 db.SaveChanges();
 
-            }
-            else
-            {
-                // do nothing
-            }
             this.Close();
         }
 
