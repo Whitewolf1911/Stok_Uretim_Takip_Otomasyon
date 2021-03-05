@@ -18,17 +18,19 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+        Frm_UretimDetay frmDetay;
         void listele()
         {
             var veriler = (from x in db.TBL_SIPARIS
                            select new
                            {
                                SiparisNo = x.SIPARISNOID,
-                               x.MUSTERI,
+                               Musteri = x.MUSTERI,
                                x.TBL_IGNELER.IGNEKOD,
-                               x.URUNADETI,
+                               Siparis = x.URUNADETI,
                                x.SIPARISTARIHI,
-                               x.ISTENILENTARIH,                             
+                               x.ISTENILENTARIH,
+                               Paketlenen = x.KONTROLSAYI,
                                x.AKTIF,
                                x.NOTLAR,
                                x.SIPARISASAMASI
@@ -45,8 +47,8 @@ namespace test_kooil.Formlar
             gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
 
 
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[8].Visible = false;
+            gridView1.Columns[7].Visible = false;
+            gridView1.Columns[9].Visible = false;
 
 
         }
@@ -64,12 +66,20 @@ namespace test_kooil.Formlar
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gridView1.GetFocusedRowCellValue("URUNADETI") != null) { txt_adet.Text = gridView1.GetFocusedRowCellValue("URUNADETI").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("MUSTERI") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("MUSTERI").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Musteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Musteri").ToString(); }
             if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) { txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparisNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString(); }
             if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) { txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString(); }
-            
+            if (gridView1.GetFocusedRowCellValue("Paketlenen") != null) { txt_adet.Text = gridView1.GetFocusedRowCellValue("Paketlenen").ToString(); }
 
+
+
+        }
+
+        private void Btn_UretimDetay_Click(object sender, EventArgs e)
+        {
+            frmDetay = new Frm_UretimDetay();
+            frmDetay.Show();
         }
     }
 }

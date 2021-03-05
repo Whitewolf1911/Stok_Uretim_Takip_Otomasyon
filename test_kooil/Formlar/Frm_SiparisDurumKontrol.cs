@@ -27,13 +27,13 @@ namespace test_kooil.Formlar
             var veriler = (from x in db.TBL_SIPARIS
                            select new
                            {
-                               SiparisNo = x.SIPARISNOID,
-                               x.MUSTERI,
-                               x.TBL_IGNELER.IGNEKOD,
+                               SiparisNo = x.SIPARISNOID, // 0
+                               Musteri = x.MUSTERI,
+                               UrunKodu = x.TBL_IGNELER.IGNEKOD,
                                Siparis = x.URUNADETI,
-                               SiparişTarihi = x.SIPARISTARIHI,
-                               İstenilenTarih =x.ISTENILENTARIH,
-                               x.TOPLAMTUTAR,
+                               UrunTuru = x.TBL_IGNELER.TUR,                              
+                               SiparisTarihi = x.SIPARISTARIHI,// 5
+                               IstenilenTarih = x.ISTENILENTARIH,//6
                                Pres = x.PRESSAYI,
                                ArkaSıyırma = x.ARKASIYIRSAYI,
                                YolKopyalama=x.YOLKOPYASAYI,
@@ -48,9 +48,9 @@ namespace test_kooil.Formlar
                                Yıkama = x.YIKAMASAYI,
                                Bileme = x.BILEMESAYI,
                                Paketlenen = x.KONTROLSAYI,
-                               x.AKTIF,
-                               x.NOTLAR,
-                               x.SIPARISASAMASI
+                               x.AKTIF,// 21
+                               x.NOTLAR,// 22 
+                               x.SIPARISASAMASI// 23
 
                            }).ToList().OrderByDescending(x => x.SiparisNo);
 
@@ -65,12 +65,11 @@ namespace test_kooil.Formlar
             gridView1.Columns[20].AppearanceCell.BackColor = Color.LightGreen;
 
             gridView1.Columns[0].Visible = false;
-            gridView1.Columns[4].Visible = false;
             gridView1.Columns[5].Visible = false;
-            gridView1.Columns[6].Visible = false;
+            gridView1.Columns[6].Visible = false;           
+            gridView1.Columns[23].Visible = false;
             gridView1.Columns[21].Visible = false;
             gridView1.Columns[22].Visible = false;
-            gridView1.Columns[23].Visible = false;
             //
             
 
@@ -95,7 +94,13 @@ namespace test_kooil.Formlar
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-
+            if (gridView1.GetFocusedRowCellValue("SiparisNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("UrunTuru") != null) { txt_sipUrunTip.Text = gridView1.GetFocusedRowCellValue("UrunTuru").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("UrunKodu") != null) { txt_sipUrunKod.Text = gridView1.GetFocusedRowCellValue("UrunKodu").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Musteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Musteri").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("SiparisTarihi") != null) { date_sipTarih.EditValue = gridView1.GetFocusedRowCellValue("SiparisTarihi"); }
+            if (gridView1.GetFocusedRowCellValue("IstenilenTarih") != null) { date_Ist_tarih.EditValue = gridView1.GetFocusedRowCellValue("IstenilenTarih"); }
+            if (gridView1.GetFocusedRowCellValue("Paketlenen") != null) { txt_paketlenen.Text = gridView1.GetFocusedRowCellValue("Paketlenen").ToString(); }
         }
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)

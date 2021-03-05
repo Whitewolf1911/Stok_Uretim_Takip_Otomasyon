@@ -439,6 +439,12 @@
     <Compile Include="Formlar\Frm_UcSiyirmaRapor.Designer.cs">
       <DependentUpon>Frm_UcSiyirmaRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_UretimDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UretimDetay.Designer.cs">
+      <DependentUpon>Frm_UretimDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniIgneEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -615,6 +621,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UcSiyirmaRapor.resx">
       <DependentUpon>Frm_UcSiyirmaRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UretimDetay.resx">
+      <DependentUpon>Frm_UretimDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>
