@@ -60,7 +60,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 7;
-            this.groupControl1.Text = "Yol Kopyalama";
+            this.groupControl1.Text = "Uç Sıyırma";
             // 
             // labelControl2
             // 

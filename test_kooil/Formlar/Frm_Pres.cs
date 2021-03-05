@@ -25,7 +25,8 @@ namespace test_kooil.Formlar
         void listele() {
             var preslencekUrunler = (from x in db.TBL_SIPARIS
                                      select new
-                                     {   SiparisNo = x.SIPARISNOID,   
+                                     {   SiparisNo = x.SIPARISNOID,
+                                         x.TBL_IGNELER.TUR,
                                          x.TBL_IGNELER.IGNEKOD,
                                          IstenilenMiktar = x.URUNADETI,
                                          x.NOTLAR,

@@ -32,8 +32,7 @@ namespace test_kooil.Formlar
                                x.TBL_IGNELER.IGNEKOD,
                                x.URUNADETI,
                                x.SIPARISTARIHI,
-                               x.ISTENILENTARIH,
-                               x.TOPLAMTUTAR,
+                               x.ISTENILENTARIH,                              
                                x.AKTIF,
                                x.NOTLAR,
                                x.SIPARISASAMASI
@@ -50,8 +49,8 @@ namespace test_kooil.Formlar
             gridView1.Columns[5].AppearanceCell.BackColor = Color.OrangeRed;
 
 
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[9].Visible = false;
+            gridView1.Columns[6].Visible = false;
+            gridView1.Columns[8].Visible = false;
 
 
         }
@@ -82,7 +81,8 @@ namespace test_kooil.Formlar
 
                 int asamaDeger = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISASAMASI").ToString());
 
-                if (asamaDeger == 1) { txt_asama.Text = "Preste"; }
+                if (asamaDeger == 0) { txt_asama.Text = "Pres Bekleniyor"; }
+                else if (asamaDeger == 1) { txt_asama.Text = "Preste"; }
                 else if (asamaDeger == 2){ txt_asama.Text = "Arka Sıyırmada";}
                 else if (asamaDeger == 3) { txt_asama.Text = "Yol Kopyalamada";}
                 else if (asamaDeger == 4)  { txt_asama.Text = "Uç Sıyırmada"; }

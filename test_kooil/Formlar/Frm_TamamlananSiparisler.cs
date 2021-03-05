@@ -28,8 +28,7 @@ namespace test_kooil.Formlar
                                x.TBL_IGNELER.IGNEKOD,
                                x.URUNADETI,
                                x.SIPARISTARIHI,
-                               x.ISTENILENTARIH,
-                               x.TOPLAMTUTAR,
+                               x.ISTENILENTARIH,                             
                                x.AKTIF,
                                x.NOTLAR,
                                x.SIPARISASAMASI
@@ -46,8 +45,8 @@ namespace test_kooil.Formlar
             gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
 
 
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[9].Visible = false;
+            gridView1.Columns[6].Visible = false;
+            gridView1.Columns[8].Visible = false;
 
 
         }
@@ -69,7 +68,7 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) { txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparisNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString(); }
             if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) { txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("TOPLAMTUTAR") != null) { txt_tutar.Text = gridView1.GetFocusedRowCellValue("TOPLAMTUTAR").ToString(); }
+            
 
         }
     }

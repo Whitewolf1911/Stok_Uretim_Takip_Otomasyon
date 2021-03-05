@@ -20,6 +20,8 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+        
+        
 
         private void Btn_Iptal_Click(object sender, EventArgs e)
         {
@@ -42,9 +44,9 @@ namespace test_kooil.Formlar
 
                 yeniIgne.IGNEKOD = txt_IgneKodu.Text;
                 yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
-                yeniIgne.ADETFIYATI = num_AdetFiyat.Value;
-                yeniIgne.NOT = txt_Not.Text;
-                yeniIgne.EBAT = txt_ebat.Text;
+                yeniIgne.GRAMAJ = num_Gramaj.Value;
+                yeniIgne.NOT = txt_Not.Text;               
+                yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
                 if (picBox_Igne.Image != null)
                 {
                     var foto = ImageToByteArray(picBox_Igne.Image);
@@ -61,13 +63,6 @@ namespace test_kooil.Formlar
                 XtraMessageBox.Show("Lütfen İğne Kodunu Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-
-
-
-
-
-
         }
 
         private void btn_fotoEkle_Click(object sender, EventArgs e)
@@ -79,6 +74,11 @@ namespace test_kooil.Formlar
             {
                 picBox_Igne.Image = Image.FromFile(dialog.FileName);
             }
+        }
+
+        private void Frm_YeniIgneEkle_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

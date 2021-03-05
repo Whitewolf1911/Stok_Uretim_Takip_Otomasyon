@@ -35,15 +35,12 @@ namespace test_kooil.Formlar
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txt_adet = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txt_musteri = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_tutar = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txt_sipNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -58,12 +55,10 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_adet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_musteri.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tutar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sipNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sipIgneTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -76,15 +71,12 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.pictureEdit7);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.pictureEdit5);
-            this.groupControl1.Controls.Add(this.pictureEdit4);
             this.groupControl1.Controls.Add(this.pictureEdit2);
             this.groupControl1.Controls.Add(this.pictureEdit1);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txt_adet);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.txt_musteri);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.txt_tutar);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.txt_sipNo);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -122,7 +114,7 @@ namespace test_kooil.Formlar
             // pictureEdit6
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(5, 315);
+            this.pictureEdit6.Location = new System.Drawing.Point(5, 268);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
@@ -142,18 +134,6 @@ namespace test_kooil.Formlar
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit5.Size = new System.Drawing.Size(40, 34);
             this.pictureEdit5.TabIndex = 23;
-            // 
-            // pictureEdit4
-            // 
-            this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(5, 260);
-            this.pictureEdit4.Name = "pictureEdit4";
-            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit4.Size = new System.Drawing.Size(40, 34);
-            this.pictureEdit4.TabIndex = 22;
             // 
             // pictureEdit2
             // 
@@ -208,25 +188,10 @@ namespace test_kooil.Formlar
             // 
             this.txt_musteri.Location = new System.Drawing.Point(167, 107);
             this.txt_musteri.Name = "txt_musteri";
+            this.txt_musteri.Properties.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.txt_musteri.Properties.Appearance.Options.UseBackColor = true;
             this.txt_musteri.Size = new System.Drawing.Size(143, 22);
             this.txt_musteri.TabIndex = 15;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(65, 266);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(44, 16);
-            this.labelControl4.TabIndex = 14;
-            this.labelControl4.Text = "Tutar : ";
-            // 
-            // txt_tutar
-            // 
-            this.txt_tutar.Location = new System.Drawing.Point(167, 263);
-            this.txt_tutar.Name = "txt_tutar";
-            this.txt_tutar.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txt_tutar.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_tutar.Size = new System.Drawing.Size(143, 22);
-            this.txt_tutar.TabIndex = 13;
             // 
             // labelControl3
             // 
@@ -240,12 +205,14 @@ namespace test_kooil.Formlar
             // 
             this.txt_sipNo.Location = new System.Drawing.Point(167, 65);
             this.txt_sipNo.Name = "txt_sipNo";
+            this.txt_sipNo.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_sipNo.Properties.Appearance.Options.UseBackColor = true;
             this.txt_sipNo.Size = new System.Drawing.Size(143, 22);
             this.txt_sipNo.TabIndex = 11;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(65, 324);
+            this.labelControl2.Location = new System.Drawing.Point(65, 277);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(78, 16);
             this.labelControl2.TabIndex = 10;
@@ -263,12 +230,14 @@ namespace test_kooil.Formlar
             // 
             this.txt_sipIgneTur.Location = new System.Drawing.Point(167, 158);
             this.txt_sipIgneTur.Name = "txt_sipIgneTur";
+            this.txt_sipIgneTur.Properties.Appearance.BackColor = System.Drawing.Color.Lime;
+            this.txt_sipIgneTur.Properties.Appearance.Options.UseBackColor = true;
             this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
             this.txt_sipIgneTur.TabIndex = 8;
             // 
             // txt_sipNot
             // 
-            this.txt_sipNot.Location = new System.Drawing.Point(167, 324);
+            this.txt_sipNot.Location = new System.Drawing.Point(167, 277);
             this.txt_sipNot.Name = "txt_sipNot";
             this.txt_sipNot.Size = new System.Drawing.Size(143, 139);
             this.txt_sipNot.TabIndex = 7;
@@ -317,12 +286,10 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_adet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_musteri.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tutar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sipNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sipIgneTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -338,15 +305,12 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit7;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit4;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txt_adet;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txt_musteri;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txt_tutar;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txt_sipNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;

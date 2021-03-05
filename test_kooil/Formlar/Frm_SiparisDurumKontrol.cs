@@ -30,7 +30,7 @@ namespace test_kooil.Formlar
                                SiparisNo = x.SIPARISNOID,
                                x.MUSTERI,
                                x.TBL_IGNELER.IGNEKOD,
-                               İstenilenAdet = x.URUNADETI,
+                               Siparis = x.URUNADETI,
                                SiparişTarihi = x.SIPARISTARIHI,
                                İstenilenTarih =x.ISTENILENTARIH,
                                x.TOPLAMTUTAR,

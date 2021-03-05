@@ -337,7 +337,7 @@ namespace test_kooil
             // 
             // barButtonItem27
             // 
-            this.barButtonItem27.Caption = "İğne Türleri";
+            this.barButtonItem27.Caption = "Ürün Türleri";
             this.barButtonItem27.Id = 25;
             this.barButtonItem27.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.ImageOptions.Image")));
             this.barButtonItem27.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.ImageOptions.LargeImage")));
@@ -346,7 +346,7 @@ namespace test_kooil
             // 
             // Btn_YeniIgneEkle
             // 
-            this.Btn_YeniIgneEkle.Caption = "Yeni İğne Ekle";
+            this.Btn_YeniIgneEkle.Caption = "Yeni Ürün Ekle";
             this.Btn_YeniIgneEkle.Id = 26;
             this.Btn_YeniIgneEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_YeniIgneEkle.ImageOptions.Image")));
             this.Btn_YeniIgneEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_YeniIgneEkle.ImageOptions.LargeImage")));
@@ -355,15 +355,16 @@ namespace test_kooil
             // 
             // barButtonItem29
             // 
-            this.barButtonItem29.Caption = "Stok";
+            this.barButtonItem29.Caption = "Hammadde Stok";
             this.barButtonItem29.Id = 27;
             this.barButtonItem29.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem29.ImageOptions.Image")));
             this.barButtonItem29.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem29.ImageOptions.LargeImage")));
             this.barButtonItem29.Name = "barButtonItem29";
+            this.barButtonItem29.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem29_ItemClick);
             // 
             // barButtonItem30
             // 
-            this.barButtonItem30.Caption = "Stok Güncelle";
+            this.barButtonItem30.Caption = "Hammadde Stok Güncelle";
             this.barButtonItem30.Id = 28;
             this.barButtonItem30.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.Image")));
             this.barButtonItem30.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));

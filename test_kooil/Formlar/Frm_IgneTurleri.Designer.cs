@@ -36,17 +36,14 @@ namespace test_kooil.Formlar
             this.pic_IgneFoto = new System.Windows.Forms.PictureBox();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.txt_Ebat = new DevExpress.XtraEditors.TextEdit();
-            this.txt_BirimFiyat = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Gramaj = new DevExpress.XtraEditors.TextEdit();
             this.txt_IsilIslem = new System.Windows.Forms.RichTextBox();
             this.txt_IgneKod = new DevExpress.XtraEditors.TextEdit();
             this.txt_Not = new System.Windows.Forms.RichTextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Btn_Yenile = new DevExpress.XtraEditors.SimpleButton();
@@ -57,11 +54,9 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Ebat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BirimFiyat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Gramaj.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKod.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +74,7 @@ namespace test_kooil.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
@@ -87,17 +83,14 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.pic_IgneFoto);
             this.groupControl1.Controls.Add(this.pictureEdit5);
             this.groupControl1.Controls.Add(this.pictureEdit4);
-            this.groupControl1.Controls.Add(this.pictureEdit3);
             this.groupControl1.Controls.Add(this.pictureEdit2);
             this.groupControl1.Controls.Add(this.pictureEdit1);
-            this.groupControl1.Controls.Add(this.txt_Ebat);
-            this.groupControl1.Controls.Add(this.txt_BirimFiyat);
+            this.groupControl1.Controls.Add(this.txt_Gramaj);
             this.groupControl1.Controls.Add(this.txt_IsilIslem);
             this.groupControl1.Controls.Add(this.txt_IgneKod);
             this.groupControl1.Controls.Add(this.txt_Not);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.Btn_Yenile);
@@ -113,7 +106,7 @@ namespace test_kooil.Formlar
             this.pic_IgneFoto.Location = new System.Drawing.Point(5, 189);
             this.pic_IgneFoto.Name = "pic_IgneFoto";
             this.pic_IgneFoto.Size = new System.Drawing.Size(375, 281);
-            this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_IgneFoto.TabIndex = 17;
             this.pic_IgneFoto.TabStop = false;
             this.pic_IgneFoto.Click += new System.EventHandler(this.pic_IgneFoto_Click);
@@ -142,18 +135,6 @@ namespace test_kooil.Formlar
             this.pictureEdit4.Size = new System.Drawing.Size(45, 34);
             this.pictureEdit4.TabIndex = 15;
             // 
-            // pictureEdit3
-            // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(18, 136);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Size = new System.Drawing.Size(45, 34);
-            this.pictureEdit3.TabIndex = 14;
-            // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
@@ -178,19 +159,12 @@ namespace test_kooil.Formlar
             this.pictureEdit1.Size = new System.Drawing.Size(40, 34);
             this.pictureEdit1.TabIndex = 12;
             // 
-            // txt_Ebat
+            // txt_Gramaj
             // 
-            this.txt_Ebat.Location = new System.Drawing.Point(162, 148);
-            this.txt_Ebat.Name = "txt_Ebat";
-            this.txt_Ebat.Size = new System.Drawing.Size(158, 22);
-            this.txt_Ebat.TabIndex = 11;
-            // 
-            // txt_BirimFiyat
-            // 
-            this.txt_BirimFiyat.Location = new System.Drawing.Point(162, 102);
-            this.txt_BirimFiyat.Name = "txt_BirimFiyat";
-            this.txt_BirimFiyat.Size = new System.Drawing.Size(158, 22);
-            this.txt_BirimFiyat.TabIndex = 10;
+            this.txt_Gramaj.Location = new System.Drawing.Point(162, 102);
+            this.txt_Gramaj.Name = "txt_Gramaj";
+            this.txt_Gramaj.Size = new System.Drawing.Size(158, 22);
+            this.txt_Gramaj.TabIndex = 10;
             // 
             // txt_IsilIslem
             // 
@@ -231,21 +205,13 @@ namespace test_kooil.Formlar
             this.labelControl4.TabIndex = 5;
             this.labelControl4.Text = "Isıl İşlem:";
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(83, 151);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(34, 16);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Ebat :";
-            // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(83, 105);
+            this.labelControl2.Location = new System.Drawing.Point(87, 105);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(72, 16);
+            this.labelControl2.Size = new System.Drawing.Size(55, 16);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Birim Fiyatı :";
+            this.labelControl2.Text = "Gramaj  :";
             // 
             // labelControl1
             // 
@@ -284,11 +250,9 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Ebat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BirimFiyat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Gramaj.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKod.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -301,18 +265,15 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton Btn_Yenile;
-        private DevExpress.XtraEditors.TextEdit txt_Ebat;
-        private DevExpress.XtraEditors.TextEdit txt_BirimFiyat;
+        private DevExpress.XtraEditors.TextEdit txt_Gramaj;
         private System.Windows.Forms.RichTextBox txt_IsilIslem;
         private DevExpress.XtraEditors.TextEdit txt_IgneKod;
         private System.Windows.Forms.RichTextBox txt_Not;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
         private DevExpress.XtraEditors.PictureEdit pictureEdit4;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.PictureBox pic_IgneFoto;

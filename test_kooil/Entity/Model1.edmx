@@ -57,11 +57,11 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IGNEKOD" Type="varchar" MaxLength="40" Nullable="false" />
-          <Property Name="ADETFIYATI" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="EBAT" Type="varchar" MaxLength="25" />
+          <Property Name="GRAMAJ" Type="decimal" Precision="18" Scale="2" />
           <Property Name="ISILISLEMFORMUL" Type="varchar" MaxLength="50" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="FOTO" Type="varbinary(max)" />
+          <Property Name="TUR" Type="varchar" MaxLength="25" Nullable="false" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -312,12 +312,12 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IGNEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ADETFIYATI" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="EBAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="ISILISLEMFORMUL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBL_SIPARIS" Relationship="Self.FK_TBL_SIPARIS_TBL_IGNELER" FromRole="TBL_IGNELER" ToRole="TBL_SIPARIS" />
           <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="TUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GRAMAJ" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TBL_PERSONEL">
           <Key>
@@ -605,11 +605,11 @@
           <EntitySetMapping Name="TBL_IGNELER">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
               <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="GRAMAJ" ColumnName="GRAMAJ" />
+                <ScalarProperty Name="TUR" ColumnName="TUR" />
                 <ScalarProperty Name="FOTO" ColumnName="FOTO" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
-                <ScalarProperty Name="ADETFIYATI" ColumnName="ADETFIYATI" />
-                <ScalarProperty Name="EBAT" ColumnName="EBAT" />
                 <ScalarProperty Name="ISILISLEMFORMUL" ColumnName="ISILISLEMFORMUL" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
               </MappingFragment>

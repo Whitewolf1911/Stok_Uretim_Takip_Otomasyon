@@ -24,10 +24,10 @@ namespace test_kooil.Formlar
         void listele() {
             var igneler = (from x in db.TBL_IGNELER
                            select new
-                           {
+                           { 
+                               x.TUR,
                                x.IGNEKOD,
-                               x.EBAT,
-                               x.ADETFIYATI,
+                               x.GRAMAJ,
                                x.ISILISLEMFORMUL,
                                x.NOT,
                                x.FOTO
@@ -65,12 +65,10 @@ namespace test_kooil.Formlar
                 txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
             }
 
-            if (gridView1.GetFocusedRowCellValue("ADETFIYATI") != null) {
-                txt_BirimFiyat.Text = gridView1.GetFocusedRowCellValue("ADETFIYATI").ToString();
+            if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null) {
+                txt_Gramaj.Text = gridView1.GetFocusedRowCellValue("GRAMAJ").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("EBAT") != null) {
-                txt_Ebat.Text = gridView1.GetFocusedRowCellValue("EBAT").ToString();
-            }
+            
             if (gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL") != null) {
                 txt_IsilIslem.Text = gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL").ToString(); }
             if (gridView1.GetFocusedRowCellValue("NOT") != null) {
@@ -91,6 +89,11 @@ namespace test_kooil.Formlar
         }
 
         private void pic_IgneFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl3_Click(object sender, EventArgs e)
         {
 
         }

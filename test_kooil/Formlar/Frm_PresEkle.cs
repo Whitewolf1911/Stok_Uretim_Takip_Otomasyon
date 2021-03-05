@@ -54,8 +54,8 @@ namespace test_kooil.Formlar
                 var deger = db.TBL_SIPARIS.Find(preslenenUrun.SIPARISNO);
                 deger.PRESSAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                if (deger.SIPARISASAMASI < 2) {  
-                    deger.SIPARISASAMASI = 2; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
+                if (deger.SIPARISASAMASI < 1) {  
+                    deger.SIPARISASAMASI = 1; //siparis asamasina 1 ekle mevcut bolumden bir sonrakine gitsin.
 
                 }
                 db.SaveChanges();

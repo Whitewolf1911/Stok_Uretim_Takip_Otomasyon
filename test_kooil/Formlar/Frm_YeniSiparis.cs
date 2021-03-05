@@ -20,6 +20,27 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
+        void listele()
+        {
+            var igneler = (from x in db.TBL_IGNELER
+                           select new
+                           {
+                               x.ID,
+                               x.TUR,
+                               x.IGNEKOD,                                                                                          
+                               x.FOTO
+                           }
+                           );
+            gridControl1.DataSource = igneler.ToList();
+            
+            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+
+            gridView1.Columns[0].Visible = false;
+            gridView1.Columns[3].Visible = false;
+
+        }
+
         private void labelControl3_Click(object sender, EventArgs e)
         {
 
@@ -27,21 +48,8 @@ namespace test_kooil.Formlar
 
         private void Frm_YeniSiparis_Load(object sender, EventArgs e)
         {
-            var igneler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               x.ID,
-                               x.IGNEKOD
-
-                           });
-            lookUpEdit_IgneCesit.Properties.ValueMember = "ID";
-            lookUpEdit_IgneCesit.Properties.DisplayMember = "IGNEKOD";
-            lookUpEdit_IgneCesit.Properties.DataSource = igneler.ToList();
-            lookUpEdit_IgneCesit.Properties.PopulateColumns();
-            lookUpEdit_IgneCesit.Properties.Columns[0].Visible = false;
-
-
-
+            listele();
+       
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -51,14 +59,14 @@ namespace test_kooil.Formlar
             {
                 TBL_SIPARIS yeniSiparis = new TBL_SIPARIS();
                 yeniSiparis.AKTIF = true;
-                int ignetipi = int.Parse(lookUpEdit_IgneCesit.EditValue.ToString());
+                int ignetipi = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                 yeniSiparis.IGNETIPI = ignetipi;
                 yeniSiparis.MUSTERI = txt_Musteri.Text;
                 yeniSiparis.URUNADETI = int.Parse(num_Adet.Value.ToString());
                 yeniSiparis.NOTLAR = txt_Not.Text;
                 yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue;
                 yeniSiparis.ISTENILENTARIH = (DateTime?)date_IstenilenTarih.EditValue;
-                yeniSiparis.SIPARISASAMASI = 1;
+                yeniSiparis.SIPARISASAMASI = 0;
 
                 yeniSiparis.ARKASIYIRSAYI = 0;
                 yeniSiparis.BILEMESAYI = 0;
@@ -76,12 +84,13 @@ namespace test_kooil.Formlar
                 yeniSiparis.YOLKOPYASAYI = 0;
 
 
-                var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
-                igneFiyati.ToString();
-                yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);
+                //var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
+                //igneFiyati.ToString();
+                //yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);
                 db.TBL_SIPARIS.Add(yeniSiparis);
                 db.SaveChanges();
                 XtraMessageBox.Show("Yeni Siparis Sisteme Eklendi. ", "Yeni Siparis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch {
                 XtraMessageBox.Show("Lutfen Bos Alan birakmayiniz. ", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,6 +101,24 @@ namespace test_kooil.Formlar
         private void Btn_Vazgec_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) {
+
+                txt_urunCesit.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+            }
+
+
+            if (gridView1.GetFocusedRowCellValue("FOTO") != null)
+            {
+                picBoxUrun.Image = Frm_IgneTurleri.ImageFromByteArray((byte[])gridView1.GetFocusedRowCellValue("FOTO"));
+            }
+            if (gridView1.GetFocusedRowCellValue("FOTO") == null)
+            {
+                picBoxUrun.Image = null;
+            }
         }
     }
 }
