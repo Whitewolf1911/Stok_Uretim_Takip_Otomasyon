@@ -20,7 +20,7 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_YikamaEkle frmEkle;
         Frm_YikamaRapor frmRapor;
-        
+
 
         void listele()
         {
@@ -28,17 +28,19 @@ namespace test_kooil.Formlar
                                     select new
                                     {
                                         SiparisNo = x.SIPARISNOID,
+                                        x.TBL_IGNELER.TUR,
                                         x.TBL_IGNELER.IGNEKOD,
                                         IstenilenMiktar = x.URUNADETI,
                                         x.NOTLAR,
-                                        x.SIPARISASAMASI,
                                         x.AKTIF
 
                                     }).ToList().OrderByDescending(x => x.SiparisNo);
 
             gridControl1.DataSource = islenecekUrunler.Where(x => x.AKTIF == true);
-
-            gridView1.Columns[4].Visible = false; //siparis asamasi sutunu gozukmeyecek.
+            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+            gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
+            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[5].Visible = false;
 
         }

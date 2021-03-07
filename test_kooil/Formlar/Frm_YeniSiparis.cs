@@ -89,11 +89,11 @@ namespace test_kooil.Formlar
                 //yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);
                 db.TBL_SIPARIS.Add(yeniSiparis);
                 db.SaveChanges();
-                XtraMessageBox.Show("Yeni Siparis Sisteme Eklendi. ", "Yeni Siparis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Yeni Sipariş Sisteme Eklendi. ", "Yeni Sipariş", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch {
-                XtraMessageBox.Show("Lutfen Bos Alan birakmayiniz. ", "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Lütfen Boş Alan Bırakmayınız. ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

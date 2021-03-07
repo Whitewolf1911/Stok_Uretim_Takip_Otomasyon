@@ -78,7 +78,7 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) { txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SIPARISASAMASI") != null)
                 {
-
+                
                 int asamaDeger = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISASAMASI").ToString());
 
                 if (asamaDeger == 0) { txt_asama.Text = "Pres Bekleniyor"; }
