@@ -37,7 +37,8 @@ namespace test_kooil
         Frm_Kontrol frmKontrol;
         Frm_TamamlananSiparisler frmTamamSiparis;
         Frm_SiparisDurumKontrol frmSipDkntrol;
-
+        Frm_HamStok frmHamStok;
+        Frm_HamRaporEkle frmHamRaporEkle;
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -328,7 +329,19 @@ namespace test_kooil
 
         private void barButtonItem29_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            frmHamStok = new Frm_HamStok();
+            frmHamStok.MdiParent = this;
+            DisposeAllButThis(frmHamStok);
+            frmHamStok.Show();
+        }
 
+        private void Btn_hamRaporEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmHamRaporEkle == null || frmHamRaporEkle.IsDisposed) {
+
+                frmHamRaporEkle = new Frm_HamRaporEkle();
+                frmHamRaporEkle.Show();
+            }
         }
     }
 }

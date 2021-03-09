@@ -47,6 +47,9 @@ namespace test_kooil.Formlar
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.date_BasimTarihi = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
+            this.combo_ham = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).BeginInit();
@@ -57,31 +60,33 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combo_ham.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lookUp_Siparis
             // 
-            this.lookUp_Siparis.Location = new System.Drawing.Point(223, 59);
+            this.lookUp_Siparis.Location = new System.Drawing.Point(223, 34);
             this.lookUp_Siparis.Name = "lookUp_Siparis";
             this.lookUp_Siparis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUp_Siparis.Properties.NullText = "Siparis Seciniz";
+            this.lookUp_Siparis.Properties.NullText = "Sipariş Seçiniz";
             this.lookUp_Siparis.Size = new System.Drawing.Size(336, 22);
             this.lookUp_Siparis.TabIndex = 0;
             this.lookUp_Siparis.EditValueChanged += new System.EventHandler(this.lookUp_Siparis_EditValueChanged);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(110, 62);
+            this.labelControl1.Location = new System.Drawing.Point(110, 37);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(48, 16);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Siparis :";
+            this.labelControl1.Text = "Sipariş :";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // num_IslenenAdet
             // 
-            this.num_IslenenAdet.Location = new System.Drawing.Point(223, 112);
+            this.num_IslenenAdet.Location = new System.Drawing.Point(223, 87);
             this.num_IslenenAdet.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -94,16 +99,16 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(110, 118);
+            this.labelControl2.Location = new System.Drawing.Point(110, 93);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(80, 16);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Islenen Adet :";
+            this.labelControl2.Text = "İşlenen Adet :";
             this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(110, 179);
+            this.labelControl3.Location = new System.Drawing.Point(110, 193);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(73, 16);
             this.labelControl3.TabIndex = 4;
@@ -112,7 +117,7 @@ namespace test_kooil.Formlar
             // 
             // text_Raporlayan
             // 
-            this.text_Raporlayan.Location = new System.Drawing.Point(223, 176);
+            this.text_Raporlayan.Location = new System.Drawing.Point(223, 190);
             this.text_Raporlayan.Name = "text_Raporlayan";
             this.text_Raporlayan.Size = new System.Drawing.Size(180, 22);
             this.text_Raporlayan.TabIndex = 5;
@@ -120,7 +125,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(155, 294);
+            this.labelControl5.Location = new System.Drawing.Point(155, 314);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(28, 16);
             this.labelControl5.TabIndex = 8;
@@ -129,7 +134,7 @@ namespace test_kooil.Formlar
             // 
             // text_Not
             // 
-            this.text_Not.Location = new System.Drawing.Point(223, 294);
+            this.text_Not.Location = new System.Drawing.Point(223, 314);
             this.text_Not.Name = "text_Not";
             this.text_Not.Size = new System.Drawing.Size(204, 168);
             this.text_Not.TabIndex = 9;
@@ -139,7 +144,7 @@ namespace test_kooil.Formlar
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(28, 37);
+            this.pictureEdit1.Location = new System.Drawing.Point(28, 12);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -152,7 +157,7 @@ namespace test_kooil.Formlar
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(39, 163);
+            this.pictureEdit2.Location = new System.Drawing.Point(39, 177);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -165,7 +170,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(39, 285);
+            this.pictureEdit3.Location = new System.Drawing.Point(39, 305);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -178,7 +183,7 @@ namespace test_kooil.Formlar
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(39, 102);
+            this.pictureEdit4.Location = new System.Drawing.Point(39, 66);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -191,7 +196,7 @@ namespace test_kooil.Formlar
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(39, 502);
+            this.simpleButton1.Location = new System.Drawing.Point(39, 511);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(172, 61);
             this.simpleButton1.TabIndex = 14;
@@ -201,16 +206,16 @@ namespace test_kooil.Formlar
             // Btn_iptal
             // 
             this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_iptal.ImageOptions.Image")));
-            this.Btn_iptal.Location = new System.Drawing.Point(387, 502);
+            this.Btn_iptal.Location = new System.Drawing.Point(387, 511);
             this.Btn_iptal.Name = "Btn_iptal";
             this.Btn_iptal.Size = new System.Drawing.Size(172, 61);
             this.Btn_iptal.TabIndex = 15;
-            this.Btn_iptal.Text = "Iptal";
+            this.Btn_iptal.Text = "İptal";
             this.Btn_iptal.Click += new System.EventHandler(this.Btn_iptal_Click);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(144, 237);
+            this.labelControl4.Location = new System.Drawing.Point(144, 251);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(39, 16);
             this.labelControl4.TabIndex = 16;
@@ -220,7 +225,7 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(39, 221);
+            this.pictureEdit5.Location = new System.Drawing.Point(39, 235);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -233,7 +238,7 @@ namespace test_kooil.Formlar
             // date_BasimTarihi
             // 
             this.date_BasimTarihi.EditValue = null;
-            this.date_BasimTarihi.Location = new System.Drawing.Point(223, 237);
+            this.date_BasimTarihi.Location = new System.Drawing.Point(223, 251);
             this.date_BasimTarihi.Name = "date_BasimTarihi";
             this.date_BasimTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -243,11 +248,49 @@ namespace test_kooil.Formlar
             this.date_BasimTarihi.TabIndex = 18;
             this.date_BasimTarihi.EditValueChanged += new System.EventHandler(this.date_BasimTarihi_EditValueChanged);
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(110, 143);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(74, 16);
+            this.labelControl6.TabIndex = 19;
+            this.labelControl6.Text = "Hammadde :";
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(39, 119);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Size = new System.Drawing.Size(52, 52);
+            this.pictureEdit6.TabIndex = 20;
+            // 
+            // combo_ham
+            // 
+            this.combo_ham.Location = new System.Drawing.Point(223, 143);
+            this.combo_ham.Name = "combo_ham";
+            this.combo_ham.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_ham.Properties.Appearance.Options.UseBackColor = true;
+            this.combo_ham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.combo_ham.Properties.Items.AddRange(new object[] {
+            "KORE",
+            "ALMAN",
+            "TURK"});
+            this.combo_ham.Size = new System.Drawing.Size(180, 22);
+            this.combo_ham.TabIndex = 21;
+            // 
             // Frm_PresEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 584);
+            this.Controls.Add(this.combo_ham);
+            this.Controls.Add(this.pictureEdit6);
+            this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.date_BasimTarihi);
             this.Controls.Add(this.pictureEdit5);
             this.Controls.Add(this.labelControl4);
@@ -278,6 +321,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combo_ham.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +347,8 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
         private DevExpress.XtraEditors.DateEdit date_BasimTarihi;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit6;
+        private DevExpress.XtraEditors.ComboBoxEdit combo_ham;
     }
 }

@@ -31,6 +31,7 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_TamamlananSiparisler));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_UretimDetay = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
@@ -50,7 +51,6 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Btn_UretimDetay = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -92,6 +92,16 @@ namespace test_kooil.Formlar
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Tamamlanan Sipariş Bilgileri";
             // 
+            // Btn_UretimDetay
+            // 
+            this.Btn_UretimDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UretimDetay.ImageOptions.Image")));
+            this.Btn_UretimDetay.Location = new System.Drawing.Point(5, 430);
+            this.Btn_UretimDetay.Name = "Btn_UretimDetay";
+            this.Btn_UretimDetay.Size = new System.Drawing.Size(174, 48);
+            this.Btn_UretimDetay.TabIndex = 30;
+            this.Btn_UretimDetay.Text = "Üretim Detayları";
+            this.Btn_UretimDetay.Click += new System.EventHandler(this.Btn_UretimDetay_Click);
+            // 
             // Btn_Yazdir
             // 
             this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
@@ -100,6 +110,7 @@ namespace test_kooil.Formlar
             this.Btn_Yazdir.Size = new System.Drawing.Size(174, 47);
             this.Btn_Yazdir.TabIndex = 29;
             this.Btn_Yazdir.Text = "Yazdır";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // pictureEdit7
             // 
@@ -271,16 +282,6 @@ namespace test_kooil.Formlar
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // Btn_UretimDetay
-            // 
-            this.Btn_UretimDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_UretimDetay.Location = new System.Drawing.Point(5, 430);
-            this.Btn_UretimDetay.Name = "Btn_UretimDetay";
-            this.Btn_UretimDetay.Size = new System.Drawing.Size(174, 48);
-            this.Btn_UretimDetay.TabIndex = 30;
-            this.Btn_UretimDetay.Text = "Üretim Detayları";
-            this.Btn_UretimDetay.Click += new System.EventHandler(this.Btn_UretimDetay_Click);
             // 
             // Frm_TamamlananSiparisler
             // 

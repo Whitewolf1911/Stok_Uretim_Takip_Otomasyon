@@ -57,7 +57,7 @@ namespace test_kooil
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_YeniIgneEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_HamStok = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
@@ -68,6 +68,8 @@ namespace test_kooil
             this.Btn_IsilIslem = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_UcSiyirma = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_sipDurumKontrol = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_hamKullanim = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_hamRaporEkle = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -117,7 +119,7 @@ namespace test_kooil
             this.barButtonItem25,
             this.barButtonItem27,
             this.Btn_YeniIgneEkle,
-            this.barButtonItem29,
+            this.Btn_HamStok,
             this.barButtonItem30,
             this.barButtonItem31,
             this.barButtonItem32,
@@ -127,10 +129,14 @@ namespace test_kooil
             this.barButtonItem3,
             this.Btn_IsilIslem,
             this.Btn_UcSiyirma,
-            this.Btn_sipDurumKontrol});
+            this.Btn_sipDurumKontrol,
+            this.Btn_hamKullanim,
+            this.Btn_hamRaporEkle});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 39;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonControl1.MaxItemId = 41;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
@@ -353,14 +359,14 @@ namespace test_kooil
             this.Btn_YeniIgneEkle.Name = "Btn_YeniIgneEkle";
             this.Btn_YeniIgneEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_YeniIgneEkle_ItemClick);
             // 
-            // barButtonItem29
+            // Btn_HamStok
             // 
-            this.barButtonItem29.Caption = "Hammadde Stok";
-            this.barButtonItem29.Id = 27;
-            this.barButtonItem29.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem29.ImageOptions.Image")));
-            this.barButtonItem29.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem29.ImageOptions.LargeImage")));
-            this.barButtonItem29.Name = "barButtonItem29";
-            this.barButtonItem29.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem29_ItemClick);
+            this.Btn_HamStok.Caption = "Hammadde Stok";
+            this.Btn_HamStok.Id = 27;
+            this.Btn_HamStok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_HamStok.ImageOptions.Image")));
+            this.Btn_HamStok.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_HamStok.ImageOptions.LargeImage")));
+            this.Btn_HamStok.Name = "Btn_HamStok";
+            this.Btn_HamStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem29_ItemClick);
             // 
             // barButtonItem30
             // 
@@ -445,6 +451,23 @@ namespace test_kooil
             this.Btn_sipDurumKontrol.Name = "Btn_sipDurumKontrol";
             this.Btn_sipDurumKontrol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_sipDurumKontrol_ItemClick);
             // 
+            // Btn_hamKullanim
+            // 
+            this.Btn_hamKullanim.Caption = "Hammadde Kullanım Raporları";
+            this.Btn_hamKullanim.Id = 39;
+            this.Btn_hamKullanim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamKullanim.ImageOptions.Image")));
+            this.Btn_hamKullanim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_hamKullanim.ImageOptions.LargeImage")));
+            this.Btn_hamKullanim.Name = "Btn_hamKullanim";
+            // 
+            // Btn_hamRaporEkle
+            // 
+            this.Btn_hamRaporEkle.Caption = "Hammadde Raporu Ekle";
+            this.Btn_hamRaporEkle.Id = 40;
+            this.Btn_hamRaporEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.Btn_hamRaporEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.Btn_hamRaporEkle.Name = "Btn_hamRaporEkle";
+            this.Btn_hamRaporEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hamRaporEkle_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -472,8 +495,10 @@ namespace test_kooil
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem29);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStok);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem30);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamKullanim);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamRaporEkle);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // ribbonPage2
@@ -565,6 +590,7 @@ namespace test_kooil
             this.ClientSize = new System.Drawing.Size(1473, 846);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Kooil Otomasyon";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -612,7 +638,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem27;
         private DevExpress.XtraBars.BarButtonItem Btn_YeniIgneEkle;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
+        private DevExpress.XtraBars.BarButtonItem Btn_HamStok;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
@@ -627,6 +653,8 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_IsilIslem;
         private DevExpress.XtraBars.BarButtonItem Btn_UcSiyirma;
         private DevExpress.XtraBars.BarButtonItem Btn_sipDurumKontrol;
+        private DevExpress.XtraBars.BarButtonItem Btn_hamKullanim;
+        private DevExpress.XtraBars.BarButtonItem Btn_hamRaporEkle;
     }
 }
 

@@ -12,10 +12,14 @@ namespace test_kooil.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_STOK
+    public partial class TBL_HAMMADDE
     {
-        public int IGNEKOD { get; set; }
-        public string IGNEADI { get; set; }
-        public Nullable<int> STOKADET { get; set; }
+        public int ID { get; set; }
+        public Nullable<decimal> KALINLIK { get; set; }
+        public Nullable<decimal> GENISLIK { get; set; }
+        public string OZELLIK { get; set; }
+        public string MENSEI { get; set; }
+        public Nullable<int> MIKTAR { get; set; }
+        public string KONUM { get; set; }
     }
 }

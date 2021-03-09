@@ -29,6 +29,7 @@ namespace test_kooil.Formlar
                 var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == preslenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
                 preslenenUrun.IGNEKODU = igneKodu.ToString();
                 preslenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                preslenenUrun.HAMMADDE = combo_ham.EditValue.ToString();
                 preslenenUrun.TARIH = date_BasimTarihi.DateTime;
                 preslenenUrun.NOT = text_Not.Text;
                 preslenenUrun.RAPORLAYAN = text_Raporlayan.Text;

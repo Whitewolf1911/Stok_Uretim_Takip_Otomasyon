@@ -27,6 +27,7 @@ namespace test_kooil.Formlar
                                x.SIPARISNO,
                                x.RAPORLAYAN,
                                x.IGNEKODU,
+                               x.HAMMADDE,
                                x.ISLENENMIKTAR,
                                x.TARIH,
                                x.NOT

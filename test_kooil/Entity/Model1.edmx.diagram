@@ -4,12 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2c4ed28d1162424dacbb1a92daa6de10" Name="Diagram1">
+      <Diagram DiagramId="2c4ed28d1162424dacbb1a92daa6de10" Name="Diagram1" ZoomLevel="42">
         <EntityTypeShape EntityType="DB_kooil_testModel.sysdiagram" Width="1.5" PointX="9.875" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_IGNELER" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_PERSONEL" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_SIPARIS" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_STOK" Width="1.5" PointX="2.75" PointY="7.125" IsExpanded="true" />
         <AssociationConnector Association="DB_kooil_testModel.FK_TBL_SIPARIS_TBL_IGNELER" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KANALACMA" Width="1.5" PointX="8.875" PointY="3.5" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_KONTROL" Width="1.5" PointX="5.75" PointY="0.75" />
@@ -26,6 +25,8 @@
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_TEMPER" Width="1.5" PointX="10.75" PointY="10.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_UCSIYIRMA" Width="1.5" PointX="11.75" PointY="3.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_YIKAMA" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_HAMMADDE" Width="1.5" PointX="13.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_HAMRAPOR" Width="1.5" PointX="13.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

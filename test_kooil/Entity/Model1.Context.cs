@@ -29,7 +29,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_IGNELER> TBL_IGNELER { get; set; }
         public virtual DbSet<TBL_PERSONEL> TBL_PERSONEL { get; set; }
         public virtual DbSet<TBL_SIPARIS> TBL_SIPARIS { get; set; }
-        public virtual DbSet<TBL_STOK> TBL_STOK { get; set; }
         public virtual DbSet<TBL_KANALACMA> TBL_KANALACMA { get; set; }
         public virtual DbSet<TBL_KONTROL> TBL_KONTROL { get; set; }
         public virtual DbSet<TBL_PRES> TBL_PRES { get; set; }
@@ -45,5 +44,7 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_TEMPER> TBL_TEMPER { get; set; }
         public virtual DbSet<TBL_UCSIYIRMA> TBL_UCSIYIRMA { get; set; }
         public virtual DbSet<TBL_YIKAMA> TBL_YIKAMA { get; set; }
+        public virtual DbSet<TBL_HAMMADDE> TBL_HAMMADDE { get; set; }
+        public virtual DbSet<TBL_HAMRAPOR> TBL_HAMRAPOR { get; set; }
     }
 }
