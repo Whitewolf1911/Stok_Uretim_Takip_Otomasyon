@@ -39,6 +39,9 @@ namespace test_kooil
         Frm_SiparisDurumKontrol frmSipDkntrol;
         Frm_HamStok frmHamStok;
         Frm_HamRaporEkle frmHamRaporEkle;
+        Frm_HamRaporlari frmHamRapor;
+        Frm_HamStokGuncelle frmHamstokGuncelle;
+
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -251,8 +254,16 @@ namespace test_kooil
         }
 
         private void barButtonItem30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
+        { //Btn_HamStokGuncelle
+
+            if (frmHamstokGuncelle == null || frmHamstokGuncelle.IsDisposed)
+            {
+
+                frmHamstokGuncelle = new Frm_HamStokGuncelle();
+                frmHamstokGuncelle.Show();
+
+            }
+
         }
 
         private void Btn_Yikama_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -342,6 +353,14 @@ namespace test_kooil
                 frmHamRaporEkle = new Frm_HamRaporEkle();
                 frmHamRaporEkle.Show();
             }
+        }
+
+        private void Btn_hamKullanim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHamRapor = new Frm_HamRaporlari();
+            frmHamRapor.MdiParent = this;
+            DisposeAllButThis(frmHamRapor);
+            frmHamRapor.Show();
         }
     }
 }

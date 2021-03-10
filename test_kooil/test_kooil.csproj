@@ -12,7 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\xth3g\Desktop\WebSite\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>239D69A509A0507F78F8DC23C089E6EF0C9F1244</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>test_kooil_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -244,11 +257,23 @@
     <Compile Include="Formlar\Frm_HamRaporEkle.Designer.cs">
       <DependentUpon>Frm_HamRaporEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_HamRaporlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_HamRaporlari.Designer.cs">
+      <DependentUpon>Frm_HamRaporlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_HamStok.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\Frm_HamStok.Designer.cs">
       <DependentUpon>Frm_HamStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_HamStokGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_HamStokGuncelle.Designer.cs">
+      <DependentUpon>Frm_HamStokGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.cs">
       <SubType>Form</SubType>
@@ -547,8 +572,14 @@
     <EmbeddedResource Include="Formlar\Frm_HamRaporEkle.resx">
       <DependentUpon>Frm_HamRaporEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_HamRaporlari.resx">
+      <DependentUpon>Frm_HamRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_HamStok.resx">
       <DependentUpon>Frm_HamStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_HamStokGuncelle.resx">
+      <DependentUpon>Frm_HamStokGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_IgneTurleri.resx">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
@@ -709,6 +740,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="test_kooil_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

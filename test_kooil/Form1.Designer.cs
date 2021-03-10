@@ -58,7 +58,7 @@ namespace test_kooil
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_YeniIgneEkle = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_HamStok = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_HamStokGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
@@ -120,7 +120,7 @@ namespace test_kooil
             this.barButtonItem27,
             this.Btn_YeniIgneEkle,
             this.Btn_HamStok,
-            this.barButtonItem30,
+            this.Btn_HamStokGuncelle,
             this.barButtonItem31,
             this.barButtonItem32,
             this.barButtonItem33,
@@ -368,14 +368,14 @@ namespace test_kooil
             this.Btn_HamStok.Name = "Btn_HamStok";
             this.Btn_HamStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem29_ItemClick);
             // 
-            // barButtonItem30
+            // Btn_HamStokGuncelle
             // 
-            this.barButtonItem30.Caption = "Hammadde Stok Güncelle";
-            this.barButtonItem30.Id = 28;
-            this.barButtonItem30.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.Image")));
-            this.barButtonItem30.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));
-            this.barButtonItem30.Name = "barButtonItem30";
-            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
+            this.Btn_HamStokGuncelle.Caption = "Hammadde Stok Güncelle";
+            this.Btn_HamStokGuncelle.Id = 28;
+            this.Btn_HamStokGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.Image")));
+            this.Btn_HamStokGuncelle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));
+            this.Btn_HamStokGuncelle.Name = "Btn_HamStokGuncelle";
+            this.Btn_HamStokGuncelle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
             // barButtonItem31
             // 
@@ -458,13 +458,14 @@ namespace test_kooil
             this.Btn_hamKullanim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamKullanim.ImageOptions.Image")));
             this.Btn_hamKullanim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_hamKullanim.ImageOptions.LargeImage")));
             this.Btn_hamKullanim.Name = "Btn_hamKullanim";
+            this.Btn_hamKullanim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hamKullanim_ItemClick);
             // 
             // Btn_hamRaporEkle
             // 
             this.Btn_hamRaporEkle.Caption = "Hammadde Raporu Ekle";
             this.Btn_hamRaporEkle.Id = 40;
-            this.Btn_hamRaporEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.Btn_hamRaporEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.Btn_hamRaporEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamRaporEkle.ImageOptions.Image")));
+            this.Btn_hamRaporEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_hamRaporEkle.ImageOptions.LargeImage")));
             this.Btn_hamRaporEkle.Name = "Btn_hamRaporEkle";
             this.Btn_hamRaporEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hamRaporEkle_ItemClick);
             // 
@@ -496,7 +497,7 @@ namespace test_kooil
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStok);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem30);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStokGuncelle);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamKullanim);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamRaporEkle);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -639,7 +640,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem barButtonItem27;
         private DevExpress.XtraBars.BarButtonItem Btn_YeniIgneEkle;
         private DevExpress.XtraBars.BarButtonItem Btn_HamStok;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.BarButtonItem Btn_HamStokGuncelle;
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.BarButtonItem barButtonItem33;

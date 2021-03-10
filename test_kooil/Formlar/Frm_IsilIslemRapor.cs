@@ -52,24 +52,17 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
-                gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
-                gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
-                gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
-                gridView1.GetFocusedRowCellValue("TARIH") != null &&
-                gridView1.GetFocusedRowCellValue("NOT") != null
-                )
-            {
+            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString(); }
 
-                txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
-                txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString();
-                txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
-                txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
-                txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString();
-                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+            if (gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString(); }
 
+            if (gridView1.GetFocusedRowCellValue("IGNEKODU") != null) { txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString(); }
 
-            }
+            if (gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null) { txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString(); }
+
+            if (gridView1.GetFocusedRowCellValue("TARIH") != null) { txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString(); }
+
+            if (gridView1.GetFocusedRowCellValue("NOT") != null) { txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString(); }
         }
 
         private void ShowGridPreview(GridControl grid)
