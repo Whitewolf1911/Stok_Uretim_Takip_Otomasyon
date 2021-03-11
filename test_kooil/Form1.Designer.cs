@@ -84,6 +84,7 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.Btn_UrunStok = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -131,10 +132,11 @@ namespace test_kooil
             this.Btn_UcSiyirma,
             this.Btn_sipDurumKontrol,
             this.Btn_hamKullanim,
-            this.Btn_hamRaporEkle});
+            this.Btn_hamRaporEkle,
+            this.Btn_UrunStok});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 41;
+            this.ribbonControl1.MaxItemId = 42;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -372,8 +374,8 @@ namespace test_kooil
             // 
             this.Btn_HamStokGuncelle.Caption = "Hammadde Stok Güncelle";
             this.Btn_HamStokGuncelle.Id = 28;
-            this.Btn_HamStokGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.Image")));
-            this.Btn_HamStokGuncelle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));
+            this.Btn_HamStokGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_HamStokGuncelle.ImageOptions.Image")));
+            this.Btn_HamStokGuncelle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_HamStokGuncelle.ImageOptions.LargeImage")));
             this.Btn_HamStokGuncelle.Name = "Btn_HamStokGuncelle";
             this.Btn_HamStokGuncelle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
@@ -492,6 +494,7 @@ namespace test_kooil
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem27);
             this.ribbonPageGroup6.ItemLinks.Add(this.Btn_YeniIgneEkle);
+            this.ribbonPageGroup6.ItemLinks.Add(this.Btn_UrunStok);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbonPageGroup7
@@ -584,6 +587,15 @@ namespace test_kooil
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // Btn_UrunStok
+            // 
+            this.Btn_UrunStok.Caption = "Ürün Stok";
+            this.Btn_UrunStok.Id = 41;
+            this.Btn_UrunStok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.Btn_UrunStok.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.Btn_UrunStok.Name = "Btn_UrunStok";
+            this.Btn_UrunStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunStok_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -656,6 +668,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_sipDurumKontrol;
         private DevExpress.XtraBars.BarButtonItem Btn_hamKullanim;
         private DevExpress.XtraBars.BarButtonItem Btn_hamRaporEkle;
+        private DevExpress.XtraBars.BarButtonItem Btn_UrunStok;
     }
 }
 

@@ -92,6 +92,7 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="FOTO" Type="varbinary(max)" />
           <Property Name="TUR" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="STOK" Type="int" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -342,6 +343,7 @@
           <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="TUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GRAMAJ" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="STOK" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_PERSONEL">
           <Key>
@@ -653,6 +655,7 @@
           <EntitySetMapping Name="TBL_IGNELER">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
               <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="STOK" ColumnName="STOK" />
                 <ScalarProperty Name="GRAMAJ" ColumnName="GRAMAJ" />
                 <ScalarProperty Name="TUR" ColumnName="TUR" />
                 <ScalarProperty Name="FOTO" ColumnName="FOTO" />

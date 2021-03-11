@@ -45,7 +45,8 @@ namespace test_kooil.Formlar
                 yeniIgne.IGNEKOD = txt_IgneKodu.Text;
                 yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
                 yeniIgne.GRAMAJ = num_Gramaj.Value;
-                yeniIgne.NOT = txt_Not.Text;               
+                yeniIgne.NOT = txt_Not.Text;
+                yeniIgne.STOK = 0;
                 yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
                 if (picBox_Igne.Image != null)
                 {

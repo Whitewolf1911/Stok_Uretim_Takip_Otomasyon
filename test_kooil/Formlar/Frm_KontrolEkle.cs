@@ -46,8 +46,8 @@ namespace test_kooil.Formlar
         {
             TBL_KONTROL islenenUrun = new TBL_KONTROL();
             islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-            islenenUrun.IGNEKODU = igneKodu.ToString();
+            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault().ToString();
+            islenenUrun.IGNEKODU = igneKodu;
             islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
             islenenUrun.TARIH = date_BasimTarihi.DateTime;
             islenenUrun.NOT = text_Not.Text;
@@ -56,6 +56,12 @@ namespace test_kooil.Formlar
 
             var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
             deger.KONTROLSAYI += int.Parse(num_IslenenAdet.Value.ToString());
+
+            var igneID = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.ID).FirstOrDefault();
+            var urunStok = db.TBL_IGNELER.Find(igneID);
+
+
+            urunStok.STOK += int.Parse(num_IslenenAdet.Value.ToString());
 
             if (deger.SIPARISASAMASI < 14)
             {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.

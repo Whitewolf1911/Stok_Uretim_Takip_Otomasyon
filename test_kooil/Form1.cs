@@ -41,7 +41,7 @@ namespace test_kooil
         Frm_HamRaporEkle frmHamRaporEkle;
         Frm_HamRaporlari frmHamRapor;
         Frm_HamStokGuncelle frmHamstokGuncelle;
-
+        Frm_UrunStok frmUrunStok;
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -361,6 +361,14 @@ namespace test_kooil
             frmHamRapor.MdiParent = this;
             DisposeAllButThis(frmHamRapor);
             frmHamRapor.Show();
+        }
+
+        private void Btn_UrunStok_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+             frmUrunStok = new Frm_UrunStok();
+             frmUrunStok.MdiParent = this;
+             DisposeAllButThis(frmUrunStok);
+             frmUrunStok.Show();
         }
     }
 }
