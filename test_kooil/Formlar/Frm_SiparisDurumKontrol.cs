@@ -29,9 +29,9 @@ namespace test_kooil.Formlar
                            {
                                SiparisNo = x.SIPARISNOID, // 0
                                Musteri = x.MUSTERI,
+                               UrunTuru = x.TBL_IGNELER.TUR,
                                UrunKodu = x.TBL_IGNELER.IGNEKOD,
-                               Siparis = x.URUNADETI,
-                               UrunTuru = x.TBL_IGNELER.TUR,                              
+                               Siparis = x.URUNADETI,                                                            
                                SiparisTarihi = x.SIPARISTARIHI,// 5
                                IstenilenTarih = x.ISTENILENTARIH,//6
                                Pres = x.PRESSAYI,
