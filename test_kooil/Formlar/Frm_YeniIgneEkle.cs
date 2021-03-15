@@ -20,6 +20,24 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+
+        void hamListele() {
+
+            var hammaddeler = (from x in db.TBL_HAMMADDE
+                               select new
+                               {
+                                   x.KALINLIK,
+                                   x.GENISLIK,
+                                   x.MENSEI,
+                                   x.OZELLIK,
+                                   x.ID
+
+                               }).ToList().OrderBy(x => x.KALINLIK);
+
+            gridControl1.DataSource = hammaddeler;
+            gridView1.Columns[4].Visible = false;
+            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
+        }
         
         
 
@@ -45,6 +63,8 @@ namespace test_kooil.Formlar
                 yeniIgne.IGNEKOD = txt_IgneKodu.Text;
                 yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
                 yeniIgne.GRAMAJ = num_Gramaj.Value;
+                yeniIgne.HAMMADDETIPI = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
                 yeniIgne.NOT = txt_Not.Text;
                 yeniIgne.STOK = 0;
                 yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
@@ -79,7 +99,21 @@ namespace test_kooil.Formlar
 
         private void Frm_YeniIgneEkle_Load(object sender, EventArgs e)
         {
-            
+            hamListele();
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if(gridView1.GetFocusedRowCellValue("KALINLIK") != null && gridView1.GetFocusedRowCellValue("GENISLIK") != null)
+            {
+                txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK");
+
+            }
         }
     }
 }

@@ -93,6 +93,8 @@
           <Property Name="FOTO" Type="varbinary(max)" />
           <Property Name="TUR" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="STOK" Type="int" />
+          <Property Name="HAMMADDETIPI" Type="int" />
+          <Property Name="SARFIYATORAN" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -344,6 +346,8 @@
           <Property Name="TUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GRAMAJ" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="STOK" Type="Int32" />
+          <Property Name="HAMMADDETIPI" Type="Int32" />
+          <Property Name="SARFIYATORAN" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TBL_PERSONEL">
           <Key>
@@ -655,6 +659,8 @@
           <EntitySetMapping Name="TBL_IGNELER">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
               <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="SARFIYATORAN" ColumnName="SARFIYATORAN" />
+                <ScalarProperty Name="HAMMADDETIPI" ColumnName="HAMMADDETIPI" />
                 <ScalarProperty Name="STOK" ColumnName="STOK" />
                 <ScalarProperty Name="GRAMAJ" ColumnName="GRAMAJ" />
                 <ScalarProperty Name="TUR" ColumnName="TUR" />

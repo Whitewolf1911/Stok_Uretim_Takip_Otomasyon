@@ -93,7 +93,7 @@ namespace test_kooil.Formlar
         {   //MUSTERI URUNKODU hammadde mensei miktar
             if (gridView1.GetFocusedRowCellValue("MUSTERI") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("MUSTERI").ToString(); }
             if (gridView1.GetFocusedRowCellValue("URUNKODU") != null) { txt_urunKodu.Text = gridView1.GetFocusedRowCellValue("URUNKODU").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("KALINLIK") != null && gridView1.GetFocusedRowCellValue("KALINLIK") != null)
+            if (gridView1.GetFocusedRowCellValue("KALINLIK") != null && gridView1.GetFocusedRowCellValue("GENISLIK") != null)
             { txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK"); }
             if (gridView1.GetFocusedRowCellValue("MENSEI") != null) { txt_mensei.Text = gridView1.GetFocusedRowCellValue("MENSEI").ToString(); }
             if (gridView1.GetFocusedRowCellValue("HarcananMiktar") != null) { txt_Miktar.Text = gridView1.GetFocusedRowCellValue("HarcananMiktar").ToString(); }

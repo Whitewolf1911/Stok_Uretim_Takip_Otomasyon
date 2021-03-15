@@ -28,6 +28,8 @@ namespace test_kooil.Entity
         public string TUR { get; set; }
         public Nullable<decimal> GRAMAJ { get; set; }
         public Nullable<int> STOK { get; set; }
+        public Nullable<int> HAMMADDETIPI { get; set; }
+        public Nullable<decimal> SARFIYATORAN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SIPARIS> TBL_SIPARIS { get; set; }
