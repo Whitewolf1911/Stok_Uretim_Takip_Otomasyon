@@ -146,6 +146,9 @@
     <Compile Include="Entity\TBL_DILCAKMA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_FIRMALAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_HAMMADDE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -250,6 +253,18 @@
     </Compile>
     <Compile Include="Formlar\Frm_DilCakmaRapor.Designer.cs">
       <DependentUpon>Frm_DilCakmaRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_FirmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_FirmaEkle.Designer.cs">
+      <DependentUpon>Frm_FirmaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Firmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Firmalar.Designer.cs">
+      <DependentUpon>Frm_Firmalar.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_HamRaporEkle.cs">
       <SubType>Form</SubType>
@@ -574,6 +589,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_DilCakmaRapor.resx">
       <DependentUpon>Frm_DilCakmaRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_FirmaEkle.resx">
+      <DependentUpon>Frm_FirmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Firmalar.resx">
+      <DependentUpon>Frm_Firmalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_HamRaporEkle.resx">
       <DependentUpon>Frm_HamRaporEkle.cs</DependentUpon>

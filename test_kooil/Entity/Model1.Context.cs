@@ -46,5 +46,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_YIKAMA> TBL_YIKAMA { get; set; }
         public virtual DbSet<TBL_HAMMADDE> TBL_HAMMADDE { get; set; }
         public virtual DbSet<TBL_HAMRAPOR> TBL_HAMRAPOR { get; set; }
+        public virtual DbSet<TBL_FIRMALAR> TBL_FIRMALAR { get; set; }
     }
 }

@@ -42,6 +42,7 @@ namespace test_kooil
         Frm_HamRaporlari frmHamRapor;
         Frm_HamStokGuncelle frmHamstokGuncelle;
         Frm_UrunStok frmUrunStok;
+        Frm_FirmaEkle frmFirmaEkle;
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -369,6 +370,16 @@ namespace test_kooil
              frmUrunStok.MdiParent = this;
              DisposeAllButThis(frmUrunStok);
              frmUrunStok.Show();
+        }
+
+        private void Btn_FirmaEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmFirmaEkle == null || frmFirmaEkle.IsDisposed)
+            {
+
+                frmFirmaEkle = new Frm_FirmaEkle();
+                frmFirmaEkle.Show();
+            }
         }
     }
 }

@@ -51,6 +51,22 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
         </EntityType>
+        <EntityType Name="TBL_FIRMALAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIRMAAD" Type="varchar" MaxLength="20" />
+          <Property Name="FIRMATAMAD" Type="varchar" MaxLength="60" />
+          <Property Name="VERGINO" Type="varchar" MaxLength="10" />
+          <Property Name="ADRES" Type="varchar" MaxLength="120" />
+          <Property Name="TELEFON1" Type="varchar" MaxLength="10" />
+          <Property Name="TELEFON2" Type="varchar" MaxLength="10" />
+          <Property Name="KONUM" Type="varchar" MaxLength="30" />
+          <Property Name="MAIL" Type="varchar" MaxLength="40" />
+          <Property Name="YETKILI" Type="varchar" MaxLength="50" />
+          <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="40" />
+        </EntityType>
         <EntityType Name="TBL_HAMMADDE">
           <Key>
             <PropertyRef Name="ID" />
@@ -297,6 +313,7 @@
           <EntitySet Name="TBL_ARKASIYIR" EntityType="Self.TBL_ARKASIYIR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_BILEME" EntityType="Self.TBL_BILEME" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_DILCAKMA" EntityType="Self.TBL_DILCAKMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_FIRMALAR" EntityType="Self.TBL_FIRMALAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMMADDE" EntityType="Self.TBL_HAMMADDE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMRAPOR" EntityType="Self.TBL_HAMRAPOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" Schema="dbo" store:Type="Tables" />
@@ -426,6 +443,7 @@
           <EntitySet Name="TBL_YIKAMA" EntityType="DB_kooil_testModel.TBL_YIKAMA" />
           <EntitySet Name="TBL_HAMMADDE" EntityType="DB_kooil_testModel.TBL_HAMMADDE" />
           <EntitySet Name="TBL_HAMRAPOR" EntityType="DB_kooil_testModel.TBL_HAMRAPOR" />
+          <EntitySet Name="TBL_FIRMALAR" EntityType="DB_kooil_testModel.TBL_FIRMALAR" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -638,6 +656,22 @@
           <Property Name="OZELLIK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="MENSEI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_FIRMALAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIRMAAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMATAMAD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="VERGINO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ADRES" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KONUM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="YETKILI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VERGIDAIRESI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -938,6 +972,23 @@
                 <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_FIRMALAR">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_FIRMALAR">
+              <MappingFragment StoreEntitySet="TBL_FIRMALAR">
+                <ScalarProperty Name="VERGIDAIRESI" ColumnName="VERGIDAIRESI" />
+                <ScalarProperty Name="YETKILI" ColumnName="YETKILI" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="KONUM" ColumnName="KONUM" />
+                <ScalarProperty Name="TELEFON2" ColumnName="TELEFON2" />
+                <ScalarProperty Name="TELEFON1" ColumnName="TELEFON1" />
+                <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+                <ScalarProperty Name="VERGINO" ColumnName="VERGINO" />
+                <ScalarProperty Name="FIRMATAMAD" ColumnName="FIRMATAMAD" />
+                <ScalarProperty Name="FIRMAAD" ColumnName="FIRMAAD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

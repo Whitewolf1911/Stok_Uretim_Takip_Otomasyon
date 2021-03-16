@@ -60,8 +60,8 @@ namespace test_kooil
             this.Btn_HamStok = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_HamStokGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Firmalar = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_FirmaEkle = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_tamamSiparisler = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GunlukHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -70,6 +70,7 @@ namespace test_kooil
             this.Btn_sipDurumKontrol = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_hamKullanim = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_hamRaporEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_UrunStok = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,7 +85,6 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.Btn_UrunStok = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -123,8 +123,8 @@ namespace test_kooil
             this.Btn_HamStok,
             this.Btn_HamStokGuncelle,
             this.barButtonItem31,
-            this.barButtonItem32,
-            this.barButtonItem33,
+            this.Btn_Firmalar,
+            this.Btn_FirmaEkle,
             this.Btn_tamamSiparisler,
             this.Btn_GunlukHareketler,
             this.barButtonItem3,
@@ -387,21 +387,22 @@ namespace test_kooil
             this.barButtonItem31.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.LargeImage")));
             this.barButtonItem31.Name = "barButtonItem31";
             // 
-            // barButtonItem32
+            // Btn_Firmalar
             // 
-            this.barButtonItem32.Caption = "Personeller";
-            this.barButtonItem32.Id = 30;
-            this.barButtonItem32.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.ImageOptions.Image")));
-            this.barButtonItem32.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.ImageOptions.LargeImage")));
-            this.barButtonItem32.Name = "barButtonItem32";
+            this.Btn_Firmalar.Caption = "Firmalar";
+            this.Btn_Firmalar.Id = 30;
+            this.Btn_Firmalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.ImageOptions.Image")));
+            this.Btn_Firmalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.ImageOptions.LargeImage")));
+            this.Btn_Firmalar.Name = "Btn_Firmalar";
             // 
-            // barButtonItem33
+            // Btn_FirmaEkle
             // 
-            this.barButtonItem33.Caption = "Personel Ekle";
-            this.barButtonItem33.Id = 31;
-            this.barButtonItem33.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.ImageOptions.Image")));
-            this.barButtonItem33.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.ImageOptions.LargeImage")));
-            this.barButtonItem33.Name = "barButtonItem33";
+            this.Btn_FirmaEkle.Caption = "Firma Ekle";
+            this.Btn_FirmaEkle.Id = 31;
+            this.Btn_FirmaEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.ImageOptions.Image")));
+            this.Btn_FirmaEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.ImageOptions.LargeImage")));
+            this.Btn_FirmaEkle.Name = "Btn_FirmaEkle";
+            this.Btn_FirmaEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_FirmaEkle_ItemClick);
             // 
             // Btn_tamamSiparisler
             // 
@@ -471,6 +472,15 @@ namespace test_kooil
             this.Btn_hamRaporEkle.Name = "Btn_hamRaporEkle";
             this.Btn_hamRaporEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hamRaporEkle_ItemClick);
             // 
+            // Btn_UrunStok
+            // 
+            this.Btn_UrunStok.Caption = "Ürün Stok";
+            this.Btn_UrunStok.Id = 41;
+            this.Btn_UrunStok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UrunStok.ImageOptions.Image")));
+            this.Btn_UrunStok.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_UrunStok.ImageOptions.LargeImage")));
+            this.Btn_UrunStok.Name = "Btn_UrunStok";
+            this.Btn_UrunStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunStok_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -535,12 +545,12 @@ namespace test_kooil
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4});
             this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Personel";
+            this.ribbonPage4.Text = "Firma-Sevkiyat";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem32);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem33);
+            this.ribbonPageGroup4.ItemLinks.Add(this.Btn_Firmalar);
+            this.ribbonPageGroup4.ItemLinks.Add(this.Btn_FirmaEkle);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // barButtonItem11
@@ -586,15 +596,6 @@ namespace test_kooil
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // Btn_UrunStok
-            // 
-            this.Btn_UrunStok.Caption = "Ürün Stok";
-            this.Btn_UrunStok.Id = 41;
-            this.Btn_UrunStok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.Btn_UrunStok.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.Btn_UrunStok.Name = "Btn_UrunStok";
-            this.Btn_UrunStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunStok_ItemClick);
             // 
             // Form1
             // 
@@ -654,8 +655,8 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_HamStok;
         private DevExpress.XtraBars.BarButtonItem Btn_HamStokGuncelle;
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem33;
+        private DevExpress.XtraBars.BarButtonItem Btn_Firmalar;
+        private DevExpress.XtraBars.BarButtonItem Btn_FirmaEkle;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
