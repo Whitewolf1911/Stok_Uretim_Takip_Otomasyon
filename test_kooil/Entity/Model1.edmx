@@ -60,8 +60,8 @@
           <Property Name="FIRMATAMAD" Type="varchar" MaxLength="60" />
           <Property Name="VERGINO" Type="varchar" MaxLength="10" />
           <Property Name="ADRES" Type="varchar" MaxLength="120" />
-          <Property Name="TELEFON1" Type="varchar" MaxLength="10" />
-          <Property Name="TELEFON2" Type="varchar" MaxLength="10" />
+          <Property Name="TELEFON1" Type="varchar" MaxLength="20" />
+          <Property Name="TELEFON2" Type="varchar" MaxLength="20" />
           <Property Name="KONUM" Type="varchar" MaxLength="30" />
           <Property Name="MAIL" Type="varchar" MaxLength="40" />
           <Property Name="YETKILI" Type="varchar" MaxLength="50" />
@@ -666,8 +666,8 @@
           <Property Name="FIRMATAMAD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="VERGINO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="ADRES" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFON1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFON2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="KONUM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="MAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="YETKILI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

@@ -184,7 +184,7 @@ namespace test_kooil.Formlar
             this.txt_Tel1.Name = "txt_Tel1";
             this.txt_Tel1.Properties.BeepOnError = false;
             this.txt_Tel1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txt_Tel1.Properties.MaskSettings.Set("mask", "0000000000");
+            this.txt_Tel1.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.txt_Tel1.Size = new System.Drawing.Size(153, 22);
             this.txt_Tel1.TabIndex = 12;
             // 
@@ -194,7 +194,7 @@ namespace test_kooil.Formlar
             this.txt_Tel2.Name = "txt_Tel2";
             this.txt_Tel2.Properties.BeepOnError = false;
             this.txt_Tel2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txt_Tel2.Properties.MaskSettings.Set("mask", "0000000000");
+            this.txt_Tel2.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.txt_Tel2.Size = new System.Drawing.Size(153, 22);
             this.txt_Tel2.TabIndex = 13;
             // 
@@ -224,6 +224,9 @@ namespace test_kooil.Formlar
             this.txt_vergiNo.EditValue = "";
             this.txt_vergiNo.Location = new System.Drawing.Point(526, 109);
             this.txt_vergiNo.Name = "txt_vergiNo";
+            this.txt_vergiNo.Properties.BeepOnError = false;
+            this.txt_vergiNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txt_vergiNo.Properties.MaskSettings.Set("mask", "0000000000");
             this.txt_vergiNo.Size = new System.Drawing.Size(153, 22);
             this.txt_vergiNo.TabIndex = 17;
             // 

@@ -512,6 +512,12 @@
     <Compile Include="Formlar\Frm_YeniIgneEkle.Designer.cs">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_YeniSevkiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YeniSevkiyat.Designer.cs">
+      <DependentUpon>Frm_YeniSevkiyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniSiparis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -718,6 +724,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YeniSevkiyat.resx">
+      <DependentUpon>Frm_YeniSevkiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniSiparis.resx">
       <DependentUpon>Frm_YeniSiparis.cs</DependentUpon>

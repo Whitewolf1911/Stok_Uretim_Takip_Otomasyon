@@ -33,6 +33,10 @@ namespace test_kooil.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_firmaSil = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_Yenile = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_bilgiGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_tamAd = new System.Windows.Forms.RichTextBox();
             this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
@@ -62,10 +66,6 @@ namespace test_kooil.Formlar
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -105,13 +105,14 @@ namespace test_kooil.Formlar
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.simpleButton3);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.richTextBox1);
+            this.groupControl1.Controls.Add(this.Btn_firmaSil);
+            this.groupControl1.Controls.Add(this.Btn_Yenile);
+            this.groupControl1.Controls.Add(this.Btn_bilgiGuncelle);
+            this.groupControl1.Controls.Add(this.txt_tamAd);
             this.groupControl1.Controls.Add(this.pictureEdit10);
             this.groupControl1.Controls.Add(this.pictureEdit9);
             this.groupControl1.Controls.Add(this.pictureEdit8);
@@ -146,6 +147,44 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(704, 604);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Firma Bilgileri";
+            // 
+            // Btn_firmaSil
+            // 
+            this.Btn_firmaSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_firmaSil.ImageOptions.Image")));
+            this.Btn_firmaSil.Location = new System.Drawing.Point(278, 543);
+            this.Btn_firmaSil.Name = "Btn_firmaSil";
+            this.Btn_firmaSil.Size = new System.Drawing.Size(170, 56);
+            this.Btn_firmaSil.TabIndex = 72;
+            this.Btn_firmaSil.Text = "Firmayı Sil";
+            this.Btn_firmaSil.Click += new System.EventHandler(this.Btn_firmaSil_Click);
+            // 
+            // Btn_Yenile
+            // 
+            this.Btn_Yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yenile.ImageOptions.Image")));
+            this.Btn_Yenile.Location = new System.Drawing.Point(518, 543);
+            this.Btn_Yenile.Name = "Btn_Yenile";
+            this.Btn_Yenile.Size = new System.Drawing.Size(170, 56);
+            this.Btn_Yenile.TabIndex = 71;
+            this.Btn_Yenile.Text = "Listeyi Yenile";
+            this.Btn_Yenile.Click += new System.EventHandler(this.Btn_Yenile_Click);
+            // 
+            // Btn_bilgiGuncelle
+            // 
+            this.Btn_bilgiGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_bilgiGuncelle.ImageOptions.Image")));
+            this.Btn_bilgiGuncelle.Location = new System.Drawing.Point(5, 543);
+            this.Btn_bilgiGuncelle.Name = "Btn_bilgiGuncelle";
+            this.Btn_bilgiGuncelle.Size = new System.Drawing.Size(170, 56);
+            this.Btn_bilgiGuncelle.TabIndex = 70;
+            this.Btn_bilgiGuncelle.Text = "Bilgileri Güncelle";
+            this.Btn_bilgiGuncelle.Click += new System.EventHandler(this.Btn_bilgiGuncelle_Click);
+            // 
+            // txt_tamAd
+            // 
+            this.txt_tamAd.Location = new System.Drawing.Point(171, 119);
+            this.txt_tamAd.Name = "txt_tamAd";
+            this.txt_tamAd.Size = new System.Drawing.Size(178, 44);
+            this.txt_tamAd.TabIndex = 69;
+            this.txt_tamAd.Text = "";
             // 
             // pictureEdit10
             // 
@@ -288,6 +327,9 @@ namespace test_kooil.Formlar
             this.txt_vergiNo.EditValue = "";
             this.txt_vergiNo.Location = new System.Drawing.Point(535, 115);
             this.txt_vergiNo.Name = "txt_vergiNo";
+            this.txt_vergiNo.Properties.BeepOnError = false;
+            this.txt_vergiNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txt_vergiNo.Properties.MaskSettings.Set("mask", "0000000000");
             this.txt_vergiNo.Size = new System.Drawing.Size(153, 22);
             this.txt_vergiNo.TabIndex = 56;
             // 
@@ -318,7 +360,7 @@ namespace test_kooil.Formlar
             this.txt_Tel2.Name = "txt_Tel2";
             this.txt_Tel2.Properties.BeepOnError = false;
             this.txt_Tel2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txt_Tel2.Properties.MaskSettings.Set("mask", "0000000000");
+            this.txt_Tel2.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.txt_Tel2.Size = new System.Drawing.Size(153, 22);
             this.txt_Tel2.TabIndex = 52;
             // 
@@ -328,7 +370,7 @@ namespace test_kooil.Formlar
             this.txt_Tel1.Name = "txt_Tel1";
             this.txt_Tel1.Properties.BeepOnError = false;
             this.txt_Tel1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txt_Tel1.Properties.MaskSettings.Set("mask", "0000000000");
+            this.txt_Tel1.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.txt_Tel1.Size = new System.Drawing.Size(153, 22);
             this.txt_Tel1.TabIndex = 51;
             // 
@@ -420,41 +462,6 @@ namespace test_kooil.Formlar
             this.labelControl1.TabIndex = 39;
             this.labelControl1.Text = "Firma Adı :";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(171, 119);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(178, 44);
-            this.richTextBox1.TabIndex = 69;
-            this.richTextBox1.Text = "";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(5, 543);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(170, 56);
-            this.simpleButton1.TabIndex = 70;
-            this.simpleButton1.Text = "Bilgileri Güncelle";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(518, 543);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(170, 56);
-            this.simpleButton2.TabIndex = 71;
-            this.simpleButton2.Text = "Listeyi Yenile";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(278, 543);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(170, 56);
-            this.simpleButton3.TabIndex = 72;
-            this.simpleButton3.Text = "Firmayı Sil";
-            // 
             // Frm_Firmalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,10 +504,10 @@ namespace test_kooil.Formlar
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private DevExpress.XtraEditors.SimpleButton Btn_firmaSil;
+        private DevExpress.XtraEditors.SimpleButton Btn_Yenile;
+        private DevExpress.XtraEditors.SimpleButton Btn_bilgiGuncelle;
+        private System.Windows.Forms.RichTextBox txt_tamAd;
         private DevExpress.XtraEditors.PictureEdit pictureEdit10;
         private DevExpress.XtraEditors.PictureEdit pictureEdit9;
         private DevExpress.XtraEditors.PictureEdit pictureEdit8;

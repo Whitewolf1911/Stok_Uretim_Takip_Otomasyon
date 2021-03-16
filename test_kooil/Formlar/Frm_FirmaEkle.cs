@@ -22,11 +22,8 @@ namespace test_kooil.Formlar
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             //Ekle Butonu
-
-           
-
-            //try
-            //{
+            try
+            {
                 TBL_FIRMALAR yeniFirma = new TBL_FIRMALAR();
                 yeniFirma.ADRES = txt_Adres.Text;
                 yeniFirma.FIRMAAD = txt_ad.Text;
@@ -44,21 +41,18 @@ namespace test_kooil.Formlar
 
                 XtraMessageBox.Show("Firma Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-            //}
-            //catch {
-
-            //    XtraMessageBox.Show("Girdiğiniz Bilgileri Kontrol Ediniz.", "İşlem Tamamlanamadı.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-
-
+                this.Close();
+            }
+            catch
+            {
+                XtraMessageBox.Show("Girdiğiniz Bilgileri Kontrol Ediniz.", "İşlem Tamamlanamadı.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
-
         private void Btn_iptal_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
     }
 }
