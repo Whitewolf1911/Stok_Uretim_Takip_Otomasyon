@@ -41,7 +41,6 @@ namespace test_kooil.Formlar
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txt_ad = new DevExpress.XtraEditors.TextEdit();
-            this.txt_tamAd = new DevExpress.XtraEditors.TextEdit();
             this.txt_Tel1 = new DevExpress.XtraEditors.TextEdit();
             this.txt_Tel2 = new DevExpress.XtraEditors.TextEdit();
             this.txt_email = new DevExpress.XtraEditors.TextEdit();
@@ -62,8 +61,8 @@ namespace test_kooil.Formlar
             this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_iptal = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_tamAd = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tamAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tel1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tel2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_email.Properties)).BeginInit();
@@ -170,13 +169,6 @@ namespace test_kooil.Formlar
             this.txt_ad.Name = "txt_ad";
             this.txt_ad.Size = new System.Drawing.Size(153, 22);
             this.txt_ad.TabIndex = 10;
-            // 
-            // txt_tamAd
-            // 
-            this.txt_tamAd.Location = new System.Drawing.Point(178, 115);
-            this.txt_tamAd.Name = "txt_tamAd";
-            this.txt_tamAd.Size = new System.Drawing.Size(153, 22);
-            this.txt_tamAd.TabIndex = 11;
             // 
             // txt_Tel1
             // 
@@ -386,11 +378,20 @@ namespace test_kooil.Formlar
             this.Btn_iptal.Text = "İptal";
             this.Btn_iptal.Click += new System.EventHandler(this.Btn_iptal_Click);
             // 
+            // txt_tamAd
+            // 
+            this.txt_tamAd.Location = new System.Drawing.Point(178, 115);
+            this.txt_tamAd.Name = "txt_tamAd";
+            this.txt_tamAd.Size = new System.Drawing.Size(153, 52);
+            this.txt_tamAd.TabIndex = 41;
+            this.txt_tamAd.Text = "";
+            // 
             // Frm_FirmaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 570);
+            this.Controls.Add(this.txt_tamAd);
             this.Controls.Add(this.Btn_iptal);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.pictureEdit10);
@@ -411,7 +412,6 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_Tel2);
             this.Controls.Add(this.txt_Tel1);
-            this.Controls.Add(this.txt_tamAd);
             this.Controls.Add(this.txt_ad);
             this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.labelControl9);
@@ -426,7 +426,6 @@ namespace test_kooil.Formlar
             this.Name = "Frm_FirmaEkle";
             this.Text = "Firma Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.txt_ad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tamAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tel1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tel2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_email.Properties)).EndInit();
@@ -462,7 +461,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txt_ad;
-        private DevExpress.XtraEditors.TextEdit txt_tamAd;
         private DevExpress.XtraEditors.TextEdit txt_Tel1;
         private DevExpress.XtraEditors.TextEdit txt_Tel2;
         private DevExpress.XtraEditors.TextEdit txt_email;
@@ -483,5 +481,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit10;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton Btn_iptal;
+        private System.Windows.Forms.RichTextBox txt_tamAd;
     }
 }

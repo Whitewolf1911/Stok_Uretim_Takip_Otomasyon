@@ -30,7 +30,6 @@ namespace test_kooil.Formlar
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_YeniSiparis));
-            this.txt_Musteri = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.date_IstenilenTarih = new DevExpress.XtraEditors.DateEdit();
@@ -53,7 +52,7 @@ namespace test_kooil.Formlar
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.picBoxUrun = new System.Windows.Forms.PictureBox();
             this.txt_urunCesit = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Musteri.Properties)).BeginInit();
+            this.lookUp_Musteri = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.date_IstenilenTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_IstenilenTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).BeginInit();
@@ -68,14 +67,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUrun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUp_Musteri.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_Musteri
-            // 
-            this.txt_Musteri.Location = new System.Drawing.Point(234, 46);
-            this.txt_Musteri.Name = "txt_Musteri";
-            this.txt_Musteri.Size = new System.Drawing.Size(159, 22);
-            this.txt_Musteri.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -299,11 +292,22 @@ namespace test_kooil.Formlar
             this.txt_urunCesit.Size = new System.Drawing.Size(159, 22);
             this.txt_urunCesit.TabIndex = 36;
             // 
+            // lookUp_Musteri
+            // 
+            this.lookUp_Musteri.Location = new System.Drawing.Point(234, 49);
+            this.lookUp_Musteri.Name = "lookUp_Musteri";
+            this.lookUp_Musteri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUp_Musteri.Properties.NullText = "";
+            this.lookUp_Musteri.Size = new System.Drawing.Size(159, 22);
+            this.lookUp_Musteri.TabIndex = 37;
+            // 
             // Frm_YeniSiparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 646);
+            this.Controls.Add(this.lookUp_Musteri);
             this.Controls.Add(this.txt_urunCesit);
             this.Controls.Add(this.picBoxUrun);
             this.Controls.Add(this.gridControl1);
@@ -325,12 +329,10 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.date_IstenilenTarih);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txt_Musteri);
             this.Name = "Frm_YeniSiparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Sipariş Oluştur";
             this.Load += new System.EventHandler(this.Frm_YeniSiparis_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Musteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_IstenilenTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_IstenilenTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).EndInit();
@@ -345,14 +347,13 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUrun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUp_Musteri.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.TextEdit txt_Musteri;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.DateEdit date_IstenilenTarih;
@@ -375,5 +376,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.PictureBox picBoxUrun;
         private System.Windows.Forms.TextBox txt_urunCesit;
+        private DevExpress.XtraEditors.LookUpEdit lookUp_Musteri;
     }
 }

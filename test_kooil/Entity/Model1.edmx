@@ -219,6 +219,17 @@
           <Property Name="SIPARISNO" Type="int" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="TBL_SEVKIYAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MUSTERI" Type="varchar" MaxLength="25" />
+          <Property Name="URUNTUR" Type="varchar" MaxLength="15" />
+          <Property Name="URUNKOD" Type="varchar" MaxLength="40" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="ADET" Type="int" />
+        </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
             <PropertyRef Name="SIPARISNOID" />
@@ -326,6 +337,7 @@
           <EntitySet Name="TBL_POLISAJ2" EntityType="Self.TBL_POLISAJ2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_PRES" EntityType="Self.TBL_PRES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_RAPOR" EntityType="Self.TBL_RAPOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_SEVKIYAT" EntityType="Self.TBL_SEVKIYAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_TEMPER" EntityType="Self.TBL_TEMPER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_UCSIYIRMA" EntityType="Self.TBL_UCSIYIRMA" Schema="dbo" store:Type="Tables" />
@@ -444,6 +456,7 @@
           <EntitySet Name="TBL_HAMMADDE" EntityType="DB_kooil_testModel.TBL_HAMMADDE" />
           <EntitySet Name="TBL_HAMRAPOR" EntityType="DB_kooil_testModel.TBL_HAMRAPOR" />
           <EntitySet Name="TBL_FIRMALAR" EntityType="DB_kooil_testModel.TBL_FIRMALAR" />
+          <EntitySet Name="TBL_SEVKIYAT" EntityType="DB_kooil_testModel.TBL_SEVKIYAT" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -672,6 +685,17 @@
           <Property Name="MAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="YETKILI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="VERGIDAIRESI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_SEVKIYAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MUSTERI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="URUNTUR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="URUNKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="ADET" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -988,6 +1012,18 @@
                 <ScalarProperty Name="VERGINO" ColumnName="VERGINO" />
                 <ScalarProperty Name="FIRMATAMAD" ColumnName="FIRMATAMAD" />
                 <ScalarProperty Name="FIRMAAD" ColumnName="FIRMAAD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SEVKIYAT">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SEVKIYAT">
+              <MappingFragment StoreEntitySet="TBL_SEVKIYAT">
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="URUNKOD" ColumnName="URUNKOD" />
+                <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
+                <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

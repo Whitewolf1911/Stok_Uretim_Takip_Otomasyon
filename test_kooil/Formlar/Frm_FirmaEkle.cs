@@ -40,7 +40,7 @@ namespace test_kooil.Formlar
                 db.SaveChanges();
 
                 XtraMessageBox.Show("Firma Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+               
                 this.Close();
             }
             catch

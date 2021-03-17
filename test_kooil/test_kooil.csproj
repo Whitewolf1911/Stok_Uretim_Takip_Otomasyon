@@ -185,6 +185,9 @@
     <Compile Include="Entity\TBL_RAPOR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_SEVKIYAT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_SIPARIS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

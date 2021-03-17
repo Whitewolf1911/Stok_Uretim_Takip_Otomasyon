@@ -20,7 +20,23 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
-        void listele()
+        void musteriListele()
+        {
+            var musteri = (from x in db.TBL_FIRMALAR
+                           select new
+                           {
+                              Firmalar = x.FIRMAAD
+
+
+                           }).ToList().OrderBy(x => x.Firmalar);
+
+            lookUp_Musteri.Properties.ValueMember = "Firmalar";
+            lookUp_Musteri.Properties.DisplayMember = "Firmalar";
+            lookUp_Musteri.Properties.DataSource = musteri;
+
+
+        }
+        void urunListele()
         {
             var igneler = (from x in db.TBL_IGNELER
                            select new
@@ -48,8 +64,8 @@ namespace test_kooil.Formlar
 
         private void Frm_YeniSiparis_Load(object sender, EventArgs e)
         {
-            listele();
-       
+            urunListele();
+            musteriListele();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -61,7 +77,7 @@ namespace test_kooil.Formlar
                 yeniSiparis.AKTIF = true;
                 int ignetipi = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                 yeniSiparis.IGNETIPI = ignetipi;
-                yeniSiparis.MUSTERI = txt_Musteri.Text;
+                yeniSiparis.MUSTERI = lookUp_Musteri.EditValue.ToString();
                 yeniSiparis.URUNADETI = int.Parse(num_Adet.Value.ToString());
                 yeniSiparis.NOTLAR = txt_Not.Text;
                 yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue;

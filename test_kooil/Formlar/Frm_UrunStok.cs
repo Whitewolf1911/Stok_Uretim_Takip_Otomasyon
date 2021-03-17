@@ -32,10 +32,9 @@ namespace test_kooil.Formlar
                            }
                            );
             gridControl1.DataSource = igneler.ToList().OrderByDescending(x => x.STOK);
+
             gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
-
             gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
-
             gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[3].Visible = false;
 
