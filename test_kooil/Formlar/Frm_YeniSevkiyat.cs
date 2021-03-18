@@ -73,6 +73,13 @@ namespace test_kooil.Formlar
             listView1.View = View.Details;
         }
 
+        void yeniSevkiyat() { 
+        
+        
+        
+        
+        }
+
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
             string urunTuru = gridView1.GetFocusedRowCellValue("TUR").ToString();
@@ -81,29 +88,64 @@ namespace test_kooil.Formlar
             var igne = db.TBL_IGNELER.Find(urunID);
             int igneStok = (int)igne.STOK;
             int adet = (int)num_Adet.Value;
-
+            var anyActive = db.TBL_SIPARIS.Where(x => x.AKTIF == true).Where(y => y.TBL_IGNELER.IGNEKOD == urunKodu).Count();
             //ADD TO TBL_SEVKIYAT
-            if (date_Tarih.EditValue != null &&  adet < igneStok )
+            if (date_Tarih.EditValue != null &&  adet <= igneStok )
             {
+                if (anyActive > 0) {
 
-                
-                TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
-                yeniSevk.URUNTUR = urunTuru;
-                yeniSevk.URUNKOD = urunKodu;
-                yeniSevk.ADET = adet;
-                yeniSevk.TARIH = date_Tarih.DateTime;
-                yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
+                    DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçtiğiniz Üründen Sevkiyat Bekleyen Aktif Sipariş Var. Devam Etmek İstediğinize Emin misiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
+                    if (siradakiAsamaSorgu == DialogResult.Yes)
+                    {
 
-                db.TBL_SEVKIYAT.Add(yeniSevk);
+                        TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
+                        yeniSevk.URUNTUR = urunTuru;
+                        yeniSevk.URUNKOD = urunKodu;
+                        yeniSevk.ADET = adet;
+                        yeniSevk.TARIH = date_Tarih.DateTime;
+                        yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
+                        yeniSevk.SEVKIYATTUR = "PERAKENDE";
 
-                //add to listview
-                string[] row = { urunTuru, urunKodu, adet.ToString() };
-                var listViewItem = new ListViewItem(row);
-                listView1.Items.Add(listViewItem).SubItems.AddRange(row);
+                        db.TBL_SEVKIYAT.Add(yeniSevk);
 
-                //Stoktan dusup urunleri tekrar listeleme
-                 igne.STOK -= adet;
-                 //urunleriListele();
+                        //add to listview
+                        string[] row = { urunTuru, urunKodu, adet.ToString() };
+                        var listViewItem = new ListViewItem(row);
+                        listView1.Items.Add(listViewItem).SubItems.AddRange(row);
+
+                        //Stoktan dusup urunleri tekrar listeleme
+                        igne.STOK -= adet;
+                        //urunleriListele();
+
+                    }
+
+                }
+                else
+                {
+                    TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
+                    yeniSevk.URUNTUR = urunTuru;
+                    yeniSevk.URUNKOD = urunKodu;
+                    yeniSevk.ADET = adet;
+                    yeniSevk.TARIH = date_Tarih.DateTime;
+                    yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
+                    yeniSevk.SEVKIYATTUR = "PERAKENDE";
+
+                    db.TBL_SEVKIYAT.Add(yeniSevk);
+
+                    //add to listview
+                    string[] row = { urunTuru, urunKodu, adet.ToString() };
+                    var listViewItem = new ListViewItem(row);
+                    listView1.Items.Add(listViewItem).SubItems.AddRange(row);
+
+                    //Stoktan dusup urunleri tekrar listeleme
+                    igne.STOK -= adet;
+                    //urunleriListele();
+
+
+                }
+
+
+
 
             }
             else {
@@ -184,6 +226,11 @@ namespace test_kooil.Formlar
             //}
 
             printPreviewDialog1.ShowDialog();
+        }
+
+        private void gridControl2_Click(object sender, EventArgs e)
+        {
+            Btn_SepeteEkle.Enabled = true;
         }
     }
 }

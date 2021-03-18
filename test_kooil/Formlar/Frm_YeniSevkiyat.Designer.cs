@@ -84,6 +84,7 @@ namespace test_kooil.Formlar
             // 
             // pic_Urun
             // 
+            this.pic_Urun.BackColor = System.Drawing.SystemColors.Highlight;
             this.pic_Urun.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pic_Urun.Location = new System.Drawing.Point(12, 382);
             this.pic_Urun.Name = "pic_Urun";
@@ -94,6 +95,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_SepeteEkle
             // 
+            this.Btn_SepeteEkle.Enabled = false;
             this.Btn_SepeteEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SepeteEkle.ImageOptions.Image")));
             this.Btn_SepeteEkle.Location = new System.Drawing.Point(519, 351);
             this.Btn_SepeteEkle.Name = "Btn_SepeteEkle";
@@ -191,6 +193,7 @@ namespace test_kooil.Formlar
             this.gridControl2.TabIndex = 15;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gridControl2.Click += new System.EventHandler(this.gridControl2_Click);
             // 
             // gridView2
             // 
@@ -290,7 +293,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.pic_Urun);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_YeniSevkiyat";
-            this.Text = "Yeni Sevkiyat";
+            this.Text = "Yeni Perakende Sevkiyat";
             this.Load += new System.EventHandler(this.Frm_YeniSevkiyat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

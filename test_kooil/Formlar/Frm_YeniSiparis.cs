@@ -97,6 +97,7 @@ namespace test_kooil.Formlar
                 yeniSiparis.UCSIYIRMASAYI = 0;
                 yeniSiparis.YIKAMASAYI = 0;
                 yeniSiparis.YOLKOPYASAYI = 0;
+                yeniSiparis.SEVKIYATSAYI = 0;
 
                 //var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
                 //igneFiyati.ToString();

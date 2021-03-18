@@ -38,6 +38,7 @@ namespace test_kooil.Entity
         public Nullable<int> YIKAMASAYI { get; set; }
         public Nullable<int> BILEMESAYI { get; set; }
         public Nullable<int> KONTROLSAYI { get; set; }
+        public Nullable<int> SEVKIYATSAYI { get; set; }
     
         public virtual TBL_IGNELER TBL_IGNELER { get; set; }
     }

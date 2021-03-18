@@ -45,6 +45,7 @@ namespace test_kooil
         Frm_FirmaEkle frmFirmaEkle;
         Frm_Firmalar frmFirmalar;
         Frm_YeniSevkiyat frmYeniSevkiyat;
+        Frm_SiparisSevkiyat frmSipSevkiyat;
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -399,6 +400,16 @@ namespace test_kooil
 
                 frmYeniSevkiyat = new Frm_YeniSevkiyat();
                 frmYeniSevkiyat.Show();
+            }
+        }
+
+        private void Btn_SipSevkiyat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmSipSevkiyat == null || frmSipSevkiyat.IsDisposed)
+            {
+
+                frmSipSevkiyat = new Frm_SiparisSevkiyat();
+                frmSipSevkiyat.Show();
             }
         }
     }

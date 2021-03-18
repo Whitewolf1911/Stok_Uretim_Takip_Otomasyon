@@ -437,6 +437,12 @@
     <Compile Include="Formlar\Frm_SiparisKontrol.Designer.cs">
       <DependentUpon>Frm_SiparisKontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_SiparisSevkiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_SiparisSevkiyat.Designer.cs">
+      <DependentUpon>Frm_SiparisSevkiyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_SiyirmaEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +694,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiparisKontrol.resx">
       <DependentUpon>Frm_SiparisKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_SiparisSevkiyat.resx">
+      <DependentUpon>Frm_SiparisSevkiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiyirmaEkle.resx">
       <DependentUpon>Frm_SiyirmaEkle.cs</DependentUpon>

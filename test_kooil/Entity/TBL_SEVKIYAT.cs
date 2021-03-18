@@ -20,5 +20,7 @@ namespace test_kooil.Entity
         public string URUNKOD { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<int> ADET { get; set; }
+        public string SEVKIYATTUR { get; set; }
+        public string SIPARISNO { get; set; }
     }
 }

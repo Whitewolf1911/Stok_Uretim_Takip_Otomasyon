@@ -50,7 +50,8 @@ namespace test_kooil.Formlar
                                Paketlenen = x.KONTROLSAYI,
                                x.AKTIF,// 21
                                x.NOTLAR,// 22 
-                               x.SIPARISASAMASI// 23
+                               x.SIPARISASAMASI,// 23
+                               Giden = x.SEVKIYATSAYI
 
                            }).ToList().OrderByDescending(x => x.SiparisNo);
 
@@ -86,11 +87,35 @@ namespace test_kooil.Formlar
             return pressayi - kontrolsayi;
         }
 
+        int KalanSayi(GridView view, int listSourceRowIndex)
+        {
+            int siparis = Convert.ToInt32(view.GetListSourceRowCellValue(listSourceRowIndex, "Siparis"));
+            int giden = Convert.ToInt32(view.GetListSourceRowCellValue(listSourceRowIndex, "Giden"));
+            if (siparis > giden) { 
+            
+            return siparis - giden;
+
+            }
+            else
+            {
+
+                return 0;
+            }
+
+        }
+
         private void gridView1_CustomUnboundColumnData_1(object sender, CustomColumnDataEventArgs e)
         {
             GridView view = sender as GridView;
+            GridView view2 = sender as GridView;
+
             if (e.Column.FieldName == "AraUrun" && e.IsGetData) e.Value =
               getTotalValue(view, e.ListSourceRowIndex);
+
+            if (e.Column.FieldName == "Kalan" && e.IsGetData) e.Value =
+              KalanSayi(view2, e.ListSourceRowIndex);
+
+
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -118,6 +143,13 @@ namespace test_kooil.Formlar
             unbColumn.OptionsColumn.AllowEdit = false;
             unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             unbColumn.AppearanceCell.BackColor = Color.LemonChiffon;
+
+            GridColumn unbColumn2 = gridView1.Columns.AddField("Kalan");
+            unbColumn2.VisibleIndex = gridView1.Columns.Count;
+            unbColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            unbColumn2.OptionsColumn.AllowEdit = false;
+            unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            unbColumn2.AppearanceCell.BackColor = Color.OrangeRed;
         }
 
         private void ShowGridPreview(GridControl grid)

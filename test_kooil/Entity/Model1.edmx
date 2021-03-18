@@ -229,6 +229,8 @@
           <Property Name="URUNKOD" Type="varchar" MaxLength="40" />
           <Property Name="TARIH" Type="date" />
           <Property Name="ADET" Type="int" />
+          <Property Name="SEVKIYATTUR" Type="varchar" MaxLength="11" />
+          <Property Name="SIPARISNO" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
@@ -258,6 +260,7 @@
           <Property Name="YIKAMASAYI" Type="int" />
           <Property Name="BILEMESAYI" Type="int" />
           <Property Name="KONTROLSAYI" Type="int" />
+          <Property Name="SEVKIYATSAYI" Type="int" />
         </EntityType>
         <EntityType Name="TBL_TEMPER">
           <Key>
@@ -416,6 +419,7 @@
           <Property Name="YIKAMASAYI" Type="Int32" />
           <Property Name="BILEMESAYI" Type="Int32" />
           <Property Name="KONTROLSAYI" Type="Int32" />
+          <Property Name="SEVKIYATSAYI" Type="Int32" />
         </EntityType>
         <Association Name="FK_TBL_SIPARIS_TBL_IGNELER">
           <End Role="TBL_IGNELER" Type="Self.TBL_IGNELER" Multiplicity="0..1" />
@@ -696,6 +700,8 @@
           <Property Name="URUNKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="ADET" Type="Int32" />
+          <Property Name="SEVKIYATTUR" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SIPARISNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -743,6 +749,7 @@
           <EntitySetMapping Name="TBL_SIPARIS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SIPARIS">
               <MappingFragment StoreEntitySet="TBL_SIPARIS">
+                <ScalarProperty Name="SEVKIYATSAYI" ColumnName="SEVKIYATSAYI" />
                 <ScalarProperty Name="KONTROLSAYI" ColumnName="KONTROLSAYI" />
                 <ScalarProperty Name="BILEMESAYI" ColumnName="BILEMESAYI" />
                 <ScalarProperty Name="YIKAMASAYI" ColumnName="YIKAMASAYI" />
@@ -1019,6 +1026,8 @@
           <EntitySetMapping Name="TBL_SEVKIYAT">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SEVKIYAT">
               <MappingFragment StoreEntitySet="TBL_SEVKIYAT">
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="SEVKIYATTUR" ColumnName="SEVKIYATTUR" />
                 <ScalarProperty Name="ADET" ColumnName="ADET" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="URUNKOD" ColumnName="URUNKOD" />

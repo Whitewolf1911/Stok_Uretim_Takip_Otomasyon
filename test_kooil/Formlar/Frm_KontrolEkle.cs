@@ -86,22 +86,7 @@ namespace test_kooil.Formlar
             db.SaveChanges();
 
             XtraMessageBox.Show("Kontrol Raporu Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //TODO bu sorguya gerek kaldi mi ???
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Ürünlerin Tamamı Paketlendi mi ? ", "Sipariş Durum", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
-            {
-
-                deger.AKTIF = false; // tamami paketlendiyse aktifligi false yap tamamlanan siparislerde gozuksun.
-
-                
-                db.SaveChanges();
-
-            }
-            else
-            {
-                // do nothing
-            }
+            
             this.Close();
 
         }

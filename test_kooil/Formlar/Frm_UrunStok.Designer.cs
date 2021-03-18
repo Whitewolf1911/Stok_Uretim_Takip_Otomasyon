@@ -31,6 +31,7 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_UrunStok));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pic_IgneFoto = new System.Windows.Forms.PictureBox();
             this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
@@ -44,9 +45,8 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.pic_IgneFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -55,7 +55,6 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.txt_urunTip.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -78,6 +77,16 @@ namespace test_kooil.Formlar
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Ürün Stokları";
             // 
+            // pic_IgneFoto
+            // 
+            this.pic_IgneFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic_IgneFoto.Location = new System.Drawing.Point(9, 224);
+            this.pic_IgneFoto.Name = "pic_IgneFoto";
+            this.pic_IgneFoto.Size = new System.Drawing.Size(336, 237);
+            this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_IgneFoto.TabIndex = 30;
+            this.pic_IgneFoto.TabStop = false;
+            // 
             // Btn_Yazdir
             // 
             this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
@@ -93,6 +102,9 @@ namespace test_kooil.Formlar
             this.pictureEdit7.EditValue = ((object)(resources.GetObject("pictureEdit7.EditValue")));
             this.pictureEdit7.Location = new System.Drawing.Point(9, 53);
             this.pictureEdit7.Name = "pictureEdit7";
+            // 
+            // 
+            // 
             this.pictureEdit7.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit7.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -105,6 +117,9 @@ namespace test_kooil.Formlar
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
             this.pictureEdit5.Location = new System.Drawing.Point(5, 170);
             this.pictureEdit5.Name = "pictureEdit5";
+            // 
+            // 
+            // 
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -117,6 +132,9 @@ namespace test_kooil.Formlar
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(5, 114);
             this.pictureEdit1.Name = "pictureEdit1";
+            // 
+            // 
+            // 
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -136,6 +154,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_stokAdet.Location = new System.Drawing.Point(167, 182);
             this.txt_stokAdet.Name = "txt_stokAdet";
+            // 
+            // 
+            // 
             this.txt_stokAdet.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_stokAdet.Properties.Appearance.Options.UseBackColor = true;
             this.txt_stokAdet.Size = new System.Drawing.Size(143, 22);
@@ -153,6 +174,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_urunKod.Location = new System.Drawing.Point(167, 126);
             this.txt_urunKod.Name = "txt_urunKod";
+            // 
+            // 
+            // 
             this.txt_urunKod.Properties.Appearance.BackColor = System.Drawing.Color.Aqua;
             this.txt_urunKod.Properties.Appearance.Options.UseBackColor = true;
             this.txt_urunKod.Size = new System.Drawing.Size(143, 22);
@@ -170,6 +194,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_urunTip.Location = new System.Drawing.Point(167, 65);
             this.txt_urunTip.Name = "txt_urunTip";
+            // 
+            // 
+            // 
             this.txt_urunTip.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_urunTip.Properties.Appearance.Options.UseBackColor = true;
             this.txt_urunTip.Size = new System.Drawing.Size(143, 22);
@@ -202,16 +229,6 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // pic_IgneFoto
-            // 
-            this.pic_IgneFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic_IgneFoto.Location = new System.Drawing.Point(9, 224);
-            this.pic_IgneFoto.Name = "pic_IgneFoto";
-            this.pic_IgneFoto.Size = new System.Drawing.Size(336, 237);
-            this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_IgneFoto.TabIndex = 30;
-            this.pic_IgneFoto.TabStop = false;
-            // 
             // Frm_UrunStok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,8 +240,7 @@ namespace test_kooil.Formlar
             this.Text = "Ürün Stok";
             this.Load += new System.EventHandler(this.Frm_UrunStok_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -233,7 +249,6 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.txt_urunTip.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
