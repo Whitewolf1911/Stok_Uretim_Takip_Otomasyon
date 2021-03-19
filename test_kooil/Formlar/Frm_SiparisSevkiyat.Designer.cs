@@ -43,26 +43,34 @@ namespace test_kooil.Formlar
             this.pic_Urun = new System.Windows.Forms.PictureBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Btn_FirmaSec = new DevExpress.XtraEditors.SimpleButton();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Tarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Tarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Urun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(962, 75);
+            this.listView1.Location = new System.Drawing.Point(1126, 98);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(354, 392);
+            this.listView1.Size = new System.Drawing.Size(324, 392);
             this.listView1.TabIndex = 36;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // num_Adet
             // 
-            this.num_Adet.Location = new System.Drawing.Point(776, 145);
+            this.num_Adet.Location = new System.Drawing.Point(977, 169);
             this.num_Adet.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -74,7 +82,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(962, 35);
+            this.labelControl5.Location = new System.Drawing.Point(1126, 58);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(71, 16);
             this.labelControl5.TabIndex = 34;
@@ -92,7 +100,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(726, 89);
+            this.labelControl3.Location = new System.Drawing.Point(927, 113);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(39, 16);
             this.labelControl3.TabIndex = 29;
@@ -101,7 +109,7 @@ namespace test_kooil.Formlar
             // date_Tarih
             // 
             this.date_Tarih.EditValue = null;
-            this.date_Tarih.Location = new System.Drawing.Point(776, 86);
+            this.date_Tarih.Location = new System.Drawing.Point(977, 110);
             this.date_Tarih.Name = "date_Tarih";
             this.date_Tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -133,7 +141,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(726, 145);
+            this.labelControl1.Location = new System.Drawing.Point(927, 169);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(35, 16);
             this.labelControl1.TabIndex = 24;
@@ -141,8 +149,9 @@ namespace test_kooil.Formlar
             // 
             // Btn_SepeteEkle
             // 
+            this.Btn_SepeteEkle.Enabled = false;
             this.Btn_SepeteEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SepeteEkle.ImageOptions.Image")));
-            this.Btn_SepeteEkle.Location = new System.Drawing.Point(726, 227);
+            this.Btn_SepeteEkle.Location = new System.Drawing.Point(927, 307);
             this.Btn_SepeteEkle.Name = "Btn_SepeteEkle";
             this.Btn_SepeteEkle.Size = new System.Drawing.Size(184, 59);
             this.Btn_SepeteEkle.TabIndex = 23;
@@ -162,10 +171,10 @@ namespace test_kooil.Formlar
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 14);
+            this.gridControl1.Location = new System.Drawing.Point(294, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(696, 364);
+            this.gridControl1.Size = new System.Drawing.Size(627, 364);
             this.gridControl1.TabIndex = 21;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -178,11 +187,60 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(26, 2);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(262, 293);
+            this.gridControl2.TabIndex = 37;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // Btn_FirmaSec
+            // 
+            this.Btn_FirmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_FirmaSec.Location = new System.Drawing.Point(60, 311);
+            this.Btn_FirmaSec.Name = "Btn_FirmaSec";
+            this.Btn_FirmaSec.Size = new System.Drawing.Size(184, 59);
+            this.Btn_FirmaSec.TabIndex = 38;
+            this.Btn_FirmaSec.Text = "Firma Seç";
+            this.Btn_FirmaSec.Click += new System.EventHandler(this.Btn_FirmaSec_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Frm_SiparisSevkiyat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 632);
+            this.ClientSize = new System.Drawing.Size(1462, 632);
+            this.Controls.Add(this.Btn_FirmaSec);
+            this.Controls.Add(this.gridControl2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.num_Adet);
             this.Controls.Add(this.labelControl5);
@@ -204,6 +262,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pic_Urun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +284,11 @@ namespace test_kooil.Formlar
         private System.Windows.Forms.PictureBox pic_Urun;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.SimpleButton Btn_FirmaSec;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

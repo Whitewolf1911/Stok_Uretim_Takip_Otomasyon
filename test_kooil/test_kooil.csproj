@@ -569,12 +569,6 @@
     <Compile Include="Formlar\Frm_YolKopyala.Designer.cs">
       <DependentUpon>Frm_YolKopyala.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Formlar\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlBaglanti.cs" />
@@ -760,9 +754,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YolKopyala.resx">
       <DependentUpon>Frm_YolKopyala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

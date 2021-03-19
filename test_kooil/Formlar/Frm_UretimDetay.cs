@@ -47,6 +47,7 @@ namespace test_kooil.Formlar
                                Yıkama = x.YIKAMASAYI,
                                Bileme = x.BILEMESAYI,
                                Paketlenen = x.KONTROLSAYI,
+                               Giden = x.SEVKIYATSAYI,
                                x.AKTIF,
                                x.NOTLAR,
                                x.SIPARISASAMASI
@@ -61,12 +62,15 @@ namespace test_kooil.Formlar
             gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[5].AppearanceCell.BackColor = Color.OrangeRed;
-            gridView1.Columns[20].AppearanceCell.BackColor = Color.LightGreen;
+            gridView1.Columns[20].AppearanceCell.BackColor = Color.Yellow;
+            gridView1.Columns[21].AppearanceCell.BackColor = Color.LightGreen;
 
-            
-            gridView1.Columns[21].Visible = false;
+
+
             gridView1.Columns[22].Visible = false;
             gridView1.Columns[23].Visible = false;
+            gridView1.Columns[24].Visible = false;
+
             //
         }
         private void Frm_UretimDetay_Load(object sender, EventArgs e)

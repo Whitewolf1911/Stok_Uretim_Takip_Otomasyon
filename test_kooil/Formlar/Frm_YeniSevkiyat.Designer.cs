@@ -292,6 +292,8 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.Btn_SepeteEkle);
             this.Controls.Add(this.pic_Urun);
             this.Controls.Add(this.gridControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Frm_YeniSevkiyat";
             this.Text = "Yeni Perakende Sevkiyat";
             this.Load += new System.EventHandler(this.Frm_YeniSevkiyat_Load);

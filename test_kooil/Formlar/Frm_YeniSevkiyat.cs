@@ -27,6 +27,7 @@ namespace test_kooil.Formlar
                                 Firma = x.FIRMAAD,
                                 FirmaAd = x.FIRMATAMAD,
                                 x.VERGINO,
+                                x.VERGIDAIRESI
 
                             }).ToList().OrderBy(x => x.Firma);
 
@@ -67,28 +68,30 @@ namespace test_kooil.Formlar
         private void initListView()
         {
             // Add columns
-            listView1.Columns.Add("Tür");
-            listView1.Columns.Add("Kod");
             listView1.Columns.Add("Adet");
+            listView1.Columns.Add("Kod");
+            listView1.Columns.Add("Tür");
             listView1.View = View.Details;
         }
-
-        void yeniSevkiyat() { 
-        
-        
-        
-        
-        }
-
+        string vergiNo = "";
+        string vergiDaire = "";
+        string tarih = "";
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
+            gridControl2.Enabled = false;
             string urunTuru = gridView1.GetFocusedRowCellValue("TUR").ToString();
             string urunKodu = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
             int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+            vergiNo = gridView2.GetFocusedRowCellValue("VERGINO").ToString();
+            vergiDaire = gridView2.GetFocusedRowCellValue("VERGIDAIRESI").ToString();
+
             var igne = db.TBL_IGNELER.Find(urunID);
             int igneStok = (int)igne.STOK;
             int adet = (int)num_Adet.Value;
             var anyActive = db.TBL_SIPARIS.Where(x => x.AKTIF == true).Where(y => y.TBL_IGNELER.IGNEKOD == urunKodu).Count();
+
+            tarih = date_Tarih.DateTime.ToString("dd/MM/yyyy");
+            date_Tarih.Enabled = false;
             //ADD TO TBL_SEVKIYAT
             if (date_Tarih.EditValue != null &&  adet <= igneStok )
             {
@@ -109,7 +112,7 @@ namespace test_kooil.Formlar
                         db.TBL_SEVKIYAT.Add(yeniSevk);
 
                         //add to listview
-                        string[] row = { urunTuru, urunKodu, adet.ToString() };
+                        string[] row = { adet.ToString(), urunTuru, urunKodu};
                         var listViewItem = new ListViewItem(row);
                         listView1.Items.Add(listViewItem).SubItems.AddRange(row);
 
@@ -133,7 +136,7 @@ namespace test_kooil.Formlar
                     db.TBL_SEVKIYAT.Add(yeniSevk);
 
                     //add to listview
-                    string[] row = { urunTuru, urunKodu, adet.ToString() };
+                    string[] row = { adet.ToString(), urunTuru, urunKodu  };
                     var listViewItem = new ListViewItem(row);
                     listView1.Items.Add(listViewItem).SubItems.AddRange(row);
 
@@ -143,8 +146,6 @@ namespace test_kooil.Formlar
 
 
                 }
-
-
 
 
             }
@@ -198,9 +199,10 @@ namespace test_kooil.Formlar
                 urunleriListele();
             }
         }
-        Font header = new Font("Verdana", 18, FontStyle.Bold);
-        Font subHeader = new Font("Verdana", 15, FontStyle.Bold);
+        Font header = new Font("Verdana", 24, FontStyle.Bold);
+        Font subHeader = new Font("Verdana", 14, FontStyle.Bold);
         Font content = new Font("Verdana", 12, FontStyle.Bold);
+        Font arial = new Font("Arial", 12, FontStyle.Regular);
         SolidBrush sb = new SolidBrush(Color.Black);
 
 
@@ -208,9 +210,35 @@ namespace test_kooil.Formlar
         {   //PAGE
             StringFormat st = new StringFormat();
             st.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString("SEVK İRSALİYESİ", header, sb, 525, 60, st);
+            e.Graphics.DrawString("SEVK İRSALİYESİ", header, sb, 450, 20, st);
 
-            e.Graphics.DrawString("Ürün Tipi     Ürün Kodu       Adet", header, sb, 120, 150, st);
+            e.Graphics.DrawString("İrsaliye No              : _________________", content, sb, 420, 80, st);
+            e.Graphics.DrawString("Düzenleme Tarihi    : _________________", content, sb, 420, 105, st);
+            e.Graphics.DrawString("Fiili Sevk Tarihi       : _________________", content, sb, 420, 130, st);
+            e.Graphics.DrawString("Fatura No                : _________________", content, sb, 420, 155, st);
+
+            e.Graphics.DrawString("Sayın, ________________________________", content, sb, 10, 190, st);
+            e.Graphics.DrawString("___________________________________", content, sb, 10, 220, st);
+            e.Graphics.DrawString("T.C. Kimlik No: _____________________________", content, sb, 10, 255, st);
+            e.Graphics.DrawString("Müşteri Vergi D. ve Hesap No.: _______________________________________", content, sb, 10, 290, st);
+
+            e.Graphics.DrawString("Şehir  : _____________", content, sb, 600, 200, st);
+            e.Graphics.DrawString("Ambar: _____________", content, sb, 600, 240, st);
+
+            e.Graphics.DrawString("ADET         ÜRÜN TİPİ        ÜRÜN KODU         FİYATI         TUTARI", subHeader, sb, 50, 325, st);
+            e.Graphics.DrawString("__________________________________________________________________", subHeader, sb, 5, 330, st);
+
+            e.Graphics.DrawString(vergiNo + "       " + vergiDaire, arial, sb, 325, 288, st);
+            e.Graphics.DrawString(tarih, arial, sb, 620, 103, st);
+
+
+            for (int i =0; i< listView1.Items.Count; i++)
+            {
+                e.Graphics.DrawString(listView1.Items[i].SubItems[0].Text, arial, sb, 55, 360 + i * 35, st);
+                e.Graphics.DrawString(listView1.Items[i].SubItems[1].Text, arial, sb, 200, 360 + i * 35, st);
+                e.Graphics.DrawString(listView1.Items[i].SubItems[2].Text, arial, sb, 350, 360 + i * 35, st);
+                e.Graphics.DrawString("_____________________________________________________________________", content, sb, 5, 362 + i*35, st);
+            }
 
 
 
