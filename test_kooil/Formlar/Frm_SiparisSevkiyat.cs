@@ -46,6 +46,7 @@ namespace test_kooil.Formlar
             gridControl2.DataSource = firmalar;
             gridView2.Columns[1].Visible = false;
             gridView2.Columns[2].Visible = false;
+            gridView2.Columns[0].AppearanceCell.BackColor = Color.Yellow;
 
         }
         bool isFound = false;
@@ -75,9 +76,17 @@ namespace test_kooil.Formlar
                                   }).ToList().Where(x => x.AKTIF == true).Where(x => x.Firma == secilenFirma).OrderBy(x => x.STOK);
 
                 gridControl1.DataSource = siparisler;
+
+                gridView1.Columns[1].Visible = false;
                 gridView1.Columns[5].Visible = false;
                 gridView1.Columns[7].Visible = false;
                 gridView1.Columns[10].Visible = false;
+
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Turquoise;
+
+
                 isFound = true;
 
 
@@ -252,12 +261,17 @@ namespace test_kooil.Formlar
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 e.Graphics.DrawString(listView1.Items[i].SubItems[0].Text, arial, sb, 5, 360 + i * 35, st);
-                e.Graphics.DrawString(listView1.Items[i].SubItems[3].Text, arial, sb, 165, 360 + i * 35, st);
+                e.Graphics.DrawString(listView1.Items[i].SubItems[3].Text, arial, sb, 170, 360 + i * 35, st);
                 e.Graphics.DrawString(listView1.Items[i].SubItems[1].Text, arial, sb, 305, 360 + i * 35, st);
                 e.Graphics.DrawString(listView1.Items[i].SubItems[2].Text, arial, sb, 440, 360 + i * 35, st);
 
                 e.Graphics.DrawString("_____________________________________________________________________", content, sb, 5, 362 + i * 35, st);
             }
+        }
+
+        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if(gridView2.GetFocusedRowCellValue("Firma") != null) { txt_firma.Text = gridView2.GetFocusedRowCellValue("Firma").ToString(); }
         }
     }
 }

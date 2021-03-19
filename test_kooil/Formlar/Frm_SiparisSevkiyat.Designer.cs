@@ -49,6 +49,8 @@ namespace test_kooil.Formlar
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_firma = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Tarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Tarih.Properties)).BeginInit();
@@ -57,6 +59,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_firma.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -77,12 +80,12 @@ namespace test_kooil.Formlar
             0,
             0});
             this.num_Adet.Name = "num_Adet";
-            this.num_Adet.Size = new System.Drawing.Size(125, 22);
+            this.num_Adet.Size = new System.Drawing.Size(134, 22);
             this.num_Adet.TabIndex = 35;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(1126, 58);
+            this.labelControl5.Location = new System.Drawing.Point(1126, 76);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(71, 16);
             this.labelControl5.TabIndex = 34;
@@ -116,7 +119,7 @@ namespace test_kooil.Formlar
             this.date_Tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_Tarih.Properties.NullText = "Tarih Seçiniz";
-            this.date_Tarih.Size = new System.Drawing.Size(125, 22);
+            this.date_Tarih.Size = new System.Drawing.Size(134, 22);
             this.date_Tarih.TabIndex = 28;
             // 
             // Btn_Yazdir
@@ -203,6 +206,7 @@ namespace test_kooil.Formlar
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
             // 
             // Btn_FirmaSec
             // 
@@ -234,11 +238,31 @@ namespace test_kooil.Formlar
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(927, 58);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(42, 16);
+            this.labelControl2.TabIndex = 39;
+            this.labelControl2.Text = "Firma :";
+            // 
+            // txt_firma
+            // 
+            this.txt_firma.Location = new System.Drawing.Point(977, 58);
+            this.txt_firma.Name = "txt_firma";
+            this.txt_firma.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_firma.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_firma.Properties.ReadOnly = true;
+            this.txt_firma.Size = new System.Drawing.Size(134, 22);
+            this.txt_firma.TabIndex = 40;
+            // 
             // Frm_SiparisSevkiyat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 632);
+            this.Controls.Add(this.txt_firma);
+            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.Btn_FirmaSec);
             this.Controls.Add(this.gridControl2);
             this.Controls.Add(this.listView1);
@@ -264,6 +288,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_firma.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +315,7 @@ namespace test_kooil.Formlar
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txt_firma;
     }
 }
