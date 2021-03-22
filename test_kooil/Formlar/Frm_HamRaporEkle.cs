@@ -92,7 +92,7 @@ namespace test_kooil.Formlar
                 rapor.SIPARISNO = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISNOID").ToString());
                 rapor.URUNTIPI = gridView1.GetFocusedRowCellValue("TUR").ToString();
                 rapor.URUNKODU = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
-                rapor.PRESSAYI = int.Parse(gridView1.GetFocusedRowCellValue("PRESSAYI").ToString());
+                rapor.PRESSAYI = (int)num_PresAdet.Value;
                 rapor.HAMHARCANAN = int.Parse(num_Miktar.Value.ToString());
                 rapor.TARIH = today;
                 rapor.RAPORLAYAN = txt_raporlayan.Text;

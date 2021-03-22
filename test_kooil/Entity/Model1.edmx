@@ -66,6 +66,7 @@
           <Property Name="MAIL" Type="varchar" MaxLength="40" />
           <Property Name="YETKILI" Type="varchar" MaxLength="50" />
           <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="40" />
+          <Property Name="AKTIF" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_HAMMADDE">
           <Key>

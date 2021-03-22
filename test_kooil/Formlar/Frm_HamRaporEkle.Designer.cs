@@ -48,6 +48,9 @@ namespace test_kooil.Formlar
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.num_PresAdet = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -60,6 +63,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_PresAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -237,11 +242,46 @@ namespace test_kooil.Formlar
             this.pictureEdit4.Size = new System.Drawing.Size(43, 45);
             this.pictureEdit4.TabIndex = 15;
             // 
+            // pictureEdit5
+            // 
+            this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
+            this.pictureEdit5.Location = new System.Drawing.Point(40, 350);
+            this.pictureEdit5.Name = "pictureEdit5";
+            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit5.Size = new System.Drawing.Size(43, 45);
+            this.pictureEdit5.TabIndex = 18;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(120, 358);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(116, 16);
+            this.labelControl5.TabIndex = 17;
+            this.labelControl5.Text = "Pres Adetini Giriniz :";
+            // 
+            // num_PresAdet
+            // 
+            this.num_PresAdet.Location = new System.Drawing.Point(332, 356);
+            this.num_PresAdet.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.num_PresAdet.Name = "num_PresAdet";
+            this.num_PresAdet.Size = new System.Drawing.Size(138, 22);
+            this.num_PresAdet.TabIndex = 16;
+            // 
             // Frm_HamRaporEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 613);
+            this.Controls.Add(this.pictureEdit5);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.num_PresAdet);
             this.Controls.Add(this.pictureEdit4);
             this.Controls.Add(this.pictureEdit3);
             this.Controls.Add(this.pictureEdit2);
@@ -273,6 +313,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_PresAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,5 +340,8 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit4;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit5;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private System.Windows.Forms.NumericUpDown num_PresAdet;
     }
 }

@@ -52,6 +52,7 @@ namespace test_kooil.Formlar
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.Btn_firmaSec = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Urun)).BeginInit();
@@ -114,6 +115,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Tamamla
             // 
+            this.Btn_Tamamla.Enabled = false;
             this.Btn_Tamamla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Tamamla.ImageOptions.Image")));
             this.Btn_Tamamla.Location = new System.Drawing.Point(519, 554);
             this.Btn_Tamamla.Name = "Btn_Tamamla";
@@ -270,11 +272,22 @@ namespace test_kooil.Formlar
             this.printDialog1.Document = this.printDocument1;
             this.printDialog1.UseEXDialog = true;
             // 
+            // Btn_firmaSec
+            // 
+            this.Btn_firmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_firmaSec.Location = new System.Drawing.Point(820, 230);
+            this.Btn_firmaSec.Name = "Btn_firmaSec";
+            this.Btn_firmaSec.Size = new System.Drawing.Size(184, 59);
+            this.Btn_firmaSec.TabIndex = 21;
+            this.Btn_firmaSec.Text = "Firma Seç";
+            this.Btn_firmaSec.Click += new System.EventHandler(this.Btn_firmaSec_Click);
+            // 
             // Frm_YeniSevkiyat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1396, 632);
+            this.Controls.Add(this.Btn_firmaSec);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.num_Adet);
             this.Controls.Add(this.labelControl5);
@@ -335,5 +348,6 @@ namespace test_kooil.Formlar
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private DevExpress.XtraEditors.SimpleButton Btn_firmaSec;
     }
 }

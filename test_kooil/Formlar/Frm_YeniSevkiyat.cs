@@ -28,6 +28,7 @@ namespace test_kooil.Formlar
                                 FirmaAd = x.FIRMATAMAD,
                                 x.VERGINO,
                                 x.VERGIDAIRESI
+                                
 
                             }).ToList().OrderBy(x => x.Firma);
 
@@ -78,7 +79,6 @@ namespace test_kooil.Formlar
         string tarih = "";
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
-            gridControl2.Enabled = false;
             string urunTuru = gridView1.GetFocusedRowCellValue("TUR").ToString();
             string urunKodu = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
             int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
@@ -119,6 +119,7 @@ namespace test_kooil.Formlar
                         //Stoktan dusup urunleri tekrar listeleme
                         igne.STOK -= adet;
                         //urunleriListele();
+                        Btn_Tamamla.Enabled = true;
 
                     }
 
@@ -143,6 +144,7 @@ namespace test_kooil.Formlar
                     //Stoktan dusup urunleri tekrar listeleme
                     igne.STOK -= adet;
                     //urunleriListele();
+                    Btn_Tamamla.Enabled = true;
 
 
                 }
@@ -197,6 +199,8 @@ namespace test_kooil.Formlar
             {
                 db.SaveChanges();
                 urunleriListele();
+                XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
         Font header = new Font("Verdana", 24, FontStyle.Bold);
@@ -258,7 +262,13 @@ namespace test_kooil.Formlar
 
         private void gridControl2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void Btn_firmaSec_Click(object sender, EventArgs e)
+        {
+            gridControl2.Enabled = false;
             Btn_SepeteEkle.Enabled = true;
+            Btn_firmaSec.Enabled = false;
         }
     }
 }

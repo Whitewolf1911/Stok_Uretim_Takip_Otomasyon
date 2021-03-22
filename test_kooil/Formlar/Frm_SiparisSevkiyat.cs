@@ -201,6 +201,8 @@ namespace test_kooil.Formlar
             {
                 db.SaveChanges();
                 siparisListele();
+                XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 

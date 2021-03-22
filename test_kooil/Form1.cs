@@ -46,6 +46,9 @@ namespace test_kooil
         Frm_Firmalar frmFirmalar;
         Frm_YeniSevkiyat frmYeniSevkiyat;
         Frm_SiparisSevkiyat frmSipSevkiyat;
+        Frm_GecmisSevkiyat frmGecmisSevk;
+        Frm_UrunDuzenle frmUrunDuzenle;
+        
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -410,6 +413,24 @@ namespace test_kooil
 
                 frmSipSevkiyat = new Frm_SiparisSevkiyat();
                 frmSipSevkiyat.Show();
+            }
+        }
+
+        private void Btn_GecmisSevkiyat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGecmisSevk = new Frm_GecmisSevkiyat();
+            frmGecmisSevk.MdiParent = this;
+            DisposeAllButThis(frmGecmisSevk);
+            frmGecmisSevk.Show();
+        }
+
+        private void Btn_UrunDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmUrunDuzenle == null || frmUrunDuzenle.IsDisposed)
+            {
+
+                frmUrunDuzenle = new Frm_UrunDuzenle();
+                frmUrunDuzenle.Show();
             }
         }
     }

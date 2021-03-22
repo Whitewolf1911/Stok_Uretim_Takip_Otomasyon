@@ -29,11 +29,11 @@ namespace test_kooil.Formlar
                                 x.MUSTERI,
                                 x.URUNTIPI,
                                 x.URUNKODU,
-                                x.PRESSAYI,
                                 KALINLIK = x.HAMKALINLIK,
                                 GENISLIK = x.HAMGENISLIK,
                                 x.MENSEI,
                                 x.OZELLIK,
+                                Pres = x.PRESSAYI,
                                 HarcananMiktar = x.HAMHARCANAN,
                                 x.TARIH,
                                 x.RAPORLAYAN
@@ -97,6 +97,7 @@ namespace test_kooil.Formlar
             { txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK"); }
             if (gridView1.GetFocusedRowCellValue("MENSEI") != null) { txt_mensei.Text = gridView1.GetFocusedRowCellValue("MENSEI").ToString(); }
             if (gridView1.GetFocusedRowCellValue("HarcananMiktar") != null) { txt_Miktar.Text = gridView1.GetFocusedRowCellValue("HarcananMiktar").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Pres") != null) { txt_pres.Text = gridView1.GetFocusedRowCellValue("Pres").ToString(); }
 
         }
     }

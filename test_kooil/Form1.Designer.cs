@@ -72,7 +72,7 @@ namespace test_kooil
             this.Btn_hamRaporEkle = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_UrunStok = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_YeniSevkiyat = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_GecmisSevkiyat = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_SipSevkiyat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -89,6 +89,7 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.Btn_UrunDuzenle = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -139,11 +140,12 @@ namespace test_kooil
             this.Btn_hamRaporEkle,
             this.Btn_UrunStok,
             this.Btn_YeniSevkiyat,
-            this.barButtonItem12,
-            this.Btn_SipSevkiyat});
+            this.Btn_GecmisSevkiyat,
+            this.Btn_SipSevkiyat,
+            this.Btn_UrunDuzenle});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 45;
+            this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -498,13 +500,14 @@ namespace test_kooil
             this.Btn_YeniSevkiyat.Name = "Btn_YeniSevkiyat";
             this.Btn_YeniSevkiyat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_YeniSevkiyat_ItemClick);
             // 
-            // barButtonItem12
+            // Btn_GecmisSevkiyat
             // 
-            this.barButtonItem12.Caption = "Geçmiş Sevkiyatlar";
-            this.barButtonItem12.Id = 43;
-            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.Btn_GecmisSevkiyat.Caption = "Geçmiş Sevkiyatlar";
+            this.Btn_GecmisSevkiyat.Id = 43;
+            this.Btn_GecmisSevkiyat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_GecmisSevkiyat.ImageOptions.Image")));
+            this.Btn_GecmisSevkiyat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_GecmisSevkiyat.ImageOptions.LargeImage")));
+            this.Btn_GecmisSevkiyat.Name = "Btn_GecmisSevkiyat";
+            this.Btn_GecmisSevkiyat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_GecmisSevkiyat_ItemClick);
             // 
             // Btn_SipSevkiyat
             // 
@@ -538,11 +541,12 @@ namespace test_kooil
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem27);
             this.ribbonPageGroup6.ItemLinks.Add(this.Btn_YeniIgneEkle);
-            this.ribbonPageGroup6.ItemLinks.Add(this.Btn_UrunStok);
+            this.ribbonPageGroup6.ItemLinks.Add(this.Btn_UrunDuzenle);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbonPageGroup7
             // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_UrunStok);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStok);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStokGuncelle);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamKullanim);
@@ -591,7 +595,7 @@ namespace test_kooil
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_YeniSevkiyat);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup3.ItemLinks.Add(this.Btn_GecmisSevkiyat);
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_SipSevkiyat);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -638,6 +642,15 @@ namespace test_kooil
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // Btn_UrunDuzenle
+            // 
+            this.Btn_UrunDuzenle.Caption = "Ürün Düzenle";
+            this.Btn_UrunDuzenle.Id = 45;
+            this.Btn_UrunDuzenle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.Btn_UrunDuzenle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.Btn_UrunDuzenle.Name = "Btn_UrunDuzenle";
+            this.Btn_UrunDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunDuzenle_ItemClick);
             // 
             // Form1
             // 
@@ -713,9 +726,10 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_hamRaporEkle;
         private DevExpress.XtraBars.BarButtonItem Btn_UrunStok;
         private DevExpress.XtraBars.BarButtonItem Btn_YeniSevkiyat;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem Btn_GecmisSevkiyat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem Btn_SipSevkiyat;
+        private DevExpress.XtraBars.BarButtonItem Btn_UrunDuzenle;
     }
 }
 

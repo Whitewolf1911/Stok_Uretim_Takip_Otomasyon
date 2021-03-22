@@ -269,6 +269,12 @@
     <Compile Include="Formlar\Frm_Firmalar.Designer.cs">
       <DependentUpon>Frm_Firmalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_GecmisSevkiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_GecmisSevkiyat.Designer.cs">
+      <DependentUpon>Frm_GecmisSevkiyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_HamRaporEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,6 +509,12 @@
     <Compile Include="Formlar\Frm_UretimDetay.Designer.cs">
       <DependentUpon>Frm_UretimDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_UrunDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UrunDuzenle.Designer.cs">
+      <DependentUpon>Frm_UrunDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_UrunStok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -604,6 +616,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Firmalar.resx">
       <DependentUpon>Frm_Firmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_GecmisSevkiyat.resx">
+      <DependentUpon>Frm_GecmisSevkiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_HamRaporEkle.resx">
       <DependentUpon>Frm_HamRaporEkle.cs</DependentUpon>
@@ -721,6 +736,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UretimDetay.resx">
       <DependentUpon>Frm_UretimDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UrunDuzenle.resx">
+      <DependentUpon>Frm_UrunDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UrunStok.resx">
       <DependentUpon>Frm_UrunStok.cs</DependentUpon>
