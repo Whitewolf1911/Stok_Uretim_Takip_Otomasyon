@@ -31,7 +31,7 @@ namespace test_kooil.Formlar
                                Siparis = x.URUNADETI,
                                x.SIPARISTARIHI,
                                x.ISTENILENTARIH,
-                               Paketlenen = x.KONTROLSAYI,
+                               Giden = x.SEVKIYATSAYI,
                                x.AKTIF,
                                x.NOTLAR,
                                x.SIPARISASAMASI

@@ -44,6 +44,7 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = degerler;
 
             gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
+            gridView1.Columns[4].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[5].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[6].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[7].AppearanceCell.BackColor = Color.LightGreen;

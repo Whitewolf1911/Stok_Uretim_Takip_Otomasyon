@@ -67,7 +67,10 @@ namespace test_kooil.Formlar
                 yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
                 yeniIgne.NOT = txt_Not.Text;
                 yeniIgne.STOK = 0;
-                yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
+                if (comboBoxEdit1.SelectedItem != null) 
+                {
+                    yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
+                }
                 if (picBox_Igne.Image != null)
                 {
                     var foto = ImageToByteArray(picBox_Igne.Image);

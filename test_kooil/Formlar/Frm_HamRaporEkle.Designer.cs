@@ -117,7 +117,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(120, 94);
+            this.labelControl1.Location = new System.Drawing.Point(116, 94);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(93, 16);
             this.labelControl1.TabIndex = 3;
@@ -125,7 +125,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(94, 157);
+            this.labelControl2.Location = new System.Drawing.Point(117, 157);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(119, 16);
             this.labelControl2.TabIndex = 4;
@@ -133,7 +133,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(243, 228);
+            this.labelControl3.Location = new System.Drawing.Point(119, 228);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(73, 16);
             this.labelControl3.TabIndex = 5;
@@ -149,7 +149,7 @@ namespace test_kooil.Formlar
             // 
             // txt_secilenSip
             // 
-            this.txt_secilenSip.Location = new System.Drawing.Point(228, 94);
+            this.txt_secilenSip.Location = new System.Drawing.Point(262, 91);
             this.txt_secilenSip.Name = "txt_secilenSip";
             this.txt_secilenSip.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_secilenSip.Properties.Appearance.Options.UseBackColor = true;
@@ -159,7 +159,7 @@ namespace test_kooil.Formlar
             // 
             // txt_secilenHam
             // 
-            this.txt_secilenHam.Location = new System.Drawing.Point(228, 154);
+            this.txt_secilenHam.Location = new System.Drawing.Point(262, 151);
             this.txt_secilenHam.Name = "txt_secilenHam";
             this.txt_secilenHam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_secilenHam.Properties.Appearance.Options.UseBackColor = true;
@@ -221,7 +221,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(39, 199);
+            this.pictureEdit3.Location = new System.Drawing.Point(39, 211);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;

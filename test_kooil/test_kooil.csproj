@@ -221,6 +221,12 @@
     <Compile Include="Formlar\FrmPolisaj1Rapor.Designer.cs">
       <DependentUpon>FrmPolisaj1Rapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_AnaSayfa.Designer.cs">
+      <DependentUpon>Frm_AnaSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_ArkaSiyirma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -592,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmPolisaj1Rapor.resx">
       <DependentUpon>FrmPolisaj1Rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_AnaSayfa.resx">
+      <DependentUpon>Frm_AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>

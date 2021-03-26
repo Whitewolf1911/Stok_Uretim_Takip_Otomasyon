@@ -252,6 +252,7 @@ namespace test_kooil.Formlar
             "BICAK",
             "PLATIN",
             "KANCA"});
+            this.comboBoxEdit1.Properties.NullText = "Tür Seçiniz";
             this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEdit1.Size = new System.Drawing.Size(180, 22);
             this.comboBoxEdit1.TabIndex = 43;

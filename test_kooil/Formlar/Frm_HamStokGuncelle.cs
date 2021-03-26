@@ -60,15 +60,25 @@ namespace test_kooil.Formlar
         {
             var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
             var madde = db.TBL_HAMMADDE.Find(maddeID);
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeden stok azaltmak istediğinize emin misiniz ? ", "Stok Azaltma", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            if (madde.MIKTAR - int.Parse(num_Miktar.Value.ToString()) >= 0)
             {
-                madde.MIKTAR -= int.Parse(num_Miktar.Value.ToString());
-                db.SaveChanges();
-                XtraMessageBox.Show("Hammadde Stoğu Sistemden Azaltıldı. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                hamListele();
 
+
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeden stok azaltmak istediğinize emin misiniz ? ", "Stok Azaltma", MessageBoxButtons.YesNo);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    madde.MIKTAR -= int.Parse(num_Miktar.Value.ToString());
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Hammadde Stoğu Sistemden Azaltıldı. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hamListele();
+
+                }
             }
+            else {
+
+                XtraMessageBox.Show("Girdiğiniz Sayıyı Kontrol Ediniz ! Stok Sıfırdan Küçük Olamaz.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void Btn_Iptal_Click(object sender, EventArgs e)

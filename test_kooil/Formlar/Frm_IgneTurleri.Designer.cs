@@ -33,6 +33,12 @@ namespace test_kooil.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
+            this.txt_hammadde = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.txt_sarfiyat = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pic_IgneFoto = new System.Windows.Forms.PictureBox();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
@@ -51,6 +57,10 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_hammadde.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sarfiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
@@ -65,7 +75,7 @@ namespace test_kooil.Formlar
             this.gridControl1.Location = new System.Drawing.Point(2, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(844, 604);
+            this.gridControl1.Size = new System.Drawing.Size(722, 604);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -80,6 +90,12 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.pictureEdit6);
+            this.groupControl1.Controls.Add(this.txt_hammadde);
+            this.groupControl1.Controls.Add(this.labelControl6);
+            this.groupControl1.Controls.Add(this.pictureEdit3);
+            this.groupControl1.Controls.Add(this.txt_sarfiyat);
+            this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.pic_IgneFoto);
             this.groupControl1.Controls.Add(this.pictureEdit5);
             this.groupControl1.Controls.Add(this.pictureEdit4);
@@ -94,16 +110,76 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.Btn_Yenile);
-            this.groupControl1.Location = new System.Drawing.Point(852, 12);
+            this.groupControl1.Location = new System.Drawing.Point(730, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(611, 604);
+            this.groupControl1.Size = new System.Drawing.Size(733, 604);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Özellikler";
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(14, 209);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit6.TabIndex = 23;
+            // 
+            // txt_hammadde
+            // 
+            this.txt_hammadde.Location = new System.Drawing.Point(168, 219);
+            this.txt_hammadde.Name = "txt_hammadde";
+            this.txt_hammadde.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_hammadde.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_hammadde.Properties.ReadOnly = true;
+            this.txt_hammadde.Size = new System.Drawing.Size(227, 22);
+            this.txt_hammadde.TabIndex = 22;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(72, 222);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(78, 16);
+            this.labelControl6.TabIndex = 21;
+            this.labelControl6.Text = "Hammadde  :";
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(14, 155);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit3.TabIndex = 20;
+            // 
+            // txt_sarfiyat
+            // 
+            this.txt_sarfiyat.Location = new System.Drawing.Point(168, 165);
+            this.txt_sarfiyat.Name = "txt_sarfiyat";
+            this.txt_sarfiyat.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_sarfiyat.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_sarfiyat.Properties.ReadOnly = true;
+            this.txt_sarfiyat.Size = new System.Drawing.Size(227, 22);
+            this.txt_sarfiyat.TabIndex = 19;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(72, 168);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(83, 16);
+            this.labelControl3.TabIndex = 18;
+            this.labelControl3.Text = "Sarfiyat (gr)  :";
             // 
             // pic_IgneFoto
             // 
             this.pic_IgneFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic_IgneFoto.Location = new System.Drawing.Point(5, 189);
+            this.pic_IgneFoto.Location = new System.Drawing.Point(347, 274);
             this.pic_IgneFoto.Name = "pic_IgneFoto";
             this.pic_IgneFoto.Size = new System.Drawing.Size(375, 281);
             this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,19 +190,19 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(336, 118);
+            this.pictureEdit5.Location = new System.Drawing.Point(15, 311);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit5.Size = new System.Drawing.Size(44, 34);
+            this.pictureEdit5.Size = new System.Drawing.Size(44, 28);
             this.pictureEdit5.TabIndex = 16;
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(353, 30);
+            this.pictureEdit4.Location = new System.Drawing.Point(421, 40);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -138,7 +214,7 @@ namespace test_kooil.Formlar
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(18, 92);
+            this.pictureEdit2.Location = new System.Drawing.Point(15, 92);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -150,7 +226,7 @@ namespace test_kooil.Formlar
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(23, 40);
+            this.pictureEdit1.Location = new System.Drawing.Point(16, 40);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -161,37 +237,47 @@ namespace test_kooil.Formlar
             // 
             // txt_Gramaj
             // 
-            this.txt_Gramaj.Location = new System.Drawing.Point(162, 102);
+            this.txt_Gramaj.Location = new System.Drawing.Point(169, 102);
             this.txt_Gramaj.Name = "txt_Gramaj";
-            this.txt_Gramaj.Size = new System.Drawing.Size(158, 22);
+            this.txt_Gramaj.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_Gramaj.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_Gramaj.Properties.ReadOnly = true;
+            this.txt_Gramaj.Size = new System.Drawing.Size(227, 22);
             this.txt_Gramaj.TabIndex = 10;
             // 
             // txt_IsilIslem
             // 
-            this.txt_IsilIslem.Location = new System.Drawing.Point(437, 55);
+            this.txt_IsilIslem.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_IsilIslem.Location = new System.Drawing.Point(556, 47);
             this.txt_IsilIslem.Name = "txt_IsilIslem";
-            this.txt_IsilIslem.Size = new System.Drawing.Size(158, 58);
+            this.txt_IsilIslem.ReadOnly = true;
+            this.txt_IsilIslem.Size = new System.Drawing.Size(158, 89);
             this.txt_IsilIslem.TabIndex = 9;
             this.txt_IsilIslem.Text = "";
             // 
             // txt_IgneKod
             // 
-            this.txt_IgneKod.Location = new System.Drawing.Point(162, 52);
+            this.txt_IgneKod.Location = new System.Drawing.Point(169, 52);
             this.txt_IgneKod.Name = "txt_IgneKod";
-            this.txt_IgneKod.Size = new System.Drawing.Size(158, 22);
+            this.txt_IgneKod.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_IgneKod.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_IgneKod.Properties.ReadOnly = true;
+            this.txt_IgneKod.Size = new System.Drawing.Size(227, 22);
             this.txt_IgneKod.TabIndex = 8;
             // 
             // txt_Not
             // 
-            this.txt_Not.Location = new System.Drawing.Point(437, 136);
+            this.txt_Not.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txt_Not.Location = new System.Drawing.Point(156, 314);
             this.txt_Not.Name = "txt_Not";
-            this.txt_Not.Size = new System.Drawing.Size(158, 144);
+            this.txt_Not.ReadOnly = true;
+            this.txt_Not.Size = new System.Drawing.Size(170, 157);
             this.txt_Not.TabIndex = 7;
             this.txt_Not.Text = "";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(386, 136);
+            this.labelControl5.Location = new System.Drawing.Point(72, 314);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(32, 16);
             this.labelControl5.TabIndex = 6;
@@ -199,7 +285,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(353, 70);
+            this.labelControl4.Location = new System.Drawing.Point(479, 47);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(56, 16);
             this.labelControl4.TabIndex = 5;
@@ -207,7 +293,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(87, 105);
+            this.labelControl2.Location = new System.Drawing.Point(73, 105);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(55, 16);
             this.labelControl2.TabIndex = 3;
@@ -215,17 +301,17 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(81, 55);
+            this.labelControl1.Location = new System.Drawing.Point(73, 55);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 16);
+            this.labelControl1.Size = new System.Drawing.Size(64, 16);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "İğne Kodu:";
+            this.labelControl1.Text = "Ürün Kodu:";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // Btn_Yenile
             // 
             this.Btn_Yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yenile.ImageOptions.Image")));
-            this.Btn_Yenile.Location = new System.Drawing.Point(23, 552);
+            this.Btn_Yenile.Location = new System.Drawing.Point(5, 552);
             this.Btn_Yenile.Name = "Btn_Yenile";
             this.Btn_Yenile.Size = new System.Drawing.Size(143, 47);
             this.Btn_Yenile.TabIndex = 1;
@@ -247,6 +333,10 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_hammadde.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sarfiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_IgneFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
@@ -277,5 +367,11 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.PictureBox pic_IgneFoto;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
+        private DevExpress.XtraEditors.TextEdit txt_sarfiyat;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit6;
+        private DevExpress.XtraEditors.TextEdit txt_hammadde;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

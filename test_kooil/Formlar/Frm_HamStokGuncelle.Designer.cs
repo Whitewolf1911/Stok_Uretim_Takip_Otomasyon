@@ -57,7 +57,7 @@ namespace test_kooil.Formlar
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(29, 239);
+            this.pictureEdit4.Location = new System.Drawing.Point(29, 254);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -92,14 +92,14 @@ namespace test_kooil.Formlar
             // 
             // txt_raporlayan
             // 
-            this.txt_raporlayan.Location = new System.Drawing.Point(319, 190);
+            this.txt_raporlayan.Location = new System.Drawing.Point(343, 181);
             this.txt_raporlayan.Name = "txt_raporlayan";
-            this.txt_raporlayan.Size = new System.Drawing.Size(141, 22);
+            this.txt_raporlayan.Size = new System.Drawing.Size(138, 22);
             this.txt_raporlayan.TabIndex = 24;
             // 
             // txt_secilenHam
             // 
-            this.txt_secilenHam.Location = new System.Drawing.Point(218, 116);
+            this.txt_secilenHam.Location = new System.Drawing.Point(237, 116);
             this.txt_secilenHam.Name = "txt_secilenHam";
             this.txt_secilenHam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_secilenHam.Properties.Appearance.Options.UseBackColor = true;
@@ -109,7 +109,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(109, 247);
+            this.labelControl4.Location = new System.Drawing.Point(88, 268);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(123, 16);
             this.labelControl4.TabIndex = 21;
@@ -117,7 +117,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(231, 193);
+            this.labelControl3.Location = new System.Drawing.Point(85, 184);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(73, 16);
             this.labelControl3.TabIndex = 20;
@@ -133,7 +133,7 @@ namespace test_kooil.Formlar
             // 
             // num_Miktar
             // 
-            this.num_Miktar.Location = new System.Drawing.Point(321, 245);
+            this.num_Miktar.Location = new System.Drawing.Point(343, 266);
             this.num_Miktar.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -183,7 +183,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_azalt
             // 
-            this.Btn_azalt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_azalt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_azalt.ImageOptions.Image")));
             this.Btn_azalt.Location = new System.Drawing.Point(12, 538);
             this.Btn_azalt.Name = "Btn_azalt";
             this.Btn_azalt.Size = new System.Drawing.Size(160, 57);

@@ -74,6 +74,7 @@ namespace test_kooil
             this.Btn_YeniSevkiyat = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GecmisSevkiyat = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_SipSevkiyat = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_UrunDuzenle = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -89,7 +90,6 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.Btn_UrunDuzenle = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -457,7 +457,7 @@ namespace test_kooil
             // 
             // Btn_sipDurumKontrol
             // 
-            this.Btn_sipDurumKontrol.Caption = "Sipariş Durum Kontrol";
+            this.Btn_sipDurumKontrol.Caption = "Aktif Sipariş Durum Kontrol";
             this.Btn_sipDurumKontrol.Id = 38;
             this.Btn_sipDurumKontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_sipDurumKontrol.ImageOptions.Image")));
             this.Btn_sipDurumKontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_sipDurumKontrol.ImageOptions.LargeImage")));
@@ -517,6 +517,15 @@ namespace test_kooil
             this.Btn_SipSevkiyat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_SipSevkiyat.ImageOptions.LargeImage")));
             this.Btn_SipSevkiyat.Name = "Btn_SipSevkiyat";
             this.Btn_SipSevkiyat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SipSevkiyat_ItemClick);
+            // 
+            // Btn_UrunDuzenle
+            // 
+            this.Btn_UrunDuzenle.Caption = "Ürün Düzenle";
+            this.Btn_UrunDuzenle.Id = 45;
+            this.Btn_UrunDuzenle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UrunDuzenle.ImageOptions.Image")));
+            this.Btn_UrunDuzenle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_UrunDuzenle.ImageOptions.LargeImage")));
+            this.Btn_UrunDuzenle.Name = "Btn_UrunDuzenle";
+            this.Btn_UrunDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunDuzenle_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -642,15 +651,6 @@ namespace test_kooil
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // Btn_UrunDuzenle
-            // 
-            this.Btn_UrunDuzenle.Caption = "Ürün Düzenle";
-            this.Btn_UrunDuzenle.Id = 45;
-            this.Btn_UrunDuzenle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.Btn_UrunDuzenle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.Btn_UrunDuzenle.Name = "Btn_UrunDuzenle";
-            this.Btn_UrunDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_UrunDuzenle_ItemClick);
             // 
             // Form1
             // 

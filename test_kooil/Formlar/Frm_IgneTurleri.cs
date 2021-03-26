@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_kooil.Entity;
-//using System.Data.SqlClient;
+
 
 namespace test_kooil.Formlar
 {
@@ -19,7 +19,7 @@ namespace test_kooil.Formlar
         {
             InitializeComponent();
         }
-        // sqlBaglanti bgl = new sqlBaglanti();
+        
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele() {
             var igneler = (from x in db.TBL_IGNELER
@@ -28,6 +28,8 @@ namespace test_kooil.Formlar
                                x.TUR,
                                x.IGNEKOD,
                                x.GRAMAJ,
+                               SARFIYAT = x.SARFIYATORAN,
+                               x.HAMMADDETIPI,
                                x.ISILISLEMFORMUL,
                                x.NOT,
                                x.FOTO
@@ -39,8 +41,12 @@ namespace test_kooil.Formlar
             gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
 
             gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
-            //  gridView1.Columns[5].Visible = false;
-
+            gridView1.Columns[2].Visible = false;
+            //gridView1.Columns[3].Visible = false;
+            gridView1.Columns[4].Visible = false;
+            gridView1.Columns[5].Visible = false;
+            gridView1.Columns[6].Visible = false;
+            gridView1.Columns[7].Visible = false;
         }
         private void labelControl1_Click(object sender, EventArgs e)
         {
@@ -61,6 +67,12 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("HAMMADDETIPI").ToString());
+            var madde = db.TBL_HAMMADDE.Find(maddeID);
+
+            string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
+
+            txt_hammadde.Text = hammaddeAd;
             if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) {
                 txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
             }
@@ -80,6 +92,13 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("FOTO") == null) {
                 pic_IgneFoto.Image = null;
             }
+
+            if (gridView1.GetFocusedRowCellValue("SARFIYAT") != null)
+            {
+                txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SARFIYAT").ToString();
+            }
+
+
 
         }
 
