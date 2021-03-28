@@ -32,7 +32,7 @@ namespace test_kooil
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_AnaSayfa = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_SiparisDurum = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -100,7 +100,7 @@ namespace test_kooil
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
-            this.barButtonItem1,
+            this.Btn_AnaSayfa,
             this.barButtonItem2,
             this.Btn_SiparisDurum,
             this.barButtonItem4,
@@ -144,23 +144,24 @@ namespace test_kooil
             this.Btn_SipSevkiyat,
             this.Btn_UrunDuzenle});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 329;
+            this.ribbonControl1.OptionsMenuMinWidth = 247;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
-            this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1105, 150);
             // 
-            // barButtonItem1
+            // Btn_AnaSayfa
             // 
-            this.barButtonItem1.Caption = "Ana Sayfa";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.Btn_AnaSayfa.Caption = "Ana Sayfa";
+            this.Btn_AnaSayfa.Id = 1;
+            this.Btn_AnaSayfa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.Btn_AnaSayfa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.Btn_AnaSayfa.Name = "Btn_AnaSayfa";
+            this.Btn_AnaSayfa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_AnaSayfa_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -538,7 +539,7 @@ namespace test_kooil
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Btn_AnaSayfa);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.Btn_SiparisDurum);
             this.ribbonPageGroup1.ItemLinks.Add(this.Btn_sipDurumKontrol);
@@ -654,12 +655,12 @@ namespace test_kooil
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1473, 846);
+            this.ClientSize = new System.Drawing.Size(1105, 687);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Kooil Otomasyon";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -674,7 +675,7 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem Btn_AnaSayfa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem Btn_SiparisDurum;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;

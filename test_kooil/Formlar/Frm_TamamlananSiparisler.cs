@@ -71,10 +71,7 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) { txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparisNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString(); }
             if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) { txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("Paketlenen") != null) { txt_adet.Text = gridView1.GetFocusedRowCellValue("Paketlenen").ToString(); }
-
-
-
+            if (gridView1.GetFocusedRowCellValue("Giden") != null) { txt_adet.Text = gridView1.GetFocusedRowCellValue("Giden").ToString(); }
         }
 
         private void Btn_UretimDetay_Click(object sender, EventArgs e)

@@ -77,7 +77,10 @@ namespace test_kooil.Formlar
                 yeniSiparis.AKTIF = true;
                 int ignetipi = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                 yeniSiparis.IGNETIPI = ignetipi;
-                yeniSiparis.MUSTERI = lookUp_Musteri.EditValue.ToString();
+                if(lookUp_Musteri.EditValue != null) //TODO PROBLEM!!!
+                {
+                    yeniSiparis.MUSTERI = lookUp_Musteri.EditValue.ToString();
+                }
                 yeniSiparis.URUNADETI = int.Parse(num_Adet.Value.ToString());
                 yeniSiparis.NOTLAR = txt_Not.Text;
                 yeniSiparis.SIPARISTARIHI = (DateTime?)date_SiparisTarih.EditValue;

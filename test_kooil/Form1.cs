@@ -48,6 +48,7 @@ namespace test_kooil
         Frm_SiparisSevkiyat frmSipSevkiyat;
         Frm_GecmisSevkiyat frmGecmisSevk;
         Frm_UrunDuzenle frmUrunDuzenle;
+        Frm_AnaSayfa frmAnaSayfa;
         
         public void DisposeAllButThis(Form form)
         {
@@ -432,6 +433,14 @@ namespace test_kooil
                 frmUrunDuzenle = new Frm_UrunDuzenle();
                 frmUrunDuzenle.Show();
             }
+        }
+
+        private void Btn_AnaSayfa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmAnaSayfa = new Frm_AnaSayfa();
+            frmAnaSayfa.MdiParent = this;
+            DisposeAllButThis(frmAnaSayfa);
+            frmAnaSayfa.Show();
         }
     }
 }
