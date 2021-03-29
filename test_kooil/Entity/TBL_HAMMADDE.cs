@@ -21,5 +21,6 @@ namespace test_kooil.Entity
         public string MENSEI { get; set; }
         public Nullable<int> MIKTAR { get; set; }
         public string KONUM { get; set; }
+        public Nullable<bool> AKTIF { get; set; }
     }
 }

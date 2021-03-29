@@ -35,6 +35,7 @@ namespace test_kooil.Formlar
                 hammadde.MENSEI = ham_mensei.EditValue.ToString();
                 hammadde.MIKTAR = (int?)num_Miktar.Value;
                 hammadde.KONUM = text_Konum.Text;
+                hammadde.AKTIF = true;
                 db.TBL_HAMMADDE.Add(hammadde);
                 db.SaveChanges();
                 XtraMessageBox.Show("Hammadde Sisteme Eklendi ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);

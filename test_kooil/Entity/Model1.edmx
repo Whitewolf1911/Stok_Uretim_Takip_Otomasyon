@@ -66,7 +66,6 @@
           <Property Name="MAIL" Type="varchar" MaxLength="40" />
           <Property Name="YETKILI" Type="varchar" MaxLength="50" />
           <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="40" />
-          <Property Name="AKTIF" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_HAMMADDE">
           <Key>
@@ -79,6 +78,7 @@
           <Property Name="MENSEI" Type="varchar" MaxLength="30" />
           <Property Name="MIKTAR" Type="int" />
           <Property Name="KONUM" Type="varchar" MaxLength="50" />
+          <Property Name="AKTIF" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_HAMRAPOR">
           <Key>
@@ -656,6 +656,7 @@
           <Property Name="MENSEI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="MIKTAR" Type="Int32" />
           <Property Name="KONUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AKTIF" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_HAMRAPOR">
           <Key>
@@ -978,6 +979,7 @@
           <EntitySetMapping Name="TBL_HAMMADDE">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_HAMMADDE">
               <MappingFragment StoreEntitySet="TBL_HAMMADDE">
+                <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
                 <ScalarProperty Name="KONUM" ColumnName="KONUM" />
                 <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
                 <ScalarProperty Name="MENSEI" ColumnName="MENSEI" />

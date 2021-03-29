@@ -144,22 +144,22 @@ namespace test_kooil
             this.Btn_SipSevkiyat,
             this.Btn_UrunDuzenle});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 247;
+            this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
-            this.ribbonControl1.Size = new System.Drawing.Size(1105, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
             // 
             // Btn_AnaSayfa
             // 
             this.Btn_AnaSayfa.Caption = "Ana Sayfa";
             this.Btn_AnaSayfa.Id = 1;
-            this.Btn_AnaSayfa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.Btn_AnaSayfa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.Btn_AnaSayfa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_AnaSayfa.ImageOptions.Image")));
+            this.Btn_AnaSayfa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_AnaSayfa.ImageOptions.LargeImage")));
             this.Btn_AnaSayfa.Name = "Btn_AnaSayfa";
             this.Btn_AnaSayfa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_AnaSayfa_ItemClick);
             // 
@@ -655,12 +655,13 @@ namespace test_kooil
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 687);
+            this.ClientSize = new System.Drawing.Size(1473, 846);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Kooil Otomasyon";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

@@ -30,12 +30,14 @@ namespace test_kooil.Formlar
                                    x.GENISLIK,
                                    x.MENSEI,
                                    x.OZELLIK,
-                                   x.ID
+                                   x.ID,
+                                   x.AKTIF
 
-                               }).ToList().OrderBy(x => x.KALINLIK);
+                               }).ToList().OrderBy(x => x.KALINLIK).Where(x => x.AKTIF == true);
 
             gridControl1.DataSource = hammaddeler;
             gridView1.Columns[4].Visible = false;
+            gridView1.Columns[5].Visible = false;
             gridView1.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
         }
         

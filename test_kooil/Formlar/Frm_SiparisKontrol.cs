@@ -81,21 +81,70 @@ namespace test_kooil.Formlar
                 
                 int asamaDeger = int.Parse(gridView1.GetFocusedRowCellValue("SIPARISASAMASI").ToString());
 
-                if (asamaDeger == 0) { txt_asama.Text = "Pres Bekleniyor"; }
-                else if (asamaDeger == 1) { txt_asama.Text = "Preste"; }
-                else if (asamaDeger == 2){ txt_asama.Text = "Arka Sıyırmada";}
-                else if (asamaDeger == 3) { txt_asama.Text = "Yol Kopyalamada";}
-                else if (asamaDeger == 4)  { txt_asama.Text = "Uç Sıyırmada"; }
-                else if (asamaDeger == 5) { txt_asama.Text = "Kanal Açmada"; }
-                else if (asamaDeger == 6) { txt_asama.Text = "Kanal Büyütmede"; }
-                else if (asamaDeger == 7) { txt_asama.Text = "Polisaj1 de"; }
-                else if (asamaDeger == 8) { txt_asama.Text = "Dil Çakmada"; }
-                else if (asamaDeger == 9) { txt_asama.Text = "Polisaj2 de"; }
-                else if (asamaDeger == 10) { txt_asama.Text = "Isıl İşlemde"; }
-                else if (asamaDeger == 11) { txt_asama.Text = "Temperde"; }
-                else if (asamaDeger == 12) { txt_asama.Text = "Yıkamada"; }
-                else if (asamaDeger == 13) { txt_asama.Text = "Bilemede"; }
-                else if (asamaDeger == 14) { txt_asama.Text = "Kontrolde"; }              
+                //if (asamaDeger == 0) { txt_asama.Text = "Pres Bekleniyor"; }
+                //else if (asamaDeger == 1) { txt_asama.Text = "Preste"; }
+                //else if (asamaDeger == 2){ txt_asama.Text = "Arka Sıyırmada";}
+                //else if (asamaDeger == 3) { txt_asama.Text = "Yol Kopyalamada";}
+                //else if (asamaDeger == 4)  { txt_asama.Text = "Uç Sıyırmada"; }
+                //else if (asamaDeger == 5) { txt_asama.Text = "Kanal Açmada"; }
+                //else if (asamaDeger == 6) { txt_asama.Text = "Kanal Büyütmede"; }
+                //else if (asamaDeger == 7) { txt_asama.Text = "Polisaj1 de"; }
+                //else if (asamaDeger == 8) { txt_asama.Text = "Dil Çakmada"; }
+                //else if (asamaDeger == 9) { txt_asama.Text = "Polisaj2 de"; }
+                //else if (asamaDeger == 10) { txt_asama.Text = "Isıl İşlemde"; }
+                //else if (asamaDeger == 11) { txt_asama.Text = "Temperde"; }
+                //else if (asamaDeger == 12) { txt_asama.Text = "Yıkamada"; }
+                //else if (asamaDeger == 13) { txt_asama.Text = "Bilemede"; }
+                //else if (asamaDeger == 14) { txt_asama.Text = "Kontrolde"; }
+
+                switch (asamaDeger)
+                {
+                    case 0:
+                        txt_asama.Text = "Pres Bekleniyor";
+                        break;
+                    case 1:
+                        txt_asama.Text = "Preste";
+                        break;
+                    case 2:
+                        txt_asama.Text = "Arka Sıyırmada";
+                        break;
+                    case 3:
+                        txt_asama.Text = "Yol Kopyalamada";
+                        break;
+                    case 4:
+                        txt_asama.Text = "Uç Sıyırmada";
+                        break;
+                    case 5:
+                        txt_asama.Text = "Kanal Açmada";
+                        break;
+                    case 6:
+                        txt_asama.Text = "Kanal Büyütmede";
+                        break;
+                    case 7:
+                        txt_asama.Text = "Polisaj1 de";
+                        break;
+                    case 8:
+                        txt_asama.Text = "Dil Çakmada";
+                        break;
+                    case 9:
+                        txt_asama.Text = "Polisaj2 de";
+                        break;
+                    case 10:
+                        txt_asama.Text = "Isıl İşlemde";
+                        break;
+                    case 11:
+                        txt_asama.Text = "Temperde";
+                        break;
+                    case 12:
+                        txt_asama.Text = "Yıkamada";
+                        break;
+                    case 13:
+                        txt_asama.Text = "Bilemede";
+                        break;
+                    case 14:
+                        txt_asama.Text = "Kontrolde";
+                        break;
+                }
 
             }
 

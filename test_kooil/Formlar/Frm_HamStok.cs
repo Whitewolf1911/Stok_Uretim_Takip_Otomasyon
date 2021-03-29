@@ -33,11 +33,13 @@ namespace test_kooil.Formlar
                                 Özellik = x.OZELLIK,
                                 Menşei  = x.MENSEI,
                                 Kilogram = x.MIKTAR,
-                                Konum = x.KONUM
+                                Konum = x.KONUM,
+                                x.AKTIF
 
-                            }).ToList().OrderBy(x => x.Kalınlık);
+                            }).ToList().OrderBy(x => x.Kalınlık).Where(x => x.AKTIF == true);
             gridControl1.DataSource = degerler;
             gridView1.Columns[0].Visible = false;
+            gridView1.Columns[7].Visible = false;
             gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
             gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
@@ -58,7 +60,7 @@ namespace test_kooil.Formlar
             {
                 int silinecekMadde = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                 var deger = db.TBL_HAMMADDE.Find(silinecekMadde);
-                db.TBL_HAMMADDE.Remove(deger);
+                deger.AKTIF = false;
                 db.SaveChanges();
                 XtraMessageBox.Show("Hammadde Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listele();
