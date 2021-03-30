@@ -161,15 +161,6 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
         </EntityType>
-        <EntityType Name="TBL_PERSONEL">
-          <Key>
-            <PropertyRef Name="KULLANICIADI" />
-          </Key>
-          <Property Name="KULLANICIADI" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SIFRE" Type="varchar" MaxLength="25" />
-          <Property Name="AD" Type="varchar" MaxLength="25" />
-          <Property Name="SOYAD" Type="varchar" MaxLength="25" />
-        </EntityType>
         <EntityType Name="TBL_POLISAJ1">
           <Key>
             <PropertyRef Name="RAPORID" />
@@ -287,6 +278,51 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
         </EntityType>
+        <EntityType Name="TBL_USERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="anasayfa" Type="bit" />
+          <Property Name="yeniSiparis" Type="bit" />
+          <Property Name="akfifSiparis" Type="bit" />
+          <Property Name="siparisDurumKontrol" Type="bit" />
+          <Property Name="tamamlananSiparis" Type="bit" />
+          <Property Name="islemRaporlari" Type="bit" />
+          <Property Name="urunTurleri" Type="bit" />
+          <Property Name="yeniUrunEkle" Type="bit" />
+          <Property Name="urunDuzenle" Type="bit" />
+          <Property Name="urunStok" Type="bit" />
+          <Property Name="hamStok" Type="bit" />
+          <Property Name="yeniHam" Type="bit" />
+          <Property Name="hamSil" Type="bit" />
+          <Property Name="hamStokGuncelle" Type="bit" />
+          <Property Name="hamRapor" Type="bit" />
+          <Property Name="hamRaporEkle" Type="bit" />
+          <Property Name="firmalar" Type="bit" />
+          <Property Name="firmaEkle" Type="bit" />
+          <Property Name="yeniPSevkiyat" Type="bit" />
+          <Property Name="yeniSipSevkiyat" Type="bit" />
+          <Property Name="gecmisSevkiyat" Type="bit" />
+          <Property Name="pres" Type="bit" />
+          <Property Name="arkaSiyir" Type="bit" />
+          <Property Name="yolKopyala" Type="bit" />
+          <Property Name="ucSiyirma" Type="bit" />
+          <Property Name="kanalAcma" Type="bit" />
+          <Property Name="kanalBuyut" Type="bit" />
+          <Property Name="polisaj1" Type="bit" />
+          <Property Name="dilCakma" Type="bit" />
+          <Property Name="polisaj2" Type="bit" />
+          <Property Name="isilIslem" Type="bit" />
+          <Property Name="temper" Type="bit" />
+          <Property Name="yikama" Type="bit" />
+          <Property Name="bileme" Type="bit" />
+          <Property Name="kontrol" Type="bit" />
+          <Property Name="ayarlar" Type="bit" />
+        </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
             <PropertyRef Name="RAPORID" />
@@ -336,7 +372,6 @@
           <EntitySet Name="TBL_KANALACMA" EntityType="Self.TBL_KANALACMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_KANALBUYUTME" EntityType="Self.TBL_KANALBUYUTME" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_KONTROL" EntityType="Self.TBL_KONTROL" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TBL_PERSONEL" EntityType="Self.TBL_PERSONEL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_POLISAJ1" EntityType="Self.TBL_POLISAJ1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_POLISAJ2" EntityType="Self.TBL_POLISAJ2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_PRES" EntityType="Self.TBL_PRES" Schema="dbo" store:Type="Tables" />
@@ -345,6 +380,7 @@
           <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_TEMPER" EntityType="Self.TBL_TEMPER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_UCSIYIRMA" EntityType="Self.TBL_UCSIYIRMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YIKAMA" EntityType="Self.TBL_YIKAMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YOLKOPYALA" EntityType="Self.TBL_YOLKOPYALA" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TBL_SIPARIS_TBL_IGNELER" Association="Self.FK_TBL_SIPARIS_TBL_IGNELER">
@@ -381,15 +417,6 @@
           <Property Name="STOK" Type="Int32" />
           <Property Name="HAMMADDETIPI" Type="Int32" />
           <Property Name="SARFIYATORAN" Type="Decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="TBL_PERSONEL">
-          <Key>
-            <PropertyRef Name="KULLANICIADI" />
-          </Key>
-          <Property Name="KULLANICIADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SIFRE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="AD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="SOYAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
@@ -437,7 +464,6 @@
         <EntityContainer Name="DB_kooil_testEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" />
-          <EntitySet Name="TBL_PERSONEL" EntityType="Self.TBL_PERSONEL" />
           <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" />
           <AssociationSet Name="FK_TBL_SIPARIS_TBL_IGNELER" Association="Self.FK_TBL_SIPARIS_TBL_IGNELER">
             <End Role="TBL_IGNELER" EntitySet="TBL_IGNELER" />
@@ -462,6 +488,7 @@
           <EntitySet Name="TBL_HAMRAPOR" EntityType="DB_kooil_testModel.TBL_HAMRAPOR" />
           <EntitySet Name="TBL_FIRMALAR" EntityType="DB_kooil_testModel.TBL_FIRMALAR" />
           <EntitySet Name="TBL_SEVKIYAT" EntityType="DB_kooil_testModel.TBL_SEVKIYAT" />
+          <EntitySet Name="TBL_USERS" EntityType="DB_kooil_testModel.TBL_USERS" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -705,6 +732,51 @@
           <Property Name="SEVKIYATTUR" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="SIPARISNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="TBL_USERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="anasayfa" Type="Boolean" />
+          <Property Name="yeniSiparis" Type="Boolean" />
+          <Property Name="akfifSiparis" Type="Boolean" />
+          <Property Name="siparisDurumKontrol" Type="Boolean" />
+          <Property Name="tamamlananSiparis" Type="Boolean" />
+          <Property Name="islemRaporlari" Type="Boolean" />
+          <Property Name="urunTurleri" Type="Boolean" />
+          <Property Name="yeniUrunEkle" Type="Boolean" />
+          <Property Name="urunDuzenle" Type="Boolean" />
+          <Property Name="urunStok" Type="Boolean" />
+          <Property Name="hamStok" Type="Boolean" />
+          <Property Name="yeniHam" Type="Boolean" />
+          <Property Name="hamSil" Type="Boolean" />
+          <Property Name="hamStokGuncelle" Type="Boolean" />
+          <Property Name="hamRapor" Type="Boolean" />
+          <Property Name="hamRaporEkle" Type="Boolean" />
+          <Property Name="firmalar" Type="Boolean" />
+          <Property Name="firmaEkle" Type="Boolean" />
+          <Property Name="yeniPSevkiyat" Type="Boolean" />
+          <Property Name="yeniSipSevkiyat" Type="Boolean" />
+          <Property Name="gecmisSevkiyat" Type="Boolean" />
+          <Property Name="pres" Type="Boolean" />
+          <Property Name="arkaSiyir" Type="Boolean" />
+          <Property Name="yolKopyala" Type="Boolean" />
+          <Property Name="ucSiyirma" Type="Boolean" />
+          <Property Name="kanalAcma" Type="Boolean" />
+          <Property Name="kanalBuyut" Type="Boolean" />
+          <Property Name="polisaj1" Type="Boolean" />
+          <Property Name="dilCakma" Type="Boolean" />
+          <Property Name="polisaj2" Type="Boolean" />
+          <Property Name="isilIslem" Type="Boolean" />
+          <Property Name="temper" Type="Boolean" />
+          <Property Name="yikama" Type="Boolean" />
+          <Property Name="bileme" Type="Boolean" />
+          <Property Name="kontrol" Type="Boolean" />
+          <Property Name="ayarlar" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -735,16 +807,6 @@
                 <ScalarProperty Name="IGNEKOD" ColumnName="IGNEKOD" />
                 <ScalarProperty Name="ISILISLEMFORMUL" ColumnName="ISILISLEMFORMUL" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TBL_PERSONEL">
-            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_PERSONEL">
-              <MappingFragment StoreEntitySet="TBL_PERSONEL">
-                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
-                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
-                <ScalarProperty Name="AD" ColumnName="AD" />
-                <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1036,6 +1098,52 @@
                 <ScalarProperty Name="URUNKOD" ColumnName="URUNKOD" />
                 <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
                 <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_USERS">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
+              <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="ayarlar" ColumnName="ayarlar" />
+                <ScalarProperty Name="kontrol" ColumnName="kontrol" />
+                <ScalarProperty Name="bileme" ColumnName="bileme" />
+                <ScalarProperty Name="yikama" ColumnName="yikama" />
+                <ScalarProperty Name="temper" ColumnName="temper" />
+                <ScalarProperty Name="isilIslem" ColumnName="isilIslem" />
+                <ScalarProperty Name="polisaj2" ColumnName="polisaj2" />
+                <ScalarProperty Name="dilCakma" ColumnName="dilCakma" />
+                <ScalarProperty Name="polisaj1" ColumnName="polisaj1" />
+                <ScalarProperty Name="kanalBuyut" ColumnName="kanalBuyut" />
+                <ScalarProperty Name="kanalAcma" ColumnName="kanalAcma" />
+                <ScalarProperty Name="ucSiyirma" ColumnName="ucSiyirma" />
+                <ScalarProperty Name="yolKopyala" ColumnName="yolKopyala" />
+                <ScalarProperty Name="arkaSiyir" ColumnName="arkaSiyir" />
+                <ScalarProperty Name="pres" ColumnName="pres" />
+                <ScalarProperty Name="gecmisSevkiyat" ColumnName="gecmisSevkiyat" />
+                <ScalarProperty Name="yeniSipSevkiyat" ColumnName="yeniSipSevkiyat" />
+                <ScalarProperty Name="yeniPSevkiyat" ColumnName="yeniPSevkiyat" />
+                <ScalarProperty Name="firmaEkle" ColumnName="firmaEkle" />
+                <ScalarProperty Name="firmalar" ColumnName="firmalar" />
+                <ScalarProperty Name="hamRaporEkle" ColumnName="hamRaporEkle" />
+                <ScalarProperty Name="hamRapor" ColumnName="hamRapor" />
+                <ScalarProperty Name="hamStokGuncelle" ColumnName="hamStokGuncelle" />
+                <ScalarProperty Name="hamSil" ColumnName="hamSil" />
+                <ScalarProperty Name="yeniHam" ColumnName="yeniHam" />
+                <ScalarProperty Name="hamStok" ColumnName="hamStok" />
+                <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+                <ScalarProperty Name="urunDuzenle" ColumnName="urunDuzenle" />
+                <ScalarProperty Name="yeniUrunEkle" ColumnName="yeniUrunEkle" />
+                <ScalarProperty Name="urunTurleri" ColumnName="urunTurleri" />
+                <ScalarProperty Name="islemRaporlari" ColumnName="islemRaporlari" />
+                <ScalarProperty Name="tamamlananSiparis" ColumnName="tamamlananSiparis" />
+                <ScalarProperty Name="siparisDurumKontrol" ColumnName="siparisDurumKontrol" />
+                <ScalarProperty Name="akfifSiparis" ColumnName="akfifSiparis" />
+                <ScalarProperty Name="yeniSiparis" ColumnName="yeniSiparis" />
+                <ScalarProperty Name="anasayfa" ColumnName="anasayfa" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -27,7 +27,6 @@ namespace test_kooil.Entity
     
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TBL_IGNELER> TBL_IGNELER { get; set; }
-        public virtual DbSet<TBL_PERSONEL> TBL_PERSONEL { get; set; }
         public virtual DbSet<TBL_SIPARIS> TBL_SIPARIS { get; set; }
         public virtual DbSet<TBL_KANALACMA> TBL_KANALACMA { get; set; }
         public virtual DbSet<TBL_KONTROL> TBL_KONTROL { get; set; }
@@ -48,5 +47,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_HAMRAPOR> TBL_HAMRAPOR { get; set; }
         public virtual DbSet<TBL_FIRMALAR> TBL_FIRMALAR { get; set; }
         public virtual DbSet<TBL_SEVKIYAT> TBL_SEVKIYAT { get; set; }
+        public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
     }
 }

@@ -174,9 +174,6 @@
     <Compile Include="Entity\TBL_KONTROL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\TBL_PERSONEL.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entity\TBL_POLISAJ1.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -199,6 +196,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_UCSIYIRMA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TBL_USERS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\TBL_YIKAMA.cs">
@@ -236,6 +236,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_ArkaSiyirma.Designer.cs">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Ayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Ayarlar.Designer.cs">
+      <DependentUpon>Frm_Ayarlar.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_Bileme.cs">
       <SubType>Form</SubType>
@@ -543,6 +549,12 @@
     <Compile Include="Formlar\Frm_YeniIgneEkle.Designer.cs">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_YeniKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YeniKullanici.Designer.cs">
+      <DependentUpon>Frm_YeniKullanici.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniSevkiyat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,6 +620,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Ayarlar.resx">
+      <DependentUpon>Frm_Ayarlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Bileme.resx">
       <DependentUpon>Frm_Bileme.cs</DependentUpon>
@@ -761,6 +776,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YeniKullanici.resx">
+      <DependentUpon>Frm_YeniKullanici.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniSevkiyat.resx">
       <DependentUpon>Frm_YeniSevkiyat.cs</DependentUpon>
