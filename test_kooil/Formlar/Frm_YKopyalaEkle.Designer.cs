@@ -103,7 +103,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Kaydet
             // 
-            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
             this.Btn_Kaydet.Location = new System.Drawing.Point(50, 499);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
             this.Btn_Kaydet.Size = new System.Drawing.Size(172, 61);
@@ -177,6 +177,7 @@ namespace test_kooil.Formlar
             // 
             // text_Raporlayan
             // 
+            this.text_Raporlayan.Enabled = false;
             this.text_Raporlayan.Location = new System.Drawing.Point(234, 173);
             this.text_Raporlayan.Name = "text_Raporlayan";
             this.text_Raporlayan.Size = new System.Drawing.Size(180, 22);

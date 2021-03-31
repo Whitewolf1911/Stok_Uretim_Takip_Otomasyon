@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,17 @@ namespace test_kooil
 {
     public partial class Form1 : Form
     {
+        private Frm_Login _login;
         public Form1()
         {
             InitializeComponent();
         }
+        public Form1(Frm_Login login)
+        {
+            InitializeComponent();
+            _login = login;
+        }
+
         Frm_IgneTurleri frmIgneTur;
         Frm_YeniSiparis frmYeniSiparis;
         Frm_YeniIgneEkle frmIgneEkle;
@@ -50,7 +58,212 @@ namespace test_kooil
         Frm_UrunDuzenle frmUrunDuzenle;
         Frm_AnaSayfa frmAnaSayfa;
         Frm_Ayarlar frmAyarlar;
-        
+
+
+        void InitializeButtons() {
+
+            if (Frm_Login.user.akfifSiparis == true)
+            {
+                Btn_SiparisDurum.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_SiparisDurum.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.arkaSiyir == true)
+            {
+                Btn_arkaSiyirma.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_arkaSiyirma.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.ayarlar == true)
+            {
+                Btn_ayarlar.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_ayarlar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.bileme == true)
+            {
+                Btn_Bileme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Bileme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.dilCakma == true)
+            {
+                Btn_DilCakma.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_DilCakma.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.firmaEkle == true)
+            {
+                Btn_FirmaEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_FirmaEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.firmalar == true)
+            {
+                Btn_Firmalar.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Firmalar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.gecmisSevkiyat == true)
+            {
+                Btn_GecmisSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_GecmisSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.hamRapor == true)
+            {
+                Btn_hamKullanim.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_hamKullanim.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.hamRaporEkle == true)
+            {
+                Btn_hamRaporEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_hamRaporEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.hamStok == true)
+            {
+                Btn_HamStok.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_HamStok.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.hamStokGuncelle == true)
+            {
+                Btn_HamStokGuncelle.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_HamStokGuncelle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.isilIslem == true)
+            {
+                Btn_IsilIslem.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_IsilIslem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.islemRaporlari == true)
+            {
+                Btn_GunlukHareketler.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_GunlukHareketler.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.kanalAcma == true)
+            {
+                Btn_KanalAcma.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_KanalAcma.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.kanalBuyut == true)
+            {
+                Btn_kanalBuyutme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_kanalBuyutme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.kontrol == true)
+            {
+                Btn_Kontrol.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Kontrol.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.polisaj1 == true)
+            {
+                Btn_Polisaj1.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Polisaj1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.polisaj2 == true)
+            {
+                Btn_polisaj2.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_polisaj2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.pres == true)
+            {
+                Btn_pres.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_pres.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.siparisDurumKontrol == true)
+            {
+                Btn_sipDurumKontrol.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_sipDurumKontrol.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.tamamlananSiparis == true)
+            {
+                Btn_tamamSiparisler.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_tamamSiparisler.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.temper == true)
+            {
+                Btn_Temper.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Temper.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.ucSiyirma == true)
+            {
+                Btn_UcSiyirma.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_UcSiyirma.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.urunDuzenle == true)
+            {
+                Btn_UrunDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_UrunDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.urunStok == true)
+            {
+                Btn_UrunStok.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_UrunStok.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.urunTurleri == true)
+            {
+                barButtonItem27.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { barButtonItem27.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yeniPSevkiyat == true)
+            {
+                Btn_YeniSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_YeniSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yeniSiparis == true)
+            {
+                barButtonItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { barButtonItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yeniSipSevkiyat == true)
+            {
+                Btn_SipSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_SipSevkiyat.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yeniUrunEkle == true)
+            {
+                Btn_YeniIgneEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_YeniIgneEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yikama == true)
+            {
+                Btn_Yikama.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Yikama.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.yolKopyala == true)
+            {
+                Btn_YolKopyala.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_YolKopyala.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+        }
+
+
+
         public void DisposeAllButThis(Form form)
         {
             foreach (Form frm in this.MdiChildren)
@@ -63,39 +276,40 @@ namespace test_kooil
                 }
             }
         }
-
+        
+        void ErrorMessage()
+        {
+            XtraMessageBox.Show("Bu Sayfayı Görüntüleme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu
-            
-           // if (frmIgneTur == null || frmIgneTur.IsDisposed) {
-
+           
                 frmIgneTur = new Frm_IgneTurleri();
                 frmIgneTur.MdiParent = this;
                 DisposeAllButThis(frmIgneTur);
                 frmIgneTur.Show();
-          //  }
+               
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {   
-            if(frmYeniSiparis == null || frmYeniSiparis.IsDisposed)
-            {
-                frmYeniSiparis = new Frm_YeniSiparis();
-                frmYeniSiparis.Show();
-            }
+        {
+            
+                if (frmYeniSiparis == null || frmYeniSiparis.IsDisposed)
+                {
+                    frmYeniSiparis = new Frm_YeniSiparis();
+                    frmYeniSiparis.Show();
+                }
+           
             
         }
 
         private void Btn_pres_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-          //  if (frmPres == null || frmPres.IsDisposed)
-           // {
-
+        {      
                 frmPres = new Frm_Pres();
                 frmPres.MdiParent = this;
                 DisposeAllButThis(frmPres);
-                frmPres.Show();
-           // }
+                frmPres.Show();      
         }
 
         private void Btn_YeniIgneEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -442,6 +656,7 @@ namespace test_kooil
             frmAnaSayfa.MdiParent = this;
             DisposeAllButThis(frmAnaSayfa);
             frmAnaSayfa.Show();
+            
         }
 
         private void Btn_ayarlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -454,7 +669,13 @@ namespace test_kooil
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            InitializeButtons();
             Btn_AnaSayfa.PerformClick();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _login.Close();
         }
     }
 }

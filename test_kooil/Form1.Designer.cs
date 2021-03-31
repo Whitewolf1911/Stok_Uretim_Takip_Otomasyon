@@ -155,7 +155,9 @@ namespace test_kooil
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
+            this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
+            this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // Btn_AnaSayfa
             // 
@@ -681,7 +683,9 @@ namespace test_kooil
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kooil Otomasyon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();

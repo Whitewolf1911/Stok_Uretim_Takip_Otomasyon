@@ -53,6 +53,7 @@ namespace test_kooil.Formlar
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.label_user = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_ham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -321,17 +322,30 @@ namespace test_kooil.Formlar
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(1211, 374);
+            this.labelControl6.Location = new System.Drawing.Point(1149, 434);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(157, 33);
             this.labelControl6.TabIndex = 10;
             this.labelControl6.Text = "Hoşgeldiniz";
+            // 
+            // label_user
+            // 
+            this.label_user.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_user.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.label_user.Appearance.Options.UseFont = true;
+            this.label_user.Appearance.Options.UseForeColor = true;
+            this.label_user.Location = new System.Drawing.Point(1149, 386);
+            this.label_user.Name = "label_user";
+            this.label_user.Size = new System.Drawing.Size(51, 22);
+            this.label_user.TabIndex = 11;
+            this.label_user.Text = "name";
             // 
             // Frm_AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1464, 628);
+            this.Controls.Add(this.label_user);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.groupControl4);
@@ -394,5 +408,6 @@ namespace test_kooil.Formlar
         private System.Windows.Forms.Timer timer2;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl label_user;
     }
 }

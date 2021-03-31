@@ -21,8 +21,8 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();        
         private void simpleButton1_Click(object sender, EventArgs e)
         { // EKLE BUTONU
-            
-                //ADDING TO TBL_PRES
+
+            //ADDING TO TBL_PRES
 
                 TBL_PRES preslenenUrun = new TBL_PRES();
                 preslenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
@@ -87,6 +87,8 @@ namespace test_kooil.Formlar
 
             lookUp_Siparis.Properties.Columns[3].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
+            text_Raporlayan.Text = Frm_Login.user.AdSoyad;
+
 
 
         }

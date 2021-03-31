@@ -106,7 +106,7 @@ namespace test_kooil.Formlar
             // date_Ist_tarih
             // 
             this.date_Ist_tarih.EditValue = null;
-            this.date_Ist_tarih.Location = new System.Drawing.Point(714, 117);
+            this.date_Ist_tarih.Location = new System.Drawing.Point(724, 117);
             this.date_Ist_tarih.Name = "date_Ist_tarih";
             this.date_Ist_tarih.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.date_Ist_tarih.Properties.Appearance.Options.UseBackColor = true;
@@ -121,7 +121,7 @@ namespace test_kooil.Formlar
             // date_sipTarih
             // 
             this.date_sipTarih.EditValue = null;
-            this.date_sipTarih.Location = new System.Drawing.Point(715, 83);
+            this.date_sipTarih.Location = new System.Drawing.Point(725, 83);
             this.date_sipTarih.Name = "date_sipTarih";
             this.date_sipTarih.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.date_sipTarih.Properties.Appearance.Options.UseBackColor = true;
@@ -204,7 +204,7 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(1010, 95);
+            this.pictureEdit5.Location = new System.Drawing.Point(970, 38);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -239,15 +239,15 @@ namespace test_kooil.Formlar
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(1066, 108);
+            this.labelControl6.Location = new System.Drawing.Point(1026, 51);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(71, 16);
+            this.labelControl6.Size = new System.Drawing.Size(41, 16);
             this.labelControl6.TabIndex = 18;
-            this.labelControl6.Text = "Paketlenen :";
+            this.labelControl6.Text = "Giden :";
             // 
             // txt_paketlenen
             // 
-            this.txt_paketlenen.Location = new System.Drawing.Point(1160, 105);
+            this.txt_paketlenen.Location = new System.Drawing.Point(1089, 48);
             this.txt_paketlenen.Name = "txt_paketlenen";
             this.txt_paketlenen.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_paketlenen.Properties.Appearance.Options.UseBackColor = true;
@@ -265,7 +265,7 @@ namespace test_kooil.Formlar
             // 
             // txt_musteri
             // 
-            this.txt_musteri.Location = new System.Drawing.Point(714, 47);
+            this.txt_musteri.Location = new System.Drawing.Point(724, 47);
             this.txt_musteri.Name = "txt_musteri";
             this.txt_musteri.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_musteri.Properties.Appearance.Options.UseBackColor = true;

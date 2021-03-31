@@ -40,7 +40,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_YeniKullanici
             // 
-            this.Btn_YeniKullanici.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_YeniKullanici.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_YeniKullanici.ImageOptions.Image")));
             this.Btn_YeniKullanici.Location = new System.Drawing.Point(12, 12);
             this.Btn_YeniKullanici.Name = "Btn_YeniKullanici";
             this.Btn_YeniKullanici.Size = new System.Drawing.Size(200, 46);
@@ -51,7 +51,7 @@ namespace test_kooil.Formlar
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(12, 114);
+            this.simpleButton2.Location = new System.Drawing.Point(12, 211);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(200, 46);
             this.simpleButton2.TabIndex = 1;

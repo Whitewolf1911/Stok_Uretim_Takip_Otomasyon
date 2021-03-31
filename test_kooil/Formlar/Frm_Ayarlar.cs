@@ -34,6 +34,7 @@ namespace test_kooil.Formlar
                            }).ToList().OrderBy(x => x.AdSoyad);
             gridControl1.DataSource = veriler;
             gridView1.Columns[3].Visible = false;
+            gridView1.Columns[2].Visible = false;
         }
 
         private void Frm_Ayarlar_Load(object sender, EventArgs e)

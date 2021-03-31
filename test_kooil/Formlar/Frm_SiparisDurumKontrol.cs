@@ -63,7 +63,7 @@ namespace test_kooil.Formlar
             gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[5].AppearanceCell.BackColor = Color.OrangeRed;
-            gridView1.Columns[20].AppearanceCell.BackColor = Color.LightGreen;
+            gridView1.Columns[24].AppearanceCell.BackColor = Color.LightGreen;
 
             gridView1.Columns[0].Visible = false;
             gridView1.Columns[5].Visible = false;
@@ -83,8 +83,14 @@ namespace test_kooil.Formlar
         {
             int pressayi = Convert.ToInt32(view.GetListSourceRowCellValue(listSourceRowIndex, "Pres"));
             int kontrolsayi = Convert.ToInt32(view.GetListSourceRowCellValue(listSourceRowIndex, "Paketlenen"));
-
-            return pressayi - kontrolsayi;
+            int sonuc = pressayi - kontrolsayi;
+            if (sonuc > 0)
+            {
+                return pressayi - kontrolsayi;
+            }
+            else {
+                return 0;
+            }
         }
 
         int KalanSayi(GridView view, int listSourceRowIndex)

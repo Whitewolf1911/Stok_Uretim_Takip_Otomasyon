@@ -29,11 +29,13 @@ namespace test_kooil.Formlar
                                 x.GENISLIK,
                                 x.OZELLIK,
                                 x.MENSEI,
-                                STOK = x.MIKTAR
-                            }).ToList().OrderBy(x => x.KALINLIK);
+                                STOK = x.MIKTAR,
+                                x.AKTIF
+                            }).ToList().OrderBy(x => x.KALINLIK).Where(x => x.AKTIF==true);
 
             gridControl1.DataSource = hammadde;
             gridView1.Columns[0].Visible = false;
+            gridView1.Columns[6].Visible = false;
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -89,6 +91,7 @@ namespace test_kooil.Formlar
         private void Frm_HamStokGuncelle_Load(object sender, EventArgs e)
         {
             hamListele();
+            txt_raporlayan.Text = Frm_Login.user.AdSoyad;
         }
     }
 }

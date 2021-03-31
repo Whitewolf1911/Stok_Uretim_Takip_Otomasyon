@@ -86,6 +86,7 @@ namespace test_kooil.Formlar
 
             lookUp_Siparis.Properties.Columns[3].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
+            text_Raporlayan.Text = Frm_Login.user.AdSoyad;
         }
 
         private void Btn_iptal_Click(object sender, EventArgs e)

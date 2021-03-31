@@ -94,6 +94,7 @@ namespace test_kooil.Formlar
 
         private void Frm_AnaSayfa_Load(object sender, EventArgs e)
         {
+            label_user.Text = Frm_Login.user.AdSoyad;
             hamListele();
             sevkListele();
             islemListele();

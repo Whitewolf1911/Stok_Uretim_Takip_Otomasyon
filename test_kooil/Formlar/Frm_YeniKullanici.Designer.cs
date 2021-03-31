@@ -123,10 +123,11 @@ namespace test_kooil.Formlar
             // chAnasayfa
             // 
             this.chAnasayfa.EditValue = true;
+            this.chAnasayfa.Enabled = false;
             this.chAnasayfa.Location = new System.Drawing.Point(370, 23);
             this.chAnasayfa.Name = "chAnasayfa";
             this.chAnasayfa.Properties.Caption = "Ana Sayfa";
-            this.chAnasayfa.Size = new System.Drawing.Size(94, 24);
+            this.chAnasayfa.Size = new System.Drawing.Size(112, 24);
             this.chAnasayfa.TabIndex = 0;
             // 
             // txt_AdSoyad
@@ -179,7 +180,7 @@ namespace test_kooil.Formlar
             this.chYeniSiparis.Location = new System.Drawing.Point(370, 62);
             this.chYeniSiparis.Name = "chYeniSiparis";
             this.chYeniSiparis.Properties.Caption = "Yeni Sipariş";
-            this.chYeniSiparis.Size = new System.Drawing.Size(94, 24);
+            this.chYeniSiparis.Size = new System.Drawing.Size(112, 24);
             this.chYeniSiparis.TabIndex = 7;
             // 
             // chAktifSiparisler
@@ -188,7 +189,7 @@ namespace test_kooil.Formlar
             this.chAktifSiparisler.Location = new System.Drawing.Point(370, 103);
             this.chAktifSiparisler.Name = "chAktifSiparisler";
             this.chAktifSiparisler.Properties.Caption = "Aktif Siparişler";
-            this.chAktifSiparisler.Size = new System.Drawing.Size(115, 24);
+            this.chAktifSiparisler.Size = new System.Drawing.Size(133, 24);
             this.chAktifSiparisler.TabIndex = 8;
             // 
             // chSipDurumKontrol
@@ -196,7 +197,7 @@ namespace test_kooil.Formlar
             this.chSipDurumKontrol.Location = new System.Drawing.Point(370, 146);
             this.chSipDurumKontrol.Name = "chSipDurumKontrol";
             this.chSipDurumKontrol.Properties.Caption = "Sipariş Durum Kontrol";
-            this.chSipDurumKontrol.Size = new System.Drawing.Size(169, 24);
+            this.chSipDurumKontrol.Size = new System.Drawing.Size(187, 24);
             this.chSipDurumKontrol.TabIndex = 9;
             // 
             // chTamamlananSip
@@ -204,7 +205,7 @@ namespace test_kooil.Formlar
             this.chTamamlananSip.Location = new System.Drawing.Point(370, 187);
             this.chTamamlananSip.Name = "chTamamlananSip";
             this.chTamamlananSip.Properties.Caption = "Tamamlanan Siparişler";
-            this.chTamamlananSip.Size = new System.Drawing.Size(169, 24);
+            this.chTamamlananSip.Size = new System.Drawing.Size(187, 24);
             this.chTamamlananSip.TabIndex = 10;
             // 
             // chIslemRapor
@@ -213,7 +214,7 @@ namespace test_kooil.Formlar
             this.chIslemRapor.Location = new System.Drawing.Point(370, 234);
             this.chIslemRapor.Name = "chIslemRapor";
             this.chIslemRapor.Properties.Caption = "İşlem Raporları";
-            this.chIslemRapor.Size = new System.Drawing.Size(127, 24);
+            this.chIslemRapor.Size = new System.Drawing.Size(145, 24);
             this.chIslemRapor.TabIndex = 11;
             // 
             // chUrunTur
@@ -222,7 +223,7 @@ namespace test_kooil.Formlar
             this.chUrunTur.Location = new System.Drawing.Point(370, 283);
             this.chUrunTur.Name = "chUrunTur";
             this.chUrunTur.Properties.Caption = "Ürün Türleri";
-            this.chUrunTur.Size = new System.Drawing.Size(115, 24);
+            this.chUrunTur.Size = new System.Drawing.Size(133, 24);
             this.chUrunTur.TabIndex = 12;
             // 
             // chYeniUrunEkle
@@ -230,7 +231,7 @@ namespace test_kooil.Formlar
             this.chYeniUrunEkle.Location = new System.Drawing.Point(370, 329);
             this.chYeniUrunEkle.Name = "chYeniUrunEkle";
             this.chYeniUrunEkle.Properties.Caption = "Yeni Ürün Ekle";
-            this.chYeniUrunEkle.Size = new System.Drawing.Size(137, 24);
+            this.chYeniUrunEkle.Size = new System.Drawing.Size(155, 24);
             this.chYeniUrunEkle.TabIndex = 13;
             // 
             // chUrunDuzenle
@@ -238,7 +239,7 @@ namespace test_kooil.Formlar
             this.chUrunDuzenle.Location = new System.Drawing.Point(370, 376);
             this.chUrunDuzenle.Name = "chUrunDuzenle";
             this.chUrunDuzenle.Properties.Caption = "Ürün Düzenle";
-            this.chUrunDuzenle.Size = new System.Drawing.Size(115, 24);
+            this.chUrunDuzenle.Size = new System.Drawing.Size(133, 24);
             this.chUrunDuzenle.TabIndex = 14;
             // 
             // chFirmaEkle
@@ -246,7 +247,7 @@ namespace test_kooil.Formlar
             this.chFirmaEkle.Location = new System.Drawing.Point(579, 376);
             this.chFirmaEkle.Name = "chFirmaEkle";
             this.chFirmaEkle.Properties.Caption = "Firma Ekle";
-            this.chFirmaEkle.Size = new System.Drawing.Size(104, 24);
+            this.chFirmaEkle.Size = new System.Drawing.Size(141, 24);
             this.chFirmaEkle.TabIndex = 23;
             // 
             // chFirmalar
@@ -254,7 +255,7 @@ namespace test_kooil.Formlar
             this.chFirmalar.Location = new System.Drawing.Point(579, 329);
             this.chFirmalar.Name = "chFirmalar";
             this.chFirmalar.Properties.Caption = "Firmalar";
-            this.chFirmalar.Size = new System.Drawing.Size(94, 24);
+            this.chFirmalar.Size = new System.Drawing.Size(131, 24);
             this.chFirmalar.TabIndex = 22;
             // 
             // chHamRaporEkle
@@ -262,7 +263,7 @@ namespace test_kooil.Formlar
             this.chHamRaporEkle.Location = new System.Drawing.Point(579, 283);
             this.chHamRaporEkle.Name = "chHamRaporEkle";
             this.chHamRaporEkle.Properties.Caption = "Hammadde Raporu Ekle";
-            this.chHamRaporEkle.Size = new System.Drawing.Size(185, 24);
+            this.chHamRaporEkle.Size = new System.Drawing.Size(222, 24);
             this.chHamRaporEkle.TabIndex = 21;
             // 
             // chHamKullanimRap
@@ -270,7 +271,7 @@ namespace test_kooil.Formlar
             this.chHamKullanimRap.Location = new System.Drawing.Point(579, 234);
             this.chHamKullanimRap.Name = "chHamKullanimRap";
             this.chHamKullanimRap.Properties.Caption = "Hammadde Kullanım Raporları";
-            this.chHamKullanimRap.Size = new System.Drawing.Size(211, 24);
+            this.chHamKullanimRap.Size = new System.Drawing.Size(248, 24);
             this.chHamKullanimRap.TabIndex = 20;
             // 
             // chHamStokGuncelle
@@ -278,7 +279,7 @@ namespace test_kooil.Formlar
             this.chHamStokGuncelle.Location = new System.Drawing.Point(579, 187);
             this.chHamStokGuncelle.Name = "chHamStokGuncelle";
             this.chHamStokGuncelle.Properties.Caption = "Hammadde Stok Güncelle";
-            this.chHamStokGuncelle.Size = new System.Drawing.Size(185, 24);
+            this.chHamStokGuncelle.Size = new System.Drawing.Size(222, 24);
             this.chHamStokGuncelle.TabIndex = 19;
             // 
             // chHamSil
@@ -286,7 +287,7 @@ namespace test_kooil.Formlar
             this.chHamSil.Location = new System.Drawing.Point(579, 146);
             this.chHamSil.Name = "chHamSil";
             this.chHamSil.Properties.Caption = "Hammadde Sil";
-            this.chHamSil.Size = new System.Drawing.Size(142, 24);
+            this.chHamSil.Size = new System.Drawing.Size(179, 24);
             this.chHamSil.TabIndex = 18;
             // 
             // chYeniHamEkle
@@ -294,7 +295,7 @@ namespace test_kooil.Formlar
             this.chYeniHamEkle.Location = new System.Drawing.Point(579, 103);
             this.chYeniHamEkle.Name = "chYeniHamEkle";
             this.chYeniHamEkle.Properties.Caption = "Yeni Hammadde Ekle";
-            this.chYeniHamEkle.Size = new System.Drawing.Size(161, 24);
+            this.chYeniHamEkle.Size = new System.Drawing.Size(198, 24);
             this.chYeniHamEkle.TabIndex = 17;
             // 
             // chHammaddeStok
@@ -302,7 +303,7 @@ namespace test_kooil.Formlar
             this.chHammaddeStok.Location = new System.Drawing.Point(579, 62);
             this.chHammaddeStok.Name = "chHammaddeStok";
             this.chHammaddeStok.Properties.Caption = "Hammadde Stok";
-            this.chHammaddeStok.Size = new System.Drawing.Size(142, 24);
+            this.chHammaddeStok.Size = new System.Drawing.Size(179, 24);
             this.chHammaddeStok.TabIndex = 16;
             // 
             // chUrunStok
@@ -310,7 +311,7 @@ namespace test_kooil.Formlar
             this.chUrunStok.Location = new System.Drawing.Point(579, 23);
             this.chUrunStok.Name = "chUrunStok";
             this.chUrunStok.Properties.Caption = "Ürün Stok";
-            this.chUrunStok.Size = new System.Drawing.Size(104, 24);
+            this.chUrunStok.Size = new System.Drawing.Size(141, 24);
             this.chUrunStok.TabIndex = 15;
             // 
             // chKanalBuyutme
@@ -366,7 +367,7 @@ namespace test_kooil.Formlar
             this.chAyarlar.Location = new System.Drawing.Point(819, 144);
             this.chAyarlar.Name = "chAyarlar";
             this.chAyarlar.Properties.Caption = "Ayarlar";
-            this.chAyarlar.Size = new System.Drawing.Size(94, 24);
+            this.chAyarlar.Size = new System.Drawing.Size(144, 24);
             this.chAyarlar.TabIndex = 26;
             // 
             // chGecmisSevkiyat
@@ -374,7 +375,7 @@ namespace test_kooil.Formlar
             this.chGecmisSevkiyat.Location = new System.Drawing.Point(819, 103);
             this.chGecmisSevkiyat.Name = "chGecmisSevkiyat";
             this.chGecmisSevkiyat.Properties.Caption = "Geçmiş Sevkiyatlar";
-            this.chGecmisSevkiyat.Size = new System.Drawing.Size(156, 24);
+            this.chGecmisSevkiyat.Size = new System.Drawing.Size(206, 24);
             this.chGecmisSevkiyat.TabIndex = 25;
             // 
             // chPeraSevkiyat
@@ -382,7 +383,7 @@ namespace test_kooil.Formlar
             this.chPeraSevkiyat.Location = new System.Drawing.Point(819, 23);
             this.chPeraSevkiyat.Name = "chPeraSevkiyat";
             this.chPeraSevkiyat.Properties.Caption = "Yeni Perakende Sevkiyat";
-            this.chPeraSevkiyat.Size = new System.Drawing.Size(179, 24);
+            this.chPeraSevkiyat.Size = new System.Drawing.Size(229, 24);
             this.chPeraSevkiyat.TabIndex = 24;
             // 
             // chKontrol
@@ -454,7 +455,7 @@ namespace test_kooil.Formlar
             this.chSipSevkiyat.Location = new System.Drawing.Point(819, 62);
             this.chSipSevkiyat.Name = "chSipSevkiyat";
             this.chSipSevkiyat.Properties.Caption = "Yeni Sipariş Sevkiyat";
-            this.chSipSevkiyat.Size = new System.Drawing.Size(156, 24);
+            this.chSipSevkiyat.Size = new System.Drawing.Size(206, 24);
             this.chSipSevkiyat.TabIndex = 41;
             // 
             // pictureEdit1
@@ -495,7 +496,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Kaydet
             // 
-            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
             this.Btn_Kaydet.Location = new System.Drawing.Point(12, 380);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
             this.Btn_Kaydet.Size = new System.Drawing.Size(166, 55);

@@ -128,7 +128,7 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("Musteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Musteri").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparisTarihi") != null) { date_sipTarih.EditValue =  gridView1.GetFocusedRowCellValue("SiparisTarihi"); }
             if (gridView1.GetFocusedRowCellValue("IstenilenTarih") != null) { date_Ist_tarih.EditValue = gridView1.GetFocusedRowCellValue("IstenilenTarih"); }
-            if (gridView1.GetFocusedRowCellValue("Paketlenen") != null) { txt_paketlenen.Text = gridView1.GetFocusedRowCellValue("Paketlenen").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Giden") != null) { txt_paketlenen.Text = gridView1.GetFocusedRowCellValue("Giden").ToString(); }
 
 
         }

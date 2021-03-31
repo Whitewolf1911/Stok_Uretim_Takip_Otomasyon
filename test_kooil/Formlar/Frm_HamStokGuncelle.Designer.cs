@@ -92,9 +92,10 @@ namespace test_kooil.Formlar
             // 
             // txt_raporlayan
             // 
-            this.txt_raporlayan.Location = new System.Drawing.Point(343, 181);
+            this.txt_raporlayan.Enabled = false;
+            this.txt_raporlayan.Location = new System.Drawing.Point(237, 181);
             this.txt_raporlayan.Name = "txt_raporlayan";
-            this.txt_raporlayan.Size = new System.Drawing.Size(138, 22);
+            this.txt_raporlayan.Size = new System.Drawing.Size(155, 22);
             this.txt_raporlayan.TabIndex = 24;
             // 
             // txt_secilenHam
@@ -133,22 +134,22 @@ namespace test_kooil.Formlar
             // 
             // num_Miktar
             // 
-            this.num_Miktar.Location = new System.Drawing.Point(343, 266);
+            this.num_Miktar.Location = new System.Drawing.Point(237, 268);
             this.num_Miktar.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
             this.num_Miktar.Name = "num_Miktar";
-            this.num_Miktar.Size = new System.Drawing.Size(138, 22);
+            this.num_Miktar.Size = new System.Drawing.Size(155, 22);
             this.num_Miktar.TabIndex = 17;
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(555, 12);
+            this.gridControl1.Location = new System.Drawing.Point(543, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(787, 583);
+            this.gridControl1.Size = new System.Drawing.Size(799, 583);
             this.gridControl1.TabIndex = 16;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
