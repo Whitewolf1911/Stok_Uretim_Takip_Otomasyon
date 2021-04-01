@@ -82,6 +82,7 @@ namespace test_kooil.Formlar
                         db.TBL_USERS.Add(new_user);
                         db.SaveChanges();
                         XtraMessageBox.Show("Yeni Kullanıcı Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else { 
                     

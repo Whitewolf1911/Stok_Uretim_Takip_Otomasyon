@@ -33,6 +33,8 @@ namespace test_kooil.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_pres = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txt_musteri = new DevExpress.XtraEditors.TextEdit();
@@ -45,19 +47,17 @@ namespace test_kooil.Formlar
             this.txt_urunKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_pres = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_pres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_musteri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_mensei.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_secilenHam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_urunKodu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_pres.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -74,6 +74,7 @@ namespace test_kooil.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
@@ -98,6 +99,24 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(314, 604);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Hammadde Rapor";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(8, 426);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(69, 16);
+            this.labelControl6.TabIndex = 20;
+            this.labelControl6.Text = "Pres Miktar:";
+            // 
+            // txt_pres
+            // 
+            this.txt_pres.Location = new System.Drawing.Point(150, 423);
+            this.txt_pres.Name = "txt_pres";
+            this.txt_pres.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_pres.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_pres.Properties.ReadOnly = true;
+            this.txt_pres.Size = new System.Drawing.Size(159, 22);
+            this.txt_pres.TabIndex = 19;
             // 
             // pictureEdit1
             // 
@@ -211,24 +230,6 @@ namespace test_kooil.Formlar
             this.Btn_Yazdir.Text = "Yazdır";
             this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(8, 426);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(69, 16);
-            this.labelControl6.TabIndex = 20;
-            this.labelControl6.Text = "Pres Miktar:";
-            // 
-            // txt_pres
-            // 
-            this.txt_pres.Location = new System.Drawing.Point(150, 423);
-            this.txt_pres.Name = "txt_pres";
-            this.txt_pres.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_pres.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_pres.Properties.ReadOnly = true;
-            this.txt_pres.Size = new System.Drawing.Size(159, 22);
-            this.txt_pres.TabIndex = 19;
-            // 
             // Frm_HamRaporlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,13 +245,13 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_pres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_musteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_mensei.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_secilenHam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_urunKodu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_pres.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

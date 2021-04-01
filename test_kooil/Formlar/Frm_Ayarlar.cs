@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_YeniKullanici frmYeniKullanici;
-
+        Frm_userUpdate frmUserUpdate;
         void userListele() {
 
             var veriler = (from x in db.TBL_USERS
@@ -27,7 +28,7 @@ namespace test_kooil.Formlar
                            {
 
                                x.AdSoyad,
-                               x.userName,
+                               KullanıcıAdı = x.userName,
                                x.password,
                                x.ID
 
@@ -35,6 +36,9 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = veriler;
             gridView1.Columns[3].Visible = false;
             gridView1.Columns[2].Visible = false;
+            gridView1.Columns[1].Visible = false;
+            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+
         }
 
         private void Frm_Ayarlar_Load(object sender, EventArgs e)
@@ -48,6 +52,44 @@ namespace test_kooil.Formlar
             {
                 frmYeniKullanici = new Frm_YeniKullanici();
                 frmYeniKullanici.Show();
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Sil_Click(object sender, EventArgs e)
+        {
+            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Kullanıcıyı Sistemden Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz .", "Dikkat", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (siradakiAsamaSorgu == DialogResult.Yes)
+            {
+
+                if (gridView1.GetFocusedRowCellValue("KullanıcıAdı").ToString() != "admin")
+                {
+
+                    var userID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                    var userRemove = db.TBL_USERS.Find(userID);
+                    db.TBL_USERS.Remove(userRemove);
+                    db.SaveChanges();
+                    userListele();
+                }
+                else
+                {
+
+                    XtraMessageBox.Show("Bu Kullanıcıyı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+        }
+
+        private void Btn_Guncelle_Click(object sender, EventArgs e)
+        {
+            if (frmUserUpdate == null || frmUserUpdate.IsDisposed)
+            {
+                frmUserUpdate = new Frm_userUpdate();
+                frmUserUpdate.Show();
             }
         }
     }

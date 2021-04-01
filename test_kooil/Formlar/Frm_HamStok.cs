@@ -49,23 +49,41 @@ namespace test_kooil.Formlar
         }
         private void Btn_yeniHamEkle_Click(object sender, EventArgs e)
         {
-            frmYeniHam = new Frm_YeniHamEkle();
-            frmYeniHam.Show();
+            if (Frm_Login.user.yeniHam == true)
+            {
+
+                frmYeniHam = new Frm_YeniHamEkle();
+                frmYeniHam.Show();
+            }
+            else { 
+               XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         private void Btn_hamSil_Click(object sender, EventArgs e)
         {
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Bu işlem seçilen hammaddeyi sistemden tamamen silecek. Devam etmek istediğinize emin misiniz ? ", "Hammadde Silme", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            if (Frm_Login.user.hamSil == true)
             {
-                int silinecekMadde = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                var deger = db.TBL_HAMMADDE.Find(silinecekMadde);
-                deger.AKTIF = false;
-                db.SaveChanges();
-                XtraMessageBox.Show("Hammadde Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                listele();
+
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Bu işlem seçilen hammaddeyi sistemden tamamen silecek. Devam etmek istediğinize emin misiniz ? ", "Hammadde Silme", MessageBoxButtons.YesNo);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    int silinecekMadde = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                    var deger = db.TBL_HAMMADDE.Find(silinecekMadde);
+                    deger.AKTIF = false;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Hammadde Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listele();
+                }
+                else { }
+
             }
-            else { }
+            else { 
+               XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void Btn_Yenile_Click(object sender, EventArgs e)

@@ -200,6 +200,7 @@ namespace test_kooil.Formlar
                 db.SaveChanges();
                 urunleriListele();
                 XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Btn_Yazdir.PerformClick();
 
             }
         }

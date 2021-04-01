@@ -169,6 +169,7 @@ namespace test_kooil.Formlar
             // 
             // txt_raporlayan
             // 
+            this.txt_raporlayan.Enabled = false;
             this.txt_raporlayan.Location = new System.Drawing.Point(331, 225);
             this.txt_raporlayan.Name = "txt_raporlayan";
             this.txt_raporlayan.Size = new System.Drawing.Size(141, 22);

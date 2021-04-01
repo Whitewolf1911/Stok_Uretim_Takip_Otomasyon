@@ -120,9 +120,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl3.Location = new System.Drawing.Point(85, 184);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(73, 16);
+            this.labelControl3.Size = new System.Drawing.Size(79, 16);
             this.labelControl3.TabIndex = 20;
-            this.labelControl3.Text = "Raporlayan :";
+            this.labelControl3.Text = "İşlem Yapan :";
             // 
             // labelControl2
             // 

@@ -315,6 +315,12 @@
     <Compile Include="Formlar\Frm_HamStokGuncelle.Designer.cs">
       <DependentUpon>Frm_HamStokGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_HataDuzeltme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_HataDuzeltme.Designer.cs">
+      <DependentUpon>Frm_HataDuzeltme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,6 +549,12 @@
     <Compile Include="Formlar\Frm_UrunStok.Designer.cs">
       <DependentUpon>Frm_UrunStok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_userUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_userUpdate.Designer.cs">
+      <DependentUpon>Frm_userUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniHamEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -666,6 +678,9 @@
     <EmbeddedResource Include="Formlar\Frm_HamStokGuncelle.resx">
       <DependentUpon>Frm_HamStokGuncelle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_HataDuzeltme.resx">
+      <DependentUpon>Frm_HataDuzeltme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_IgneTurleri.resx">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -779,6 +794,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UrunStok.resx">
       <DependentUpon>Frm_UrunStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_userUpdate.resx">
+      <DependentUpon>Frm_userUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniHamEkle.resx">
       <DependentUpon>Frm_YeniHamEkle.cs</DependentUpon>

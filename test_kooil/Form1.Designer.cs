@@ -76,6 +76,8 @@ namespace test_kooil
             this.Btn_SipSevkiyat = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_UrunDuzenle = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_ayarlar = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_hataDuzeltme = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -85,7 +87,8 @@ namespace test_kooil
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
@@ -145,16 +148,19 @@ namespace test_kooil
             this.Btn_GecmisSevkiyat,
             this.Btn_SipSevkiyat,
             this.Btn_UrunDuzenle,
-            this.Btn_ayarlar});
+            this.Btn_ayarlar,
+            this.barButtonItem1,
+            this.Btn_hataDuzeltme});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 47;
+            this.ribbonControl1.MaxItemId = 50;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
-            this.ribbonPage4});
+            this.ribbonPage4,
+            this.ribbonPage3});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
@@ -535,12 +541,26 @@ namespace test_kooil
             // 
             // Btn_ayarlar
             // 
-            this.Btn_ayarlar.Caption = "Ayarlar";
+            this.Btn_ayarlar.Caption = "Kullanıcı Ayarları";
             this.Btn_ayarlar.Id = 46;
             this.Btn_ayarlar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ayarlar.ImageOptions.Image")));
             this.Btn_ayarlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_ayarlar.ImageOptions.LargeImage")));
             this.Btn_ayarlar.Name = "Btn_ayarlar";
             this.Btn_ayarlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_ayarlar_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Id = 49;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // Btn_hataDuzeltme
+            // 
+            this.Btn_hataDuzeltme.Caption = "Hata Düzeltme";
+            this.Btn_hataDuzeltme.Id = 48;
+            this.Btn_hataDuzeltme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hataDuzeltme.ImageOptions.Image")));
+            this.Btn_hataDuzeltme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_hataDuzeltme.ImageOptions.LargeImage")));
+            this.Btn_hataDuzeltme.Name = "Btn_hataDuzeltme";
+            this.Btn_hataDuzeltme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hataDuzeltme_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -606,8 +626,7 @@ namespace test_kooil
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup3});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Firma-Sevkiyat";
             // 
@@ -624,10 +643,18 @@ namespace test_kooil
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_SipSevkiyat);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
-            // ribbonPageGroup5
+            // ribbonPage3
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.Btn_ayarlar);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Diğer";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.Btn_ayarlar);
+            this.ribbonPageGroup8.ItemLinks.Add(this.Btn_hataDuzeltme);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
             // barButtonItem11
             // 
@@ -756,7 +783,10 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_SipSevkiyat;
         private DevExpress.XtraBars.BarButtonItem Btn_UrunDuzenle;
         private DevExpress.XtraBars.BarButtonItem Btn_ayarlar;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem Btn_hataDuzeltme;
     }
 }
 

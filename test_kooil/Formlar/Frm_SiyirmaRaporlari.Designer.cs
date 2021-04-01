@@ -31,6 +31,7 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SiyirmaRaporlari));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txt_IslenenAdet = new DevExpress.XtraEditors.TextEdit();
@@ -52,7 +53,6 @@ namespace test_kooil.Formlar
             this.txt_Tarih = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
@@ -98,6 +98,16 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(337, 604);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Özellikler";
+            // 
+            // Btn_Yazdir
+            // 
+            this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
+            this.Btn_Yazdir.Location = new System.Drawing.Point(13, 541);
+            this.Btn_Yazdir.Name = "Btn_Yazdir";
+            this.Btn_Yazdir.Size = new System.Drawing.Size(143, 47);
+            this.Btn_Yazdir.TabIndex = 21;
+            this.Btn_Yazdir.Text = "Yazdır";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // pictureEdit6
             // 
@@ -297,18 +307,9 @@ namespace test_kooil.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // Btn_Yazdir
-            // 
-            this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_Yazdir.Location = new System.Drawing.Point(13, 541);
-            this.Btn_Yazdir.Name = "Btn_Yazdir";
-            this.Btn_Yazdir.Size = new System.Drawing.Size(143, 47);
-            this.Btn_Yazdir.TabIndex = 21;
-            this.Btn_Yazdir.Text = "Yazdır";
-            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // Frm_SiyirmaRaporlari
             // 

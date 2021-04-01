@@ -58,6 +58,7 @@ namespace test_kooil
         Frm_UrunDuzenle frmUrunDuzenle;
         Frm_AnaSayfa frmAnaSayfa;
         Frm_Ayarlar frmAyarlar;
+        Frm_HataDuzeltme frmHataDuzelt;
 
 
         void InitializeButtons() {
@@ -661,10 +662,12 @@ namespace test_kooil
 
         private void Btn_ayarlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmAyarlar = new Frm_Ayarlar();
-            frmAyarlar.MdiParent = this;
-            DisposeAllButThis(frmAyarlar);
-            frmAyarlar.Show();
+            if (frmAyarlar == null || frmAyarlar.IsDisposed)
+            {
+
+                frmAyarlar = new Frm_Ayarlar();
+                frmAyarlar.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -676,6 +679,16 @@ namespace test_kooil
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             _login.Close();
+        }
+
+        
+
+        private void Btn_hataDuzeltme_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHataDuzelt = new Frm_HataDuzeltme();
+            frmHataDuzelt.MdiParent = this;
+            DisposeAllButThis(frmHataDuzelt);
+            frmHataDuzelt.Show();
         }
     }
 }
