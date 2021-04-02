@@ -73,7 +73,7 @@ namespace test_kooil.Formlar
             this.date_istenilen = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.Btn_RaporSil = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_hamRapSil = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Siparis)).BeginInit();
@@ -114,15 +114,17 @@ namespace test_kooil.Formlar
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // Btn_SiparisSil
             // 
             this.Btn_SiparisSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisSil.ImageOptions.Image")));
-            this.Btn_SiparisSil.Location = new System.Drawing.Point(606, 417);
+            this.Btn_SiparisSil.Location = new System.Drawing.Point(584, 417);
             this.Btn_SiparisSil.Name = "Btn_SiparisSil";
-            this.Btn_SiparisSil.Size = new System.Drawing.Size(188, 57);
+            this.Btn_SiparisSil.Size = new System.Drawing.Size(210, 57);
             this.Btn_SiparisSil.TabIndex = 1;
             this.Btn_SiparisSil.Text = "Seçili Siparişi Sil";
+            this.Btn_SiparisSil.Click += new System.EventHandler(this.Btn_SiparisSil_Click);
             // 
             // labelControl1
             // 
@@ -452,6 +454,7 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle.Size = new System.Drawing.Size(176, 57);
             this.Btn_Guncelle.TabIndex = 34;
             this.Btn_Guncelle.Text = "Güncelle";
+            this.Btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
             // txt_not
             // 
@@ -512,27 +515,29 @@ namespace test_kooil.Formlar
             // Btn_RaporSil
             // 
             this.Btn_RaporSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_RaporSil.ImageOptions.Image")));
-            this.Btn_RaporSil.Location = new System.Drawing.Point(606, 550);
+            this.Btn_RaporSil.Location = new System.Drawing.Point(584, 550);
             this.Btn_RaporSil.Name = "Btn_RaporSil";
-            this.Btn_RaporSil.Size = new System.Drawing.Size(188, 57);
+            this.Btn_RaporSil.Size = new System.Drawing.Size(210, 57);
             this.Btn_RaporSil.TabIndex = 41;
-            this.Btn_RaporSil.Text = "Hatalı Rapor Sil";
+            this.Btn_RaporSil.Text = "Hatalı Rapor Düzelt";
+            this.Btn_RaporSil.Click += new System.EventHandler(this.Btn_RaporSil_Click);
             // 
-            // simpleButton1
+            // Btn_hamRapSil
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(606, 487);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(188, 57);
-            this.simpleButton1.TabIndex = 42;
-            this.simpleButton1.Text = "Hammadde Raporu Sil";
+            this.Btn_hamRapSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamRapSil.ImageOptions.Image")));
+            this.Btn_hamRapSil.Location = new System.Drawing.Point(584, 487);
+            this.Btn_hamRapSil.Name = "Btn_hamRapSil";
+            this.Btn_hamRapSil.Size = new System.Drawing.Size(210, 57);
+            this.Btn_hamRapSil.TabIndex = 42;
+            this.Btn_hamRapSil.Text = "Hammadde Raporu";
+            this.Btn_hamRapSil.Click += new System.EventHandler(this.Btn_hamRapSil_Click);
             // 
             // Frm_HataDuzeltme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1464, 628);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.Btn_hamRapSil);
             this.Controls.Add(this.Btn_RaporSil);
             this.Controls.Add(this.labelControl19);
             this.Controls.Add(this.date_istenilen);
@@ -650,6 +655,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl date_istenilen;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.SimpleButton Btn_RaporSil;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton Btn_hamRapSil;
     }
 }

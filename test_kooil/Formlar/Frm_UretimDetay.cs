@@ -59,9 +59,9 @@ namespace test_kooil.Formlar
             //renklendirmeler ve sutun gizlemeler
             gridView1.Columns[1].AppearanceCell.BackColor = Color.Green;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
+            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.OrangeRed;
+            gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
             gridView1.Columns[20].AppearanceCell.BackColor = Color.Yellow;
             gridView1.Columns[21].AppearanceCell.BackColor = Color.LightGreen;
 

@@ -67,6 +67,21 @@
           <Property Name="YETKILI" Type="varchar" MaxLength="50" />
           <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="40" />
         </EntityType>
+        <EntityType Name="TBL_HAMLOG">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="RAPORID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KALINLIK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GENISLIK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OZELLIK" Type="varchar" MaxLength="10" />
+          <Property Name="MENSEI" Type="varchar" MaxLength="25" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="ISLEM" Type="varchar" MaxLength="15" />
+          <Property Name="SEBEP" Type="varchar" MaxLength="15" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="MIKTAR" Type="int" />
+        </EntityType>
         <EntityType Name="TBL_HAMMADDE">
           <Key>
             <PropertyRef Name="ID" />
@@ -210,6 +225,7 @@
           <Property Name="TARIH" Type="date" />
           <Property Name="SIPARISNO" Type="int" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
+          <Property Name="URUNTUR" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBL_SEVKIYAT">
           <Key>
@@ -322,6 +338,7 @@
           <Property Name="bileme" Type="bit" />
           <Property Name="kontrol" Type="bit" />
           <Property Name="ayarlar" Type="bit" />
+          <Property Name="hataduzelt" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
@@ -365,6 +382,7 @@
           <EntitySet Name="TBL_BILEME" EntityType="Self.TBL_BILEME" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_DILCAKMA" EntityType="Self.TBL_DILCAKMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_FIRMALAR" EntityType="Self.TBL_FIRMALAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_HAMLOG" EntityType="Self.TBL_HAMLOG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMMADDE" EntityType="Self.TBL_HAMMADDE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMRAPOR" EntityType="Self.TBL_HAMRAPOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" Schema="dbo" store:Type="Tables" />
@@ -489,6 +507,7 @@
           <EntitySet Name="TBL_FIRMALAR" EntityType="DB_kooil_testModel.TBL_FIRMALAR" />
           <EntitySet Name="TBL_SEVKIYAT" EntityType="DB_kooil_testModel.TBL_SEVKIYAT" />
           <EntitySet Name="TBL_USERS" EntityType="DB_kooil_testModel.TBL_USERS" />
+          <EntitySet Name="TBL_HAMLOG" EntityType="DB_kooil_testModel.TBL_HAMLOG" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -551,6 +570,7 @@
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="SIPARISNO" Type="Int32" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_YOLKOPYALA">
           <Key>
@@ -776,6 +796,22 @@
           <Property Name="bileme" Type="Boolean" />
           <Property Name="kontrol" Type="Boolean" />
           <Property Name="ayarlar" Type="Boolean" />
+          <Property Name="hataduzelt" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBL_HAMLOG">
+          <Key>
+            <PropertyRef Name="RAPORID" />
+          </Key>
+          <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KALINLIK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GENISLIK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OZELLIK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MENSEI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="ISLEM" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="SEBEP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MIKTAR" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -897,6 +933,7 @@
           <EntitySetMapping Name="TBL_RAPOR">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_RAPOR">
               <MappingFragment StoreEntitySet="TBL_RAPOR">
+                <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
@@ -1105,6 +1142,7 @@
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="hataduzelt" ColumnName="hataduzelt" />
                 <ScalarProperty Name="ayarlar" ColumnName="ayarlar" />
                 <ScalarProperty Name="kontrol" ColumnName="kontrol" />
                 <ScalarProperty Name="bileme" ColumnName="bileme" />
@@ -1145,6 +1183,22 @@
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_HAMLOG">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_HAMLOG">
+              <MappingFragment StoreEntitySet="TBL_HAMLOG">
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="SEBEP" ColumnName="SEBEP" />
+                <ScalarProperty Name="ISLEM" ColumnName="ISLEM" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="MENSEI" ColumnName="MENSEI" />
+                <ScalarProperty Name="OZELLIK" ColumnName="OZELLIK" />
+                <ScalarProperty Name="GENISLIK" ColumnName="GENISLIK" />
+                <ScalarProperty Name="KALINLIK" ColumnName="KALINLIK" />
+                <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -48,13 +48,14 @@ namespace test_kooil.Formlar
             rapor.NOT = text_Not.Text;
             rapor.RAPORLAYAN = text_Raporlayan.Text;
             rapor.ISLEM = "Yol Kopyalama";
+            rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 
             XtraMessageBox.Show("Yol Kopyalama Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
-            deger.BILEMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
+            deger.YOLKOPYASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
                 if (deger.SIPARISASAMASI < 3)
                 {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
@@ -72,15 +73,16 @@ namespace test_kooil.Formlar
         private void Frm_YKopyalaEkle_Load(object sender, EventArgs e)
         {
             var islenecekUrunler = (from x in db.TBL_SIPARIS
-                                     select new
-                                     {
-                                         x.SIPARISNOID,
-                                         IgneKodu = x.TBL_IGNELER.IGNEKOD,
-                                         IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI,
-                                         x.AKTIF
+                                    select new
+                                    {
+                                        x.SIPARISNOID,
+                                        Tur = x.TBL_IGNELER.TUR,
+                                        IgneKodu = x.TBL_IGNELER.IGNEKOD,
+                                        IstenilenMiktar = x.URUNADETI,
+                                        x.SIPARISASAMASI,
+                                        x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
+                                    }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
 
             lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
@@ -88,7 +90,7 @@ namespace test_kooil.Formlar
 
             lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
 
-            lookUp_Siparis.Properties.Columns[3].Visible = false;
+            lookUp_Siparis.Properties.Columns[5].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
             text_Raporlayan.Text = Frm_Login.user.AdSoyad;
 

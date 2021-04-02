@@ -261,6 +261,12 @@ namespace test_kooil
             }
             else { Btn_YolKopyala.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
 
+            if (Frm_Login.user.hataduzelt == true)
+            {
+                Btn_hataDuzeltme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_hataDuzeltme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
         }
 
 

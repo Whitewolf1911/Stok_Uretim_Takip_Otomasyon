@@ -21,6 +21,8 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_YeniHamEkle frmYeniHam;
+        Frm_HammaddeLog frmHamLog;
+        
 
         void listele() {
 
@@ -40,9 +42,9 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = degerler;
             gridView1.Columns[0].Visible = false;
             gridView1.Columns[7].Visible = false;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+            gridView1.Columns[1].AppearanceCell.BackColor = Color.Aquamarine;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
+            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
 
@@ -52,8 +54,11 @@ namespace test_kooil.Formlar
             if (Frm_Login.user.yeniHam == true)
             {
 
-                frmYeniHam = new Frm_YeniHamEkle();
-                frmYeniHam.Show();
+                if (frmYeniHam == null || frmYeniHam.IsDisposed)
+                {
+                    frmYeniHam = new Frm_YeniHamEkle();
+                    frmYeniHam.Show();
+                }
             }
             else { 
                XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -125,6 +130,15 @@ namespace test_kooil.Formlar
         {
             ShowGridPreview(gridControl1);
             PrintGrid(gridControl1);
+        }
+
+        private void Btn_hamLog_Click(object sender, EventArgs e)
+        {
+            if (frmHamLog == null || frmHamLog.IsDisposed)
+            {
+                frmHamLog = new Frm_HammaddeLog();
+                frmHamLog.Show();
+            }
         }
     }
 }

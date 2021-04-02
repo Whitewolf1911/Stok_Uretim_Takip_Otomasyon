@@ -37,6 +37,7 @@ namespace test_kooil.Formlar
             this.Btn_Yenile = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_hamSil = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_yeniHamEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_hamLog = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -67,6 +68,7 @@ namespace test_kooil.Formlar
             // 
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.Controls.Add(this.Btn_hamLog);
             this.groupControl1.Controls.Add(this.Btn_yazdir);
             this.groupControl1.Controls.Add(this.Btn_Yenile);
             this.groupControl1.Controls.Add(this.Btn_hamSil);
@@ -81,7 +83,7 @@ namespace test_kooil.Formlar
             // Btn_yazdir
             // 
             this.Btn_yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_yazdir.ImageOptions.Image")));
-            this.Btn_yazdir.Location = new System.Drawing.Point(21, 523);
+            this.Btn_yazdir.Location = new System.Drawing.Point(21, 429);
             this.Btn_yazdir.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_yazdir.Name = "Btn_yazdir";
             this.Btn_yazdir.Size = new System.Drawing.Size(233, 53);
@@ -122,6 +124,17 @@ namespace test_kooil.Formlar
             this.Btn_yeniHamEkle.Text = "Yeni Hammadde Ekle";
             this.Btn_yeniHamEkle.Click += new System.EventHandler(this.Btn_yeniHamEkle_Click);
             // 
+            // Btn_hamLog
+            // 
+            this.Btn_hamLog.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_hamLog.Location = new System.Drawing.Point(103, 539);
+            this.Btn_hamLog.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_hamLog.Name = "Btn_hamLog";
+            this.Btn_hamLog.Size = new System.Drawing.Size(170, 53);
+            this.Btn_hamLog.TabIndex = 4;
+            this.Btn_hamLog.Text = "Hammadde Log";
+            this.Btn_hamLog.Click += new System.EventHandler(this.Btn_hamLog_Click);
+            // 
             // Frm_HamStok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,5 +163,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.SimpleButton Btn_hamSil;
         private DevExpress.XtraEditors.SimpleButton Btn_yeniHamEkle;
         private DevExpress.XtraEditors.SimpleButton Btn_yazdir;
+        private DevExpress.XtraEditors.SimpleButton Btn_hamLog;
     }
 }

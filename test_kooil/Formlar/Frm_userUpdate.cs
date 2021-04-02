@@ -221,8 +221,11 @@ namespace test_kooil.Formlar
                             if (chYikama.Checked) { new_user.yikama = true; } else { new_user.yikama = false; }
                             if (chBileme.Checked) { new_user.bileme = true; } else { new_user.bileme = false; }
                             if (chKontrol.Checked) { new_user.kontrol = true; } else { new_user.kontrol = false; }
+                            if (chHataDuzelt.Checked) { new_user.hataduzelt = true; } else { new_user.hataduzelt = false; }
 
-                            db.SaveChanges();
+
+
+                        db.SaveChanges();
                             XtraMessageBox.Show("Kullanıcı Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         

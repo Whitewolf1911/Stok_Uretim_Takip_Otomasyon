@@ -28,14 +28,12 @@ namespace test_kooil.Formlar
                            {
 
                                x.AdSoyad,
-                               KullanıcıAdı = x.userName,
-                               x.password,
+                              
                                x.ID
 
                            }).ToList().OrderBy(x => x.AdSoyad);
             gridControl1.DataSource = veriler;
-            gridView1.Columns[3].Visible = false;
-            gridView1.Columns[2].Visible = false;
+            
             gridView1.Columns[1].Visible = false;
             gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
 

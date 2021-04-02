@@ -48,5 +48,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_FIRMALAR> TBL_FIRMALAR { get; set; }
         public virtual DbSet<TBL_SEVKIYAT> TBL_SEVKIYAT { get; set; }
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
+        public virtual DbSet<TBL_HAMLOG> TBL_HAMLOG { get; set; }
     }
 }

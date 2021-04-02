@@ -78,6 +78,8 @@ namespace test_kooil.Formlar
                         if (chYikama.Checked) { new_user.yikama = true; } else { new_user.yikama = false; }
                         if (chBileme.Checked) { new_user.bileme = true; } else { new_user.bileme = false; }
                         if (chKontrol.Checked) { new_user.kontrol = true; } else { new_user.kontrol = false; }
+                        if (chHataDuzelt.Checked) { new_user.hataduzelt = true; } else { new_user.hataduzelt = false; }
+
 
                         db.TBL_USERS.Add(new_user);
                         db.SaveChanges();

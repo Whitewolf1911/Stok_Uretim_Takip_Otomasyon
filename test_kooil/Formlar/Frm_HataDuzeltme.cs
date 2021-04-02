@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,8 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
-
+        Frm_HamRaporDuzenle frmHamDuzenle;
+        Frm_HataliRaporSil frmRaporDuzenle;
         void sipListele() {
 
             var veriler = (from x in db.TBL_SIPARIS
@@ -46,7 +48,8 @@ namespace test_kooil.Formlar
                                x.UCSIYIRMASAYI,
                                x.URUNADETI,
                                x.YIKAMASAYI,
-                               x.YOLKOPYASAYI
+                               x.YOLKOPYASAYI,
+                               
 
                            }).ToList().OrderByDescending(x => x.SiparişNo);
 
@@ -65,7 +68,7 @@ namespace test_kooil.Formlar
             gridView1.Columns[17].Visible = false;
             gridView1.Columns[18].Visible = false;
             gridView1.Columns[19].Visible = false;
-            gridView1.Columns[20].Visible = false;
+            //gridView1.Columns[20].Visible = false;
             gridView1.Columns[22].Visible = false;
             gridView1.Columns[21].Visible = false;
 
@@ -79,6 +82,104 @@ namespace test_kooil.Formlar
         private void Frm_HataDuzeltme_Load(object sender, EventArgs e)
         {
             sipListele();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            num_ArkaSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ARKASIYIRSAYI"));
+            num_bileme.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("BILEMESAYI"));
+            num_dilCakma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("DILCAKMASAYI"));
+            num_IsilIslem.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ISILISLEMSAYI"));
+            num_KanalAcma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALACMASAYI"));
+            num_KanalBuyut.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALBUYUTSAYI"));
+            num_kontrol.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KONTROLSAYI"));
+            num_Polisaj1.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI1SAYI"));
+            num_Polisaj2.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI2SAYI"));
+            num_Pres.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("PRESSAYI"));
+            num_SevkEdilen.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SEVKIYATSAYI"));
+            num_Siparis.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("URUNADETI"));
+            num_temper.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("TEMPERSAYI"));
+            num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
+            num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
+            num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
+            date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
+            dateEdit2.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("İstenilenTarih");
+
+            if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) {
+                txt_not.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+            }
+
+        }
+
+        private void Btn_Guncelle_Click(object sender, EventArgs e)
+        {
+            DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Güncellemek İstediğinize Emin Misiniz ? .", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Sorgu == DialogResult.Yes)
+            {
+                var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
+
+                var sip = db.TBL_SIPARIS.Find(sipID);
+
+                sip.ARKASIYIRSAYI = (int)num_ArkaSiyirma.Value;
+                sip.BILEMESAYI = (int)num_bileme.Value;
+                sip.DILCAKMASAYI = (int)num_dilCakma.Value;
+                sip.ISILISLEMSAYI = (int)num_IsilIslem.Value;
+                sip.ISTENILENTARIH = dateEdit2.DateTime;
+                sip.KANALACMASAYI = (int)num_KanalAcma.Value;
+                sip.KANALBUYUTSAYI = (int)num_KanalBuyut.Value;
+                sip.KONTROLSAYI = (int)num_kontrol.Value;
+                sip.NOTLAR = txt_not.Text;
+                sip.POLI1SAYI = (int)num_Polisaj1.Value;
+                sip.POLI2SAYI = (int)num_Polisaj2.Value;
+                sip.PRESSAYI = (int)num_Pres.Value;
+                sip.SEVKIYATSAYI = (int)num_SevkEdilen.Value;
+                sip.SIPARISTARIHI = date_siparis.DateTime;
+                sip.TEMPERSAYI = (int)num_temper.Value;
+                sip.UCSIYIRMASAYI = (int)num_ucSiyirma.Value;
+                sip.URUNADETI = (int)num_Siparis.Value;
+                sip.YIKAMASAYI = (int)num_yikama.Value;
+                sip.YOLKOPYASAYI = (int)num_YolKopyala.Value;
+
+                db.SaveChanges();
+                XtraMessageBox.Show("Seçilen Sipariş Güncellendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                sipListele();
+                
+            }
+
+        }
+
+        private void Btn_SiparisSil_Click(object sender, EventArgs e)
+        {
+            DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz !", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Sorgu == DialogResult.Yes)
+            {
+                var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
+
+                var sip = db.TBL_SIPARIS.Find(sipID);
+                db.TBL_SIPARIS.Remove(sip);
+                db.SaveChanges();
+                XtraMessageBox.Show("Seçilen Sipariş Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                sipListele();
+
+            }
+        }
+
+        private void Btn_hamRapSil_Click(object sender, EventArgs e)
+        {
+            if (frmHamDuzenle == null || frmHamDuzenle.IsDisposed)
+            {
+                frmHamDuzenle = new Frm_HamRaporDuzenle();
+                frmHamDuzenle.Show();
+            }
+        }
+
+        private void Btn_RaporSil_Click(object sender, EventArgs e)
+        {
+            if (frmRaporDuzenle == null || frmRaporDuzenle.IsDisposed)
+            {
+                frmRaporDuzenle = new Frm_HataliRaporSil();
+                frmRaporDuzenle.Show();
+            }
         }
     }
 }

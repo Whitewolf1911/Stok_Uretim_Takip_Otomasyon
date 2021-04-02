@@ -45,42 +45,80 @@ namespace test_kooil.Formlar
 
         private void Btn_Ekle_Click(object sender, EventArgs e)
         {
-            var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            var madde = db.TBL_HAMMADDE.Find(maddeID);
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeye stok eklemek istediğinize emin misiniz ? ", "Stok Ekleme", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            if (string.IsNullOrWhiteSpace(combo_sebep.SelectedItem.ToString()) == false)
             {
-                madde.MIKTAR += int.Parse(num_Miktar.Value.ToString());
-                db.SaveChanges();
-                XtraMessageBox.Show("Hammadde Stoğu Sisteme Eklendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                hamListele();
+                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                var madde = db.TBL_HAMMADDE.Find(maddeID);
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeye stok eklemek istediğinize emin misiniz ? ", "Stok Ekleme", MessageBoxButtons.YesNo);
 
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    madde.MIKTAR += int.Parse(num_Miktar.Value.ToString());
+                    TBL_HAMLOG log = new TBL_HAMLOG();
+                    log.GENISLIK = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("GENISLIK"));
+                    log.KALINLIK = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KALINLIK").ToString());
+                    log.ISLEM = "Ekleme";
+                    log.MENSEI = gridView1.GetFocusedRowCellValue("MENSEI").ToString();
+                    log.OZELLIK = gridView1.GetFocusedRowCellValue("OZELLIK").ToString();
+                    log.RAPORLAYAN = txt_raporlayan.Text;
+                    log.TARIH = DateTime.Now;
+                    log.SEBEP = combo_sebep.SelectedItem.ToString();
+                    log.MIKTAR = (int)num_Miktar.Value;
+                    db.TBL_HAMLOG.Add(log);
+
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Hammadde Stoğu Sisteme Eklendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hamListele();
+                }
+
+            }
+            else { 
+                    XtraMessageBox.Show("Sebep Seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void Btn_azalt_Click(object sender, EventArgs e)
         {
-            var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            var madde = db.TBL_HAMMADDE.Find(maddeID);
-            if (madde.MIKTAR - int.Parse(num_Miktar.Value.ToString()) >= 0)
+            if (string.IsNullOrWhiteSpace(combo_sebep.SelectedItem.ToString()) == false)
             {
-
-
-                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeden stok azaltmak istediğinize emin misiniz ? ", "Stok Azaltma", MessageBoxButtons.YesNo);
-                if (siradakiAsamaSorgu == DialogResult.Yes)
+                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                var madde = db.TBL_HAMMADDE.Find(maddeID);
+                if (madde.MIKTAR - int.Parse(num_Miktar.Value.ToString()) >= 0)
                 {
-                    madde.MIKTAR -= int.Parse(num_Miktar.Value.ToString());
-                    db.SaveChanges();
-                    XtraMessageBox.Show("Hammadde Stoğu Sistemden Azaltıldı. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    hamListele();
 
+
+                    DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddeden stok azaltmak istediğinize emin misiniz ? ", "Stok Azaltma", MessageBoxButtons.YesNo);
+                    if (siradakiAsamaSorgu == DialogResult.Yes)
+                    {
+                        madde.MIKTAR -= int.Parse(num_Miktar.Value.ToString());
+                        TBL_HAMLOG log = new TBL_HAMLOG();
+                        log.GENISLIK = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("GENISLIK"));
+                        log.KALINLIK = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KALINLIK").ToString());
+                        log.ISLEM = "Azaltma";
+                        log.MENSEI = gridView1.GetFocusedRowCellValue("MENSEI").ToString();
+                        log.OZELLIK = gridView1.GetFocusedRowCellValue("OZELLIK").ToString();
+                        log.RAPORLAYAN = txt_raporlayan.Text;
+                        log.TARIH = DateTime.Now;
+                        log.SEBEP = combo_sebep.SelectedItem.ToString();
+                        log.MIKTAR = (int)num_Miktar.Value;
+                        db.TBL_HAMLOG.Add(log);
+                        db.SaveChanges();
+                        XtraMessageBox.Show("Hammadde Stoğu Sistemden Azaltıldı. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        hamListele();
+
+                    }
+                }
+                else
+                {
+
+                    XtraMessageBox.Show("Girdiğiniz Sayıyı Kontrol Ediniz ! Stok Sıfırdan Küçük Olamaz.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else {
+            else { 
+                    XtraMessageBox.Show("Sebep Seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                XtraMessageBox.Show("Girdiğiniz Sayıyı Kontrol Ediniz ! Stok Sıfırdan Küçük Olamaz.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
 
         private void Btn_Iptal_Click(object sender, EventArgs e)

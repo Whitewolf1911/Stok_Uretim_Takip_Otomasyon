@@ -58,11 +58,11 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = veriler.Where(x => x.AKTIF == true);
 
             //renklendirmeler ve sutun gizlemeler
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Green;
+            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightYellow;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
+            gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.OrangeRed;
+            gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
             gridView1.Columns[24].AppearanceCell.BackColor = Color.LightGreen;
 
             gridView1.Columns[0].Visible = false;
@@ -155,7 +155,7 @@ namespace test_kooil.Formlar
             unbColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             unbColumn2.OptionsColumn.AllowEdit = false;
             unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            unbColumn2.AppearanceCell.BackColor = Color.OrangeRed;
+            unbColumn2.AppearanceCell.BackColor = Color.Yellow;
         }
 
         private void ShowGridPreview(GridControl grid)

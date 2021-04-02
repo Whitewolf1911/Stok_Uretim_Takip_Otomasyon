@@ -27,6 +27,7 @@ namespace test_kooil.Formlar
                                     select new
                                     {
                                         x.SIPARISNOID,
+                                        Tur = x.TBL_IGNELER.TUR,
                                         IgneKodu = x.TBL_IGNELER.IGNEKOD,
                                         IstenilenMiktar = x.URUNADETI,
                                         x.SIPARISASAMASI,
@@ -40,7 +41,7 @@ namespace test_kooil.Formlar
 
             lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
 
-            lookUp_Siparis.Properties.Columns[3].Visible = false;
+            lookUp_Siparis.Properties.Columns[5].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
             text_Raporlayan.Text = Frm_Login.user.AdSoyad;
 
@@ -69,6 +70,7 @@ namespace test_kooil.Formlar
             rapor.NOT = text_Not.Text;
             rapor.RAPORLAYAN = text_Raporlayan.Text;
             rapor.ISLEM = "Polisaj2";
+            rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
             db.TBL_RAPOR.Add(rapor);
             db.SaveChanges();
 

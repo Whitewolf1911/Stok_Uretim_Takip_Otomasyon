@@ -40,7 +40,7 @@ namespace test_kooil.Formlar
             gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
             gridView1.Columns[2].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightBlue;
+            gridView1.Columns[3].AppearanceCell.BackColor = Color.Aquamarine;
 
 
 

@@ -12,16 +12,17 @@ namespace test_kooil.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_RAPOR
+    public partial class TBL_HAMLOG
     {
         public int RAPORID { get; set; }
-        public string ISLEM { get; set; }
-        public string IGNEKODU { get; set; }
-        public Nullable<int> ISLENENMIKTAR { get; set; }
-        public string RAPORLAYAN { get; set; }
+        public Nullable<decimal> KALINLIK { get; set; }
+        public Nullable<decimal> GENISLIK { get; set; }
+        public string OZELLIK { get; set; }
+        public string MENSEI { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
-        public Nullable<int> SIPARISNO { get; set; }
-        public string NOT { get; set; }
-        public string URUNTUR { get; set; }
+        public string ISLEM { get; set; }
+        public string SEBEP { get; set; }
+        public string RAPORLAYAN { get; set; }
+        public Nullable<int> MIKTAR { get; set; }
     }
 }
