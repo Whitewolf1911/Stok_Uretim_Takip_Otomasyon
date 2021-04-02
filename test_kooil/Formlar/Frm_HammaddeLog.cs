@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraGrid;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,9 +39,42 @@ namespace test_kooil.Formlar
             gridControl1.DataSource = veriler;
         
         }
+        private void ShowGridPreview(GridControl grid)
+        {
+            // Check whether the GridControl can be previewed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+            // Open the Preview window.
+            grid.ShowPrintPreview();
+        }
+        private void PrintGrid(GridControl grid)
+        {
+            // Check whether the GridControl can be printed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+            // Print.
+            grid.Print();
+        }
         private void Frm_HammaddeLog_Load(object sender, EventArgs e)
         {
             logListele();
+        }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            logListele();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            ShowGridPreview(gridControl1);
+            PrintGrid(gridControl1);
         }
     }
 }

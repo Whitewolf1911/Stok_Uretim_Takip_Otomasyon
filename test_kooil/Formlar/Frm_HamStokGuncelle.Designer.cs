@@ -47,6 +47,10 @@ namespace test_kooil.Formlar
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.combo_sebep = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txt_konum = new System.Windows.Forms.RichTextBox();
+            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_konum = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -57,12 +61,13 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combo_sebep.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(29, 292);
+            this.pictureEdit4.Location = new System.Drawing.Point(35, 215);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -74,7 +79,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(29, 164);
+            this.pictureEdit3.Location = new System.Drawing.Point(35, 87);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -86,7 +91,7 @@ namespace test_kooil.Formlar
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(29, 106);
+            this.pictureEdit2.Location = new System.Drawing.Point(35, 29);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -98,14 +103,14 @@ namespace test_kooil.Formlar
             // txt_raporlayan
             // 
             this.txt_raporlayan.Enabled = false;
-            this.txt_raporlayan.Location = new System.Drawing.Point(237, 181);
+            this.txt_raporlayan.Location = new System.Drawing.Point(243, 104);
             this.txt_raporlayan.Name = "txt_raporlayan";
             this.txt_raporlayan.Size = new System.Drawing.Size(155, 22);
             this.txt_raporlayan.TabIndex = 24;
             // 
             // txt_secilenHam
             // 
-            this.txt_secilenHam.Location = new System.Drawing.Point(237, 116);
+            this.txt_secilenHam.Location = new System.Drawing.Point(243, 39);
             this.txt_secilenHam.Name = "txt_secilenHam";
             this.txt_secilenHam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_secilenHam.Properties.Appearance.Options.UseBackColor = true;
@@ -115,7 +120,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(88, 306);
+            this.labelControl4.Location = new System.Drawing.Point(94, 229);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(123, 16);
             this.labelControl4.TabIndex = 21;
@@ -123,7 +128,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(85, 184);
+            this.labelControl3.Location = new System.Drawing.Point(91, 107);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 16);
             this.labelControl3.TabIndex = 20;
@@ -131,7 +136,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(84, 119);
+            this.labelControl2.Location = new System.Drawing.Point(90, 42);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(119, 16);
             this.labelControl2.TabIndex = 19;
@@ -139,7 +144,7 @@ namespace test_kooil.Formlar
             // 
             // num_Miktar
             // 
-            this.num_Miktar.Location = new System.Drawing.Point(237, 306);
+            this.num_Miktar.Location = new System.Drawing.Point(243, 229);
             this.num_Miktar.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -200,7 +205,7 @@ namespace test_kooil.Formlar
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(29, 227);
+            this.pictureEdit1.Location = new System.Drawing.Point(35, 150);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -211,7 +216,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(85, 247);
+            this.labelControl1.Location = new System.Drawing.Point(91, 170);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(83, 16);
             this.labelControl1.TabIndex = 32;
@@ -220,7 +225,7 @@ namespace test_kooil.Formlar
             // combo_sebep
             // 
             this.combo_sebep.EditValue = "";
-            this.combo_sebep.Location = new System.Drawing.Point(237, 244);
+            this.combo_sebep.Location = new System.Drawing.Point(243, 167);
             this.combo_sebep.Name = "combo_sebep";
             this.combo_sebep.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.combo_sebep.Properties.Appearance.Options.UseBackColor = true;
@@ -234,11 +239,53 @@ namespace test_kooil.Formlar
             this.combo_sebep.Size = new System.Drawing.Size(180, 22);
             this.combo_sebep.TabIndex = 44;
             // 
+            // txt_konum
+            // 
+            this.txt_konum.Location = new System.Drawing.Point(365, 343);
+            this.txt_konum.Name = "txt_konum";
+            this.txt_konum.Size = new System.Drawing.Size(160, 104);
+            this.txt_konum.TabIndex = 45;
+            this.txt_konum.Text = "";
+            // 
+            // pictureEdit5
+            // 
+            this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
+            this.pictureEdit5.Location = new System.Drawing.Point(365, 292);
+            this.pictureEdit5.Name = "pictureEdit5";
+            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit5.Size = new System.Drawing.Size(43, 45);
+            this.pictureEdit5.TabIndex = 47;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(414, 311);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(48, 16);
+            this.labelControl5.TabIndex = 46;
+            this.labelControl5.Text = "Konum :";
+            // 
+            // btn_konum
+            // 
+            this.btn_konum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_konum.Location = new System.Drawing.Point(365, 453);
+            this.btn_konum.Name = "btn_konum";
+            this.btn_konum.Size = new System.Drawing.Size(160, 46);
+            this.btn_konum.TabIndex = 48;
+            this.btn_konum.Text = "Konum Güncelle";
+            this.btn_konum.Click += new System.EventHandler(this.btn_konum_Click);
+            // 
             // Frm_HamStokGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 607);
+            this.Controls.Add(this.btn_konum);
+            this.Controls.Add(this.pictureEdit5);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.txt_konum);
             this.Controls.Add(this.combo_sebep);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.labelControl1);
@@ -268,6 +315,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combo_sebep.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +340,9 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ComboBoxEdit combo_sebep;
+        private System.Windows.Forms.RichTextBox txt_konum;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit5;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.SimpleButton btn_konum;
     }
 }

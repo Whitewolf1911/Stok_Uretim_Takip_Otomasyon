@@ -30,7 +30,8 @@ namespace test_kooil.Formlar
                                 x.OZELLIK,
                                 x.MENSEI,
                                 STOK = x.MIKTAR,
-                                x.AKTIF
+                                x.AKTIF,
+                                x.KONUM
                             }).ToList().OrderBy(x => x.KALINLIK).Where(x => x.AKTIF==true);
 
             gridControl1.DataSource = hammadde;
@@ -41,6 +42,7 @@ namespace test_kooil.Formlar
         {
             txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK") + " " +
                                    gridView1.GetFocusedRowCellValue("MENSEI").ToString() + " " + gridView1.GetFocusedRowCellValue("OZELLIK").ToString();
+            if(gridView1.GetFocusedRowCellValue("KONUM")!= null) { txt_konum.Text = gridView1.GetFocusedRowCellValue("KONUM").ToString(); }
         }
 
         private void Btn_Ekle_Click(object sender, EventArgs e)
@@ -130,6 +132,23 @@ namespace test_kooil.Formlar
         {
             hamListele();
             txt_raporlayan.Text = Frm_Login.user.AdSoyad;
+        }
+
+        private void btn_konum_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                var madde = db.TBL_HAMMADDE.Find(maddeID);
+                madde.KONUM = txt_konum.Text;
+                db.SaveChanges();
+                XtraMessageBox.Show("Konum Güncellendi.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                hamListele();
+
+            }
+            catch (Exception) {
+                    XtraMessageBox.Show("Bir Hata Oluştu. Girdiğiniz Bilgileri Kontrol Ediniz. !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
