@@ -32,10 +32,11 @@ namespace test_kooil.Formlar
                                Menşei = x.MENSEI,
                                Kilogram = x.MIKTAR,
                                x.AKTIF
-                           }).ToList().OrderBy(x => x.Kilogram).Where(x => x.AKTIF ==true).Take(15);
+                           }).ToList().OrderBy(x => x.Kilogram).Where(x => x.AKTIF ==true).Take(20);
 
             gridControl_ham.DataSource = veriler;
             gridView1.Columns[5].Visible = false;
+            gridView1.Columns[4].AppearanceCell.BackColor = Color.Orange;
             
         }
 

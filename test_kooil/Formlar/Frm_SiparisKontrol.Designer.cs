@@ -53,6 +53,7 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Btn_Sarfiyat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -72,6 +73,7 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.Btn_Sarfiyat);
             this.groupControl1.Controls.Add(this.Btn_Yazdir);
             this.groupControl1.Controls.Add(this.pictureEdit7);
             this.groupControl1.Controls.Add(this.pictureEdit6);
@@ -101,7 +103,7 @@ namespace test_kooil.Formlar
             // Btn_Yazdir
             // 
             this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
-            this.Btn_Yazdir.Location = new System.Drawing.Point(136, 538);
+            this.Btn_Yazdir.Location = new System.Drawing.Point(149, 549);
             this.Btn_Yazdir.Name = "Btn_Yazdir";
             this.Btn_Yazdir.Size = new System.Drawing.Size(174, 47);
             this.Btn_Yazdir.TabIndex = 29;
@@ -269,7 +271,7 @@ namespace test_kooil.Formlar
             // 
             // txt_sipNot
             // 
-            this.txt_sipNot.Location = new System.Drawing.Point(155, 354);
+            this.txt_sipNot.Location = new System.Drawing.Point(167, 354);
             this.txt_sipNot.Name = "txt_sipNot";
             this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
             this.txt_sipNot.TabIndex = 7;
@@ -278,7 +280,7 @@ namespace test_kooil.Formlar
             // Btn_Guncelle
             // 
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
-            this.Btn_Guncelle.Location = new System.Drawing.Point(136, 484);
+            this.Btn_Guncelle.Location = new System.Drawing.Point(149, 495);
             this.Btn_Guncelle.Name = "Btn_Guncelle";
             this.Btn_Guncelle.Size = new System.Drawing.Size(174, 48);
             this.Btn_Guncelle.TabIndex = 0;
@@ -303,6 +305,16 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // Btn_Sarfiyat
+            // 
+            this.Btn_Sarfiyat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_Sarfiyat.Location = new System.Drawing.Point(5, 548);
+            this.Btn_Sarfiyat.Name = "Btn_Sarfiyat";
+            this.Btn_Sarfiyat.Size = new System.Drawing.Size(138, 48);
+            this.Btn_Sarfiyat.TabIndex = 30;
+            this.Btn_Sarfiyat.Text = "Sarfiyat";
+            this.Btn_Sarfiyat.Click += new System.EventHandler(this.Btn_Sarfiyat_Click);
+            // 
             // Frm_SiparisKontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,7 +323,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "Frm_SiparisKontrol";
-            this.Text = "Sipariş Kontrol";
+            this.Text = "Aktif Siparişler";
             this.Load += new System.EventHandler(this.Frm_SiparisKontrol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -358,5 +370,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit7;
         private DevExpress.XtraEditors.SimpleButton Btn_Yazdir;
+        private DevExpress.XtraEditors.SimpleButton Btn_Sarfiyat;
     }
 }

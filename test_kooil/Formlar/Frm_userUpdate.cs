@@ -114,7 +114,15 @@ namespace test_kooil.Formlar
 
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {       //36
+        {      
+            if (gridView1.GetFocusedRowCellValue("userName").ToString() == "admin")
+            {
+                txt_password.Properties.UseSystemPasswordChar = true;
+            }
+            else { 
+                txt_password.Properties.UseSystemPasswordChar = false;
+            }
+
             txt_AdSoyad.Text = gridView1.GetFocusedRowCellValue("AdSoyad").ToString();
             txt_password.Text = gridView1.GetFocusedRowCellValue("password").ToString();
             txt_userName.Text = gridView1.GetFocusedRowCellValue("userName").ToString();

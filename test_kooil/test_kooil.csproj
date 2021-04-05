@@ -480,6 +480,12 @@
     <Compile Include="Formlar\Frm_RaporOzet.Designer.cs">
       <DependentUpon>Frm_RaporOzet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_Sarfiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Sarfiyat.Designer.cs">
+      <DependentUpon>Frm_Sarfiyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_SiparisDurumKontrol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -779,6 +785,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_RaporOzet.resx">
       <DependentUpon>Frm_RaporOzet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Sarfiyat.resx">
+      <DependentUpon>Frm_Sarfiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiparisDurumKontrol.resx">
       <DependentUpon>Frm_SiparisDurumKontrol.cs</DependentUpon>

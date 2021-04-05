@@ -23,6 +23,7 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+        Frm_Sarfiyat frmSarfiyat; 
         void listele() {
             var veriler = (from x in db.TBL_SIPARIS
                            select new
@@ -186,34 +187,16 @@ namespace test_kooil.Formlar
             ShowGridPreview(gridControl1);
             PrintGrid(gridControl1);
         }
+
+        private void Btn_Sarfiyat_Click(object sender, EventArgs e)
+        {
+            if (frmSarfiyat == null || frmSarfiyat.IsDisposed)
+            {
+                frmSarfiyat = new Frm_Sarfiyat();
+                frmSarfiyat.Show();
+            }
+        }
     }
 }
 
 
-// private void gridView1_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-//{
-//    GridView view = sender as GridView;
-//    if (e.Column.FieldName == "SiparisAsamasi" && e.IsGetData) 
-//    { e.Value = durumuYazdir(view, e.ListSourceRowIndex); }
-
-//}//Provides data for the Total column.
-
-//int durumuYazdir(GridView view, int listSourceRowIndex)
-//{
-//    var asamaDurumu = Convert.ToInt32(view.GetListSourceRowCellValue(listSourceRowIndex, "SIPARISASAMASI"));
-//    if (asamaDurumu == 1)
-//    {
-//        return 5;
-//    }
-//    else
-//    {
-//        return 2;
-//    }
-//} //GridColumn unbColumn = gridView1.Columns.AddField("SiparisAsamasi");
-//unbColumn.VisibleIndex = gridView1.Columns.Count;
-//unbColumn.OptionsColumn.AllowEdit = false;
-//unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-//unbColumn.DisplayFormat.FormatString = "c";
-//unbColumn.AppearanceCell.BackColor = Color.LemonChiffon;
-
-// Returns the total amount for a specific row.
