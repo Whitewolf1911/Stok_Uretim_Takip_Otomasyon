@@ -329,6 +329,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.date_IstenilenTarih);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_YeniSiparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Sipariş Oluştur";

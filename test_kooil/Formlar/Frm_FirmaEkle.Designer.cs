@@ -423,6 +423,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_FirmaEkle";
             this.Text = "Firma Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.txt_ad.Properties)).EndInit();

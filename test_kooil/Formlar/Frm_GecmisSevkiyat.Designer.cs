@@ -125,6 +125,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(404, 604);
             this.groupControl1.TabIndex = 3;
+            this.groupControl1.Text = "Sevkiyatlar";
             // 
             // date_edit
             // 
@@ -376,6 +377,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_GecmisSevkiyat";
             this.Text = "Geçmiş Sevkiyatlar";
             this.Load += new System.EventHandler(this.Frm_GecmisSevkiyat_Load);

@@ -344,6 +344,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_Sarfiyat";
             this.Text = "Sarfiyat";
             this.Load += new System.EventHandler(this.Frm_Sarfiyat_Load);

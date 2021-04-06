@@ -67,7 +67,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_refresh
             // 
-            this.Btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_refresh.ImageOptions.Image")));
             this.Btn_refresh.Location = new System.Drawing.Point(12, 86);
             this.Btn_refresh.Name = "Btn_refresh";
             this.Btn_refresh.Size = new System.Drawing.Size(50, 55);
@@ -82,6 +82,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.Btn_refresh);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_HammaddeLog";
             this.Text = "Hammadde Log";
             this.Load += new System.EventHandler(this.Frm_HammaddeLog_Load);

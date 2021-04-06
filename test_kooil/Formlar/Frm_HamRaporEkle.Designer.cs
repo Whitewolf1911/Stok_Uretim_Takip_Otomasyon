@@ -299,6 +299,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.num_Miktar);
             this.Controls.Add(this.gridControl2);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_HamRaporEkle";
             this.Text = "Hammadde Rapor Ekle";
             this.Load += new System.EventHandler(this.Frm_HamRaporEkle_Load);

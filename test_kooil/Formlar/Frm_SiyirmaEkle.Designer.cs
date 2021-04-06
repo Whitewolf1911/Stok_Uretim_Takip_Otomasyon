@@ -250,6 +250,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.num_IslenenAdet);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.lookUp_Siparis);
+            this.MaximizeBox = false;
             this.Name = "Frm_SiyirmaEkle";
             this.Text = "Arka Siyirma Adet";
             this.Load += new System.EventHandler(this.Frm_SiyirmaEkle_Load);

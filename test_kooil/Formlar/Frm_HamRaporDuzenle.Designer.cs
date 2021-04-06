@@ -247,6 +247,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.Btn_SiparisSil);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_HamRaporDuzenle";
             this.Text = "Hammadde Raporu Düzenle";
             this.Load += new System.EventHandler(this.Frm_HamRaporDuzenle_Load);

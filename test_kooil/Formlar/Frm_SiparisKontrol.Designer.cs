@@ -31,6 +31,7 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SiparisKontrol));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_Sarfiyat = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yazdir = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
@@ -53,7 +54,6 @@ namespace test_kooil.Formlar
             this.Btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Btn_Sarfiyat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -99,6 +99,16 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(328, 604);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Sipariş Kontrol";
+            // 
+            // Btn_Sarfiyat
+            // 
+            this.Btn_Sarfiyat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Sarfiyat.ImageOptions.Image")));
+            this.Btn_Sarfiyat.Location = new System.Drawing.Point(5, 548);
+            this.Btn_Sarfiyat.Name = "Btn_Sarfiyat";
+            this.Btn_Sarfiyat.Size = new System.Drawing.Size(138, 48);
+            this.Btn_Sarfiyat.TabIndex = 30;
+            this.Btn_Sarfiyat.Text = "Sarfiyat";
+            this.Btn_Sarfiyat.Click += new System.EventHandler(this.Btn_Sarfiyat_Click);
             // 
             // Btn_Yazdir
             // 
@@ -305,16 +315,6 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // Btn_Sarfiyat
-            // 
-            this.Btn_Sarfiyat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_Sarfiyat.Location = new System.Drawing.Point(5, 548);
-            this.Btn_Sarfiyat.Name = "Btn_Sarfiyat";
-            this.Btn_Sarfiyat.Size = new System.Drawing.Size(138, 48);
-            this.Btn_Sarfiyat.TabIndex = 30;
-            this.Btn_Sarfiyat.Text = "Sarfiyat";
-            this.Btn_Sarfiyat.Click += new System.EventHandler(this.Btn_Sarfiyat_Click);
-            // 
             // Frm_SiparisKontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,6 +322,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_SiparisKontrol";
             this.Text = "Aktif Siparişler";
             this.Load += new System.EventHandler(this.Frm_SiparisKontrol_Load);

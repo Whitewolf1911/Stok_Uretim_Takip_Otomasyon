@@ -382,6 +382,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_YeniIgneEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Ürün Ekle";

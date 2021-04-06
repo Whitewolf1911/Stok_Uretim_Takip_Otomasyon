@@ -566,6 +566,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_userName);
             this.Controls.Add(this.txt_AdSoyad);
             this.Controls.Add(this.chAnasayfa);
+            this.MaximizeBox = false;
             this.Name = "Frm_YeniKullanici";
             this.Text = "Yeni Kullanıcı Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.chAnasayfa.Properties)).EndInit();

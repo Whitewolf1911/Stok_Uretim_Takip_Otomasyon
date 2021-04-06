@@ -345,6 +345,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1554, 775);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_UretimDetay";
             this.Text = "Tamamlanan Üretim Detay";
             this.Load += new System.EventHandler(this.Frm_UretimDetay_Load);

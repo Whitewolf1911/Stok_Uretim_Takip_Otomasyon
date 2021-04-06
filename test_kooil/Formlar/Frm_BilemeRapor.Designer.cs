@@ -318,6 +318,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_BilemeRapor";
             this.Text = "Bileme Rapor";
             this.Load += new System.EventHandler(this.Frm_BilemeRapor_Load);

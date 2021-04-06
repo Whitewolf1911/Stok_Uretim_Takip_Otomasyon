@@ -109,6 +109,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.Btn_Sil);
             this.Controls.Add(this.Btn_YeniKullanici);
+            this.MaximizeBox = false;
             this.Name = "Frm_Ayarlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Ayarları";

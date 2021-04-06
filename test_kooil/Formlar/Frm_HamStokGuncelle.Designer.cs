@@ -269,7 +269,7 @@ namespace test_kooil.Formlar
             // 
             // btn_konum
             // 
-            this.btn_konum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_konum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_konum.ImageOptions.Image")));
             this.btn_konum.Location = new System.Drawing.Point(365, 453);
             this.btn_konum.Name = "btn_konum";
             this.btn_konum.Size = new System.Drawing.Size(160, 46);
@@ -302,6 +302,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.num_Miktar);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_HamStokGuncelle";
             this.Text = "Hammadde Stok Güncelle";
             this.Load += new System.EventHandler(this.Frm_HamStokGuncelle_Load);

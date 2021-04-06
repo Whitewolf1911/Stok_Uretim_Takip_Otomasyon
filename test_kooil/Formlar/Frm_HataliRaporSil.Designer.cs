@@ -70,7 +70,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_RaporSil
             // 
-            this.Btn_RaporSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisSil.ImageOptions.Image")));
+            this.Btn_RaporSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_RaporSil.ImageOptions.Image")));
             this.Btn_RaporSil.Location = new System.Drawing.Point(8, 526);
             this.Btn_RaporSil.Name = "Btn_RaporSil";
             this.Btn_RaporSil.Size = new System.Drawing.Size(210, 57);
@@ -142,7 +142,7 @@ namespace test_kooil.Formlar
             // 
             // btn_guncelle
             // 
-            this.btn_guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_guncelle.ImageOptions.Image")));
             this.btn_guncelle.Location = new System.Drawing.Point(8, 449);
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(210, 57);
@@ -179,6 +179,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_islem);
             this.Controls.Add(this.Btn_RaporSil);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_HataliRaporSil";
             this.Text = "Hatalı Rapor Sil";
             this.Load += new System.EventHandler(this.Frm_HataliRaporSil_Load);

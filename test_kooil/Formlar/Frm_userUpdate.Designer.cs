@@ -586,6 +586,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_AdSoyad);
             this.Controls.Add(this.chAnasayfa);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_userUpdate";
             this.Text = "Kullanıcı Güncelle";
             this.Load += new System.EventHandler(this.Frm_userUpdate_Load);

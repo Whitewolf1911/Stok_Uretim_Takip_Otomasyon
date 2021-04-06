@@ -88,7 +88,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_login
             // 
-            this.Btn_login.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_login.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_login.ImageOptions.Image")));
             this.Btn_login.Location = new System.Drawing.Point(408, 244);
             this.Btn_login.Name = "Btn_login";
             this.Btn_login.Size = new System.Drawing.Size(145, 55);
@@ -133,6 +133,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_userName);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kooil";

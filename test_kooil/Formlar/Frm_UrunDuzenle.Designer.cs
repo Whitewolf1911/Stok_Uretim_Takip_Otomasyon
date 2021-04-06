@@ -443,6 +443,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_UrunDuzenle";
             this.Text = "Ürün Düzenle";
             this.Load += new System.EventHandler(this.Frm_UrunDuzenle_Load);

@@ -210,7 +210,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_FirmaSec
             // 
-            this.Btn_FirmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_FirmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_FirmaSec.ImageOptions.Image")));
             this.Btn_FirmaSec.Location = new System.Drawing.Point(60, 311);
             this.Btn_FirmaSec.Name = "Btn_FirmaSec";
             this.Btn_FirmaSec.Size = new System.Drawing.Size(184, 59);
@@ -277,6 +277,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.Btn_SepeteEkle);
             this.Controls.Add(this.pic_Urun);
             this.Controls.Add(this.gridControl1);
+            this.MaximizeBox = false;
             this.Name = "Frm_SiparisSevkiyat";
             this.Text = "Yeni Sipariş Sevkiyat";
             this.Load += new System.EventHandler(this.Frm_SiparisSevkiyat_Load);

@@ -46,7 +46,7 @@ namespace test_kooil.Formlar
             
 
             gridView1.BestFitColumns();
-           // gridView1.Columns[7].GroupIndex = 0;
+           // gridView1.Columns[7].GroupIndex = 1;
 
         }
         private void Frm_Sarfiyat_Load(object sender, EventArgs e)
@@ -67,6 +67,8 @@ namespace test_kooil.Formlar
             unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             unbColumn2.AppearanceCell.BackColor = Color.Yellow;
             gridView1.BestFitColumns();
+            gridView1.Columns[7].GroupIndex = 1;
+
         }
 
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
