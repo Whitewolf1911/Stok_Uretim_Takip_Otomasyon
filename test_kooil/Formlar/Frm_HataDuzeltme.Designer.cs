@@ -459,6 +459,7 @@ namespace test_kooil.Formlar
             // txt_not
             // 
             this.txt_not.Location = new System.Drawing.Point(656, 242);
+            this.txt_not.MaxLength = 74;
             this.txt_not.Name = "txt_not";
             this.txt_not.Size = new System.Drawing.Size(138, 145);
             this.txt_not.TabIndex = 35;

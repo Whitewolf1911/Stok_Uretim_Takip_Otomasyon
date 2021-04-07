@@ -81,33 +81,13 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-
-            //if (gridView1.GetFocusedRowCellValue("NOT") != null &&
-            //        gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null &&
-            //        gridView1.GetFocusedRowCellValue("ISLEM") != null &&
-            //        gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null &&
-            //        gridView1.GetFocusedRowCellValue("SIPARISNO") != null &&
-            //        gridView1.GetFocusedRowCellValue("IGNEKODU") != null &&
-            //        gridView1.GetFocusedRowCellValue("TARIH") != null
-
-
-
-            //    )
-            //{
-
-            //    txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
-            //    txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString();
-            //    txt_islem.Text = gridView1.GetFocusedRowCellValue("ISLEM").ToString();
-            //    txt_adet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString();
-            //    txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString();
-            //    txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString();
-            //    date_tarih.EditValue = gridView1.GetFocusedRowCellValue("TARIH");
-
-
-            //}
-           
-
-
+            if(gridView1.GetFocusedRowCellValue("Not") != null) { txt_sipNot.Text = gridView1.GetFocusedRowCellValue("Not").ToString(); }
+            if(gridView1.GetFocusedRowCellValue("Raporlayan") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("Raporlayan").ToString(); }
+            if(gridView1.GetFocusedRowCellValue("İşlem") != null) { txt_islem.Text = gridView1.GetFocusedRowCellValue("İşlem").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("İşlenen") != null) { txt_adet.Text = gridView1.GetFocusedRowCellValue("İşlenen").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("SiparişNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparişNo").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) { txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString(); }
+            if(gridView1.GetFocusedRowCellValue("Tarih") != null) { date_tarih.EditValue = gridView1.GetFocusedRowCellValue("Tarih"); }
 
         }
     }

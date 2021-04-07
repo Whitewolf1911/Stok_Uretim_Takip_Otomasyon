@@ -104,9 +104,9 @@ namespace test_kooil.Formlar
             // 
             this.labelControl2.Location = new System.Drawing.Point(114, 102);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 16);
+            this.labelControl2.Size = new System.Drawing.Size(81, 16);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Ürün Çeşidi :";
+            this.labelControl2.Text = "Seçilen Ürün :";
             // 
             // labelControl3
             // 
@@ -137,7 +137,7 @@ namespace test_kooil.Formlar
             // 
             this.num_Adet.Location = new System.Drawing.Point(234, 158);
             this.num_Adet.Maximum = new decimal(new int[] {
-            9999999,
+            99999999,
             0,
             0,
             0});
@@ -178,6 +178,7 @@ namespace test_kooil.Formlar
             // txt_Not
             // 
             this.txt_Not.Location = new System.Drawing.Point(234, 368);
+            this.txt_Not.MaxLength = 74;
             this.txt_Not.Name = "txt_Not";
             this.txt_Not.Size = new System.Drawing.Size(159, 143);
             this.txt_Not.TabIndex = 13;

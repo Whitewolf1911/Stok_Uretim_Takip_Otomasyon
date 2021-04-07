@@ -167,6 +167,7 @@ namespace test_kooil.Formlar
             this.txt_ad.EditValue = "";
             this.txt_ad.Location = new System.Drawing.Point(178, 53);
             this.txt_ad.Name = "txt_ad";
+            this.txt_ad.Properties.MaxLength = 20;
             this.txt_ad.Size = new System.Drawing.Size(153, 22);
             this.txt_ad.TabIndex = 10;
             // 
@@ -194,6 +195,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_email.Location = new System.Drawing.Point(178, 178);
             this.txt_email.Name = "txt_email";
+            this.txt_email.Properties.MaxLength = 40;
             this.txt_email.Size = new System.Drawing.Size(153, 22);
             this.txt_email.TabIndex = 14;
             // 
@@ -201,6 +203,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_Konum.Location = new System.Drawing.Point(526, 227);
             this.txt_Konum.Name = "txt_Konum";
+            this.txt_Konum.Properties.MaxLength = 30;
             this.txt_Konum.Size = new System.Drawing.Size(153, 22);
             this.txt_Konum.TabIndex = 15;
             // 
@@ -208,6 +211,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_Yetkili.Location = new System.Drawing.Point(526, 51);
             this.txt_Yetkili.Name = "txt_Yetkili";
+            this.txt_Yetkili.Properties.MaxLength = 50;
             this.txt_Yetkili.Size = new System.Drawing.Size(153, 22);
             this.txt_Yetkili.TabIndex = 16;
             // 
@@ -227,12 +231,14 @@ namespace test_kooil.Formlar
             this.txt_vergiDaire.EditValue = "";
             this.txt_vergiDaire.Location = new System.Drawing.Point(526, 171);
             this.txt_vergiDaire.Name = "txt_vergiDaire";
+            this.txt_vergiDaire.Properties.MaxLength = 40;
             this.txt_vergiDaire.Size = new System.Drawing.Size(153, 22);
             this.txt_vergiDaire.TabIndex = 18;
             // 
             // txt_Adres
             // 
             this.txt_Adres.Location = new System.Drawing.Point(526, 292);
+            this.txt_Adres.MaxLength = 120;
             this.txt_Adres.Name = "txt_Adres";
             this.txt_Adres.Size = new System.Drawing.Size(153, 158);
             this.txt_Adres.TabIndex = 19;
@@ -381,6 +387,7 @@ namespace test_kooil.Formlar
             // txt_tamAd
             // 
             this.txt_tamAd.Location = new System.Drawing.Point(178, 115);
+            this.txt_tamAd.MaxLength = 60;
             this.txt_tamAd.Name = "txt_tamAd";
             this.txt_tamAd.Size = new System.Drawing.Size(153, 52);
             this.txt_tamAd.TabIndex = 41;

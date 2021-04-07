@@ -83,17 +83,21 @@ namespace test_kooil.Formlar
             // 
             // txt_sipIgneTur
             // 
-            this.txt_sipIgneTur.Location = new System.Drawing.Point(113, 342);
+            this.txt_sipIgneTur.Location = new System.Drawing.Point(63, 342);
             this.txt_sipIgneTur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sipIgneTur.Name = "txt_sipIgneTur";
-            this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
+            this.txt_sipIgneTur.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_sipIgneTur.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_sipIgneTur.Size = new System.Drawing.Size(193, 22);
             this.txt_sipIgneTur.TabIndex = 8;
             // 
             // txt_sipNot
             // 
+            this.txt_sipNot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txt_sipNot.Location = new System.Drawing.Point(113, 414);
             this.txt_sipNot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sipNot.Name = "txt_sipNot";
+            this.txt_sipNot.ReadOnly = true;
             this.txt_sipNot.Size = new System.Drawing.Size(143, 125);
             this.txt_sipNot.TabIndex = 7;
             this.txt_sipNot.Text = "";
@@ -117,7 +121,7 @@ namespace test_kooil.Formlar
             this.Btn_SiyirmaRapor.Name = "Btn_SiyirmaRapor";
             this.Btn_SiyirmaRapor.Size = new System.Drawing.Size(173, 48);
             this.Btn_SiyirmaRapor.TabIndex = 1;
-            this.Btn_SiyirmaRapor.Text = "Sıyırma Raporları";
+            this.Btn_SiyirmaRapor.Text = "Raporlar";
             this.Btn_SiyirmaRapor.Click += new System.EventHandler(this.Btn_SiyirmaRapor_Click);
             // 
             // Btn_Guncelle

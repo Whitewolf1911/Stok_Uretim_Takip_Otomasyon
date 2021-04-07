@@ -124,10 +124,13 @@ namespace test_kooil.Formlar
             this.date_tarih.EditValue = null;
             this.date_tarih.Location = new System.Drawing.Point(167, 281);
             this.date_tarih.Name = "date_tarih";
+            this.date_tarih.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.date_tarih.Properties.Appearance.Options.UseBackColor = true;
             this.date_tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.date_tarih.Properties.ReadOnly = true;
             this.date_tarih.Size = new System.Drawing.Size(131, 22);
             this.date_tarih.TabIndex = 32;
             // 
@@ -233,6 +236,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_adet.Location = new System.Drawing.Point(167, 234);
             this.txt_adet.Name = "txt_adet";
+            this.txt_adet.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_adet.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_adet.Properties.ReadOnly = true;
             this.txt_adet.Size = new System.Drawing.Size(143, 22);
             this.txt_adet.TabIndex = 17;
             // 
@@ -248,6 +254,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_Raporlayan.Location = new System.Drawing.Point(167, 87);
             this.txt_Raporlayan.Name = "txt_Raporlayan";
+            this.txt_Raporlayan.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_Raporlayan.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_Raporlayan.Properties.ReadOnly = true;
             this.txt_Raporlayan.Size = new System.Drawing.Size(143, 22);
             this.txt_Raporlayan.TabIndex = 15;
             // 
@@ -265,6 +274,7 @@ namespace test_kooil.Formlar
             this.txt_islem.Name = "txt_islem";
             this.txt_islem.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txt_islem.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_islem.Properties.ReadOnly = true;
             this.txt_islem.Size = new System.Drawing.Size(143, 22);
             this.txt_islem.TabIndex = 13;
             // 
@@ -280,6 +290,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_sipNo.Location = new System.Drawing.Point(167, 45);
             this.txt_sipNo.Name = "txt_sipNo";
+            this.txt_sipNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_sipNo.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_sipNo.Properties.ReadOnly = true;
             this.txt_sipNo.Size = new System.Drawing.Size(143, 22);
             this.txt_sipNo.TabIndex = 11;
             // 
@@ -295,21 +308,26 @@ namespace test_kooil.Formlar
             // 
             this.labelControl1.Location = new System.Drawing.Point(64, 141);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 16);
+            this.labelControl1.Size = new System.Drawing.Size(68, 16);
             this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "İğne Kodu :";
+            this.labelControl1.Text = "Ürün Kodu :";
             // 
             // txt_sipIgneTur
             // 
             this.txt_sipIgneTur.Location = new System.Drawing.Point(167, 138);
             this.txt_sipIgneTur.Name = "txt_sipIgneTur";
+            this.txt_sipIgneTur.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_sipIgneTur.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_sipIgneTur.Properties.ReadOnly = true;
             this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
             this.txt_sipIgneTur.TabIndex = 8;
             // 
             // txt_sipNot
             // 
-            this.txt_sipNot.Location = new System.Drawing.Point(155, 354);
+            this.txt_sipNot.BackColor = System.Drawing.Color.White;
+            this.txt_sipNot.Location = new System.Drawing.Point(167, 344);
             this.txt_sipNot.Name = "txt_sipNot";
+            this.txt_sipNot.ReadOnly = true;
             this.txt_sipNot.Size = new System.Drawing.Size(143, 124);
             this.txt_sipNot.TabIndex = 7;
             this.txt_sipNot.Text = "";

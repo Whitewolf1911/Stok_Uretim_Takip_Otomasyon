@@ -133,6 +133,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_IslenenAdet.Location = new System.Drawing.Point(165, 268);
             this.txt_IslenenAdet.Name = "txt_IslenenAdet";
+            this.txt_IslenenAdet.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_IslenenAdet.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_IslenenAdet.Properties.ReadOnly = true;
             this.txt_IslenenAdet.Size = new System.Drawing.Size(158, 22);
             this.txt_IslenenAdet.TabIndex = 17;
             // 
@@ -200,6 +203,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_Raporlayan.Location = new System.Drawing.Point(165, 159);
             this.txt_Raporlayan.Name = "txt_Raporlayan";
+            this.txt_Raporlayan.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_Raporlayan.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_Raporlayan.Properties.ReadOnly = true;
             this.txt_Raporlayan.Size = new System.Drawing.Size(158, 22);
             this.txt_Raporlayan.TabIndex = 11;
             // 
@@ -207,6 +213,9 @@ namespace test_kooil.Formlar
             // 
             this.txt_IgneKodu.Location = new System.Drawing.Point(165, 100);
             this.txt_IgneKodu.Name = "txt_IgneKodu";
+            this.txt_IgneKodu.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_IgneKodu.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_IgneKodu.Properties.ReadOnly = true;
             this.txt_IgneKodu.Size = new System.Drawing.Size(158, 22);
             this.txt_IgneKodu.TabIndex = 10;
             // 
@@ -214,13 +223,18 @@ namespace test_kooil.Formlar
             // 
             this.txt_SiparisNo.Location = new System.Drawing.Point(165, 48);
             this.txt_SiparisNo.Name = "txt_SiparisNo";
+            this.txt_SiparisNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_SiparisNo.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_SiparisNo.Properties.ReadOnly = true;
             this.txt_SiparisNo.Size = new System.Drawing.Size(158, 22);
             this.txt_SiparisNo.TabIndex = 8;
             // 
             // txt_Not
             // 
+            this.txt_Not.BackColor = System.Drawing.Color.White;
             this.txt_Not.Location = new System.Drawing.Point(165, 325);
             this.txt_Not.Name = "txt_Not";
+            this.txt_Not.ReadOnly = true;
             this.txt_Not.Size = new System.Drawing.Size(158, 144);
             this.txt_Not.TabIndex = 7;
             this.txt_Not.Text = "";
@@ -280,6 +294,8 @@ namespace test_kooil.Formlar
             this.txt_Tarih.EditValue = null;
             this.txt_Tarih.Location = new System.Drawing.Point(165, 220);
             this.txt_Tarih.Name = "txt_Tarih";
+            this.txt_Tarih.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_Tarih.Properties.Appearance.Options.UseBackColor = true;
             this.txt_Tarih.Properties.BeepOnError = false;
             this.txt_Tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -290,6 +306,7 @@ namespace test_kooil.Formlar
             this.txt_Tarih.Properties.EditFormat.FormatString = "";
             this.txt_Tarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txt_Tarih.Properties.MaskSettings.Set("mask", "");
+            this.txt_Tarih.Properties.ReadOnly = true;
             this.txt_Tarih.Size = new System.Drawing.Size(158, 22);
             this.txt_Tarih.TabIndex = 20;
             // 

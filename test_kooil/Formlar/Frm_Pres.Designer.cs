@@ -85,7 +85,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(13, 411);
+            this.labelControl2.Location = new System.Drawing.Point(13, 451);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(78, 16);
@@ -95,7 +95,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 344);
+            this.labelControl1.Location = new System.Drawing.Point(13, 383);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(36, 16);
@@ -105,17 +105,22 @@ namespace test_kooil.Formlar
             // 
             // txt_sipIgneTur
             // 
-            this.txt_sipIgneTur.Location = new System.Drawing.Point(78, 341);
+            this.txt_sipIgneTur.Location = new System.Drawing.Point(55, 380);
             this.txt_sipIgneTur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sipIgneTur.Name = "txt_sipIgneTur";
-            this.txt_sipIgneTur.Size = new System.Drawing.Size(143, 22);
+            this.txt_sipIgneTur.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_sipIgneTur.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_sipIgneTur.Properties.ReadOnly = true;
+            this.txt_sipIgneTur.Size = new System.Drawing.Size(204, 22);
             this.txt_sipIgneTur.TabIndex = 4;
             // 
             // txt_sipNot
             // 
-            this.txt_sipNot.Location = new System.Drawing.Point(78, 446);
+            this.txt_sipNot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_sipNot.Location = new System.Drawing.Point(116, 451);
             this.txt_sipNot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sipNot.Name = "txt_sipNot";
+            this.txt_sipNot.ReadOnly = true;
             this.txt_sipNot.Size = new System.Drawing.Size(143, 125);
             this.txt_sipNot.TabIndex = 3;
             this.txt_sipNot.Text = "";
@@ -139,7 +144,7 @@ namespace test_kooil.Formlar
             this.Btn_PresRapor.Name = "Btn_PresRapor";
             this.Btn_PresRapor.Size = new System.Drawing.Size(173, 48);
             this.Btn_PresRapor.TabIndex = 1;
-            this.Btn_PresRapor.Text = "Pres Raporları";
+            this.Btn_PresRapor.Text = "Raporlar";
             this.Btn_PresRapor.Click += new System.EventHandler(this.Btn_PresRapor_Click);
             // 
             // Btn_Guncelle

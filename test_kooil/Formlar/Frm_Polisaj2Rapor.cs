@@ -80,7 +80,7 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null) { txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString(); }
 
             if (gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString(); }
 
@@ -88,7 +88,7 @@ namespace test_kooil.Formlar
 
             if (gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null) { txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString(); }
 
-            if (gridView1.GetFocusedRowCellValue("TARIH") != null) { txt_Tarih.Text = gridView1.GetFocusedRowCellValue("TARIH").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("TARIH") != null) { txt_Tarih.EditValue= (DateTime)gridView1.GetFocusedRowCellValue("TARIH"); }
 
             if (gridView1.GetFocusedRowCellValue("NOT") != null) { txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString(); }
         }

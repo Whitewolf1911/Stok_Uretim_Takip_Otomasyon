@@ -122,7 +122,7 @@ namespace test_kooil.Formlar
             // pictureEdit6
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(14, 209);
+            this.pictureEdit6.Location = new System.Drawing.Point(13, 94);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
@@ -133,7 +133,7 @@ namespace test_kooil.Formlar
             // 
             // txt_hammadde
             // 
-            this.txt_hammadde.Location = new System.Drawing.Point(168, 219);
+            this.txt_hammadde.Location = new System.Drawing.Point(170, 104);
             this.txt_hammadde.Name = "txt_hammadde";
             this.txt_hammadde.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_hammadde.Properties.Appearance.Options.UseBackColor = true;
@@ -143,7 +143,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(72, 222);
+            this.labelControl6.Location = new System.Drawing.Point(74, 107);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(78, 16);
             this.labelControl6.TabIndex = 21;
@@ -152,7 +152,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(14, 155);
+            this.pictureEdit3.Location = new System.Drawing.Point(15, 213);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -163,17 +163,17 @@ namespace test_kooil.Formlar
             // 
             // txt_sarfiyat
             // 
-            this.txt_sarfiyat.Location = new System.Drawing.Point(168, 165);
+            this.txt_sarfiyat.Location = new System.Drawing.Point(169, 223);
             this.txt_sarfiyat.Name = "txt_sarfiyat";
             this.txt_sarfiyat.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txt_sarfiyat.Properties.Appearance.Options.UseBackColor = true;
             this.txt_sarfiyat.Properties.ReadOnly = true;
-            this.txt_sarfiyat.Size = new System.Drawing.Size(227, 22);
+            this.txt_sarfiyat.Size = new System.Drawing.Size(158, 22);
             this.txt_sarfiyat.TabIndex = 19;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(72, 168);
+            this.labelControl3.Location = new System.Drawing.Point(73, 226);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(83, 16);
             this.labelControl3.TabIndex = 18;
@@ -181,6 +181,7 @@ namespace test_kooil.Formlar
             // 
             // pic_IgneFoto
             // 
+            this.pic_IgneFoto.BackColor = System.Drawing.SystemColors.Highlight;
             this.pic_IgneFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pic_IgneFoto.Location = new System.Drawing.Point(347, 274);
             this.pic_IgneFoto.Name = "pic_IgneFoto";
@@ -217,7 +218,7 @@ namespace test_kooil.Formlar
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(15, 92);
+            this.pictureEdit2.Location = new System.Drawing.Point(15, 150);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -240,12 +241,12 @@ namespace test_kooil.Formlar
             // 
             // txt_Gramaj
             // 
-            this.txt_Gramaj.Location = new System.Drawing.Point(169, 102);
+            this.txt_Gramaj.Location = new System.Drawing.Point(170, 160);
             this.txt_Gramaj.Name = "txt_Gramaj";
             this.txt_Gramaj.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txt_Gramaj.Properties.Appearance.Options.UseBackColor = true;
             this.txt_Gramaj.Properties.ReadOnly = true;
-            this.txt_Gramaj.Size = new System.Drawing.Size(227, 22);
+            this.txt_Gramaj.Size = new System.Drawing.Size(158, 22);
             this.txt_Gramaj.TabIndex = 10;
             // 
             // txt_IsilIslem
@@ -296,7 +297,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(73, 105);
+            this.labelControl2.Location = new System.Drawing.Point(74, 163);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(55, 16);
             this.labelControl2.TabIndex = 3;
