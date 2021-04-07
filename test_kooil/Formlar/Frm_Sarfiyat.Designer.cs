@@ -219,6 +219,7 @@ namespace test_kooil.Formlar
             this.Btn_Yazdir.Size = new System.Drawing.Size(174, 47);
             this.Btn_Yazdir.TabIndex = 29;
             this.Btn_Yazdir.Text = "Yazdır";
+            this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
             // 
             // pictureEdit7
             // 

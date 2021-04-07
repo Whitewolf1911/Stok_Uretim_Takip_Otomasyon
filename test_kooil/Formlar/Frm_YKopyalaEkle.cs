@@ -24,48 +24,71 @@ namespace test_kooil.Formlar
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
             // EKLE BUTONU
+            try
+            {
+                if (lookUp_Siparis.EditValue != null && date_BasimTarihi.EditValue != null)
+                {
 
-            //ADDING TO TBL_PRES
 
-            TBL_YOLKOPYALA islenenUrun = new TBL_YOLKOPYALA();
-            islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-            islenenUrun.IGNEKODU = igneKodu.ToString();
-            islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            islenenUrun.TARIH = date_BasimTarihi.DateTime;
-            islenenUrun.NOT = text_Not.Text;
-            islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
-            db.TBL_YOLKOPYALA.Add(islenenUrun);
-            db.SaveChanges();
+                    TBL_YOLKOPYALA islenenUrun = new TBL_YOLKOPYALA();
+                    islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+                    islenenUrun.IGNEKODU = igneKodu.ToString();
+                    islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    islenenUrun.TARIH = date_BasimTarihi.DateTime;
+                    islenenUrun.NOT = text_Not.Text;
+                    islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+                    db.TBL_YOLKOPYALA.Add(islenenUrun);
+                    db.SaveChanges();
 
-            // ADDING TO TBL_RAPORLAR
+                    // ADDING TO TBL_RAPORLAR
 
-            TBL_RAPOR rapor = new TBL_RAPOR();
-            rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            rapor.IGNEKODU = igneKodu.ToString();
-            rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            rapor.TARIH = date_BasimTarihi.DateTime;
-            rapor.NOT = text_Not.Text;
-            rapor.RAPORLAYAN = text_Raporlayan.Text;
-            rapor.ISLEM = "Yol Kopyalama";
-            rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
-            db.TBL_RAPOR.Add(rapor);
-            db.SaveChanges();
+                    TBL_RAPOR rapor = new TBL_RAPOR();
+                    rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    rapor.IGNEKODU = igneKodu.ToString();
+                    rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    rapor.TARIH = date_BasimTarihi.DateTime;
+                    rapor.NOT = text_Not.Text;
+                    rapor.RAPORLAYAN = text_Raporlayan.Text;
+                    rapor.ISLEM = "Yol Kopyalama";
+                    rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
+                    db.TBL_RAPOR.Add(rapor);
+                    db.SaveChanges();
 
-            XtraMessageBox.Show("Yol Kopyalama Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Yol Kopyalama Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
-            deger.YOLKOPYASAYI += int.Parse(num_IslenenAdet.Value.ToString());
+                    var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+                    deger.YOLKOPYASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                if (deger.SIPARISASAMASI < 3)
-                {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                    deger.SIPARISASAMASI = 3; //siparis asamasini guncelle 
+                    if (deger.SIPARISASAMASI < 3)
+                    {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
+                        deger.SIPARISASAMASI = 3; //siparis asamasini guncelle 
+
+                    }
+                    db.SaveChanges();
+
+
+                    this.Close();
+                }
+                else
+                {
+                    if (lookUp_Siparis.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Sipariş Seçiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                    else if (date_BasimTarihi.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Tarih Seçiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
 
                 }
-                db.SaveChanges();
-
-            
-            this.Close();
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Bir Hata Oluştu. Girdiğiniz Bilgileri Kontrol Ediniz Ve Tekrar Deneyiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }

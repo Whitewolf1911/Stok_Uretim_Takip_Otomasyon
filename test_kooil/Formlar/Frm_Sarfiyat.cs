@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
@@ -182,6 +183,37 @@ namespace test_kooil.Formlar
         {
 
             listele();
+        }
+        private void ShowGridPreview(GridControl grid)
+        {
+            // Check whether the GridControl can be previewed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+
+            // Open the Preview window.
+            grid.ShowPrintPreview();
+        }
+
+        private void PrintGrid(GridControl grid)
+        {
+            // Check whether the GridControl can be printed.
+            if (!grid.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                return;
+            }
+
+            // Print.
+            grid.Print();
+        }
+
+        private void Btn_Yazdir_Click(object sender, EventArgs e)
+        {
+            ShowGridPreview(gridControl1);
+            PrintGrid(gridControl1);
         }
     }
 }

@@ -71,6 +71,7 @@ namespace test_kooil.Formlar
 
 
         }
+        bool fotoSwitch = false; // declared this to prevent exception and crash the program
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {
             using (var ms = new MemoryStream())
@@ -87,7 +88,9 @@ namespace test_kooil.Formlar
             if (res == DialogResult.OK)
             {
                 picBox_Igne.Image = Image.FromFile(dialog.FileName);
+                fotoSwitch = true;
             }
+            
         }
 
         private void Frm_UrunDuzenle_Load(object sender, EventArgs e)
@@ -135,7 +138,7 @@ namespace test_kooil.Formlar
             {
                 txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("FOTO") != null)
+            if (gridView1.GetFocusedRowCellValue("FOTO") != null  )
             {
                 picBox_Igne.Image = Frm_IgneTurleri.ImageFromByteArray((byte[])gridView1.GetFocusedRowCellValue("FOTO"));
             }
@@ -162,7 +165,7 @@ namespace test_kooil.Formlar
 
                 igne.TUR = comboBoxEdit1.SelectedItem.ToString();
 
-                if (picBox_Igne.Image != null)
+                if (picBox_Igne.Image != null && fotoSwitch)
                 {
                     var foto = ImageToByteArray(picBox_Igne.Image);
                     igne.FOTO = foto;

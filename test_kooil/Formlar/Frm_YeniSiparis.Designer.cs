@@ -275,6 +275,7 @@ namespace test_kooil.Formlar
             // 
             // picBoxUrun
             // 
+            this.picBoxUrun.BackColor = System.Drawing.SystemColors.Highlight;
             this.picBoxUrun.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picBoxUrun.Location = new System.Drawing.Point(455, 333);
             this.picBoxUrun.Name = "picBoxUrun";

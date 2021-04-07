@@ -47,6 +47,7 @@ namespace test_kooil.Formlar
             this.num_IslenenAdet = new System.Windows.Forms.NumericUpDown();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lookUp_Siparis = new DevExpress.XtraEditors.LookUpEdit();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
@@ -57,6 +58,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // date_BasimTarihi
@@ -99,6 +101,7 @@ namespace test_kooil.Formlar
             this.Btn_iptal.Size = new System.Drawing.Size(172, 61);
             this.Btn_iptal.TabIndex = 49;
             this.Btn_iptal.Text = "İptal";
+            this.Btn_iptal.Click += new System.EventHandler(this.Btn_iptal_Click);
             // 
             // Btn_Kaydet
             // 
@@ -228,11 +231,25 @@ namespace test_kooil.Formlar
             this.lookUp_Siparis.Size = new System.Drawing.Size(336, 22);
             this.lookUp_Siparis.TabIndex = 36;
             // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(489, 94);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit6.Size = new System.Drawing.Size(84, 74);
+            this.pictureEdit6.TabIndex = 53;
+            // 
             // Frm_UcSiyirmaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 565);
+            this.Controls.Add(this.pictureEdit6);
             this.Controls.Add(this.date_BasimTarihi);
             this.Controls.Add(this.pictureEdit5);
             this.Controls.Add(this.labelControl4);
@@ -264,6 +281,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +306,6 @@ namespace test_kooil.Formlar
         private System.Windows.Forms.NumericUpDown num_IslenenAdet;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LookUpEdit lookUp_Siparis;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit6;
     }
 }

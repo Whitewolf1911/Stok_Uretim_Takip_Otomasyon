@@ -47,6 +47,7 @@ namespace test_kooil.Formlar
             this.num_IslenenAdet = new System.Windows.Forms.NumericUpDown();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lookUp_Siparis = new DevExpress.XtraEditors.LookUpEdit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
@@ -57,6 +58,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // date_BasimTarihi
@@ -229,11 +231,23 @@ namespace test_kooil.Formlar
             this.lookUp_Siparis.Size = new System.Drawing.Size(336, 22);
             this.lookUp_Siparis.TabIndex = 36;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(498, 109);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_BilemeEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 595);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.date_BasimTarihi);
             this.Controls.Add(this.pictureEdit5);
             this.Controls.Add(this.labelControl4);
@@ -265,6 +279,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +304,6 @@ namespace test_kooil.Formlar
         private System.Windows.Forms.NumericUpDown num_IslenenAdet;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LookUpEdit lookUp_Siparis;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

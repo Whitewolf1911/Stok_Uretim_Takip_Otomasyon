@@ -23,49 +23,73 @@ namespace test_kooil.Formlar
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {    //KAYDET BUTONU
-            TBL_ARKASIYIR siyrilanUrun = new TBL_ARKASIYIR();
-
-            siyrilanUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == siyrilanUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-            siyrilanUrun.IGNEKODU = igneKodu.ToString();
-            siyrilanUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            siyrilanUrun.TARIH = date_BasimTarihi.DateTime;
-            siyrilanUrun.NOT = text_Not.Text;
-            siyrilanUrun.RAPORLAYAN = text_Raporlayan.Text;
-            db.TBL_ARKASIYIR.Add(siyrilanUrun);
-            db.SaveChanges();
-
-            // ADDING TBL_RAPOR
-
-            TBL_RAPOR rapor = new TBL_RAPOR();
-            rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-            rapor.IGNEKODU = igneKodu.ToString();
-            rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-            rapor.TARIH = date_BasimTarihi.DateTime;
-            rapor.NOT = text_Not.Text;
-            rapor.RAPORLAYAN = text_Raporlayan.Text;
-            rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
-            rapor.ISLEM = "Arka Sıyırma";
-
-            db.TBL_RAPOR.Add(rapor);
-            db.SaveChanges();
-
-
-
-            XtraMessageBox.Show("Arka Sıyırma Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            var deger = db.TBL_SIPARIS.Find(siyrilanUrun.SIPARISNO);
-            deger.ARKASIYIRSAYI += int.Parse(num_IslenenAdet.Value.ToString());
-
-            if (deger.SIPARISASAMASI < 2)
+            try
             {
-                deger.SIPARISASAMASI = 2; //siparis asamasini ayarla
+                if (lookUp_Siparis.EditValue != null && date_BasimTarihi.EditValue != null)
+                {
+                    TBL_ARKASIYIR siyrilanUrun = new TBL_ARKASIYIR();
+
+                    siyrilanUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == siyrilanUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+                    siyrilanUrun.IGNEKODU = igneKodu.ToString();
+                    siyrilanUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    siyrilanUrun.TARIH = date_BasimTarihi.DateTime;
+                    siyrilanUrun.NOT = text_Not.Text;
+                    siyrilanUrun.RAPORLAYAN = text_Raporlayan.Text;
+                    db.TBL_ARKASIYIR.Add(siyrilanUrun);
+                    db.SaveChanges();
+
+                    // ADDING TBL_RAPOR
+
+                    TBL_RAPOR rapor = new TBL_RAPOR();
+                    rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    rapor.IGNEKODU = igneKodu.ToString();
+                    rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    rapor.TARIH = date_BasimTarihi.DateTime;
+                    rapor.NOT = text_Not.Text;
+                    rapor.RAPORLAYAN = text_Raporlayan.Text;
+                    rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
+                    rapor.ISLEM = "Arka Sıyırma";
+
+                    db.TBL_RAPOR.Add(rapor);
+                    db.SaveChanges();
+
+
+
+                    XtraMessageBox.Show("Arka Sıyırma Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    var deger = db.TBL_SIPARIS.Find(siyrilanUrun.SIPARISNO);
+                    deger.ARKASIYIRSAYI += int.Parse(num_IslenenAdet.Value.ToString());
+
+                    if (deger.SIPARISASAMASI < 2)
+                    {
+                        deger.SIPARISASAMASI = 2; //siparis asamasini ayarla
+                    }
+
+                    db.SaveChanges();
+
+                    this.Close();
+                }
+                else
+                {
+                    if (lookUp_Siparis.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Sipariş Seçiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                    else if (date_BasimTarihi.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Tarih Seçiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+
+                }
             }
-               
-            db.SaveChanges();
-  
-            this.Close();
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Bir Hata Oluştu. Girdiğiniz Bilgileri Kontrol Ediniz Ve Tekrar Deneyiniz ! ", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -92,6 +116,11 @@ namespace test_kooil.Formlar
             lookUp_Siparis.Properties.Columns[5].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
             text_Raporlayan.Text = Frm_Login.user.AdSoyad;
+        }
+
+        private void Btn_iptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

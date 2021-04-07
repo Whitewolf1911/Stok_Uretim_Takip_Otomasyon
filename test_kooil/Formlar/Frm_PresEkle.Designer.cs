@@ -50,6 +50,7 @@ namespace test_kooil.Formlar
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.combo_ham = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_Siparis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_IslenenAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.text_Raporlayan.Properties)).BeginInit();
@@ -62,6 +63,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combo_ham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lookUp_Siparis
@@ -284,11 +286,23 @@ namespace test_kooil.Formlar
             this.combo_ham.Size = new System.Drawing.Size(180, 22);
             this.combo_ham.TabIndex = 21;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(487, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_PresEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 584);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.combo_ham);
             this.Controls.Add(this.pictureEdit6);
             this.Controls.Add(this.labelControl6);
@@ -325,6 +339,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.date_BasimTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combo_ham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +367,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private DevExpress.XtraEditors.ComboBoxEdit combo_ham;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
