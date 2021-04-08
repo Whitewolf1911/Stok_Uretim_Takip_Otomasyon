@@ -88,6 +88,7 @@ namespace test_kooil.Formlar
 
 
                 isFound = true;
+                gridView1.BestFitColumns();
 
 
             }
@@ -219,6 +220,7 @@ namespace test_kooil.Formlar
 
                 Btn_FirmaSec.Enabled = false;
                 Btn_SepeteEkle.Enabled = true;
+                gridControl2.Enabled = false;
 
             }
 

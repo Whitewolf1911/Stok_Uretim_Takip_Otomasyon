@@ -34,7 +34,10 @@ namespace test_kooil.Formlar
 
             gridControl2.DataSource = firmalar;
             gridView2.Columns[2].Visible = false;
-        
+            gridView2.Columns[3].Visible = false;
+            gridView2.Columns[1].Visible = false;
+            
+
         }
         void urunleriListele() {
 
