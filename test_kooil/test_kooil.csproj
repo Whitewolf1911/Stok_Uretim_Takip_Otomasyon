@@ -162,6 +162,9 @@
     <Compile Include="Entity\TBL_HAMRAPOR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_IADE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_IGNELER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -341,6 +344,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_HataliRaporSil.Designer.cs">
       <DependentUpon>Frm_HataliRaporSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_Iade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Iade.Designer.cs">
+      <DependentUpon>Frm_Iade.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_IgneTurleri.cs">
       <SubType>Form</SubType>
@@ -588,6 +597,12 @@
     <Compile Include="Formlar\Frm_YeniHamEkle.Designer.cs">
       <DependentUpon>Frm_YeniHamEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_YeniIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YeniIade.Designer.cs">
+      <DependentUpon>Frm_YeniIade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_YeniIgneEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -717,6 +732,9 @@
     <EmbeddedResource Include="Formlar\Frm_HataliRaporSil.resx">
       <DependentUpon>Frm_HataliRaporSil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Iade.resx">
+      <DependentUpon>Frm_Iade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_IgneTurleri.resx">
       <DependentUpon>Frm_IgneTurleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -839,6 +857,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniHamEkle.resx">
       <DependentUpon>Frm_YeniHamEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YeniIade.resx">
+      <DependentUpon>Frm_YeniIade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniIgneEkle.resx">
       <DependentUpon>Frm_YeniIgneEkle.cs</DependentUpon>

@@ -113,6 +113,21 @@
           <Property Name="MENSEI" Type="varchar" MaxLength="25" />
           <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="TBL_IADE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUNKOD" Type="varchar" MaxLength="40" />
+          <Property Name="ADET" Type="int" />
+          <Property Name="FIRMA" Type="varchar" MaxLength="50" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="60" />
+          <Property Name="SIPNO" Type="int" />
+          <Property Name="NEDEN" Type="varchar" MaxLength="100" />
+          <Property Name="SONUC" Type="varchar" MaxLength="100" />
+          <Property Name="URUNTUR" Type="varchar" MaxLength="25" />
+        </EntityType>
         <EntityType Name="TBL_IGNELER">
           <Key>
             <PropertyRef Name="ID" />
@@ -339,6 +354,7 @@
           <Property Name="kontrol" Type="bit" />
           <Property Name="ayarlar" Type="bit" />
           <Property Name="hataduzelt" Type="bit" />
+          <Property Name="iade" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
@@ -385,6 +401,7 @@
           <EntitySet Name="TBL_HAMLOG" EntityType="Self.TBL_HAMLOG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMMADDE" EntityType="Self.TBL_HAMMADDE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HAMRAPOR" EntityType="Self.TBL_HAMRAPOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_IADE" EntityType="Self.TBL_IADE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_IGNELER" EntityType="Self.TBL_IGNELER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ISILISLEM" EntityType="Self.TBL_ISILISLEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_KANALACMA" EntityType="Self.TBL_KANALACMA" Schema="dbo" store:Type="Tables" />
@@ -508,6 +525,7 @@
           <EntitySet Name="TBL_SEVKIYAT" EntityType="DB_kooil_testModel.TBL_SEVKIYAT" />
           <EntitySet Name="TBL_USERS" EntityType="DB_kooil_testModel.TBL_USERS" />
           <EntitySet Name="TBL_HAMLOG" EntityType="DB_kooil_testModel.TBL_HAMLOG" />
+          <EntitySet Name="TBL_IADE" EntityType="DB_kooil_testModel.TBL_IADE" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -797,6 +815,7 @@
           <Property Name="kontrol" Type="Boolean" />
           <Property Name="ayarlar" Type="Boolean" />
           <Property Name="hataduzelt" Type="Boolean" />
+          <Property Name="iade" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_HAMLOG">
           <Key>
@@ -812,6 +831,21 @@
           <Property Name="SEBEP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MIKTAR" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_IADE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUNKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ADET" Type="Int32" />
+          <Property Name="FIRMA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SIPNO" Type="Int32" />
+          <Property Name="NEDEN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SONUC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1142,6 +1176,7 @@
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="iade" ColumnName="iade" />
                 <ScalarProperty Name="hataduzelt" ColumnName="hataduzelt" />
                 <ScalarProperty Name="ayarlar" ColumnName="ayarlar" />
                 <ScalarProperty Name="kontrol" ColumnName="kontrol" />
@@ -1199,6 +1234,22 @@
                 <ScalarProperty Name="GENISLIK" ColumnName="GENISLIK" />
                 <ScalarProperty Name="KALINLIK" ColumnName="KALINLIK" />
                 <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_IADE">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IADE">
+              <MappingFragment StoreEntitySet="TBL_IADE">
+                <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
+                <ScalarProperty Name="SONUC" ColumnName="SONUC" />
+                <ScalarProperty Name="NEDEN" ColumnName="NEDEN" />
+                <ScalarProperty Name="SIPNO" ColumnName="SIPNO" />
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+                <ScalarProperty Name="URUNKOD" ColumnName="URUNKOD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

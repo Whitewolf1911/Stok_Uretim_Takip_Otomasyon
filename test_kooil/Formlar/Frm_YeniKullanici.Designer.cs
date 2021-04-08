@@ -77,6 +77,7 @@ namespace test_kooil.Formlar
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.Btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
             this.chHataDuzelt = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_iade = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chAnasayfa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_userName.Properties)).BeginInit();
@@ -120,6 +121,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // chAnasayfa
@@ -514,11 +516,20 @@ namespace test_kooil.Formlar
             this.chHataDuzelt.Size = new System.Drawing.Size(177, 24);
             this.chHataDuzelt.TabIndex = 48;
             // 
+            // ch_iade
+            // 
+            this.ch_iade.Location = new System.Drawing.Point(819, 234);
+            this.ch_iade.Name = "ch_iade";
+            this.ch_iade.Properties.Caption = "İade";
+            this.ch_iade.Size = new System.Drawing.Size(177, 24);
+            this.ch_iade.TabIndex = 49;
+            // 
             // Frm_YeniKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 459);
+            this.Controls.Add(this.ch_iade);
             this.Controls.Add(this.chHataDuzelt);
             this.Controls.Add(this.Btn_Kaydet);
             this.Controls.Add(this.pictureEdit3);
@@ -612,6 +623,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,5 +678,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.SimpleButton Btn_Kaydet;
         private DevExpress.XtraEditors.CheckEdit chHataDuzelt;
+        private DevExpress.XtraEditors.CheckEdit ch_iade;
     }
 }

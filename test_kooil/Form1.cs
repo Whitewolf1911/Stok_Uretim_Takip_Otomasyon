@@ -59,6 +59,7 @@ namespace test_kooil
         Frm_AnaSayfa frmAnaSayfa;
         Frm_Ayarlar frmAyarlar;
         Frm_HataDuzeltme frmHataDuzelt;
+        Frm_Iade frmIade;
 
 
         void InitializeButtons() {
@@ -266,6 +267,12 @@ namespace test_kooil
                 Btn_hataDuzeltme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             }
             else { Btn_hataDuzeltme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.iade == true)
+            {
+                Btn_Iadeler.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_Iadeler.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
 
         }
 
@@ -695,6 +702,14 @@ namespace test_kooil
             frmHataDuzelt.MdiParent = this;
             DisposeAllButThis(frmHataDuzelt);
             frmHataDuzelt.Show();
+        }
+
+        private void Btn_Iadeler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmIade = new Frm_Iade();
+            frmIade.MdiParent = this;
+            DisposeAllButThis(frmIade);
+            frmIade.Show();
         }
     }
 }

@@ -55,5 +55,6 @@ namespace test_kooil.Entity
         public Nullable<bool> kontrol { get; set; }
         public Nullable<bool> ayarlar { get; set; }
         public Nullable<bool> hataduzelt { get; set; }
+        public Nullable<bool> iade { get; set; }
     }
 }

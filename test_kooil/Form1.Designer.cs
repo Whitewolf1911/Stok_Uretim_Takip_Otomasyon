@@ -78,6 +78,7 @@ namespace test_kooil
             this.Btn_ayarlar = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_hataDuzeltme = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Iadeler = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -150,10 +151,11 @@ namespace test_kooil
             this.Btn_UrunDuzenle,
             this.Btn_ayarlar,
             this.barButtonItem1,
-            this.Btn_hataDuzeltme});
+            this.Btn_hataDuzeltme,
+            this.Btn_Iadeler});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 50;
+            this.ribbonControl1.MaxItemId = 51;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -562,6 +564,14 @@ namespace test_kooil
             this.Btn_hataDuzeltme.Name = "Btn_hataDuzeltme";
             this.Btn_hataDuzeltme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hataDuzeltme_ItemClick);
             // 
+            // Btn_Iadeler
+            // 
+            this.Btn_Iadeler.Caption = "İadeler";
+            this.Btn_Iadeler.Id = 50;
+            this.Btn_Iadeler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Iadeler.ImageOptions.LargeImage")));
+            this.Btn_Iadeler.Name = "Btn_Iadeler";
+            this.Btn_Iadeler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Iadeler_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -641,6 +651,7 @@ namespace test_kooil
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_YeniSevkiyat);
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_GecmisSevkiyat);
             this.ribbonPageGroup3.ItemLinks.Add(this.Btn_SipSevkiyat);
+            this.ribbonPageGroup3.ItemLinks.Add(this.Btn_Iadeler);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // ribbonPage3
@@ -788,6 +799,7 @@ namespace test_kooil
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem Btn_hataDuzeltme;
+        private DevExpress.XtraBars.BarButtonItem Btn_Iadeler;
     }
 }
 

@@ -64,7 +64,9 @@ namespace test_kooil.Formlar
                                x.yeniSipSevkiyat,
                                x.yeniUrunEkle,
                                x.yikama,
-                               x.yolKopyala
+                               x.yolKopyala,
+                               x.hataduzelt,
+                               x.iade
 
                            }).ToList();
 
@@ -109,7 +111,9 @@ namespace test_kooil.Formlar
             gridView1.Columns[37].Visible = false;
             gridView1.Columns[38].Visible = false;
             gridView1.Columns[39].Visible = false;
-            
+            gridView1.Columns[40].Visible = false;
+            gridView1.Columns[41].Visible = false;
+
 
 
         }
@@ -162,6 +166,9 @@ namespace test_kooil.Formlar
             chYeniUrunEkle.Checked = (bool)gridView1.GetFocusedRowCellValue("yeniUrunEkle");
             chYikama.Checked = (bool)gridView1.GetFocusedRowCellValue("yikama");
             chYolKopyala.Checked = (bool)gridView1.GetFocusedRowCellValue("yolKopyala");
+            ch_iade.Checked = (bool)gridView1.GetFocusedRowCellValue("iade");
+            chHataDuzelt.Checked = (bool)gridView1.GetFocusedRowCellValue("hataduzelt");
+
         }
 
         private void Frm_userUpdate_Load(object sender, EventArgs e)
@@ -230,6 +237,7 @@ namespace test_kooil.Formlar
                             if (chBileme.Checked) { new_user.bileme = true; } else { new_user.bileme = false; }
                             if (chKontrol.Checked) { new_user.kontrol = true; } else { new_user.kontrol = false; }
                             if (chHataDuzelt.Checked) { new_user.hataduzelt = true; } else { new_user.hataduzelt = false; }
+                            if (ch_iade.Checked) { new_user.iade = true; } else { new_user.iade = false; }
 
 
 

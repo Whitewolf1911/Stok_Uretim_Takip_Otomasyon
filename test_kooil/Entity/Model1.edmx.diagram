@@ -30,6 +30,7 @@
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_SEVKIYAT" Width="1.5" PointX="3.375" PointY="14.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_USERS" Width="1.5" PointX="5.375" PointY="14.75" />
         <EntityTypeShape EntityType="DB_kooil_testModel.TBL_HAMLOG" Width="1.5" PointX="7.375" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_kooil_testModel.TBL_IADE" Width="1.5" PointX="9.375" PointY="14.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
