@@ -20,6 +20,7 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_HamRaporDuzenle frmHamDuzenle;
         Frm_HataliRaporSil frmRaporDuzenle;
+        Frm_UrunStokDuzenle frmUrunStokDuzenle;
         void sipListele() {
 
             var veriler = (from x in db.TBL_SIPARIS
@@ -179,6 +180,15 @@ namespace test_kooil.Formlar
             {
                 frmRaporDuzenle = new Frm_HataliRaporSil();
                 frmRaporDuzenle.Show();
+            }
+        }
+
+        private void Btn_urunStokDuzen_Click(object sender, EventArgs e)
+        {
+            if (frmUrunStokDuzenle == null || frmUrunStokDuzenle.IsDisposed)
+            { 
+                frmUrunStokDuzenle = new Frm_UrunStokDuzenle();
+                frmUrunStokDuzenle.Show();
             }
         }
     }

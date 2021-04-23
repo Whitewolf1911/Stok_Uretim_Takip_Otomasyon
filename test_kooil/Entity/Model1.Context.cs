@@ -50,5 +50,6 @@ namespace test_kooil.Entity
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
         public virtual DbSet<TBL_HAMLOG> TBL_HAMLOG { get; set; }
         public virtual DbSet<TBL_IADE> TBL_IADE { get; set; }
+        public virtual DbSet<TBL_URUNSTOKLOG> TBL_URUNSTOKLOG { get; set; }
     }
 }

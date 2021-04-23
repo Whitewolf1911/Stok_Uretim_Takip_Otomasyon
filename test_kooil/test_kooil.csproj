@@ -204,6 +204,9 @@
     <Compile Include="Entity\TBL_UCSIYIRMA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_URUNSTOKLOG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_USERS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -585,6 +588,18 @@
     <Compile Include="Formlar\Frm_UrunStok.Designer.cs">
       <DependentUpon>Frm_UrunStok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_UrunStokDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UrunStokDuzenle.Designer.cs">
+      <DependentUpon>Frm_UrunStokDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_UrunStokLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_UrunStokLog.Designer.cs">
+      <DependentUpon>Frm_UrunStokLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_userUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -851,6 +866,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UrunStok.resx">
       <DependentUpon>Frm_UrunStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UrunStokDuzenle.resx">
+      <DependentUpon>Frm_UrunStokDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_UrunStokLog.resx">
+      <DependentUpon>Frm_UrunStokLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_userUpdate.resx">
       <DependentUpon>Frm_userUpdate.cs</DependentUpon>

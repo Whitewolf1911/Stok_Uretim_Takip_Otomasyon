@@ -309,6 +309,17 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
         </EntityType>
+        <EntityType Name="TBL_URUNSTOKLOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ISLEM" Type="varchar" MaxLength="10" />
+          <Property Name="URUN" Type="varchar" MaxLength="50" />
+          <Property Name="MIKTAR" Type="int" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="RAPORLAYAN" Type="varchar" MaxLength="60" />
+        </EntityType>
         <EntityType Name="TBL_USERS">
           <Key>
             <PropertyRef Name="ID" />
@@ -415,6 +426,7 @@
           <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_TEMPER" EntityType="Self.TBL_TEMPER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_UCSIYIRMA" EntityType="Self.TBL_UCSIYIRMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_URUNSTOKLOG" EntityType="Self.TBL_URUNSTOKLOG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YIKAMA" EntityType="Self.TBL_YIKAMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YOLKOPYALA" EntityType="Self.TBL_YOLKOPYALA" Schema="dbo" store:Type="Tables" />
@@ -526,6 +538,7 @@
           <EntitySet Name="TBL_USERS" EntityType="DB_kooil_testModel.TBL_USERS" />
           <EntitySet Name="TBL_HAMLOG" EntityType="DB_kooil_testModel.TBL_HAMLOG" />
           <EntitySet Name="TBL_IADE" EntityType="DB_kooil_testModel.TBL_IADE" />
+          <EntitySet Name="TBL_URUNSTOKLOG" EntityType="DB_kooil_testModel.TBL_URUNSTOKLOG" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -846,6 +859,17 @@
           <Property Name="NEDEN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SONUC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_URUNSTOKLOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ISLEM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="URUN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MIKTAR" Type="Int32" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="RAPORLAYAN" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1249,6 +1273,18 @@
                 <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
                 <ScalarProperty Name="ADET" ColumnName="ADET" />
                 <ScalarProperty Name="URUNKOD" ColumnName="URUNKOD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_URUNSTOKLOG">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_URUNSTOKLOG">
+              <MappingFragment StoreEntitySet="TBL_URUNSTOKLOG">
+                <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="URUN" ColumnName="URUN" />
+                <ScalarProperty Name="ISLEM" ColumnName="ISLEM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

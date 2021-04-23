@@ -20,6 +20,7 @@ namespace test_kooil.Formlar
         }
 
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+        Frm_UrunStokLog frmStokLog;
         void listele()
         {
             var igneler = (from x in db.TBL_IGNELER
@@ -104,6 +105,15 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("FOTO") == null)
             {
                 pic_IgneFoto.Image = null;
+            }
+        }
+
+        private void Btn_Log_Click(object sender, EventArgs e)
+        {
+            if (frmStokLog == null || frmStokLog.IsDisposed)
+            {
+                frmStokLog = new Frm_UrunStokLog();
+                frmStokLog.Show();
             }
         }
     }

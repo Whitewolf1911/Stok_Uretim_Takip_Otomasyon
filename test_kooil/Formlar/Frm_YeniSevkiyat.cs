@@ -94,7 +94,10 @@ namespace test_kooil.Formlar
             var anyActive = db.TBL_SIPARIS.Where(x => x.AKTIF == true).Where(y => y.TBL_IGNELER.IGNEKOD == urunKodu).Count();
 
             tarih = date_Tarih.DateTime.ToString("dd/MM/yyyy");
-            date_Tarih.Enabled = false;
+            if (date_Tarih.EditValue != null) { 
+                date_Tarih.Enabled = false;
+
+            }
             //ADD TO TBL_SEVKIYAT
             if (date_Tarih.EditValue != null &&  adet <= igneStok )
             {
