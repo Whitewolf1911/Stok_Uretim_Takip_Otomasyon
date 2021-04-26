@@ -61,19 +61,19 @@ namespace test_kooil.Formlar
                 var siparisler = (from x in db.TBL_SIPARIS
                                   select new
                                   {
-                                      SiparisNo = x.SIPARISNOID,
+                                      SiparişNo = x.SIPARISNOID,
                                       Firma = x.MUSTERI,
-                                      x.TBL_IGNELER.TUR,
+                                      Tür = x.TBL_IGNELER.TUR,
                                       Sipariş = x.URUNADETI,
-                                      x.TBL_IGNELER.IGNEKOD,
+                                      ÜrünKodu=x.TBL_IGNELER.IGNEKOD,
                                       x.TBL_IGNELER.FOTO,
-                                      x.TBL_IGNELER.STOK,
+                                      Stok =x.TBL_IGNELER.STOK,
                                       x.AKTIF,
                                       Tarih = x.SIPARISTARIHI,
                                       Giden = x.SEVKIYATSAYI,
                                       x.TBL_IGNELER.ID
 
-                                  }).ToList().Where(x => x.AKTIF == true).Where(x => x.Firma == secilenFirma).OrderBy(x => x.STOK);
+                                  }).ToList().Where(x => x.AKTIF == true).Where(x => x.Firma == secilenFirma).OrderBy(x => x.Stok);
 
                 gridControl1.DataSource = siparisler;
 
@@ -125,9 +125,9 @@ namespace test_kooil.Formlar
         string tarih = "";
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
-            string siparisNo = gridView1.GetFocusedRowCellValue("SiparisNo").ToString();
-            string urunTuru = gridView1.GetFocusedRowCellValue("TUR").ToString();
-            string urunKodu = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();         
+            string siparisNo = gridView1.GetFocusedRowCellValue("SiparişNo").ToString();
+            string urunTuru = gridView1.GetFocusedRowCellValue("Tür").ToString();
+            string urunKodu = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();         
             int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
             var igne = db.TBL_IGNELER.Find(urunID);
             int igneStok = (int)igne.STOK;
@@ -161,7 +161,7 @@ namespace test_kooil.Formlar
                 //Stoktan dusup urunleri tekrar listeleme
                 igne.STOK -= adet;
                 siparis.SEVKIYATSAYI += adet;
-                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Siparişin Sevkiyatı Bitti Mi ? ", "Sevkiyat Bitti Mi ?", MessageBoxButtons.YesNo);
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Siparişin Sevkiyatı Bitti Mi ? (Evet Derseniz Sipariş Tamamlanmış Olacak) ", "Sevkiyat Bitti Mi ?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (siradakiAsamaSorgu == DialogResult.Yes)
                 {
                     siparis.AKTIF = false;

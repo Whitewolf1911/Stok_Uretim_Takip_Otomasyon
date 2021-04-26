@@ -26,8 +26,8 @@ namespace test_kooil.Formlar
                             {
                                 Firma = x.FIRMAAD,
                                 FirmaAd = x.FIRMATAMAD,
-                                x.VERGINO,
-                                x.VERGIDAIRESI
+                                VergiNo = x.VERGINO,
+                                VergiDairesi = x.VERGIDAIRESI
                                 
 
                             }).ToList().OrderBy(x => x.Firma);
@@ -45,13 +45,13 @@ namespace test_kooil.Formlar
                            select new
                            {
 
-                               x.TUR,
-                               x.IGNEKOD,
-                               x.STOK,
+                               Tür=x.TUR,
+                               ÜrünKodu=x.IGNEKOD,
+                               Stok=x.STOK,
                                x.FOTO,
                                x.ID
                            }
-                           ).ToList().OrderByDescending(x => x.STOK);
+                           ).ToList().OrderByDescending(x => x.Stok);
 
             gridControl1.DataSource = urunler;
             gridView1.Columns[3].Visible = false;
@@ -82,11 +82,11 @@ namespace test_kooil.Formlar
         string tarih = "";
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
-            string urunTuru = gridView1.GetFocusedRowCellValue("TUR").ToString();
-            string urunKodu = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+            string urunTuru = gridView1.GetFocusedRowCellValue("Tür").ToString();
+            string urunKodu = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            vergiNo = gridView2.GetFocusedRowCellValue("VERGINO").ToString();
-            vergiDaire = gridView2.GetFocusedRowCellValue("VERGIDAIRESI").ToString();
+            vergiNo = gridView2.GetFocusedRowCellValue("VergiNo").ToString();
+            vergiDaire = gridView2.GetFocusedRowCellValue("VergiDairesi").ToString();
 
             var igne = db.TBL_IGNELER.Find(urunID);
             int igneStok = (int)igne.STOK;

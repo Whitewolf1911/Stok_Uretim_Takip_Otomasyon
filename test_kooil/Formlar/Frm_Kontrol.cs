@@ -25,14 +25,14 @@ namespace test_kooil.Formlar
             var islenecekUrunler = (from x in db.TBL_SIPARIS
                                     select new
                                     {
-                                        SiparisNo = x.SIPARISNOID,
-                                        x.TBL_IGNELER.TUR,
-                                        x.TBL_IGNELER.IGNEKOD,
-                                        IstenilenMiktar = x.URUNADETI,
-                                        x.NOTLAR,
+                                        SiparişNo = x.SIPARISNOID,
+                                        Tür = x.TBL_IGNELER.TUR,
+                                        ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                        SiparişMiktarı = x.URUNADETI,
+                                        Not = x.NOTLAR,
                                         x.AKTIF
 
-                                    }).ToList().OrderByDescending(x => x.SiparisNo);
+                                    }).ToList().OrderByDescending(x => x.SiparişNo);
 
             gridControl1.DataSource = islenecekUrunler.Where(x => x.AKTIF == true);
             gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
@@ -70,12 +70,12 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null &&
-               gridView1.GetFocusedRowCellValue("NOTLAR") != null)
+            if (gridView1.GetFocusedRowCellValue("SiparişNo") != null &&
+               gridView1.GetFocusedRowCellValue("Not") != null)
             {
 
-                txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
-                txt_sipNot.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+                txt_sipIgneTur.Text = gridView1.GetFocusedRowCellValue("SiparişNo").ToString();
+                txt_sipNot.Text = gridView1.GetFocusedRowCellValue("Not").ToString();
             }
         }
     }

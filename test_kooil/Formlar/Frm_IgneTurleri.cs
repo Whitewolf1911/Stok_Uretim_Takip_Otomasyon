@@ -25,10 +25,10 @@ namespace test_kooil.Formlar
             var igneler = (from x in db.TBL_IGNELER
                            select new
                            { 
-                               x.TUR,
-                               x.IGNEKOD,
+                               Tür=x.TUR,
+                               ÜrünKodu=x.IGNEKOD,
                                x.GRAMAJ,
-                               SARFIYAT = x.SARFIYATORAN,
+                               SarfiyatGr = x.SARFIYATORAN,
                                x.HAMMADDETIPI,
                                x.ISILISLEMFORMUL,
                                x.NOT,
@@ -73,8 +73,8 @@ namespace test_kooil.Formlar
             string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
 
             txt_hammadde.Text = hammaddeAd;
-            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) {
-                txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) {
+                txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             }
 
             if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null) {
@@ -93,9 +93,9 @@ namespace test_kooil.Formlar
                 pic_IgneFoto.Image = null;
             }
 
-            if (gridView1.GetFocusedRowCellValue("SARFIYAT") != null)
+            if (gridView1.GetFocusedRowCellValue("SarfiyatGr") != null)
             {
-                txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SARFIYAT").ToString();
+                txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SarfiyatGr").ToString();
             }
 
 

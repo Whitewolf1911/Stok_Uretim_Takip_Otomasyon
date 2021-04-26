@@ -27,13 +27,13 @@ namespace test_kooil.Formlar
             var hammaddeler = (from x in db.TBL_HAMMADDE
                                select new
                                {
-                                   x.KALINLIK,
-                                   x.GENISLIK,
-                                   x.MENSEI,
-                                   x.OZELLIK,
+                                   Kalınlık = x.KALINLIK,
+                                   Genişlik = x.GENISLIK,
+                                   Menşei = x.MENSEI,
+                                   Özellik = x.OZELLIK,
                                    x.ID
 
-                               }).ToList().OrderBy(x => x.KALINLIK);
+                               }).ToList().OrderBy(x => x.Kalınlık);
 
             gridControl2.DataSource = hammaddeler;
             gridView2.Columns[4].Visible = false;
@@ -45,12 +45,12 @@ namespace test_kooil.Formlar
             var igneler = (from x in db.TBL_IGNELER
                            select new
                            {
-                               x.TUR,
-                               x.IGNEKOD,
-                               x.GRAMAJ,
-                               x.SARFIYATORAN,
+                               Tür = x.TUR,
+                               ÜrünKodu=x.IGNEKOD,
+                               Gramaj=x.GRAMAJ,
+                               Sarfiyat=x.SARFIYATORAN,
                                x.ISILISLEMFORMUL,
-                               x.NOT,
+                               Not=x.NOT,
                                x.FOTO,
                                x.HAMMADDETIPI,
                                x.ID
@@ -111,32 +111,32 @@ namespace test_kooil.Formlar
 
             }
             
-            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null)
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null)
             {
-                txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+                txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("TUR") != null)
+            if (gridView1.GetFocusedRowCellValue("Tür") != null)
             {
-                comboBoxEdit1.Text = gridView1.GetFocusedRowCellValue("TUR").ToString();
-            }
-
-            if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null)
-            {
-                num_Gramaj.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("GRAMAJ").ToString());
+                comboBoxEdit1.Text = gridView1.GetFocusedRowCellValue("Tür").ToString();
             }
 
-            if (gridView1.GetFocusedRowCellValue("SARFIYATORAN") != null)
+            if (gridView1.GetFocusedRowCellValue("Gramaj") != null)
             {
-                num_Gramaj.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SARFIYATORAN").ToString());
+                num_Gramaj.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("Gramaj").ToString());
+            }
+
+            if (gridView1.GetFocusedRowCellValue("Sarfiyat") != null)
+            {
+                num_SarfiyatOrani.Value = (decimal)gridView1.GetFocusedRowCellValue("Sarfiyat");
             }
 
             if (gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL") != null)
             {
                 txt_IsilIslem.Text = gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("NOT") != null)
+            if (gridView1.GetFocusedRowCellValue("Not") != null)
             {
-                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+                txt_Not.Text = gridView1.GetFocusedRowCellValue("Not").ToString();
             }
             if (gridView1.GetFocusedRowCellValue("FOTO") != null  )
             {
@@ -180,8 +180,8 @@ namespace test_kooil.Formlar
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            string hammaddeAd = gridView2.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView2.GetFocusedRowCellValue("GENISLIK").ToString() +
-                " " + gridView2.GetFocusedRowCellValue("OZELLIK").ToString() + " " + gridView2.GetFocusedRowCellValue("MENSEI").ToString();
+            string hammaddeAd = gridView2.GetFocusedRowCellValue("Kalınlık").ToString() + " x " + gridView2.GetFocusedRowCellValue("Genişlik").ToString() +
+                " " + gridView2.GetFocusedRowCellValue("Özellik").ToString() + " " + gridView2.GetFocusedRowCellValue("Menşei").ToString();
             txt_secilenHam.Text = hammaddeAd;
             Btn_Kaydet.Enabled = false;
         }

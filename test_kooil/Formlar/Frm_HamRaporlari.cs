@@ -25,22 +25,22 @@ namespace test_kooil.Formlar
             var degerler = (from x in db.TBL_HAMRAPOR
                             select new
                             {
-                                x.SIPARISNO,
-                                x.MUSTERI,
-                                x.URUNTIPI,
-                                x.URUNKODU,
-                                KALINLIK = x.HAMKALINLIK,
-                                GENISLIK = x.HAMGENISLIK,
-                                x.MENSEI,
-                                x.OZELLIK,
+                                SiparişNo=x.SIPARISNO,
+                                Müşteri=x.MUSTERI,
+                                Tür=x.URUNTIPI,
+                                ÜrünKodu=x.URUNKODU,
+                                Kalınlık = x.HAMKALINLIK,
+                                Genişlik = x.HAMGENISLIK,
+                                Menşei = x.MENSEI,
+                                Özellik = x.OZELLIK,
                                 Pres = x.PRESSAYI,
-                                HarcananMiktar = x.HAMHARCANAN,
-                                x.TARIH,
-                                x.RAPORLAYAN
+                                HarcananMiktarKg = x.HAMHARCANAN,
+                                Tarih  =x.TARIH,
+                                Raporlayan =x.RAPORLAYAN
 
 
 
-                            }).ToList().OrderByDescending(x => x.TARIH);
+                            }).ToList().OrderByDescending(x => x.Tarih);
             gridControl1.DataSource = degerler;
 
             gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
@@ -92,12 +92,12 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {   //MUSTERI URUNKODU hammadde mensei miktar
-            if (gridView1.GetFocusedRowCellValue("MUSTERI") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("MUSTERI").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("URUNKODU") != null) { txt_urunKodu.Text = gridView1.GetFocusedRowCellValue("URUNKODU").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("KALINLIK") != null && gridView1.GetFocusedRowCellValue("GENISLIK") != null)
-            { txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK"); }
-            if (gridView1.GetFocusedRowCellValue("MENSEI") != null) { txt_mensei.Text = gridView1.GetFocusedRowCellValue("MENSEI").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("HarcananMiktar") != null) { txt_Miktar.Text = gridView1.GetFocusedRowCellValue("HarcananMiktar").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Müşteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Müşteri").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) { txt_urunKodu.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Kalınlık ") != null && gridView1.GetFocusedRowCellValue("Genişlik") != null)
+            { txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("Kalınlık").ToString() + " x " + gridView1.GetFocusedRowCellValue("Genişlik"); }
+            if (gridView1.GetFocusedRowCellValue("Menşei") != null) { txt_mensei.Text = gridView1.GetFocusedRowCellValue("Menşei").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("HarcananMiktarKg") != null) { txt_Miktar.Text = gridView1.GetFocusedRowCellValue("HarcananMiktarKg").ToString(); }
             if (gridView1.GetFocusedRowCellValue("Pres") != null) { txt_pres.Text = gridView1.GetFocusedRowCellValue("Pres").ToString(); }
 
         }

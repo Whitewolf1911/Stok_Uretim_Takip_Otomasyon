@@ -42,8 +42,8 @@ namespace test_kooil.Formlar
                            select new
                            {
                                x.ID,
-                               x.TUR,
-                               x.IGNEKOD,                                                                                          
+                               Tür = x.TUR,
+                               ÜrünKodu= x.IGNEKOD,                                                                                          
                                x.FOTO
                            }
                            );
@@ -170,9 +170,9 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null) {
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) {
 
-                txt_urunCesit.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+                txt_urunCesit.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             }
 
 

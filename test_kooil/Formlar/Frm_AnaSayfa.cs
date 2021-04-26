@@ -38,6 +38,7 @@ namespace test_kooil.Formlar
             gridView1.Columns[5].Visible = false;
             gridView1.Columns[4].AppearanceCell.BackColor = Color.Orange;
             
+            
         }
 
         void islemListele()
@@ -85,6 +86,7 @@ namespace test_kooil.Formlar
             gridControl_durum.DataSource = veriler;
             gridView4.Columns[3].Visible = false;
             gridView4.Columns[4].Visible = false;
+            gridView4.BestFitColumns();
 
         }
 

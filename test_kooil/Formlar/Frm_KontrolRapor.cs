@@ -24,18 +24,19 @@ namespace test_kooil.Formlar
             var veriler = (from x in db.TBL_RAPOR  // change this !!!
                            select new
                            {
-                               x.SIPARISNO,
-                               x.RAPORLAYAN,
-                               x.IGNEKODU,
-                               x.ISLENENMIKTAR,
-                               x.TARIH,
-                               x.NOT,
+                               SiparişNo = x.SIPARISNO,
+                               Raporlayan = x.RAPORLAYAN,
+                               Tür = x.URUNTUR,
+                               ÜrünKodu = x.IGNEKODU,
+                               İşlenenMiktar = x.ISLENENMIKTAR,
+                               Tarih = x.TARIH,
+                               Not = x.NOT,
                                x.ISLEM
 
-                           }).ToList().OrderByDescending(x => x.TARIH).Where(x => x.ISLEM == "Kontrol");
+                           }).ToList().OrderByDescending(x => x.Tarih).Where(x => x.ISLEM == "Kontrol");
 
             gridControl1.DataSource = veriler;
-
+            gridView1.Columns[7].Visible = false;
         }
 
         private void Frm_KontrolRapor_Load(object sender, EventArgs e)
@@ -81,17 +82,15 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("SIPARISNO") != null) { txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SIPARISNO").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("SiparişNo") != null) { txt_SiparisNo.Text = gridView1.GetFocusedRowCellValue("SiparişNo").ToString(); }
 
-            if (gridView1.GetFocusedRowCellValue("RAPORLAYAN") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("RAPORLAYAN").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Raporlayan") != null) { txt_Raporlayan.Text = gridView1.GetFocusedRowCellValue("Raporlayan").ToString(); }
 
-            if (gridView1.GetFocusedRowCellValue("IGNEKODU") != null) { txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("IGNEKODU").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) { txt_IgneKodu.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString(); }
 
-            if (gridView1.GetFocusedRowCellValue("ISLENENMIKTAR") != null) { txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("ISLENENMIKTAR").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("İşlenenMiktar") != null) { txt_IslenenAdet.Text = gridView1.GetFocusedRowCellValue("İşlenenMiktar").ToString(); }
 
-            if (gridView1.GetFocusedRowCellValue("TARIH") != null) { txt_Tarih.EditValue = (DateTime)gridView1.GetFocusedRowCellValue("TARIH"); }
-
-            if (gridView1.GetFocusedRowCellValue("NOT") != null) { txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Not") != null) { txt_Not.Text = gridView1.GetFocusedRowCellValue("Not").ToString(); }
         }
     }
 }

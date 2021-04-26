@@ -29,12 +29,12 @@ namespace test_kooil.Formlar
                                FirmaTamAd = x.FIRMATAMAD,
                                x.ADRES,
                                x.KONUM,
-                               x.MAIL,
-                               x.TELEFON1,
+                               MailAdresi = x.MAIL,
+                               Telefon1 = x.TELEFON1,
                                x.TELEFON2,
                                x.VERGIDAIRESI,
                                x.VERGINO,
-                               x.YETKILI
+                               Yetkili = x.YETKILI
 
                            }).ToList();
 
@@ -114,12 +114,12 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("FirmaTamAd") != null) { txt_tamAd.Text = gridView1.GetFocusedRowCellValue("FirmaTamAd").ToString(); }
             if (gridView1.GetFocusedRowCellValue("ADRES") != null) { txt_Adres.Text = gridView1.GetFocusedRowCellValue("ADRES").ToString(); }
             if (gridView1.GetFocusedRowCellValue("KONUM") != null) { txt_Konum.Text = gridView1.GetFocusedRowCellValue("KONUM").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("MAIL") != null) { txt_email.Text = gridView1.GetFocusedRowCellValue("MAIL").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("TELEFON1") != null) { txt_Tel1.Text = gridView1.GetFocusedRowCellValue("TELEFON1").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("MailAdresi") != null) { txt_email.Text = gridView1.GetFocusedRowCellValue("MailAdresi").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Telefon1") != null) { txt_Tel1.Text = gridView1.GetFocusedRowCellValue("Telefon1").ToString(); }
             if (gridView1.GetFocusedRowCellValue("TELEFON2") != null) { txt_Tel2.Text = gridView1.GetFocusedRowCellValue("TELEFON2").ToString(); }
             if (gridView1.GetFocusedRowCellValue("VERGIDAIRESI") != null) { txt_vergiDaire.Text = gridView1.GetFocusedRowCellValue("VERGIDAIRESI").ToString(); }
             if (gridView1.GetFocusedRowCellValue("VERGINO") != null) { txt_vergiNo.Text = gridView1.GetFocusedRowCellValue("VERGINO").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("YETKILI") != null) { txt_Yetkili.Text = gridView1.GetFocusedRowCellValue("YETKILI").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Yetkili") != null) { txt_Yetkili.Text = gridView1.GetFocusedRowCellValue("Yetkili").ToString(); }
         }
     }
 }

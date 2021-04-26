@@ -612,7 +612,7 @@ namespace test_kooil
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "İğne Aşama Kontrol";
+            this.ribbonPage2.Text = "Ürün Aşama Kontrol";
             // 
             // ribbonPageGroup2
             // 

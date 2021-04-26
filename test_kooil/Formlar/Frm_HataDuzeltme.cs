@@ -49,7 +49,7 @@ namespace test_kooil.Formlar
                                x.SEVKIYATSAYI,
                                x.TEMPERSAYI,
                                x.UCSIYIRMASAYI,
-                               x.URUNADETI,
+                               SiparişAdet=x.URUNADETI,
                                x.YIKAMASAYI,
                                x.YOLKOPYASAYI,
                                
@@ -100,7 +100,7 @@ namespace test_kooil.Formlar
             num_Polisaj2.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI2SAYI"));
             num_Pres.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("PRESSAYI"));
             num_SevkEdilen.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SEVKIYATSAYI"));
-            num_Siparis.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("URUNADETI"));
+            num_Siparis.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SiparişAdet"));
             num_temper.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("TEMPERSAYI"));
             num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
             num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));

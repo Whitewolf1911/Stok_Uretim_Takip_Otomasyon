@@ -36,6 +36,7 @@ namespace test_kooil.Formlar
                     preslenenUrun.TARIH = date_BasimTarihi.DateTime;
                     preslenenUrun.NOT = text_Not.Text;
                     preslenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+                    preslenenUrun.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
                     db.TBL_PRES.Add(preslenenUrun);
                     db.SaveChanges();
 
@@ -115,7 +116,8 @@ namespace test_kooil.Formlar
             lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
             lookUp_Siparis.Properties.DataSource = preslencekUrunler;
             lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
-
+            lookUp_Siparis.Properties.BestFit();
+            lookUp_Siparis.Properties.Columns[1].Visible = false;
             lookUp_Siparis.Properties.Columns[5].Visible = false;
             lookUp_Siparis.Properties.Columns[4].Visible = false;
             text_Raporlayan.Text = Frm_Login.user.AdSoyad;

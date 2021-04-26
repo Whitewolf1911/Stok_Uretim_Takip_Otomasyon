@@ -26,13 +26,13 @@ namespace test_kooil.Formlar
             var igneler = (from x in db.TBL_IGNELER
                            select new
                            {
-                               x.TUR,
-                               x.IGNEKOD,
-                               x.STOK,         
+                               Tür = x.TUR,
+                               ÜrünKodu = x.IGNEKOD,
+                               Stok = x.STOK,         
                                x.FOTO
                            }
                            );
-            gridControl1.DataSource = igneler.ToList().OrderByDescending(x => x.STOK);
+            gridControl1.DataSource = igneler.ToList().OrderByDescending(x => x.Stok);
 
             gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
             gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
@@ -85,17 +85,17 @@ namespace test_kooil.Formlar
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
 
-            if (gridView1.GetFocusedRowCellValue("TUR") != null)
+            if (gridView1.GetFocusedRowCellValue("Tür") != null)
             {
-                  txt_urunTip.Text = gridView1.GetFocusedRowCellValue("TUR").ToString();
+                  txt_urunTip.Text = gridView1.GetFocusedRowCellValue("Tür").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("IGNEKOD") != null)
+            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null)
             {
-                txt_urunKod.Text = gridView1.GetFocusedRowCellValue("IGNEKOD").ToString();
+                txt_urunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             }
-            if (gridView1.GetFocusedRowCellValue("STOK") != null)
+            if (gridView1.GetFocusedRowCellValue("Stok") != null)
             {
-                txt_stokAdet.Text = gridView1.GetFocusedRowCellValue("STOK").ToString();
+                txt_stokAdet.Text = gridView1.GetFocusedRowCellValue("Stok").ToString();
             }
 
             if (gridView1.GetFocusedRowCellValue("FOTO") != null)

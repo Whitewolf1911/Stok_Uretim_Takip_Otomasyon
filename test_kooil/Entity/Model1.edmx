@@ -227,6 +227,7 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
           <Property Name="HAMMADDE" Type="varchar" MaxLength="15" />
+          <Property Name="URUNTUR" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBL_RAPOR">
           <Key>
@@ -576,6 +577,7 @@
           <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SIPARISNO" Type="Int32" />
           <Property Name="HAMMADDE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_ARKASIYIR">
           <Key>
@@ -964,6 +966,7 @@
           <EntitySetMapping Name="TBL_PRES">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_PRES">
               <MappingFragment StoreEntitySet="TBL_PRES">
+                <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
                 <ScalarProperty Name="HAMMADDE" ColumnName="HAMMADDE" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
