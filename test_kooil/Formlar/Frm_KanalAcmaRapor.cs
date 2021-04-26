@@ -22,7 +22,7 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele()
         {
-            var veriler = (from x in db.TBL_KANALACMA
+            var veriler = (from x in db.TBL_RAPOR
                            select new
                            {
                                x.SIPARISNO,
@@ -30,9 +30,10 @@ namespace test_kooil.Formlar
                                x.IGNEKODU,
                                x.ISLENENMIKTAR,
                                x.TARIH,
-                               x.NOT
+                               x.NOT,
+                               x.ISLEM
 
-                           }).ToList().OrderByDescending(x => x.TARIH);
+                           }).ToList().OrderByDescending(x => x.TARIH).Where(x => x.ISLEM == "Kanal Acma");
 
             gridControl1.DataSource = veriler;
 

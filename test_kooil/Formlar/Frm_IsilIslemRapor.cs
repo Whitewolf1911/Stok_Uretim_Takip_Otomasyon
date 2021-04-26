@@ -24,7 +24,7 @@ namespace test_kooil.Formlar
 
         void listele()
         {
-            var veriler = (from x in db.TBL_ISILISLEM  // change this !!!
+            var veriler = (from x in db.TBL_RAPOR  // change this !!!
                            select new
                            {
                                x.SIPARISNO,
@@ -32,9 +32,10 @@ namespace test_kooil.Formlar
                                x.IGNEKODU,
                                x.ISLENENMIKTAR,
                                x.TARIH,
-                               x.NOT
+                               x.NOT,
+                               x.ISLEM
 
-                           }).ToList().OrderByDescending(x => x.TARIH);
+                           }).ToList().OrderByDescending(x => x.TARIH).Where(x => x.ISLEM == "Isil Islem");
 
             gridControl1.DataSource = veriler;
 

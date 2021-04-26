@@ -30,21 +30,23 @@ namespace test_kooil.Formlar
                 {
 
 
-                    TBL_YOLKOPYALA islenenUrun = new TBL_YOLKOPYALA();
-                    islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-                    islenenUrun.IGNEKODU = igneKodu.ToString();
-                    islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-                    islenenUrun.TARIH = date_BasimTarihi.DateTime;
-                    islenenUrun.NOT = text_Not.Text;
-                    islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
-                    db.TBL_YOLKOPYALA.Add(islenenUrun);
-                    db.SaveChanges();
+                    //TBL_YOLKOPYALA islenenUrun = new TBL_YOLKOPYALA();
+                    //islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    //var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+                    //islenenUrun.IGNEKODU = igneKodu.ToString();
+                    //islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    //islenenUrun.TARIH = date_BasimTarihi.DateTime;
+                    //islenenUrun.NOT = text_Not.Text;
+                    //islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+                    //db.TBL_YOLKOPYALA.Add(islenenUrun);
+                    //db.SaveChanges();
 
                     // ADDING TO TBL_RAPORLAR
 
                     TBL_RAPOR rapor = new TBL_RAPOR();
                     rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == rapor.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
+
                     rapor.IGNEKODU = igneKodu.ToString();
                     rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
                     rapor.TARIH = date_BasimTarihi.DateTime;
@@ -57,7 +59,7 @@ namespace test_kooil.Formlar
 
                     XtraMessageBox.Show("Yol Kopyalama Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+                    var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
                     deger.YOLKOPYASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
                     if (deger.SIPARISASAMASI < 3)

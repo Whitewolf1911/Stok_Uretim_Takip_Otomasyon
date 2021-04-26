@@ -498,6 +498,18 @@
     <Compile Include="Formlar\Frm_Sarfiyat.Designer.cs">
       <DependentUpon>Frm_Sarfiyat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_SevkiyatSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_SevkiyatSil.Designer.cs">
+      <DependentUpon>Frm_SevkiyatSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_SipaktifEt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_SipaktifEt.Designer.cs">
+      <DependentUpon>Frm_SipaktifEt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_SiparisDurumKontrol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -680,7 +692,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sqlBaglanti.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -821,6 +832,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Sarfiyat.resx">
       <DependentUpon>Frm_Sarfiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_SevkiyatSil.resx">
+      <DependentUpon>Frm_SevkiyatSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_SipaktifEt.resx">
+      <DependentUpon>Frm_SipaktifEt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SiparisDurumKontrol.resx">
       <DependentUpon>Frm_SiparisDurumKontrol.cs</DependentUpon>

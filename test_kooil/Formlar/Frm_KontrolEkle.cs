@@ -51,25 +51,42 @@ namespace test_kooil.Formlar
             {
                 if (lookUp_Siparis.EditValue != null && date_BasimTarihi.EditValue != null)
                 {
-                    TBL_KONTROL islenenUrun = new TBL_KONTROL();
-                    islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault().ToString();
-                    islenenUrun.IGNEKODU = igneKodu;
-                    islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-                    islenenUrun.TARIH = date_BasimTarihi.DateTime;
-                    islenenUrun.NOT = text_Not.Text;
-                    islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
-                    db.TBL_KONTROL.Add(islenenUrun);
+                    //TBL_KONTROL islenenUrun = new TBL_KONTROL();
+                    //islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    //var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault().ToString();
+                    //islenenUrun.IGNEKODU = igneKodu;
+                    //islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    //islenenUrun.TARIH = date_BasimTarihi.DateTime;
+                    //islenenUrun.NOT = text_Not.Text;
+                    //islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
+                    //db.TBL_KONTROL.Add(islenenUrun);
 
-                    var deger = db.TBL_SIPARIS.Find(islenenUrun.SIPARISNO);
+                   
+
+                    
+                    // ADDING TO TBL_RAPORLAR
+
+                    TBL_RAPOR rapor = new TBL_RAPOR();
+                    rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
+                    var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == rapor.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault().ToString();
+
+                    rapor.IGNEKODU = igneKodu.ToString();
+                    rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
+                    rapor.TARIH = date_BasimTarihi.DateTime;
+                    rapor.NOT = text_Not.Text;
+                    rapor.RAPORLAYAN = text_Raporlayan.Text;
+                    rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
+                    rapor.ISLEM = "Kontrol";
+                    db.TBL_RAPOR.Add(rapor);
+
+                    var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
                     deger.KONTROLSAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                    var igneID = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.ID).FirstOrDefault();
+                    var igneID = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == rapor.SIPARISNO).Select(x => x.TBL_IGNELER.ID).FirstOrDefault();
                     var urunStok = db.TBL_IGNELER.Find(igneID);
 
 
                     urunStok.STOK += int.Parse(num_IslenenAdet.Value.ToString());
-
                     if (deger.SIPARISASAMASI < 14)
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
                         deger.SIPARISASAMASI = 14; //siparis asamasini guncelle 
@@ -79,19 +96,7 @@ namespace test_kooil.Formlar
                     }
                     db.SaveChanges();
 
-                    // ADDING TO TBL_RAPORLAR
-
-                    TBL_RAPOR rapor = new TBL_RAPOR();
-                    rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-                    rapor.IGNEKODU = igneKodu.ToString();
-                    rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-                    rapor.TARIH = date_BasimTarihi.DateTime;
-                    rapor.NOT = text_Not.Text;
-                    rapor.RAPORLAYAN = text_Raporlayan.Text;
-                    rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
-                    rapor.ISLEM = "Kontrol";
-                    db.TBL_RAPOR.Add(rapor);
-                    db.SaveChanges();
+                    
 
                     XtraMessageBox.Show("Kontrol Raporu Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -21,6 +21,8 @@ namespace test_kooil.Formlar
         Frm_HamRaporDuzenle frmHamDuzenle;
         Frm_HataliRaporSil frmRaporDuzenle;
         Frm_UrunStokDuzenle frmUrunStokDuzenle;
+        Frm_SevkiyatSil frmSevkSil;
+        Frm_SipaktifEt frmSipAktifEt;
         void sipListele() {
 
             var veriler = (from x in db.TBL_SIPARIS
@@ -189,6 +191,25 @@ namespace test_kooil.Formlar
             { 
                 frmUrunStokDuzenle = new Frm_UrunStokDuzenle();
                 frmUrunStokDuzenle.Show();
+            }
+        }
+
+        private void Btn_SevkiyatSil_Click(object sender, EventArgs e)
+        {
+            if (frmSevkSil == null || frmSevkSil.IsDisposed)
+            {
+                frmSevkSil = new Frm_SevkiyatSil();
+                frmSevkSil.Show();
+            }
+        }
+
+        private void Btn_sipAktifEt_Click(object sender, EventArgs e)
+        {
+            
+            if (frmSipAktifEt == null || frmSipAktifEt.IsDisposed)
+            {
+                frmSipAktifEt = new Frm_SipaktifEt();
+                frmSipAktifEt.Show();
             }
         }
     }

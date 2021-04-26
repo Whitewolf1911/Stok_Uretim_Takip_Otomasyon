@@ -122,13 +122,13 @@ namespace test_kooil.Formlar
             // pictureEdit6
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(13, 94);
+            this.pictureEdit6.Location = new System.Drawing.Point(15, 86);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit6.Size = new System.Drawing.Size(45, 50);
             this.pictureEdit6.TabIndex = 23;
             // 
             // txt_hammadde
@@ -152,13 +152,13 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(15, 213);
+            this.pictureEdit3.Location = new System.Drawing.Point(16, 213);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit3.Size = new System.Drawing.Size(45, 45);
             this.pictureEdit3.TabIndex = 20;
             // 
             // txt_sarfiyat
@@ -194,25 +194,25 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(15, 311);
+            this.pictureEdit5.Location = new System.Drawing.Point(15, 293);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit5.Size = new System.Drawing.Size(44, 28);
+            this.pictureEdit5.Size = new System.Drawing.Size(44, 46);
             this.pictureEdit5.TabIndex = 16;
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(421, 40);
+            this.pictureEdit4.Location = new System.Drawing.Point(428, 31);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit4.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit4.Size = new System.Drawing.Size(45, 50);
             this.pictureEdit4.TabIndex = 15;
             // 
             // pictureEdit2
@@ -224,7 +224,7 @@ namespace test_kooil.Formlar
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Size = new System.Drawing.Size(45, 34);
+            this.pictureEdit2.Size = new System.Drawing.Size(45, 45);
             this.pictureEdit2.TabIndex = 13;
             // 
             // pictureEdit1
@@ -236,7 +236,7 @@ namespace test_kooil.Formlar
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(40, 34);
+            this.pictureEdit1.Size = new System.Drawing.Size(40, 50);
             this.pictureEdit1.TabIndex = 12;
             // 
             // txt_Gramaj
@@ -272,10 +272,10 @@ namespace test_kooil.Formlar
             // txt_Not
             // 
             this.txt_Not.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txt_Not.Location = new System.Drawing.Point(156, 314);
+            this.txt_Not.Location = new System.Drawing.Point(169, 314);
             this.txt_Not.Name = "txt_Not";
             this.txt_Not.ReadOnly = true;
-            this.txt_Not.Size = new System.Drawing.Size(170, 157);
+            this.txt_Not.Size = new System.Drawing.Size(157, 157);
             this.txt_Not.TabIndex = 7;
             this.txt_Not.Text = "";
             // 

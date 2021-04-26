@@ -64,7 +64,7 @@ namespace test_kooil.Formlar
             if (siradakiAsamaSorgu == DialogResult.Yes)
             {
 
-                if (gridView1.GetFocusedRowCellValue("KullanıcıAdı").ToString() != "admin")
+                if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != "admin" && gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != Frm_Login.user.AdSoyad)
                 {
 
                     var userID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
@@ -75,9 +75,15 @@ namespace test_kooil.Formlar
                 }
                 else
                 {
+                    if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == "admin")
+                    {
+                        XtraMessageBox.Show("Bu Kullanıcıyı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == Frm_Login.user.AdSoyad) {
+                        
+                        XtraMessageBox.Show("Kendi Hesabınızı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    XtraMessageBox.Show("Bu Kullanıcıyı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    }
                 }
             }
         }
