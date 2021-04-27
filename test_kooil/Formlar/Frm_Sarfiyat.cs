@@ -28,8 +28,8 @@ namespace test_kooil.Formlar
             var veriler = (from x in db.TBL_SIPARIS
                            select new
                            {
-                               x.TBL_IGNELER.TUR,
-                               x.TBL_IGNELER.IGNEKOD,
+                               Tür = x.TBL_IGNELER.TUR,
+                               ÜrünKodu=x.TBL_IGNELER.IGNEKOD,
                                Ham = x.TBL_IGNELER.HAMMADDETIPI,
                                Sipariş = x.URUNADETI,
                                Preslenen = x.PRESSAYI,
@@ -37,7 +37,7 @@ namespace test_kooil.Formlar
                                x.AKTIF
 
 
-                           }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.TUR);
+                           }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Tür);
 
             gridControl1.DataSource = veriler;
             gridView1.Columns[2].Visible = false;

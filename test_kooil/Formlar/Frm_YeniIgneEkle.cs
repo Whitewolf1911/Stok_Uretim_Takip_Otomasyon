@@ -60,33 +60,48 @@ namespace test_kooil.Formlar
             
             try
             {
-                TBL_IGNELER yeniIgne = new TBL_IGNELER();
-
-                yeniIgne.IGNEKOD = txt_IgneKodu.Text;
-                yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
-                yeniIgne.GRAMAJ = num_Gramaj.Value;
-                yeniIgne.HAMMADDETIPI = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
-                yeniIgne.NOT = txt_Not.Text;
-                yeniIgne.STOK = 0;
-                if (comboBoxEdit1.SelectedItem != null) 
+                if (string.IsNullOrWhiteSpace(txt_IgneKodu.Text) || comboBoxEdit1.SelectedItem == null)
                 {
-                    yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
+                    if (string.IsNullOrWhiteSpace(txt_IgneKodu.Text) )
+                    {
+                        XtraMessageBox.Show("Lütfen Ürün Kodunu Giriniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Lütfen Ürün Türünü Seçiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                if (picBox_Igne.Image != null)
-                {
-                    var foto = ImageToByteArray(picBox_Igne.Image);
-                    yeniIgne.FOTO = foto;
-                }
+                else {
+
+                    TBL_IGNELER yeniIgne = new TBL_IGNELER();
+
+                    yeniIgne.IGNEKOD = txt_IgneKodu.Text;
+                    yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
+                    yeniIgne.GRAMAJ = num_Gramaj.Value;
+                    yeniIgne.HAMMADDETIPI = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                    yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
+                    yeniIgne.NOT = txt_Not.Text;
+                    yeniIgne.STOK = 0;
+                    if (comboBoxEdit1.SelectedItem != null)
+                    {
+                        yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
+                    }
+                    if (picBox_Igne.Image != null)
+                    {
+                        var foto = ImageToByteArray(picBox_Igne.Image);
+                        yeniIgne.FOTO = foto;
+                    }
 
 
-                db.TBL_IGNELER.Add(yeniIgne);
-                db.SaveChanges();
-                XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                    db.TBL_IGNELER.Add(yeniIgne);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                
             }
-            catch { 
-                XtraMessageBox.Show("Lütfen İğne Kodunu Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch(Exception) { 
+                XtraMessageBox.Show("Bir Hata Oluştu !", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

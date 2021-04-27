@@ -30,9 +30,9 @@ namespace test_kooil.Formlar
                                Tür = x.TBL_IGNELER.TUR,
                                ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                SiparişAdet = x.URUNADETI,
-                               SiparişTarihi = x.SIPARISTARIHI,
-                               İstenilenTarih=x.ISTENILENTARIH,
                                Giden = x.SEVKIYATSAYI,
+                               SiparişTarihi = x.SIPARISTARIHI,
+                               İstenilenTarih = x.ISTENILENTARIH,
                                x.AKTIF,
                                Not = x.NOTLAR,
                                x.SIPARISASAMASI

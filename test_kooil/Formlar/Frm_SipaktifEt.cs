@@ -30,13 +30,14 @@ namespace test_kooil.Formlar
                                Tür = x.TBL_IGNELER.TUR,
                                ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                SiparişAdet = x.URUNADETI,
+                               Giden = x.SEVKIYATSAYI,
                                SiparişTarihi = x.SIPARISTARIHI,
                                İstenilenTarih = x.ISTENILENTARIH,
                                x.AKTIF
 
                            }).ToList().OrderByDescending(x => x.SiparişNo).Where(x=> x.AKTIF == false);
             gridControl1.DataSource = veriler;
-            gridView1.Columns[7].Visible = false;
+            gridView1.Columns[8].Visible = false;
         }
 
         private void Frm_SipaktifEt_Load(object sender, EventArgs e)

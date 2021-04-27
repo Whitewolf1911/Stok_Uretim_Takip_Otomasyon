@@ -94,8 +94,10 @@ namespace test_kooil.Formlar
         {   //MUSTERI URUNKODU hammadde mensei miktar
             if (gridView1.GetFocusedRowCellValue("Müşteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Müşteri").ToString(); }
             if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) { txt_urunKodu.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("Kalınlık ") != null && gridView1.GetFocusedRowCellValue("Genişlik") != null)
+           
+            if (gridView1.GetFocusedRowCellValue("Kalınlık") != null && gridView1.GetFocusedRowCellValue("Genişlik") != null)
             { txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("Kalınlık").ToString() + " x " + gridView1.GetFocusedRowCellValue("Genişlik"); }
+            
             if (gridView1.GetFocusedRowCellValue("Menşei") != null) { txt_mensei.Text = gridView1.GetFocusedRowCellValue("Menşei").ToString(); }
             if (gridView1.GetFocusedRowCellValue("HarcananMiktarKg") != null) { txt_Miktar.Text = gridView1.GetFocusedRowCellValue("HarcananMiktarKg").ToString(); }
             if (gridView1.GetFocusedRowCellValue("Pres") != null) { txt_pres.Text = gridView1.GetFocusedRowCellValue("Pres").ToString(); }
