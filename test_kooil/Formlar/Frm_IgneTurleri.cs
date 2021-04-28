@@ -70,12 +70,16 @@ namespace test_kooil.Formlar
         {
             try
             {
-                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("HAMMADDETIPI").ToString());
-                var madde = db.TBL_HAMMADDE.Find(maddeID);
+                if(gridView1.GetFocusedRowCellValue("HAMMADDETIPI") != null)
+                {
+                    var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("HAMMADDETIPI").ToString());
+                    var madde = db.TBL_HAMMADDE.Find(maddeID);
 
-                string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
+                    string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
 
-                txt_hammadde.Text = hammaddeAd;
+                    txt_hammadde.Text = hammaddeAd;
+                }
+                
                 if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null)
                 {
                     txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
