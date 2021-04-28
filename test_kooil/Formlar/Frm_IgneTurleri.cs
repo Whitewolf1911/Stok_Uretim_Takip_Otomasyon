@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,37 +68,49 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("HAMMADDETIPI").ToString());
-            var madde = db.TBL_HAMMADDE.Find(maddeID);
-
-            string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
-
-            txt_hammadde.Text = hammaddeAd;
-            if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) {
-                txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
-            }
-
-            if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null) {
-                txt_Gramaj.Text = gridView1.GetFocusedRowCellValue("GRAMAJ").ToString();
-            }
-            
-            if (gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL") != null) {
-                txt_IsilIslem.Text = gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("NOT") != null) {
-                txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
-            } 
-             if(gridView1.GetFocusedRowCellValue("FOTO") != null) {
-                pic_IgneFoto.Image = ImageFromByteArray((byte[])gridView1.GetFocusedRowCellValue("FOTO"));
-            }
-            if (gridView1.GetFocusedRowCellValue("FOTO") == null) {
-                pic_IgneFoto.Image = null;
-            }
-
-            if (gridView1.GetFocusedRowCellValue("SarfiyatGr") != null)
+            try
             {
-                txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SarfiyatGr").ToString();
-            }
+                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("HAMMADDETIPI").ToString());
+                var madde = db.TBL_HAMMADDE.Find(maddeID);
 
+                string hammaddeAd = madde.KALINLIK.ToString() + " x " + madde.GENISLIK.ToString() + " " + madde.OZELLIK + " " + madde.MENSEI;
+
+                txt_hammadde.Text = hammaddeAd;
+                if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null)
+                {
+                    txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
+                }
+
+                if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null)
+                {
+                    txt_Gramaj.Text = gridView1.GetFocusedRowCellValue("GRAMAJ").ToString();
+                }
+
+                if (gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL") != null)
+                {
+                    txt_IsilIslem.Text = gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL").ToString();
+                }
+                if (gridView1.GetFocusedRowCellValue("NOT") != null)
+                {
+                    txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+                }
+                if (gridView1.GetFocusedRowCellValue("FOTO") != null)
+                {
+                    pic_IgneFoto.Image = ImageFromByteArray((byte[])gridView1.GetFocusedRowCellValue("FOTO"));
+                }
+                if (gridView1.GetFocusedRowCellValue("FOTO") == null)
+                {
+                    pic_IgneFoto.Image = null;
+                }
+
+                if (gridView1.GetFocusedRowCellValue("SarfiyatGr") != null)
+                {
+                    txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SarfiyatGr").ToString();
+                }
+            }
+            catch (Exception) { 
+                            XtraMessageBox.Show("Bir Hata Oluştu !", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }

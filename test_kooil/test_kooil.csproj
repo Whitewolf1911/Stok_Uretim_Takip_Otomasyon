@@ -61,7 +61,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>turanIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -504,6 +504,12 @@
     <Compile Include="Formlar\Frm_SevkiyatSil.Designer.cs">
       <DependentUpon>Frm_SevkiyatSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_Sign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Sign.Designer.cs">
+      <DependentUpon>Frm_Sign.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_SipaktifEt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -836,6 +842,9 @@
     <EmbeddedResource Include="Formlar\Frm_SevkiyatSil.resx">
       <DependentUpon>Frm_SevkiyatSil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Sign.resx">
+      <DependentUpon>Frm_Sign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_SipaktifEt.resx">
       <DependentUpon>Frm_SipaktifEt.cs</DependentUpon>
     </EmbeddedResource>
@@ -974,6 +983,7 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="kooil_ICON.ico" />
+    <Content Include="turanIcon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

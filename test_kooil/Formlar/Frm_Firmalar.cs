@@ -98,7 +98,7 @@ namespace test_kooil.Formlar
                     db.SaveChanges();
                 }
 
-                catch
+                catch(Exception)
                 {
                     XtraMessageBox.Show("Bir Hata Oluştu. Girdiğiniz Bilgileri Kontrol Ediniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

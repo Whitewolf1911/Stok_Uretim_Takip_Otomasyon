@@ -53,6 +53,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            txt_sonuc.Clear();
+            txt_neden.Clear();
             if (gridView1.GetFocusedRowCellValue("Firma") != null) { txt_firma.Text = gridView1.GetFocusedRowCellValue("Firma").ToString(); }
             if (gridView1.GetFocusedRowCellValue("ÜrünKod") != null) { txt_UrunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKod").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparişNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparişNo").ToString(); }

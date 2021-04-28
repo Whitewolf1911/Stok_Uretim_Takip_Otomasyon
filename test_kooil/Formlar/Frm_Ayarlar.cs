@@ -60,31 +60,39 @@ namespace test_kooil.Formlar
 
         private void Btn_Sil_Click(object sender, EventArgs e)
         {
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Kullanıcıyı Sistemden Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz .", "Dikkat", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            try
             {
-
-                if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != "admin" && gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != Frm_Login.user.AdSoyad)
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Kullanıcıyı Sistemden Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz .", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
                 {
 
-                    var userID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                    var userRemove = db.TBL_USERS.Find(userID);
-                    db.TBL_USERS.Remove(userRemove);
-                    db.SaveChanges();
-                    userListele();
-                }
-                else
-                {
-                    if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == "admin")
+                    if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != "admin" && gridView1.GetFocusedRowCellValue("AdSoyad").ToString() != Frm_Login.user.AdSoyad)
                     {
-                        XtraMessageBox.Show("Bu Kullanıcıyı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == Frm_Login.user.AdSoyad) {
-                        
-                        XtraMessageBox.Show("Kendi Hesabınızı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                        var userID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                        var userRemove = db.TBL_USERS.Find(userID);
+                        db.TBL_USERS.Remove(userRemove);
+                        db.SaveChanges();
+                        userListele();
+                    }
+                    else
+                    {
+                        if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == "admin")
+                        {
+                            XtraMessageBox.Show("Bu Kullanıcıyı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else if (gridView1.GetFocusedRowCellValue("AdSoyad").ToString() == Frm_Login.user.AdSoyad)
+                        {
+
+                            XtraMessageBox.Show("Kendi Hesabınızı Sistemden Silemezsiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
                     }
                 }
+            }
+            catch (Exception) { 
+                            XtraMessageBox.Show("Bir Hata Oluştu !", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 

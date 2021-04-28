@@ -47,6 +47,7 @@ namespace test_kooil.Formlar
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -133,10 +134,11 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_userName);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kooil";
+            this.Text = "Turan Needles Otomasyon";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_userName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();

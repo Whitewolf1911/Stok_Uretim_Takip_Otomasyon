@@ -100,7 +100,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(69, 181);
+            this.labelControl3.Location = new System.Drawing.Point(70, 204);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(40, 16);
             this.labelControl3.TabIndex = 2;
@@ -116,7 +116,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(69, 253);
+            this.labelControl5.Location = new System.Drawing.Point(70, 276);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(59, 16);
             this.labelControl5.TabIndex = 4;
@@ -124,7 +124,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(69, 323);
+            this.labelControl6.Location = new System.Drawing.Point(70, 346);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(59, 16);
             this.labelControl6.TabIndex = 5;
@@ -173,17 +173,18 @@ namespace test_kooil.Formlar
             // 
             // txt_Tel1
             // 
-            this.txt_Tel1.Location = new System.Drawing.Point(178, 250);
+            this.txt_Tel1.Location = new System.Drawing.Point(179, 273);
             this.txt_Tel1.Name = "txt_Tel1";
             this.txt_Tel1.Properties.BeepOnError = false;
             this.txt_Tel1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txt_Tel1.Properties.MaskSettings.Set("mask", "(000) 000-0000");
+            this.txt_Tel1.Properties.MaskSettings.Set("mask", "(999) 000-0000");
+            this.txt_Tel1.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txt_Tel1.Size = new System.Drawing.Size(153, 22);
             this.txt_Tel1.TabIndex = 12;
             // 
             // txt_Tel2
             // 
-            this.txt_Tel2.Location = new System.Drawing.Point(178, 320);
+            this.txt_Tel2.Location = new System.Drawing.Point(179, 343);
             this.txt_Tel2.Name = "txt_Tel2";
             this.txt_Tel2.Properties.BeepOnError = false;
             this.txt_Tel2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -193,7 +194,7 @@ namespace test_kooil.Formlar
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(178, 178);
+            this.txt_email.Location = new System.Drawing.Point(179, 201);
             this.txt_email.Name = "txt_email";
             this.txt_email.Properties.MaxLength = 40;
             this.txt_email.Size = new System.Drawing.Size(153, 22);
@@ -271,7 +272,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(11, 161);
+            this.pictureEdit3.Location = new System.Drawing.Point(12, 184);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -283,7 +284,7 @@ namespace test_kooil.Formlar
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(11, 229);
+            this.pictureEdit4.Location = new System.Drawing.Point(12, 252);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -295,7 +296,7 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(11, 301);
+            this.pictureEdit5.Location = new System.Drawing.Point(12, 324);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -389,7 +390,7 @@ namespace test_kooil.Formlar
             this.txt_tamAd.Location = new System.Drawing.Point(178, 115);
             this.txt_tamAd.MaxLength = 60;
             this.txt_tamAd.Name = "txt_tamAd";
-            this.txt_tamAd.Size = new System.Drawing.Size(153, 52);
+            this.txt_tamAd.Size = new System.Drawing.Size(153, 62);
             this.txt_tamAd.TabIndex = 41;
             this.txt_tamAd.Text = "";
             // 

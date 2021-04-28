@@ -20,6 +20,8 @@ namespace test_kooil.Formlar
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+
+        Frm_Sign frm_sign;
         
         void hamListele()
         {
@@ -187,6 +189,17 @@ namespace test_kooil.Formlar
             sevkListele();
             islemListele();
             siparisListele();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            //SIGNATURE
+            if (frm_sign == null || frm_sign.IsDisposed) {
+
+                frm_sign = new Frm_Sign();
+                frm_sign.Show();
+            }
+
         }
     }
 }

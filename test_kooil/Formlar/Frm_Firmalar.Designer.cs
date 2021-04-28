@@ -181,8 +181,9 @@ namespace test_kooil.Formlar
             // txt_tamAd
             // 
             this.txt_tamAd.Location = new System.Drawing.Point(171, 119);
+            this.txt_tamAd.MaxLength = 60;
             this.txt_tamAd.Name = "txt_tamAd";
-            this.txt_tamAd.Size = new System.Drawing.Size(178, 44);
+            this.txt_tamAd.Size = new System.Drawing.Size(178, 60);
             this.txt_tamAd.TabIndex = 69;
             this.txt_tamAd.Text = "";
             // 
@@ -249,7 +250,7 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(4, 308);
+            this.pictureEdit5.Location = new System.Drawing.Point(5, 320);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -261,7 +262,7 @@ namespace test_kooil.Formlar
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(4, 236);
+            this.pictureEdit4.Location = new System.Drawing.Point(5, 248);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -273,7 +274,7 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(4, 168);
+            this.pictureEdit3.Location = new System.Drawing.Point(5, 180);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -309,6 +310,7 @@ namespace test_kooil.Formlar
             // txt_Adres
             // 
             this.txt_Adres.Location = new System.Drawing.Point(535, 298);
+            this.txt_Adres.MaxLength = 120;
             this.txt_Adres.Name = "txt_Adres";
             this.txt_Adres.Size = new System.Drawing.Size(153, 158);
             this.txt_Adres.TabIndex = 58;
@@ -319,6 +321,7 @@ namespace test_kooil.Formlar
             this.txt_vergiDaire.EditValue = "";
             this.txt_vergiDaire.Location = new System.Drawing.Point(535, 177);
             this.txt_vergiDaire.Name = "txt_vergiDaire";
+            this.txt_vergiDaire.Properties.MaxLength = 40;
             this.txt_vergiDaire.Size = new System.Drawing.Size(153, 22);
             this.txt_vergiDaire.TabIndex = 57;
             // 
@@ -337,6 +340,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_Yetkili.Location = new System.Drawing.Point(535, 57);
             this.txt_Yetkili.Name = "txt_Yetkili";
+            this.txt_Yetkili.Properties.MaxLength = 50;
             this.txt_Yetkili.Size = new System.Drawing.Size(153, 22);
             this.txt_Yetkili.TabIndex = 55;
             // 
@@ -344,19 +348,21 @@ namespace test_kooil.Formlar
             // 
             this.txt_Konum.Location = new System.Drawing.Point(535, 233);
             this.txt_Konum.Name = "txt_Konum";
+            this.txt_Konum.Properties.MaxLength = 30;
             this.txt_Konum.Size = new System.Drawing.Size(153, 22);
             this.txt_Konum.TabIndex = 54;
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(171, 185);
+            this.txt_email.Location = new System.Drawing.Point(172, 197);
             this.txt_email.Name = "txt_email";
+            this.txt_email.Properties.MaxLength = 40;
             this.txt_email.Size = new System.Drawing.Size(178, 22);
             this.txt_email.TabIndex = 53;
             // 
             // txt_Tel2
             // 
-            this.txt_Tel2.Location = new System.Drawing.Point(171, 327);
+            this.txt_Tel2.Location = new System.Drawing.Point(172, 339);
             this.txt_Tel2.Name = "txt_Tel2";
             this.txt_Tel2.Properties.BeepOnError = false;
             this.txt_Tel2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -366,7 +372,7 @@ namespace test_kooil.Formlar
             // 
             // txt_Tel1
             // 
-            this.txt_Tel1.Location = new System.Drawing.Point(171, 257);
+            this.txt_Tel1.Location = new System.Drawing.Point(172, 269);
             this.txt_Tel1.Name = "txt_Tel1";
             this.txt_Tel1.Properties.BeepOnError = false;
             this.txt_Tel1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -379,6 +385,7 @@ namespace test_kooil.Formlar
             this.txt_ad.EditValue = "";
             this.txt_ad.Location = new System.Drawing.Point(171, 60);
             this.txt_ad.Name = "txt_ad";
+            this.txt_ad.Properties.MaxLength = 20;
             this.txt_ad.Size = new System.Drawing.Size(178, 22);
             this.txt_ad.TabIndex = 49;
             // 
@@ -416,7 +423,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(62, 330);
+            this.labelControl6.Location = new System.Drawing.Point(63, 342);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(59, 16);
             this.labelControl6.TabIndex = 44;
@@ -424,7 +431,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(62, 260);
+            this.labelControl5.Location = new System.Drawing.Point(63, 272);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(59, 16);
             this.labelControl5.TabIndex = 43;
@@ -440,7 +447,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(62, 188);
+            this.labelControl3.Location = new System.Drawing.Point(63, 200);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(40, 16);
             this.labelControl3.TabIndex = 41;

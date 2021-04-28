@@ -51,7 +51,6 @@ namespace test_kooil.Formlar
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.label_user = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_ham)).BeginInit();
@@ -223,14 +222,15 @@ namespace test_kooil.Formlar
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1173, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(1149, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 278);
+            this.pictureBox1.Size = new System.Drawing.Size(310, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // timer1
             // 
@@ -240,7 +240,7 @@ namespace test_kooil.Formlar
             // digitalClock
             // 
             this.digitalClock.Appearance.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.digitalClock.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.digitalClock.Appearance.ForeColor = System.Drawing.Color.Red;
             this.digitalClock.Appearance.Options.UseFont = true;
             this.digitalClock.Appearance.Options.UseForeColor = true;
             this.digitalClock.Location = new System.Drawing.Point(1140, 508);
@@ -304,25 +304,13 @@ namespace test_kooil.Formlar
             this.timer2.Interval = 90000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(1235, 12);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(133, 57);
-            this.labelControl5.TabIndex = 9;
-            this.labelControl5.Text = "Kooil ";
-            // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(1149, 434);
+            this.labelControl6.Location = new System.Drawing.Point(1149, 432);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(157, 33);
             this.labelControl6.TabIndex = 10;
@@ -331,10 +319,10 @@ namespace test_kooil.Formlar
             // label_user
             // 
             this.label_user.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_user.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.label_user.Appearance.ForeColor = System.Drawing.Color.Red;
             this.label_user.Appearance.Options.UseFont = true;
             this.label_user.Appearance.Options.UseForeColor = true;
-            this.label_user.Location = new System.Drawing.Point(1149, 386);
+            this.label_user.Location = new System.Drawing.Point(1149, 374);
             this.label_user.Name = "label_user";
             this.label_user.Size = new System.Drawing.Size(51, 22);
             this.label_user.TabIndex = 11;
@@ -347,7 +335,6 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1464, 628);
             this.Controls.Add(this.label_user);
             this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.digitalClock);
             this.Controls.Add(this.pictureBox1);
@@ -407,7 +394,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.Timer timer2;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl label_user;
     }

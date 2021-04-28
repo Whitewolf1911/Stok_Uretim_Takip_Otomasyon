@@ -133,6 +133,7 @@ namespace test_kooil.Formlar
             // txt_Not
             // 
             this.txt_Not.Location = new System.Drawing.Point(210, 378);
+            this.txt_Not.MaxLength = 100;
             this.txt_Not.Name = "txt_Not";
             this.txt_Not.Size = new System.Drawing.Size(204, 124);
             this.txt_Not.TabIndex = 26;
@@ -180,6 +181,7 @@ namespace test_kooil.Formlar
             this.txt_IgneKodu.Location = new System.Drawing.Point(210, 21);
             this.txt_IgneKodu.Name = "txt_IgneKodu";
             this.txt_IgneKodu.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txt_IgneKodu.Properties.MaxLength = 40;
             this.txt_IgneKodu.Size = new System.Drawing.Size(180, 22);
             this.txt_IgneKodu.TabIndex = 35;
             // 
@@ -206,6 +208,7 @@ namespace test_kooil.Formlar
             // txt_IsilIslem
             // 
             this.txt_IsilIslem.Location = new System.Drawing.Point(210, 298);
+            this.txt_IsilIslem.MaxLength = 50;
             this.txt_IsilIslem.Name = "txt_IsilIslem";
             this.txt_IsilIslem.Size = new System.Drawing.Size(204, 61);
             this.txt_IsilIslem.TabIndex = 38;

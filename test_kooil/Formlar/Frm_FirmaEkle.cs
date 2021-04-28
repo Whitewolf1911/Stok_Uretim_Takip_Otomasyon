@@ -24,26 +24,33 @@ namespace test_kooil.Formlar
             //Ekle Butonu
             try
             {
-                TBL_FIRMALAR yeniFirma = new TBL_FIRMALAR();
-                yeniFirma.ADRES = txt_Adres.Text;
-                yeniFirma.FIRMAAD = txt_ad.Text;
-                yeniFirma.FIRMATAMAD = txt_tamAd.Text;
-                yeniFirma.KONUM = txt_Konum.Text;
-                yeniFirma.MAIL = txt_email.Text;
-                yeniFirma.TELEFON1 = txt_Tel1.Text;
-                yeniFirma.TELEFON2 = txt_Tel2.Text;
-                yeniFirma.VERGIDAIRESI = txt_vergiDaire.Text;
-                yeniFirma.VERGINO = txt_vergiNo.Text;
-                yeniFirma.YETKILI = txt_Yetkili.Text;
+                if (string.IsNullOrWhiteSpace(txt_ad.Text))
+                {
+                    XtraMessageBox.Show("Lütfen Firma Adını Giriniz !", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    TBL_FIRMALAR yeniFirma = new TBL_FIRMALAR();
+                    yeniFirma.ADRES = txt_Adres.Text;
+                    yeniFirma.FIRMAAD = txt_ad.Text;
+                    yeniFirma.FIRMATAMAD = txt_tamAd.Text;
+                    yeniFirma.KONUM = txt_Konum.Text;
+                    yeniFirma.MAIL = txt_email.Text;
+                    yeniFirma.TELEFON1 = txt_Tel1.Text;
+                    yeniFirma.TELEFON2 = txt_Tel2.Text;
+                    yeniFirma.VERGIDAIRESI = txt_vergiDaire.Text;
+                    yeniFirma.VERGINO = txt_vergiNo.Text;
+                    yeniFirma.YETKILI = txt_Yetkili.Text;
 
-                db.TBL_FIRMALAR.Add(yeniFirma);
-                db.SaveChanges();
+                    db.TBL_FIRMALAR.Add(yeniFirma);
+                    db.SaveChanges();
 
-                XtraMessageBox.Show("Firma Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-                this.Close();
+                    XtraMessageBox.Show("Firma Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
+                
             }
-            catch
+            catch(Exception)
             {
                 XtraMessageBox.Show("Girdiğiniz Bilgileri Kontrol Ediniz.", "İşlem Tamamlanamadı.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
