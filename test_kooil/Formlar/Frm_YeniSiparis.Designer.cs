@@ -80,6 +80,7 @@ namespace test_kooil.Formlar
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Enabled = false;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(44, 572);
             this.simpleButton1.Name = "simpleButton1";

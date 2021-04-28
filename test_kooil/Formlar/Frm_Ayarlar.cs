@@ -22,20 +22,23 @@ namespace test_kooil.Formlar
         Frm_YeniKullanici frmYeniKullanici;
         Frm_userUpdate frmUserUpdate;
         void userListele() {
+            try
+            {
+                var veriler = (from x in db.TBL_USERS
+                               select new
+                               {
 
-            var veriler = (from x in db.TBL_USERS
-                           select new
-                           {
+                                   x.AdSoyad,
 
-                               x.AdSoyad,
-                              
-                               x.ID
+                                   x.ID
 
-                           }).ToList().OrderBy(x => x.AdSoyad);
-            gridControl1.DataSource = veriler;
-            
-            gridView1.Columns[1].Visible = false;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+                               }).ToList().OrderBy(x => x.AdSoyad);
+                gridControl1.DataSource = veriler;
+
+                gridView1.Columns[1].Visible = false;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+            }
+            catch (Exception) { }
 
         }
 

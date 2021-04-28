@@ -19,7 +19,7 @@ namespace test_kooil
             InitializeComponent();
         }
         public Form1(Frm_Login login)
-        {
+        {   //Second constructor for the login page . 
             InitializeComponent();
             _login = login;
         }
@@ -291,10 +291,6 @@ namespace test_kooil
             }
         }
         
-        void ErrorMessage()
-        {
-            XtraMessageBox.Show("Bu Sayfayı Görüntüleme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
         
         private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {   //IgneTurleri Butonu

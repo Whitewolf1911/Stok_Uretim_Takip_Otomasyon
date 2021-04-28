@@ -21,21 +21,25 @@ namespace test_kooil.Formlar
         
         void listele()
         {
-            var veriler = (from x in db.TBL_SEVKIYAT
-                           select new
-                           {
-                               x.ID,
-                               Müşteri = x.MUSTERI,
-                               Tür = x.URUNTUR,
-                               ÜrünKodu = x.URUNKOD,
-                               Adet = x.ADET,
-                               SevkiyatTürü = x.SEVKIYATTUR,
-                               Tarih = x.TARIH,
-                               SiparişNo = x.SIPARISNO
+            try
+            {
+                var veriler = (from x in db.TBL_SEVKIYAT
+                               select new
+                               {
+                                   x.ID,
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKodu = x.URUNKOD,
+                                   Adet = x.ADET,
+                                   SevkiyatTürü = x.SEVKIYATTUR,
+                                   Tarih = x.TARIH,
+                                   SiparişNo = x.SIPARISNO
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].Visible = false;
+                               }).ToList().OrderByDescending(x => x.Tarih);
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].Visible = false;
+            }
+            catch (Exception) { }
 
         }
         private void Frm_SevkiyatSil_Load(object sender, EventArgs e)
@@ -66,6 +70,11 @@ namespace test_kooil.Formlar
             catch(Exception) { 
                     XtraMessageBox.Show("Bir Hata Oluştu ! ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            Btn_sil.Enabled = true;
         }
     }
 }

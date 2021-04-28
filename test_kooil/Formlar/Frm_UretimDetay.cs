@@ -22,55 +22,58 @@ namespace test_kooil.Formlar
 
         void listele()
         {
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
-                               SiparisNo = x.SIPARISNOID,
-                               Musteri = x.MUSTERI,
-                               UrunKodu = x.TBL_IGNELER.IGNEKOD,
-                               UrunTuru = x.TBL_IGNELER.TUR,
-                               Siparis = x.URUNADETI,
-                               SiparisTarihi = x.SIPARISTARIHI,
-                               IstenilenTarih = x.ISTENILENTARIH,
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
+                                   SiparisNo = x.SIPARISNOID,
+                                   Musteri = x.MUSTERI,
+                                   UrunKodu = x.TBL_IGNELER.IGNEKOD,
+                                   UrunTuru = x.TBL_IGNELER.TUR,
+                                   Siparis = x.URUNADETI,
+                                   SiparisTarihi = x.SIPARISTARIHI,
+                                   IstenilenTarih = x.ISTENILENTARIH,
 
-                               Pres = x.PRESSAYI,
-                               ArkaSıyırma = x.ARKASIYIRSAYI,
-                               YolKopyalama = x.YOLKOPYASAYI,
-                               UçSıyırma = x.UCSIYIRMASAYI,
-                               KanalAçma = x.KANALACMASAYI,
-                               KanalBüyütme = x.KANALBUYUTSAYI,
-                               Polisaj1 = x.POLI1SAYI,
-                               DilÇakma = x.DILCAKMASAYI,
-                               Polisaj2 = x.POLI2SAYI,
-                               Isılİşlem = x.ISILISLEMSAYI,
-                               Temper = x.TEMPERSAYI,
-                               Yıkama = x.YIKAMASAYI,
-                               Bileme = x.BILEMESAYI,
-                               Paketlenen = x.KONTROLSAYI,
-                               Giden = x.SEVKIYATSAYI,
-                               x.AKTIF,
-                               x.NOTLAR,
-                               x.SIPARISASAMASI
+                                   Pres = x.PRESSAYI,
+                                   ArkaSıyırma = x.ARKASIYIRSAYI,
+                                   YolKopyalama = x.YOLKOPYASAYI,
+                                   UçSıyırma = x.UCSIYIRMASAYI,
+                                   KanalAçma = x.KANALACMASAYI,
+                                   KanalBüyütme = x.KANALBUYUTSAYI,
+                                   Polisaj1 = x.POLI1SAYI,
+                                   DilÇakma = x.DILCAKMASAYI,
+                                   Polisaj2 = x.POLI2SAYI,
+                                   Isılİşlem = x.ISILISLEMSAYI,
+                                   Temper = x.TEMPERSAYI,
+                                   Yıkama = x.YIKAMASAYI,
+                                   Bileme = x.BILEMESAYI,
+                                   Paketlenen = x.KONTROLSAYI,
+                                   Giden = x.SEVKIYATSAYI,
+                                   x.AKTIF,
+                                   x.NOTLAR,
+                                   x.SIPARISASAMASI
 
-                           }).ToList().OrderByDescending(x => x.SiparisNo);
+                               }).ToList().OrderByDescending(x => x.SiparisNo);
 
-            gridControl1.DataSource = veriler.Where(x => x.AKTIF == false);
+                gridControl1.DataSource = veriler.Where(x => x.AKTIF == false);
 
-            //renklendirmeler ve sutun gizlemeler
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Green;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[20].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[21].AppearanceCell.BackColor = Color.LightGreen;
+                //renklendirmeler ve sutun gizlemeler
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Green;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[20].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[21].AppearanceCell.BackColor = Color.LightGreen;
 
 
 
-            gridView1.Columns[22].Visible = false;
-            gridView1.Columns[23].Visible = false;
-            gridView1.Columns[24].Visible = false;
-
+                gridView1.Columns[22].Visible = false;
+                gridView1.Columns[23].Visible = false;
+                gridView1.Columns[24].Visible = false;
+            }
+            catch (Exception) { }
             //
         }
         private void Frm_UretimDetay_Load(object sender, EventArgs e)

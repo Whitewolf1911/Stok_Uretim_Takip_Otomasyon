@@ -23,24 +23,26 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void listele() {
+            try
+            {
+                var veriler = (from x in db.TBL_RAPOR
+                               select new
+                               {
+                                   SiparişNo = x.SIPARISNO,
+                                   İşlem = x.ISLEM,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKodu = x.IGNEKODU,
+                                   İşlenen = x.ISLENENMIKTAR,
+                                   Tarih = x.TARIH,
+                                   Raporlayan = x.RAPORLAYAN,
+                                   Not = x.NOT,
 
-            var veriler = (from x in db.TBL_RAPOR
-                           select new
-                           {
-                               SiparişNo = x.SIPARISNO,
-                               İşlem = x.ISLEM,
-                               Tür = x.URUNTUR,
-                               ÜrünKodu = x.IGNEKODU,
-                               İşlenen = x.ISLENENMIKTAR,
-                               Tarih = x.TARIH,
-                               Raporlayan = x.RAPORLAYAN,
-                               Not = x.NOT,
 
+                               });
+                gridControl1.DataSource = veriler.ToList().OrderByDescending(x => x.Tarih);
 
-                           });
-            gridControl1.DataSource = veriler.ToList().OrderByDescending(x => x.Tarih);
-
-        
+            }
+            catch (Exception) { }
         }
 
         private void Frm_RaporOzet_Load(object sender, EventArgs e)

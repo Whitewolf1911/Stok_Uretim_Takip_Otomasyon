@@ -22,39 +22,45 @@ namespace test_kooil.Formlar
 
         void musteriListele()
         {
-            var musteri = (from x in db.TBL_FIRMALAR
-                           select new
-                           {
-                              Firmalar = x.FIRMAAD
+            try
+            {
+                var musteri = (from x in db.TBL_FIRMALAR
+                               select new
+                               {
+                                   Firmalar = x.FIRMAAD
 
 
-                           }).ToList().OrderBy(x => x.Firmalar);
+                               }).ToList().OrderBy(x => x.Firmalar);
 
-            lookUp_Musteri.Properties.ValueMember = "Firmalar";
-            lookUp_Musteri.Properties.DisplayMember = "Firmalar";
-            lookUp_Musteri.Properties.DataSource = musteri;
-
+                lookUp_Musteri.Properties.ValueMember = "Firmalar";
+                lookUp_Musteri.Properties.DisplayMember = "Firmalar";
+                lookUp_Musteri.Properties.DataSource = musteri;
+            }
+            catch (Exception) { }
 
         }
         void urunListele()
         {
-            var igneler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               x.ID,
-                               Tür = x.TUR,
-                               ÜrünKodu= x.IGNEKOD,                                                                                          
-                               x.FOTO
-                           }
-                           );
-            gridControl1.DataSource = igneler.ToList();
-            
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+            try
+            {
+                var igneler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   x.ID,
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   x.FOTO
+                               }
+                               );
+                gridControl1.DataSource = igneler.ToList();
 
-            gridView1.Columns[0].Visible = false;
-            gridView1.Columns[3].Visible = false;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
 
+                gridView1.Columns[0].Visible = false;
+                gridView1.Columns[3].Visible = false;
+            }
+            catch (Exception) { }
         }
 
         private void labelControl3_Click(object sender, EventArgs e)
@@ -170,6 +176,7 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            simpleButton1.Enabled = true;
             if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) {
 
                 txt_urunCesit.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();

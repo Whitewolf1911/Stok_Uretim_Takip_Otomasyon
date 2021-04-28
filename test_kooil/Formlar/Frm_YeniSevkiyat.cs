@@ -20,47 +20,51 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void firmaListele() {
+            try
+            {
+                var firmalar = (from x in db.TBL_FIRMALAR
+                                select new
+                                {
+                                    Firma = x.FIRMAAD,
+                                    FirmaAd = x.FIRMATAMAD,
+                                    VergiNo = x.VERGINO,
+                                    VergiDairesi = x.VERGIDAIRESI
 
-            var firmalar = (from x in db.TBL_FIRMALAR
-                            select new
-                            {
-                                Firma = x.FIRMAAD,
-                                FirmaAd = x.FIRMATAMAD,
-                                VergiNo = x.VERGINO,
-                                VergiDairesi = x.VERGIDAIRESI
-                                
 
-                            }).ToList().OrderBy(x => x.Firma);
+                                }).ToList().OrderBy(x => x.Firma);
 
-            gridControl2.DataSource = firmalar;
-            gridView2.Columns[2].Visible = false;
-            gridView2.Columns[3].Visible = false;
-            gridView2.Columns[1].Visible = false;
-            
+                gridControl2.DataSource = firmalar;
+                gridView2.Columns[2].Visible = false;
+                gridView2.Columns[3].Visible = false;
+                gridView2.Columns[1].Visible = false;
+            }
+            catch (Exception) { }
 
         }
         void urunleriListele() {
+            try
+            {
+                var urunler = (from x in db.TBL_IGNELER
+                               select new
+                               {
 
-            var urunler = (from x in db.TBL_IGNELER
-                           select new
-                           {
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   Stok = x.STOK,
+                                   x.FOTO,
+                                   x.ID
+                               }
+                               ).ToList().OrderByDescending(x => x.Stok);
 
-                               Tür=x.TUR,
-                               ÜrünKodu=x.IGNEKOD,
-                               Stok=x.STOK,
-                               x.FOTO,
-                               x.ID
-                           }
-                           ).ToList().OrderByDescending(x => x.Stok);
+                gridControl1.DataSource = urunler;
+                gridView1.Columns[3].Visible = false;
+                gridView1.Columns[4].Visible = false;
 
-            gridControl1.DataSource = urunler;
-            gridView1.Columns[3].Visible = false;
-            gridView1.Columns[4].Visible = false;
-
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Yellow;
-
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Yellow;
+            }
+            catch (Exception) { }
 
         }
         private void Frm_YeniSevkiyat_Load(object sender, EventArgs e)
@@ -82,31 +86,60 @@ namespace test_kooil.Formlar
         string tarih = "";
         private void Btn_SepeteEkle_Click(object sender, EventArgs e)
         {
-            string urunTuru = gridView1.GetFocusedRowCellValue("Tür").ToString();
-            string urunKodu = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
-            int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            vergiNo = gridView2.GetFocusedRowCellValue("VergiNo").ToString();
-            vergiDaire = gridView2.GetFocusedRowCellValue("VergiDairesi").ToString();
-
-            var igne = db.TBL_IGNELER.Find(urunID);
-            int igneStok = (int)igne.STOK;
-            int adet = (int)num_Adet.Value;
-            var anyActive = db.TBL_SIPARIS.Where(x => x.AKTIF == true).Where(y => y.TBL_IGNELER.IGNEKOD == urunKodu).Count();
-
-            tarih = date_Tarih.DateTime.ToString("dd/MM/yyyy");
-            if (date_Tarih.EditValue != null) { 
-                date_Tarih.Enabled = false;
-
-            }
-            //ADD TO TBL_SEVKIYAT
-            if (date_Tarih.EditValue != null &&  adet <= igneStok )
+            try
             {
-                if (anyActive > 0) {
+                string urunTuru = gridView1.GetFocusedRowCellValue("Tür").ToString();
+                string urunKodu = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
+                int urunID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                vergiNo = gridView2.GetFocusedRowCellValue("VergiNo").ToString();
+                vergiDaire = gridView2.GetFocusedRowCellValue("VergiDairesi").ToString();
 
-                    DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçtiğiniz Üründen Sevkiyat Bekleyen Aktif Sipariş Var. Devam Etmek İstediğinize Emin misiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
-                    if (siradakiAsamaSorgu == DialogResult.Yes)
+                var igne = db.TBL_IGNELER.Find(urunID);
+                int igneStok = (int)igne.STOK;
+                int adet = (int)num_Adet.Value;
+                var anyActive = db.TBL_SIPARIS.Where(x => x.AKTIF == true).Where(y => y.TBL_IGNELER.IGNEKOD == urunKodu).Count();
+
+                tarih = date_Tarih.DateTime.ToString("dd/MM/yyyy");
+                if (date_Tarih.EditValue != null)
+                {
+                    date_Tarih.Enabled = false;
+
+                }
+                //ADD TO TBL_SEVKIYAT
+                if (date_Tarih.EditValue != null && adet <= igneStok)
+                {
+                    if (anyActive > 0)
                     {
 
+                        DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçtiğiniz Üründen Sevkiyat Bekleyen Aktif Sipariş Var. Devam Etmek İstediğinize Emin misiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
+                        if (siradakiAsamaSorgu == DialogResult.Yes)
+                        {
+
+                            TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
+                            yeniSevk.URUNTUR = urunTuru;
+                            yeniSevk.URUNKOD = urunKodu;
+                            yeniSevk.ADET = adet;
+                            yeniSevk.TARIH = date_Tarih.DateTime;
+                            yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
+                            yeniSevk.SEVKIYATTUR = "PERAKENDE";
+
+                            db.TBL_SEVKIYAT.Add(yeniSevk);
+
+                            //add to listview
+                            string[] row = { adet.ToString(), urunTuru, urunKodu };
+                            var listViewItem = new ListViewItem(row);
+                            listView1.Items.Add(listViewItem).SubItems.AddRange(row);
+
+                            //Stoktan dusup urunleri tekrar listeleme
+                            igne.STOK -= adet;
+                            //urunleriListele();
+                            Btn_Tamamla.Enabled = true;
+
+                        }
+
+                    }
+                    else
+                    {
                         TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
                         yeniSevk.URUNTUR = urunTuru;
                         yeniSevk.URUNKOD = urunKodu;
@@ -118,7 +151,7 @@ namespace test_kooil.Formlar
                         db.TBL_SEVKIYAT.Add(yeniSevk);
 
                         //add to listview
-                        string[] row = { adet.ToString(), urunTuru, urunKodu};
+                        string[] row = { adet.ToString(), urunTuru, urunKodu };
                         var listViewItem = new ListViewItem(row);
                         listView1.Items.Add(listViewItem).SubItems.AddRange(row);
 
@@ -127,51 +160,29 @@ namespace test_kooil.Formlar
                         //urunleriListele();
                         Btn_Tamamla.Enabled = true;
 
+
                     }
+
 
                 }
                 else
                 {
-                    TBL_SEVKIYAT yeniSevk = new TBL_SEVKIYAT();
-                    yeniSevk.URUNTUR = urunTuru;
-                    yeniSevk.URUNKOD = urunKodu;
-                    yeniSevk.ADET = adet;
-                    yeniSevk.TARIH = date_Tarih.DateTime;
-                    yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
-                    yeniSevk.SEVKIYATTUR = "PERAKENDE";
+                    if (date_Tarih.EditValue == null)
+                    {
 
-                    db.TBL_SEVKIYAT.Add(yeniSevk);
+                        XtraMessageBox.Show("Lütfen Tarih Seçiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    //add to listview
-                    string[] row = { adet.ToString(), urunTuru, urunKodu  };
-                    var listViewItem = new ListViewItem(row);
-                    listView1.Items.Add(listViewItem).SubItems.AddRange(row);
+                    }
+                    else if (adet > igneStok)
+                    {
 
-                    //Stoktan dusup urunleri tekrar listeleme
-                    igne.STOK -= adet;
-                    //urunleriListele();
-                    Btn_Tamamla.Enabled = true;
+                        XtraMessageBox.Show("Stokta Bulunandan Daha Fazla Ürün Sevkiyatı Yapamazsınız.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
+                    }
                 }
-
 
             }
-            else {
-                if (date_Tarih.EditValue == null)
-                {
-
-                    XtraMessageBox.Show("Lütfen Tarih Seçiniz !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-                else if (adet > igneStok) { 
-                
-                    XtraMessageBox.Show("Stokta Bulunandan Daha Fazla Ürün Sevkiyatı Yapamazsınız.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-            }
-
-
+            catch (Exception) { }
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -190,6 +201,7 @@ namespace test_kooil.Formlar
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_firmaSec.Enabled = true;
             if (gridView2.GetFocusedRowCellValue("Firma") != null) { txt_firma.Text = gridView2.GetFocusedRowCellValue("Firma").ToString(); }
         }
 
@@ -200,15 +212,19 @@ namespace test_kooil.Formlar
 
         private void Btn_Tamamla_Click(object sender, EventArgs e)
         {
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Sevkiyatı Tamamlamak İstediğinize Emin Misiniz ? ", "Sevkiyat Onay", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            try
             {
-                db.SaveChanges();
-                urunleriListele();
-                XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Btn_Yazdir.PerformClick();
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Sevkiyatı Tamamlamak İstediğinize Emin Misiniz ? ", "Sevkiyat Onay", MessageBoxButtons.YesNo);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    db.SaveChanges();
+                    urunleriListele();
+                    XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Btn_Yazdir.PerformClick();
 
+                }
             }
+            catch (Exception) { }
         }
         Font header = new Font("Verdana", 24, FontStyle.Bold);
         Font subHeader = new Font("Verdana", 14, FontStyle.Bold);

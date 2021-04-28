@@ -24,57 +24,60 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele()
         {
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
-                               SiparisNo = x.SIPARISNOID, // 0
-                               Musteri = x.MUSTERI,
-                               UrunTuru = x.TBL_IGNELER.TUR,
-                               UrunKodu = x.TBL_IGNELER.IGNEKOD,
-                               Siparis = x.URUNADETI,                                                            
-                               SiparisTarihi = x.SIPARISTARIHI,// 5
-                               IstenilenTarih = x.ISTENILENTARIH,//6
-                               Pres = x.PRESSAYI,
-                               ArkaSıyırma = x.ARKASIYIRSAYI,
-                               YolKopyalama=x.YOLKOPYASAYI,
-                               UçSıyırma =x.UCSIYIRMASAYI,
-                               KanalAçma = x.KANALACMASAYI,
-                               KanalBüyütme = x.KANALBUYUTSAYI,
-                               Polisaj1 = x.POLI1SAYI,
-                               DilÇakma = x.DILCAKMASAYI,
-                               Polisaj2 = x.POLI2SAYI,
-                               Isılİşlem = x.ISILISLEMSAYI,
-                               Temper = x.TEMPERSAYI,
-                               Yıkama = x.YIKAMASAYI,
-                               Bileme = x.BILEMESAYI,
-                               Paketlenen = x.KONTROLSAYI,
-                               x.AKTIF,// 21
-                               x.NOTLAR,// 22 
-                               x.SIPARISASAMASI,// 23
-                               Giden = x.SEVKIYATSAYI
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
+                                   SiparisNo = x.SIPARISNOID, // 0
+                                   Musteri = x.MUSTERI,
+                                   UrunTuru = x.TBL_IGNELER.TUR,
+                                   UrunKodu = x.TBL_IGNELER.IGNEKOD,
+                                   Siparis = x.URUNADETI,
+                                   SiparisTarihi = x.SIPARISTARIHI,// 5
+                                   IstenilenTarih = x.ISTENILENTARIH,//6
+                                   Pres = x.PRESSAYI,
+                                   ArkaSıyırma = x.ARKASIYIRSAYI,
+                                   YolKopyalama = x.YOLKOPYASAYI,
+                                   UçSıyırma = x.UCSIYIRMASAYI,
+                                   KanalAçma = x.KANALACMASAYI,
+                                   KanalBüyütme = x.KANALBUYUTSAYI,
+                                   Polisaj1 = x.POLI1SAYI,
+                                   DilÇakma = x.DILCAKMASAYI,
+                                   Polisaj2 = x.POLI2SAYI,
+                                   Isılİşlem = x.ISILISLEMSAYI,
+                                   Temper = x.TEMPERSAYI,
+                                   Yıkama = x.YIKAMASAYI,
+                                   Bileme = x.BILEMESAYI,
+                                   Paketlenen = x.KONTROLSAYI,
+                                   x.AKTIF,// 21
+                                   x.NOTLAR,// 22 
+                                   x.SIPARISASAMASI,// 23
+                                   Giden = x.SEVKIYATSAYI
 
-                           }).ToList().OrderByDescending(x => x.SiparisNo);
+                               }).ToList().OrderByDescending(x => x.SiparisNo);
 
-            gridControl1.DataSource = veriler.Where(x => x.AKTIF == true);
+                gridControl1.DataSource = veriler.Where(x => x.AKTIF == true);
 
-            //renklendirmeler ve sutun gizlemeler
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[24].AppearanceCell.BackColor = Color.LightGreen;
+                //renklendirmeler ve sutun gizlemeler
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[24].AppearanceCell.BackColor = Color.LightGreen;
 
-            gridView1.Columns[0].Visible = false;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[6].Visible = false;           
-            gridView1.Columns[23].Visible = false;
-            gridView1.Columns[21].Visible = false;
-            gridView1.Columns[22].Visible = false;
-            //
-            
+                gridView1.Columns[0].Visible = false;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[23].Visible = false;
+                gridView1.Columns[21].Visible = false;
+                gridView1.Columns[22].Visible = false;
+                //
 
 
+            }
+            catch (Exception) { }
 
 
 

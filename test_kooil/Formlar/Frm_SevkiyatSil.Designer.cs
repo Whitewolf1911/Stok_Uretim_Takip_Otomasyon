@@ -53,9 +53,11 @@ namespace test_kooil.Formlar
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // Btn_sil
             // 
+            this.Btn_sil.Enabled = false;
             this.Btn_sil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_sil.ImageOptions.Image")));
             this.Btn_sil.Location = new System.Drawing.Point(12, 12);
             this.Btn_sil.Name = "Btn_sil";

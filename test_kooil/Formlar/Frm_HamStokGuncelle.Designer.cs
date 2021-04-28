@@ -184,6 +184,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Ekle
             // 
+            this.Btn_Ekle.Enabled = false;
             this.Btn_Ekle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ekle.ImageOptions.Image")));
             this.Btn_Ekle.Location = new System.Drawing.Point(12, 443);
             this.Btn_Ekle.Name = "Btn_Ekle";
@@ -194,6 +195,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_azalt
             // 
+            this.Btn_azalt.Enabled = false;
             this.Btn_azalt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_azalt.ImageOptions.Image")));
             this.Btn_azalt.Location = new System.Drawing.Point(12, 538);
             this.Btn_azalt.Name = "Btn_azalt";
@@ -269,6 +271,7 @@ namespace test_kooil.Formlar
             // 
             // btn_konum
             // 
+            this.btn_konum.Enabled = false;
             this.btn_konum.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_konum.ImageOptions.Image")));
             this.btn_konum.Location = new System.Drawing.Point(365, 453);
             this.btn_konum.Name = "btn_konum";

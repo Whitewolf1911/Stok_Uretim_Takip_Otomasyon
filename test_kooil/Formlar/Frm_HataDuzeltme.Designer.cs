@@ -123,6 +123,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_SiparisSil
             // 
+            this.Btn_SiparisSil.Enabled = false;
             this.Btn_SiparisSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisSil.ImageOptions.Image")));
             this.Btn_SiparisSil.Location = new System.Drawing.Point(583, 290);
             this.Btn_SiparisSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -486,6 +487,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Guncelle
             // 
+            this.Btn_Guncelle.Enabled = false;
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
             this.Btn_Guncelle.Location = new System.Drawing.Point(12, 559);
             this.Btn_Guncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -604,7 +606,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_sipAktifEt
             // 
-            this.Btn_sipAktifEt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_sipAktifEt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_sipAktifEt.ImageOptions.Image")));
             this.Btn_sipAktifEt.Location = new System.Drawing.Point(583, 559);
             this.Btn_sipAktifEt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_sipAktifEt.Name = "Btn_sipAktifEt";

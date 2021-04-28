@@ -21,21 +21,25 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void raporListele() {
-            var veriler = (from x in db.TBL_RAPOR
-                           select new
-                           {
-                               İşlem = x.ISLEM,
-                               Tür = x.URUNTUR,
-                               ÜrünKodu = x.IGNEKODU,
-                               İşlenenMiktar = x.ISLENENMIKTAR,
-                               Tarih = x.TARIH,
-                               Raporlayan = x.RAPORLAYAN,
-                               x.RAPORID,
+            try
+            {
+                var veriler = (from x in db.TBL_RAPOR
+                               select new
+                               {
+                                   İşlem = x.ISLEM,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKodu = x.IGNEKODU,
+                                   İşlenenMiktar = x.ISLENENMIKTAR,
+                                   Tarih = x.TARIH,
+                                   Raporlayan = x.RAPORLAYAN,
+                                   x.RAPORID,
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
+                               }).ToList().OrderByDescending(x => x.Tarih);
 
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[6].Visible = false;
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[6].Visible = false;
+            }
+            catch (Exception) { }
         }
         private void Frm_HataliRaporSil_Load(object sender, EventArgs e)
         {
@@ -44,6 +48,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            btn_guncelle.Enabled = true;
+            Btn_RaporSil.Enabled = true;
             txt_islem.Text = gridView1.GetFocusedRowCellValue("İşlem").ToString();
             txt_urunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
             txt_raporlayan.Text = gridView1.GetFocusedRowCellValue("Raporlayan").ToString();
@@ -52,33 +58,41 @@ namespace test_kooil.Formlar
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Güncellemek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                int repID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
-                var rep = db.TBL_RAPOR.Find(repID);
-                rep.ISLENENMIKTAR = (int)num_miktar.Value;
-                db.SaveChanges();
-                XtraMessageBox.Show("Rapor Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                raporListele();
+                DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Güncellemek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    int repID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
+                    var rep = db.TBL_RAPOR.Find(repID);
+                    rep.ISLENENMIKTAR = (int)num_miktar.Value;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Rapor Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    raporListele();
 
+                }
             }
+            catch (Exception) { }
         }
 
         private void Btn_RaporSil_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                int repID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
-                var rep = db.TBL_RAPOR.Find(repID);
-                db.TBL_RAPOR.Remove(rep);
-                db.SaveChanges();
-                XtraMessageBox.Show("Rapor Silindi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                raporListele();
+                DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    int repID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
+                    var rep = db.TBL_RAPOR.Find(repID);
+                    db.TBL_RAPOR.Remove(rep);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Rapor Silindi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    raporListele();
 
 
+                }
             }
+            catch (Exception) { }
         }
     }
 }

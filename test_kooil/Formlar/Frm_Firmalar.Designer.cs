@@ -150,6 +150,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_firmaSil
             // 
+            this.Btn_firmaSil.Enabled = false;
             this.Btn_firmaSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_firmaSil.ImageOptions.Image")));
             this.Btn_firmaSil.Location = new System.Drawing.Point(278, 543);
             this.Btn_firmaSil.Name = "Btn_firmaSil";
@@ -170,6 +171,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_bilgiGuncelle
             // 
+            this.Btn_bilgiGuncelle.Enabled = false;
             this.Btn_bilgiGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_bilgiGuncelle.ImageOptions.Image")));
             this.Btn_bilgiGuncelle.Location = new System.Drawing.Point(5, 543);
             this.Btn_bilgiGuncelle.Name = "Btn_bilgiGuncelle";

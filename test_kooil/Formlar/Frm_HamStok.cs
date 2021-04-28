@@ -25,70 +25,84 @@ namespace test_kooil.Formlar
         
 
         void listele() {
+            try
+            {
+                var degerler = (from x in db.TBL_HAMMADDE
+                                select new
+                                {
+                                    x.ID,
+                                    Kalınlık = x.KALINLIK,
+                                    Genişlik = x.GENISLIK,
+                                    Özellik = x.OZELLIK,
+                                    Menşei = x.MENSEI,
+                                    Kilogram = x.MIKTAR,
+                                    Konum = x.KONUM,
+                                    x.AKTIF
 
-            var degerler = (from x in db.TBL_HAMMADDE
-                            select new
-                            {
-                                x.ID,
-                                Kalınlık = x.KALINLIK,
-                                Genişlik = x.GENISLIK,
-                                Özellik = x.OZELLIK,
-                                Menşei  = x.MENSEI,
-                                Kilogram = x.MIKTAR,
-                                Konum = x.KONUM,
-                                x.AKTIF
-
-                            }).ToList().OrderBy(x => x.Kalınlık).Where(x => x.AKTIF == true);
-            gridControl1.DataSource = degerler;
-            gridView1.Columns[0].Visible = false;
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
+                                }).ToList().OrderBy(x => x.Kalınlık).Where(x => x.AKTIF == true);
+                gridControl1.DataSource = degerler;
+                gridView1.Columns[0].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
+            }
+            catch (Exception) { }
 
         }
         private void Btn_yeniHamEkle_Click(object sender, EventArgs e)
         {
-            if (Frm_Login.user.yeniHam == true)
+            try
             {
 
-                if (frmYeniHam == null || frmYeniHam.IsDisposed)
+
+                if (Frm_Login.user.yeniHam == true)
                 {
-                    frmYeniHam = new Frm_YeniHamEkle();
-                    frmYeniHam.Show();
+
+                    if (frmYeniHam == null || frmYeniHam.IsDisposed)
+                    {
+                        frmYeniHam = new Frm_YeniHamEkle();
+                        frmYeniHam.Show();
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
-            else { 
-               XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            catch (Exception) { }
 
         }
 
         private void Btn_hamSil_Click(object sender, EventArgs e)
         {
-            if (Frm_Login.user.hamSil == true)
+            try
             {
-
-                DialogResult siradakiAsamaSorgu = MessageBox.Show("Bu işlem seçilen hammaddeyi sistemden tamamen silecek. Devam etmek istediğinize emin misiniz ? ", "Hammadde Silme", MessageBoxButtons.YesNo);
-                if (siradakiAsamaSorgu == DialogResult.Yes)
+                if (Frm_Login.user.hamSil == true)
                 {
-                    int silinecekMadde = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                    var deger = db.TBL_HAMMADDE.Find(silinecekMadde);
-                    deger.AKTIF = false;
-                    db.SaveChanges();
-                    XtraMessageBox.Show("Hammadde Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    listele();
+
+                    DialogResult siradakiAsamaSorgu = MessageBox.Show("Bu işlem seçilen hammaddeyi sistemden tamamen silecek. Devam etmek istediğinize emin misiniz ? ", "Hammadde Silme", MessageBoxButtons.YesNo);
+                    if (siradakiAsamaSorgu == DialogResult.Yes)
+                    {
+                        int silinecekMadde = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                        var deger = db.TBL_HAMMADDE.Find(silinecekMadde);
+                        deger.AKTIF = false;
+                        db.SaveChanges();
+                        XtraMessageBox.Show("Hammadde Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        listele();
+                    }
+                    else { }
+
                 }
-                else { }
-
+                else
+                {
+                    XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else { 
-               XtraMessageBox.Show("Bu İşlemi Gerçekleştirme Yetkiniz Yoktur !", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            catch (Exception) { }
         }
 
         private void Btn_Yenile_Click(object sender, EventArgs e)
@@ -139,6 +153,11 @@ namespace test_kooil.Formlar
                 frmHamLog = new Frm_HammaddeLog();
                 frmHamLog.Show();
             }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            Btn_hamSil.Enabled = true;
         }
     }
 }

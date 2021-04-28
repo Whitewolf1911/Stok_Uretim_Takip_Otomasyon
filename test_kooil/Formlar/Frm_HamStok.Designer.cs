@@ -33,11 +33,11 @@ namespace test_kooil.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_hamLog = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_yazdir = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yenile = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_hamSil = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_yeniHamEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_hamLog = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -63,6 +63,7 @@ namespace test_kooil.Formlar
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // groupControl1
             // 
@@ -79,6 +80,17 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(279, 598);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Hammadde Stok Paneli";
+            // 
+            // Btn_hamLog
+            // 
+            this.Btn_hamLog.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamLog.ImageOptions.Image")));
+            this.Btn_hamLog.Location = new System.Drawing.Point(103, 539);
+            this.Btn_hamLog.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_hamLog.Name = "Btn_hamLog";
+            this.Btn_hamLog.Size = new System.Drawing.Size(170, 53);
+            this.Btn_hamLog.TabIndex = 4;
+            this.Btn_hamLog.Text = "Hammadde Log";
+            this.Btn_hamLog.Click += new System.EventHandler(this.Btn_hamLog_Click);
             // 
             // Btn_yazdir
             // 
@@ -104,6 +116,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_hamSil
             // 
+            this.Btn_hamSil.Enabled = false;
             this.Btn_hamSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamSil.ImageOptions.Image")));
             this.Btn_hamSil.Location = new System.Drawing.Point(21, 117);
             this.Btn_hamSil.Margin = new System.Windows.Forms.Padding(4);
@@ -123,17 +136,6 @@ namespace test_kooil.Formlar
             this.Btn_yeniHamEkle.TabIndex = 0;
             this.Btn_yeniHamEkle.Text = "Yeni Hammadde Ekle";
             this.Btn_yeniHamEkle.Click += new System.EventHandler(this.Btn_yeniHamEkle_Click);
-            // 
-            // Btn_hamLog
-            // 
-            this.Btn_hamLog.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_hamLog.Location = new System.Drawing.Point(103, 539);
-            this.Btn_hamLog.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_hamLog.Name = "Btn_hamLog";
-            this.Btn_hamLog.Size = new System.Drawing.Size(170, 53);
-            this.Btn_hamLog.TabIndex = 4;
-            this.Btn_hamLog.Text = "Hammadde Log";
-            this.Btn_hamLog.Click += new System.EventHandler(this.Btn_hamLog_Click);
             // 
             // Frm_HamStok
             // 

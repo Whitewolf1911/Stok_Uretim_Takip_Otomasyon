@@ -86,6 +86,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Kaydet
             // 
+            this.Btn_Kaydet.Enabled = false;
             this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
             this.Btn_Kaydet.Location = new System.Drawing.Point(12, 536);
             this.Btn_Kaydet.Name = "Btn_Kaydet";

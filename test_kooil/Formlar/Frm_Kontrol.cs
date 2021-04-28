@@ -22,24 +22,28 @@ namespace test_kooil.Formlar
         Frm_KontrolRapor frmRapor;
         void listele()
         {
-            var islenecekUrunler = (from x in db.TBL_SIPARIS
-                                    select new
-                                    {
-                                        SiparişNo = x.SIPARISNOID,
-                                        Tür = x.TBL_IGNELER.TUR,
-                                        ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
-                                        SiparişMiktarı = x.URUNADETI,
-                                        Not = x.NOTLAR,
-                                        x.AKTIF
+            try
+            {
+                var islenecekUrunler = (from x in db.TBL_SIPARIS
+                                        select new
+                                        {
+                                            SiparişNo = x.SIPARISNOID,
+                                            Tür = x.TBL_IGNELER.TUR,
+                                            ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                            SiparişMiktarı = x.URUNADETI,
+                                            Not = x.NOTLAR,
+                                            x.AKTIF
 
-                                    }).ToList().OrderByDescending(x => x.SiparişNo);
+                                        }).ToList().OrderByDescending(x => x.SiparişNo);
 
-            gridControl1.DataSource = islenecekUrunler.Where(x => x.AKTIF == true);
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].Visible = false;
+                gridControl1.DataSource = islenecekUrunler.Where(x => x.AKTIF == true);
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].Visible = false;
+            }
+            catch (Exception) { }
 
         }
         private void Btn_SiyirmaEkle_Click(object sender, EventArgs e)

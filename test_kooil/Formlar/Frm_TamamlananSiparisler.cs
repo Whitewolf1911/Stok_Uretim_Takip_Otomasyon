@@ -22,36 +22,37 @@ namespace test_kooil.Formlar
         Frm_UretimDetay frmDetay;
         void listele()
         {
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
-                               SiparişNo = x.SIPARISNOID,
-                               Müşteri = x.MUSTERI,
-                               Tür = x.TBL_IGNELER.TUR,
-                               ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
-                               SiparişAdet = x.URUNADETI,
-                               Giden = x.SEVKIYATSAYI,
-                               SiparişTarihi = x.SIPARISTARIHI,
-                               İstenilenTarih = x.ISTENILENTARIH,
-                               x.AKTIF,
-                               Not = x.NOTLAR,
-                               x.SIPARISASAMASI
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
+                                   SiparişNo = x.SIPARISNOID,
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.TBL_IGNELER.TUR,
+                                   ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                   SiparişAdet = x.URUNADETI,
+                                   Giden = x.SEVKIYATSAYI,
+                                   SiparişTarihi = x.SIPARISTARIHI,
+                                   İstenilenTarih = x.ISTENILENTARIH,
+                                   x.AKTIF,
+                                   Not = x.NOTLAR,
+                                   x.SIPARISASAMASI
 
-                           }).ToList().OrderByDescending(x => x.SiparişNo);
+                               }).ToList().OrderByDescending(x => x.SiparişNo);
 
-            gridControl1.DataSource = veriler.Where(x => x.AKTIF == false);
+                gridControl1.DataSource = veriler.Where(x => x.AKTIF == false);
 
-            //renklendirmeler ve sutun gizlemeler
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
-
-
-            gridView1.Columns[8].Visible = false;
-            gridView1.Columns[10].Visible = false;
-
+                //renklendirmeler ve sutun gizlemeler
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[10].Visible = false;
+            }
+            catch (Exception) { }
 
         }
 

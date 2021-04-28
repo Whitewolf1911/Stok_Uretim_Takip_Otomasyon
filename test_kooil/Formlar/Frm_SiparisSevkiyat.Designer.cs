@@ -210,6 +210,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_FirmaSec
             // 
+            this.Btn_FirmaSec.Enabled = false;
             this.Btn_FirmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_FirmaSec.ImageOptions.Image")));
             this.Btn_FirmaSec.Location = new System.Drawing.Point(60, 311);
             this.Btn_FirmaSec.Name = "Btn_FirmaSec";

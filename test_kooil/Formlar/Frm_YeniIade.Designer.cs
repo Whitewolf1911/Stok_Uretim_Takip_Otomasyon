@@ -31,6 +31,14 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_YeniIade));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.num_adet = new System.Windows.Forms.NumericUpDown();
+            this.lookUp_firma = new DevExpress.XtraEditors.LookUpEdit();
+            this.num_sipNo = new System.Windows.Forms.NumericUpDown();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.date_tarih = new DevExpress.XtraEditors.DateEdit();
+            this.Btn_iptal = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
             this.txt_neden = new System.Windows.Forms.RichTextBox();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -45,16 +53,14 @@ namespace test_kooil.Formlar
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Btn_iptal = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.date_tarih = new DevExpress.XtraEditors.DateEdit();
-            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.num_sipNo = new System.Windows.Forms.NumericUpDown();
-            this.lookUp_firma = new DevExpress.XtraEditors.LookUpEdit();
-            this.num_adet = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
@@ -63,12 +69,6 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -98,6 +98,93 @@ namespace test_kooil.Formlar
             this.groupControl1.Size = new System.Drawing.Size(429, 533);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "İade";
+            // 
+            // num_adet
+            // 
+            this.num_adet.Location = new System.Drawing.Point(171, 105);
+            this.num_adet.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.num_adet.Name = "num_adet";
+            this.num_adet.Size = new System.Drawing.Size(185, 23);
+            this.num_adet.TabIndex = 113;
+            // 
+            // lookUp_firma
+            // 
+            this.lookUp_firma.Location = new System.Drawing.Point(171, 161);
+            this.lookUp_firma.Name = "lookUp_firma";
+            this.lookUp_firma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUp_firma.Properties.NullText = "Firma Seçiniz";
+            this.lookUp_firma.Size = new System.Drawing.Size(185, 22);
+            this.lookUp_firma.TabIndex = 112;
+            // 
+            // num_sipNo
+            // 
+            this.num_sipNo.Location = new System.Drawing.Point(171, 217);
+            this.num_sipNo.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.num_sipNo.Name = "num_sipNo";
+            this.num_sipNo.Size = new System.Drawing.Size(185, 23);
+            this.num_sipNo.TabIndex = 111;
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(5, 256);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Size = new System.Drawing.Size(63, 59);
+            this.pictureEdit6.TabIndex = 110;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(81, 275);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(39, 16);
+            this.labelControl6.TabIndex = 109;
+            this.labelControl6.Text = "Tarih :";
+            // 
+            // date_tarih
+            // 
+            this.date_tarih.EditValue = null;
+            this.date_tarih.Location = new System.Drawing.Point(171, 274);
+            this.date_tarih.Name = "date_tarih";
+            this.date_tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.date_tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.date_tarih.Size = new System.Drawing.Size(125, 22);
+            this.date_tarih.TabIndex = 108;
+            // 
+            // Btn_iptal
+            // 
+            this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_iptal.ImageOptions.Image")));
+            this.Btn_iptal.Location = new System.Drawing.Point(276, 467);
+            this.Btn_iptal.Name = "Btn_iptal";
+            this.Btn_iptal.Size = new System.Drawing.Size(148, 61);
+            this.Btn_iptal.TabIndex = 107;
+            this.Btn_iptal.Text = "İptal";
+            this.Btn_iptal.Click += new System.EventHandler(this.Btn_iptal_Click);
+            // 
+            // Btn_Kaydet
+            // 
+            this.Btn_Kaydet.Enabled = false;
+            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
+            this.Btn_Kaydet.Location = new System.Drawing.Point(5, 467);
+            this.Btn_Kaydet.Name = "Btn_Kaydet";
+            this.Btn_Kaydet.Size = new System.Drawing.Size(144, 61);
+            this.Btn_Kaydet.TabIndex = 106;
+            this.Btn_Kaydet.Text = "Ekle";
+            this.Btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
             // 
             // txt_neden
             // 
@@ -238,92 +325,6 @@ namespace test_kooil.Formlar
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // Btn_iptal
-            // 
-            this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_iptal.ImageOptions.Image")));
-            this.Btn_iptal.Location = new System.Drawing.Point(276, 467);
-            this.Btn_iptal.Name = "Btn_iptal";
-            this.Btn_iptal.Size = new System.Drawing.Size(148, 61);
-            this.Btn_iptal.TabIndex = 107;
-            this.Btn_iptal.Text = "İptal";
-            this.Btn_iptal.Click += new System.EventHandler(this.Btn_iptal_Click);
-            // 
-            // Btn_Kaydet
-            // 
-            this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
-            this.Btn_Kaydet.Location = new System.Drawing.Point(5, 467);
-            this.Btn_Kaydet.Name = "Btn_Kaydet";
-            this.Btn_Kaydet.Size = new System.Drawing.Size(144, 61);
-            this.Btn_Kaydet.TabIndex = 106;
-            this.Btn_Kaydet.Text = "Ekle";
-            this.Btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
-            // 
-            // date_tarih
-            // 
-            this.date_tarih.EditValue = null;
-            this.date_tarih.Location = new System.Drawing.Point(171, 274);
-            this.date_tarih.Name = "date_tarih";
-            this.date_tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date_tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date_tarih.Size = new System.Drawing.Size(125, 22);
-            this.date_tarih.TabIndex = 108;
-            // 
-            // pictureEdit6
-            // 
-            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(5, 256);
-            this.pictureEdit6.Name = "pictureEdit6";
-            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Size = new System.Drawing.Size(63, 59);
-            this.pictureEdit6.TabIndex = 110;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(81, 275);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(39, 16);
-            this.labelControl6.TabIndex = 109;
-            this.labelControl6.Text = "Tarih :";
-            // 
-            // num_sipNo
-            // 
-            this.num_sipNo.Location = new System.Drawing.Point(171, 217);
-            this.num_sipNo.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.num_sipNo.Name = "num_sipNo";
-            this.num_sipNo.Size = new System.Drawing.Size(185, 23);
-            this.num_sipNo.TabIndex = 111;
-            // 
-            // lookUp_firma
-            // 
-            this.lookUp_firma.Location = new System.Drawing.Point(171, 161);
-            this.lookUp_firma.Name = "lookUp_firma";
-            this.lookUp_firma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUp_firma.Properties.NullText = "Firma Seçiniz";
-            this.lookUp_firma.Size = new System.Drawing.Size(185, 22);
-            this.lookUp_firma.TabIndex = 112;
-            // 
-            // num_adet
-            // 
-            this.num_adet.Location = new System.Drawing.Point(171, 105);
-            this.num_adet.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.num_adet.Name = "num_adet";
-            this.num_adet.Size = new System.Drawing.Size(185, 23);
-            this.num_adet.TabIndex = 113;
-            // 
             // Frm_YeniIade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -337,6 +338,12 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
@@ -345,12 +352,6 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_tarih.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).EndInit();
             this.ResumeLayout(false);
 
         }

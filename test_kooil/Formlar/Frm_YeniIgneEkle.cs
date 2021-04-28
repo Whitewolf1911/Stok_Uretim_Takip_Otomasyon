@@ -22,23 +22,26 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void hamListele() {
+            try
+            {
+                var hammaddeler = (from x in db.TBL_HAMMADDE
+                                   select new
+                                   {
+                                       x.KALINLIK,
+                                       x.GENISLIK,
+                                       x.MENSEI,
+                                       x.OZELLIK,
+                                       x.ID,
+                                       x.AKTIF
 
-            var hammaddeler = (from x in db.TBL_HAMMADDE
-                               select new
-                               {
-                                   x.KALINLIK,
-                                   x.GENISLIK,
-                                   x.MENSEI,
-                                   x.OZELLIK,
-                                   x.ID,
-                                   x.AKTIF
+                                   }).ToList().OrderBy(x => x.KALINLIK).Where(x => x.AKTIF == true);
 
-                               }).ToList().OrderBy(x => x.KALINLIK).Where(x => x.AKTIF == true);
-
-            gridControl1.DataSource = hammaddeler;
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
+                gridControl1.DataSource = hammaddeler;
+                gridView1.Columns[4].Visible = false;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
+            }
+            catch (Exception) { }
         }
         
         
@@ -73,30 +76,34 @@ namespace test_kooil.Formlar
                 }
                 else {
 
-                    TBL_IGNELER yeniIgne = new TBL_IGNELER();
-
-                    yeniIgne.IGNEKOD = txt_IgneKodu.Text;
-                    yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
-                    yeniIgne.GRAMAJ = num_Gramaj.Value;
-                    yeniIgne.HAMMADDETIPI = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                    yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
-                    yeniIgne.NOT = txt_Not.Text;
-                    yeniIgne.STOK = 0;
-                    if (comboBoxEdit1.SelectedItem != null)
+                    try
                     {
-                        yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
-                    }
-                    if (picBox_Igne.Image != null)
-                    {
-                        var foto = ImageToByteArray(picBox_Igne.Image);
-                        yeniIgne.FOTO = foto;
-                    }
+                        TBL_IGNELER yeniIgne = new TBL_IGNELER();
+
+                        yeniIgne.IGNEKOD = txt_IgneKodu.Text;
+                        yeniIgne.ISILISLEMFORMUL = txt_IsilIslem.Text;
+                        yeniIgne.GRAMAJ = num_Gramaj.Value;
+                        yeniIgne.HAMMADDETIPI = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                        yeniIgne.SARFIYATORAN = num_SarfiyatOrani.Value;
+                        yeniIgne.NOT = txt_Not.Text;
+                        yeniIgne.STOK = 0;
+                        if (comboBoxEdit1.SelectedItem != null)
+                        {
+                            yeniIgne.TUR = comboBoxEdit1.SelectedItem.ToString();
+                        }
+                        if (picBox_Igne.Image != null)
+                        {
+                            var foto = ImageToByteArray(picBox_Igne.Image);
+                            yeniIgne.FOTO = foto;
+                        }
 
 
-                    db.TBL_IGNELER.Add(yeniIgne);
-                    db.SaveChanges();
-                    XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                        db.TBL_IGNELER.Add(yeniIgne);
+                        db.SaveChanges();
+                        XtraMessageBox.Show("İğne Sisteme Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (Exception) { XtraMessageBox.Show("Bir Hata Oluştu !", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
                 
             }
@@ -129,6 +136,7 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_Kaydet.Enabled = true;
             if(gridView1.GetFocusedRowCellValue("KALINLIK") != null && gridView1.GetFocusedRowCellValue("GENISLIK") != null)
             {
                 txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("KALINLIK").ToString() + " x " + gridView1.GetFocusedRowCellValue("GENISLIK");

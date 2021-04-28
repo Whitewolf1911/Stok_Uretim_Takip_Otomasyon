@@ -23,31 +23,35 @@ namespace test_kooil.Formlar
         
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         void listele() {
-            var igneler = (from x in db.TBL_IGNELER
-                           select new
-                           { 
-                               Tür=x.TUR,
-                               ÜrünKodu=x.IGNEKOD,
-                               x.GRAMAJ,
-                               SarfiyatGr = x.SARFIYATORAN,
-                               x.HAMMADDETIPI,
-                               x.ISILISLEMFORMUL,
-                               x.NOT,
-                               x.FOTO
-                           }
-                           );
-            gridControl1.DataSource = igneler.ToList();
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+            try
+            {
+                var igneler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   x.GRAMAJ,
+                                   SarfiyatGr = x.SARFIYATORAN,
+                                   x.HAMMADDETIPI,
+                                   x.ISILISLEMFORMUL,
+                                   x.NOT,
+                                   x.FOTO
+                               }
+                               );
+                gridControl1.DataSource = igneler.ToList();
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
 
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
 
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].Visible = false;
-            //gridView1.Columns[3].Visible = false;
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[7].Visible = false;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].Visible = false;
+                //gridView1.Columns[3].Visible = false;
+                gridView1.Columns[4].Visible = false;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[7].Visible = false;
+            }
+            catch (Exception) { }
         }
         private void labelControl1_Click(object sender, EventArgs e)
         {

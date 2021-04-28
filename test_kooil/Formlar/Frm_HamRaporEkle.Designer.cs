@@ -87,6 +87,7 @@ namespace test_kooil.Formlar
             // 
             // gridControl2
             // 
+            this.gridControl2.Enabled = false;
             this.gridControl2.Location = new System.Drawing.Point(554, 310);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
@@ -177,6 +178,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Ekle
             // 
+            this.Btn_Ekle.Enabled = false;
             this.Btn_Ekle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ekle.ImageOptions.Image")));
             this.Btn_Ekle.Location = new System.Drawing.Point(12, 544);
             this.Btn_Ekle.Name = "Btn_Ekle";

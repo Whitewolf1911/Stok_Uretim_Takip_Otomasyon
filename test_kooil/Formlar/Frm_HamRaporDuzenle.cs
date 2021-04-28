@@ -21,25 +21,27 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void raporListele() {
+            try
+            {
+                var veriler = (from x in db.TBL_HAMRAPOR
+                               select new
+                               {
+                                   x.RAPORID,
+                                   Kalınlık = x.HAMKALINLIK,
+                                   Genişlik = x.HAMGENISLIK,
+                                   Özellik = x.OZELLIK,
+                                   Menşei = x.MENSEI,
+                                   HarcananKG = x.HAMHARCANAN,
+                                   Preslenen = x.PRESSAYI,
+                                   Tarih = x.TARIH,
+                                   Raporlayan = x.RAPORLAYAN
 
-            var veriler = (from x in db.TBL_HAMRAPOR
-                           select new
-                           {
-                               x.RAPORID,
-                               Kalınlık = x.HAMKALINLIK,
-                               Genişlik = x.HAMGENISLIK,
-                               Özellik =x.OZELLIK,
-                               Menşei = x.MENSEI,
-                               HarcananKG = x.HAMHARCANAN,
-                               Preslenen = x.PRESSAYI,
-                               Tarih = x.TARIH,
-                               Raporlayan = x.RAPORLAYAN
+                               }).ToList().OrderByDescending(x => x.Tarih);
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
-
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].Visible = false;
-        
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].Visible = false;
+            }
+            catch (Exception) { }
         }
         private void Frm_HamRaporDuzenle_Load(object sender, EventArgs e)
         {
@@ -48,6 +50,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_SiparisSil.Enabled = true;
+            Btn_Guncelle.Enabled = true;
             txt_secilenHam.Text = gridView1.GetFocusedRowCellValue("Kalınlık").ToString() + " x " + gridView1.GetFocusedRowCellValue("Genişlik") + " " +
                                   gridView1.GetFocusedRowCellValue("Özellik").ToString() + " " + gridView1.GetFocusedRowCellValue("Menşei").ToString();
 
@@ -60,32 +64,40 @@ namespace test_kooil.Formlar
 
         private void Btn_SiparisSil_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz !", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                int raporID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
-                var delRapor = db.TBL_HAMRAPOR.Find(raporID);
-                db.TBL_HAMRAPOR.Remove(delRapor);
-                db.SaveChanges();
-                XtraMessageBox.Show("Rapor Silindi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                raporListele();
+                DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz !", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    int raporID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
+                    var delRapor = db.TBL_HAMRAPOR.Find(raporID);
+                    db.TBL_HAMRAPOR.Remove(delRapor);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Rapor Silindi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    raporListele();
+                }
             }
+            catch (Exception) { }
 
         }
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Güncellemek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                int raporID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
-                var rapor = db.TBL_HAMRAPOR.Find(raporID);
-                rapor.PRESSAYI = (int)num_presAdet.Value;
-                rapor.HAMHARCANAN = (int)num_HamMiktar.Value;
-                db.SaveChanges();
-                XtraMessageBox.Show("Rapor Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult Sorgu = MessageBox.Show("Seçilen Raporu Güncellemek İstediğinize Emin Misiniz ? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    int raporID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
+                    var rapor = db.TBL_HAMRAPOR.Find(raporID);
+                    rapor.PRESSAYI = (int)num_presAdet.Value;
+                    rapor.HAMHARCANAN = (int)num_HamMiktar.Value;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Rapor Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
             }
+            catch (Exception) { }
         }
     }
 }

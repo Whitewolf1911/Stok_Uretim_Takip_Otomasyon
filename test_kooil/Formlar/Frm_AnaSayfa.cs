@@ -25,70 +25,87 @@ namespace test_kooil.Formlar
         
         void hamListele()
         {
-            var veriler = (from x in db.TBL_HAMMADDE
-                           select new
-                           {
-                               Kalınlık = x.KALINLIK,
-                               Genişlik = x.GENISLIK,
-                               Özellik = x.OZELLIK,
-                               Menşei = x.MENSEI,
-                               Kilogram = x.MIKTAR,
-                               x.AKTIF
-                           }).ToList().OrderBy(x => x.Kilogram).Where(x => x.AKTIF ==true).Take(20);
+            try
+            {
+                var veriler = (from x in db.TBL_HAMMADDE
+                               select new
+                               {
+                                   Kalınlık = x.KALINLIK,
+                                   Genişlik = x.GENISLIK,
+                                   Özellik = x.OZELLIK,
+                                   Menşei = x.MENSEI,
+                                   Kilogram = x.MIKTAR,
+                                   x.AKTIF
+                               }).ToList().OrderBy(x => x.Kilogram).Where(x => x.AKTIF == true).Take(20);
 
-            gridControl_ham.DataSource = veriler;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.Orange;
+                gridControl_ham.DataSource = veriler;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Orange;
+            }
+            catch (Exception) { }
             
             
         }
 
         void islemListele()
         {
-            var veriler = (from x in db.TBL_RAPOR
-                           select new
-                           {
-                               İşlem = x.ISLEM,
-                               ÜrünKodu = x.IGNEKODU,
-                               Miktar = x.ISLENENMIKTAR,
-                               Tarih = x.TARIH
-                           }).ToList().OrderByDescending(x => x.Tarih).Take(15);
+            try
+            {
+                var veriler = (from x in db.TBL_RAPOR
+                               select new
+                               {
+                                   İşlem = x.ISLEM,
+                                   ÜrünKodu = x.IGNEKODU,
+                                   Miktar = x.ISLENENMIKTAR,
+                                   Tarih = x.TARIH
+                               }).ToList().OrderByDescending(x => x.Tarih).Take(15);
 
-            gridControl_hareket.DataSource = veriler;
+                gridControl_hareket.DataSource = veriler;
+            }
+            catch (Exception) { }
+            
         }
 
         void sevkListele()
         {
-            var veriler = (from x in db.TBL_SEVKIYAT
-                           select new
-                           {                            
-                               Müşteri = x.MUSTERI,
-                               Tür = x.URUNTUR,
-                               ÜrünKod = x.URUNKOD,
-                               Adet = x.ADET,
-                               Tarih = x.TARIH
-                           }).ToList().OrderByDescending(x => x.Tarih).Take(15);
+            try
+            {
+                var veriler = (from x in db.TBL_SEVKIYAT
+                               select new
+                               {
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKod = x.URUNKOD,
+                                   Adet = x.ADET,
+                                   Tarih = x.TARIH
+                               }).ToList().OrderByDescending(x => x.Tarih).Take(15);
 
-            gridControl_sevk.DataSource = veriler;
+                gridControl_sevk.DataSource = veriler;
+            }
+            catch (Exception) { }
             
         }
 
         void siparisListele()
         {
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
 
-                               Müşteri = x.MUSTERI,
-                               Tür = x.TBL_IGNELER.TUR,
-                               ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
-                               x.SIPARISASAMASI,
-                               x.AKTIF
-                           }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Müşteri);
-            gridControl_durum.DataSource = veriler;
-            gridView4.Columns[3].Visible = false;
-            gridView4.Columns[4].Visible = false;
-            gridView4.BestFitColumns();
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.TBL_IGNELER.TUR,
+                                   ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                   x.SIPARISASAMASI,
+                                   x.AKTIF
+                               }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Müşteri);
+                gridControl_durum.DataSource = veriler;
+                gridView4.Columns[3].Visible = false;
+                gridView4.Columns[4].Visible = false;
+                gridView4.BestFitColumns();
+            }
+            catch (Exception) { }
 
         }
 

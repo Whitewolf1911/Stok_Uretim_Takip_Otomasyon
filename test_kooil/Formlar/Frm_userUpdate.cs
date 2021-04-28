@@ -21,99 +21,101 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void userListele() {
+            try
+            {
+                var veriler = (from x in db.TBL_USERS
+                               select new
+                               {
+                                   x.AdSoyad,
+                                   x.password,
+                                   x.userName,
+                                   x.akfifSiparis,
+                                   x.anasayfa,
+                                   x.arkaSiyir,
+                                   x.ayarlar,
+                                   x.bileme,
+                                   x.dilCakma,
+                                   x.firmaEkle,
+                                   x.firmalar,
+                                   x.gecmisSevkiyat,
+                                   x.hamRapor,
+                                   x.hamRaporEkle,
+                                   x.hamSil,
+                                   x.hamStok,
+                                   x.hamStokGuncelle,
+                                   x.ID,
+                                   x.isilIslem,
+                                   x.islemRaporlari,
+                                   x.kanalAcma,
+                                   x.kanalBuyut,
+                                   x.kontrol,
+                                   x.polisaj1,
+                                   x.polisaj2,
+                                   x.pres,
+                                   x.siparisDurumKontrol,
+                                   x.tamamlananSiparis,
+                                   x.temper,
+                                   x.ucSiyirma,
+                                   x.urunDuzenle,
+                                   x.urunStok,
+                                   x.urunTurleri,
+                                   x.yeniHam,
+                                   x.yeniPSevkiyat,
+                                   x.yeniSiparis,
+                                   x.yeniSipSevkiyat,
+                                   x.yeniUrunEkle,
+                                   x.yikama,
+                                   x.yolKopyala,
+                                   x.hataduzelt,
+                                   x.iade
 
-            var veriler = (from x in db.TBL_USERS
-                           select new
-                           {
-                               x.AdSoyad,
-                               x.password,
-                               x.userName,
-                               x.akfifSiparis,
-                               x.anasayfa,
-                               x.arkaSiyir,
-                               x.ayarlar,
-                               x.bileme,
-                               x.dilCakma,
-                               x.firmaEkle,
-                               x.firmalar,
-                               x.gecmisSevkiyat,
-                               x.hamRapor,
-                               x.hamRaporEkle,
-                               x.hamSil,
-                               x.hamStok,
-                               x.hamStokGuncelle,
-                               x.ID,
-                               x.isilIslem,
-                               x.islemRaporlari,
-                               x.kanalAcma,
-                               x.kanalBuyut,
-                               x.kontrol,
-                               x.polisaj1,
-                               x.polisaj2,
-                               x.pres,
-                               x.siparisDurumKontrol,
-                               x.tamamlananSiparis,
-                               x.temper,
-                               x.ucSiyirma,
-                               x.urunDuzenle,
-                               x.urunStok,
-                               x.urunTurleri,
-                               x.yeniHam,
-                               x.yeniPSevkiyat,
-                               x.yeniSiparis,
-                               x.yeniSipSevkiyat,
-                               x.yeniUrunEkle,
-                               x.yikama,
-                               x.yolKopyala,
-                               x.hataduzelt,
-                               x.iade
+                               }).ToList();
 
-                           }).ToList();
-
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[1].Visible = false;
-            gridView1.Columns[2].Visible = false;
-            gridView1.Columns[3].Visible = false;
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[8].Visible = false;
-            gridView1.Columns[9].Visible = false;
-            gridView1.Columns[10].Visible = false;
-            gridView1.Columns[11].Visible = false;
-            gridView1.Columns[12].Visible = false;
-            gridView1.Columns[13].Visible = false;
-            gridView1.Columns[14].Visible = false;
-            gridView1.Columns[15].Visible = false;
-            gridView1.Columns[16].Visible = false;
-            gridView1.Columns[17].Visible = false;
-            gridView1.Columns[18].Visible = false;
-            gridView1.Columns[19].Visible = false;
-            gridView1.Columns[20].Visible = false;
-            gridView1.Columns[21].Visible = false;
-            gridView1.Columns[22].Visible = false;
-            gridView1.Columns[23].Visible = false;
-            gridView1.Columns[24].Visible = false;
-            gridView1.Columns[25].Visible = false;
-            gridView1.Columns[26].Visible = false;
-            gridView1.Columns[27].Visible = false;
-            gridView1.Columns[28].Visible = false;
-            gridView1.Columns[29].Visible = false;
-            gridView1.Columns[30].Visible = false;
-            gridView1.Columns[31].Visible = false;
-            gridView1.Columns[32].Visible = false;
-            gridView1.Columns[33].Visible = false;
-            gridView1.Columns[34].Visible = false;
-            gridView1.Columns[35].Visible = false;
-            gridView1.Columns[36].Visible = false;
-            gridView1.Columns[37].Visible = false;
-            gridView1.Columns[38].Visible = false;
-            gridView1.Columns[39].Visible = false;
-            gridView1.Columns[40].Visible = false;
-            gridView1.Columns[41].Visible = false;
-
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[1].Visible = false;
+                gridView1.Columns[2].Visible = false;
+                gridView1.Columns[3].Visible = false;
+                gridView1.Columns[4].Visible = false;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[9].Visible = false;
+                gridView1.Columns[10].Visible = false;
+                gridView1.Columns[11].Visible = false;
+                gridView1.Columns[12].Visible = false;
+                gridView1.Columns[13].Visible = false;
+                gridView1.Columns[14].Visible = false;
+                gridView1.Columns[15].Visible = false;
+                gridView1.Columns[16].Visible = false;
+                gridView1.Columns[17].Visible = false;
+                gridView1.Columns[18].Visible = false;
+                gridView1.Columns[19].Visible = false;
+                gridView1.Columns[20].Visible = false;
+                gridView1.Columns[21].Visible = false;
+                gridView1.Columns[22].Visible = false;
+                gridView1.Columns[23].Visible = false;
+                gridView1.Columns[24].Visible = false;
+                gridView1.Columns[25].Visible = false;
+                gridView1.Columns[26].Visible = false;
+                gridView1.Columns[27].Visible = false;
+                gridView1.Columns[28].Visible = false;
+                gridView1.Columns[29].Visible = false;
+                gridView1.Columns[30].Visible = false;
+                gridView1.Columns[31].Visible = false;
+                gridView1.Columns[32].Visible = false;
+                gridView1.Columns[33].Visible = false;
+                gridView1.Columns[34].Visible = false;
+                gridView1.Columns[35].Visible = false;
+                gridView1.Columns[36].Visible = false;
+                gridView1.Columns[37].Visible = false;
+                gridView1.Columns[38].Visible = false;
+                gridView1.Columns[39].Visible = false;
+                gridView1.Columns[40].Visible = false;
+                gridView1.Columns[41].Visible = false;
+            }
+            catch (Exception) { }
 
 
         }

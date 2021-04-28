@@ -70,6 +70,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_RaporSil
             // 
+            this.Btn_RaporSil.Enabled = false;
             this.Btn_RaporSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_RaporSil.ImageOptions.Image")));
             this.Btn_RaporSil.Location = new System.Drawing.Point(8, 526);
             this.Btn_RaporSil.Name = "Btn_RaporSil";
@@ -142,6 +143,7 @@ namespace test_kooil.Formlar
             // 
             // btn_guncelle
             // 
+            this.btn_guncelle.Enabled = false;
             this.btn_guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_guncelle.ImageOptions.Image")));
             this.btn_guncelle.Location = new System.Drawing.Point(8, 449);
             this.btn_guncelle.Name = "btn_guncelle";

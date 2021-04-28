@@ -21,29 +21,36 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void urunListele() {
-            var veriler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               Tür = x.TUR,
-                               ÜrünKodu = x.IGNEKOD,
+            try
+            {
+                var veriler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
 
-                           }).ToList().OrderBy(x => x.ÜrünKodu);
-            gridControl1.DataSource = veriler;
+                               }).ToList().OrderBy(x => x.ÜrünKodu);
+                gridControl1.DataSource = veriler;
+            }
+            catch (Exception) { }
         }
         void musteriListele()
         {
-            var musteri = (from x in db.TBL_FIRMALAR
-                           select new
-                           {
-                               Firmalar = x.FIRMAAD
+            try
+            {
+                var musteri = (from x in db.TBL_FIRMALAR
+                               select new
+                               {
+                                   Firmalar = x.FIRMAAD
 
 
-                           }).ToList().OrderBy(x => x.Firmalar);
+                               }).ToList().OrderBy(x => x.Firmalar);
 
-            lookUp_firma.Properties.ValueMember = "Firmalar";
-            lookUp_firma.Properties.DisplayMember = "Firmalar";
-            lookUp_firma.Properties.DataSource = musteri;
-
+                lookUp_firma.Properties.ValueMember = "Firmalar";
+                lookUp_firma.Properties.DisplayMember = "Firmalar";
+                lookUp_firma.Properties.DataSource = musteri;
+            }
+            catch (Exception) { }
 
         }
         private void Frm_YeniIade_Load(object sender, EventArgs e)
@@ -54,6 +61,7 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_Kaydet.Enabled = true;
             if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null) { txt_UrunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();  }
         }
 

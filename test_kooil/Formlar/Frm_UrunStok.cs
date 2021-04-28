@@ -23,21 +23,25 @@ namespace test_kooil.Formlar
         Frm_UrunStokLog frmStokLog;
         void listele()
         {
-            var igneler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               Tür = x.TUR,
-                               ÜrünKodu = x.IGNEKOD,
-                               Stok = x.STOK,         
-                               x.FOTO
-                           }
-                           );
-            gridControl1.DataSource = igneler.ToList().OrderByDescending(x => x.Stok);
+            try
+            {
+                var igneler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   Stok = x.STOK,
+                                   x.FOTO
+                               }
+                               );
+                gridControl1.DataSource = igneler.ToList().OrderByDescending(x => x.Stok);
 
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[3].Visible = false;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[3].Visible = false;
+            }
+            catch (Exception) { }
 
         }
 

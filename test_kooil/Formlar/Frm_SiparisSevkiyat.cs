@@ -31,22 +31,25 @@ namespace test_kooil.Formlar
         }
 
         void firmaListele() {
+            try
+            {
+                var firmalar = (from x in db.TBL_FIRMALAR
+                                select new
+                                {
 
-            var firmalar = (from x in db.TBL_FIRMALAR
-                            select new
-                            {
+                                    Firma = x.FIRMAAD,
+                                    x.VERGIDAIRESI,
+                                    x.VERGINO
 
-                                Firma = x.FIRMAAD,
-                                x.VERGIDAIRESI,
-                                x.VERGINO
-
-                            }).ToList().OrderBy(x => x.Firma);
+                                }).ToList().OrderBy(x => x.Firma);
 
 
-            gridControl2.DataSource = firmalar;
-            gridView2.Columns[1].Visible = false;
-            gridView2.Columns[2].Visible = false;
-            gridView2.Columns[0].AppearanceCell.BackColor = Color.Yellow;
+                gridControl2.DataSource = firmalar;
+                gridView2.Columns[1].Visible = false;
+                gridView2.Columns[2].Visible = false;
+                gridView2.Columns[0].AppearanceCell.BackColor = Color.Yellow;
+            }
+            catch (Exception) { }
 
         }
         bool isFound = false;
@@ -57,38 +60,41 @@ namespace test_kooil.Formlar
 
             if (anyActive > 0)
             {
+                try
+                {
+                    var siparisler = (from x in db.TBL_SIPARIS
+                                      select new
+                                      {
+                                          SiparişNo = x.SIPARISNOID,
+                                          Firma = x.MUSTERI,
+                                          Tür = x.TBL_IGNELER.TUR,
+                                          Sipariş = x.URUNADETI,
+                                          ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                          x.TBL_IGNELER.FOTO,
+                                          Stok = x.TBL_IGNELER.STOK,
+                                          x.AKTIF,
+                                          Tarih = x.SIPARISTARIHI,
+                                          Giden = x.SEVKIYATSAYI,
+                                          x.TBL_IGNELER.ID
 
-                var siparisler = (from x in db.TBL_SIPARIS
-                                  select new
-                                  {
-                                      SiparişNo = x.SIPARISNOID,
-                                      Firma = x.MUSTERI,
-                                      Tür = x.TBL_IGNELER.TUR,
-                                      Sipariş = x.URUNADETI,
-                                      ÜrünKodu=x.TBL_IGNELER.IGNEKOD,
-                                      x.TBL_IGNELER.FOTO,
-                                      Stok =x.TBL_IGNELER.STOK,
-                                      x.AKTIF,
-                                      Tarih = x.SIPARISTARIHI,
-                                      Giden = x.SEVKIYATSAYI,
-                                      x.TBL_IGNELER.ID
+                                      }).ToList().Where(x => x.AKTIF == true).Where(x => x.Firma == secilenFirma).OrderBy(x => x.Stok);
 
-                                  }).ToList().Where(x => x.AKTIF == true).Where(x => x.Firma == secilenFirma).OrderBy(x => x.Stok);
+                    gridControl1.DataSource = siparisler;
 
-                gridControl1.DataSource = siparisler;
+                    gridView1.Columns[1].Visible = false;
+                    gridView1.Columns[5].Visible = false;
+                    gridView1.Columns[7].Visible = false;
+                    gridView1.Columns[10].Visible = false;
 
-                gridView1.Columns[1].Visible = false;
-                gridView1.Columns[5].Visible = false;
-                gridView1.Columns[7].Visible = false;
-                gridView1.Columns[10].Visible = false;
-
-                gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
-                gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
-                gridView1.Columns[3].AppearanceCell.BackColor = Color.Turquoise;
+                    gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
+                    gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
+                    gridView1.Columns[3].AppearanceCell.BackColor = Color.Turquoise;
 
 
-                isFound = true;
-                gridView1.BestFitColumns();
+                    isFound = true;
+                    gridView1.BestFitColumns();
+                }
+                catch (Exception) { }
 
 
             }
@@ -214,6 +220,7 @@ namespace test_kooil.Formlar
         string secilenFirma;
         private void Btn_FirmaSec_Click(object sender, EventArgs e)
         {
+            try { 
             secilenFirma = gridView2.GetFocusedRowCellValue("Firma").ToString();
             siparisListele();
             if (isFound) { 
@@ -222,7 +229,10 @@ namespace test_kooil.Formlar
                 Btn_SepeteEkle.Enabled = true;
                 gridControl2.Enabled = false;
 
+                }
             }
+            catch (Exception) { }
+
 
         }
 
@@ -275,6 +285,7 @@ namespace test_kooil.Formlar
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_FirmaSec.Enabled = true;
             if(gridView2.GetFocusedRowCellValue("Firma") != null) { txt_firma.Text = gridView2.GetFocusedRowCellValue("Firma").ToString(); }
         }
     }

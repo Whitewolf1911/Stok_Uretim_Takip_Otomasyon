@@ -54,10 +54,12 @@ namespace test_kooil.Formlar
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // Btn_aktifet
             // 
-            this.Btn_aktifet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_aktifet.Enabled = false;
+            this.Btn_aktifet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_aktifet.ImageOptions.Image")));
             this.Btn_aktifet.Location = new System.Drawing.Point(12, 12);
             this.Btn_aktifet.Name = "Btn_aktifet";
             this.Btn_aktifet.Size = new System.Drawing.Size(49, 63);
@@ -66,7 +68,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_yenile
             // 
-            this.Btn_yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btn_yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_yenile.ImageOptions.Image")));
             this.Btn_yenile.Location = new System.Drawing.Point(12, 93);
             this.Btn_yenile.Name = "Btn_yenile";
             this.Btn_yenile.Size = new System.Drawing.Size(49, 63);

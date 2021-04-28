@@ -26,17 +26,21 @@ namespace test_kooil.Formlar
 
         void listele()
         {
-            var veriler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               x.ID,
-                               Tür = x.TUR,
-                               ÜrünKodu = x.IGNEKOD,
-                               Stok = x.STOK
-                           }).ToList().OrderByDescending(x => x.Stok);
+            try
+            {
+                var veriler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   x.ID,
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   Stok = x.STOK
+                               }).ToList().OrderByDescending(x => x.Stok);
 
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].Visible = false;
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].Visible = false;
+            }
+            catch (Exception) { }
         }
 
         private void Frm_UrunStokDuzenle_Load(object sender, EventArgs e)
@@ -47,6 +51,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_Ekle.Enabled = true;
+            Btn_azalt.Enabled = true;
             if (gridView1.GetFocusedRowCellValue("ÜrünKodu") != null)
             {
                 txt_secilenUrun.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();

@@ -21,36 +21,38 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void listele() {
+            try
+            {
+                var degerler = (from x in db.TBL_HAMRAPOR
+                                select new
+                                {
+                                    SiparişNo = x.SIPARISNO,
+                                    Müşteri = x.MUSTERI,
+                                    Tür = x.URUNTIPI,
+                                    ÜrünKodu = x.URUNKODU,
+                                    Kalınlık = x.HAMKALINLIK,
+                                    Genişlik = x.HAMGENISLIK,
+                                    Menşei = x.MENSEI,
+                                    Özellik = x.OZELLIK,
+                                    Pres = x.PRESSAYI,
+                                    HarcananMiktarKg = x.HAMHARCANAN,
+                                    Tarih = x.TARIH,
+                                    Raporlayan = x.RAPORLAYAN
 
-            var degerler = (from x in db.TBL_HAMRAPOR
-                            select new
-                            {
-                                SiparişNo=x.SIPARISNO,
-                                Müşteri=x.MUSTERI,
-                                Tür=x.URUNTIPI,
-                                ÜrünKodu=x.URUNKODU,
-                                Kalınlık = x.HAMKALINLIK,
-                                Genişlik = x.HAMGENISLIK,
-                                Menşei = x.MENSEI,
-                                Özellik = x.OZELLIK,
-                                Pres = x.PRESSAYI,
-                                HarcananMiktarKg = x.HAMHARCANAN,
-                                Tarih  =x.TARIH,
-                                Raporlayan =x.RAPORLAYAN
 
 
+                                }).ToList().OrderByDescending(x => x.Tarih);
+                gridControl1.DataSource = degerler;
 
-                            }).ToList().OrderByDescending(x => x.Tarih);
-            gridControl1.DataSource = degerler;
-
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[6].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[7].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[8].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[9].AppearanceCell.BackColor = Color.Orange;
-
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[6].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[7].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[8].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[9].AppearanceCell.BackColor = Color.Orange;
+            }
+            catch (Exception) { }
 
 
         }

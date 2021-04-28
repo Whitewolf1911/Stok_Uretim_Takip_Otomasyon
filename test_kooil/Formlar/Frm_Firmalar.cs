@@ -21,36 +21,40 @@ namespace test_kooil.Formlar
 
         void listele()
         {
-            var veriler = (from x in db.TBL_FIRMALAR
-                           select new
-                           {
-                               x.ID,
-                               FirmaAd = x.FIRMAAD,
-                               FirmaTamAd = x.FIRMATAMAD,
-                               x.ADRES,
-                               x.KONUM,
-                               MailAdresi = x.MAIL,
-                               Telefon1 = x.TELEFON1,
-                               x.TELEFON2,
-                               x.VERGIDAIRESI,
-                               x.VERGINO,
-                               Yetkili = x.YETKILI
+            try
+            {
+                var veriler = (from x in db.TBL_FIRMALAR
+                               select new
+                               {
+                                   x.ID,
+                                   FirmaAd = x.FIRMAAD,
+                                   FirmaTamAd = x.FIRMATAMAD,
+                                   x.ADRES,
+                                   x.KONUM,
+                                   MailAdresi = x.MAIL,
+                                   Telefon1 = x.TELEFON1,
+                                   x.TELEFON2,
+                                   x.VERGIDAIRESI,
+                                   x.VERGINO,
+                                   Yetkili = x.YETKILI
 
-                           }).ToList();
+                               }).ToList();
 
-            gridControl1.DataSource = veriler;
+                gridControl1.DataSource = veriler;
 
-            gridView1.Columns[0].Visible = false;
-            gridView1.Columns[3].Visible = false;
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[8].Visible = false;
-            gridView1.Columns[9].Visible = false;
+                gridView1.Columns[0].Visible = false;
+                gridView1.Columns[3].Visible = false;
+                gridView1.Columns[4].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[9].Visible = false;
 
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[6].AppearanceCell.BackColor = Color.Lime;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[6].AppearanceCell.BackColor = Color.Lime;
+            }
+            catch (Exception) { }
         }
         private void Frm_Firmalar_Load(object sender, EventArgs e)
         {
@@ -110,6 +114,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_bilgiGuncelle.Enabled = true;
+            Btn_firmaSil.Enabled = true;
             if (gridView1.GetFocusedRowCellValue("FirmaAd") != null) { txt_ad.Text = gridView1.GetFocusedRowCellValue("FirmaAd").ToString(); }
             if (gridView1.GetFocusedRowCellValue("FirmaTamAd") != null) { txt_tamAd.Text = gridView1.GetFocusedRowCellValue("FirmaTamAd").ToString(); }
             if (gridView1.GetFocusedRowCellValue("ADRES") != null) { txt_Adres.Text = gridView1.GetFocusedRowCellValue("ADRES").ToString(); }

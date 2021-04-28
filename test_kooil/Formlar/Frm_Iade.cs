@@ -22,24 +22,27 @@ namespace test_kooil.Formlar
         Frm_YeniIade frmYeniIade;
 
         void listele() {
-            var veriler = (from x in db.TBL_IADE
-                           select new
-                           {
-                               x.ID,
-                               Firma = x.FIRMA,
-                               Tür = x.URUNTUR,
-                               ÜrünKod = x.URUNKOD,
-                               Adet = x.ADET,
-                               SiparişNo = x.SIPNO,
-                               Tarih = x.TARIH,
-                               Neden = x.NEDEN,
-                               Sonuç = x.SONUC,
-                               Raporlayan = x.RAPORLAYAN
+            try
+            {
+                var veriler = (from x in db.TBL_IADE
+                               select new
+                               {
+                                   x.ID,
+                                   Firma = x.FIRMA,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKod = x.URUNKOD,
+                                   Adet = x.ADET,
+                                   SiparişNo = x.SIPNO,
+                                   Tarih = x.TARIH,
+                                   Neden = x.NEDEN,
+                                   Sonuç = x.SONUC,
+                                   Raporlayan = x.RAPORLAYAN
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].Visible = false;
-            
+                               }).ToList().OrderByDescending(x => x.Tarih);
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].Visible = false;
+            }
+            catch (Exception) { }
         }
         private void Frm_Iade_Load(object sender, EventArgs e)
         {
@@ -53,6 +56,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_IadeKaldir.Enabled = true;
+            Btn_SonucGuncelle.Enabled = true;
             txt_sonuc.Clear();
             txt_neden.Clear();
             if (gridView1.GetFocusedRowCellValue("Firma") != null) { txt_firma.Text = gridView1.GetFocusedRowCellValue("Firma").ToString(); }
@@ -65,17 +70,20 @@ namespace test_kooil.Formlar
 
         private void Btn_IadeKaldir_Click(object sender, EventArgs e)
         {
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? ", " Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            try
             {
-                int rapID = (int)gridView1.GetFocusedRowCellValue("ID");
-                var rap = db.TBL_IADE.Find(rapID);
-                db.TBL_IADE.Remove(rap);
-                db.SaveChanges();
-                XtraMessageBox.Show("Rapor Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                listele();
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Raporu Silmek İstediğinize Emin Misiniz ? ", " Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    int rapID = (int)gridView1.GetFocusedRowCellValue("ID");
+                    var rap = db.TBL_IADE.Find(rapID);
+                    db.TBL_IADE.Remove(rap);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Rapor Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listele();
+                }
             }
-
+            catch (Exception) { }
 
         }
 
@@ -90,17 +98,21 @@ namespace test_kooil.Formlar
 
         private void Btn_SonucGuncelle_Click(object sender, EventArgs e)
         {
-            DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Raporu Sonuçlandırmak İstediğinize Emin Misiniz ? ", " Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            try
             {
-                int rapID = (int)gridView1.GetFocusedRowCellValue("ID");
-                var rap = db.TBL_IADE.Find(rapID);
-                rap.SONUC = txt_sonuc.Text;
-                db.SaveChanges();
-                XtraMessageBox.Show("İade Sonuçlandırıldı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                listele();
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Raporu Sonuçlandırmak İstediğinize Emin Misiniz ? ", " Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    int rapID = (int)gridView1.GetFocusedRowCellValue("ID");
+                    var rap = db.TBL_IADE.Find(rapID);
+                    rap.SONUC = txt_sonuc.Text;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("İade Sonuçlandırıldı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listele();
 
+                }
             }
+            catch (Exception) { }
 
         }
 

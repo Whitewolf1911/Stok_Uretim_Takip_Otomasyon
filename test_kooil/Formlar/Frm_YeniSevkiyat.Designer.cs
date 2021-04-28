@@ -274,7 +274,8 @@ namespace test_kooil.Formlar
             // 
             // Btn_firmaSec
             // 
-            this.Btn_firmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_firmaSec.Enabled = false;
+            this.Btn_firmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_firmaSec.ImageOptions.Image")));
             this.Btn_firmaSec.Location = new System.Drawing.Point(820, 230);
             this.Btn_firmaSec.Name = "Btn_firmaSec";
             this.Btn_firmaSec.Size = new System.Drawing.Size(184, 59);

@@ -22,22 +22,26 @@ namespace test_kooil.Formlar
 
         void listele()
         {
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
-                               SiparişNo = x.SIPARISNOID,
-                               Müşteri = x.MUSTERI,
-                               Tür = x.TBL_IGNELER.TUR,
-                               ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
-                               SiparişAdet = x.URUNADETI,
-                               Giden = x.SEVKIYATSAYI,
-                               SiparişTarihi = x.SIPARISTARIHI,
-                               İstenilenTarih = x.ISTENILENTARIH,
-                               x.AKTIF
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
+                                   SiparişNo = x.SIPARISNOID,
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.TBL_IGNELER.TUR,
+                                   ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                   SiparişAdet = x.URUNADETI,
+                                   Giden = x.SEVKIYATSAYI,
+                                   SiparişTarihi = x.SIPARISTARIHI,
+                                   İstenilenTarih = x.ISTENILENTARIH,
+                                   x.AKTIF
 
-                           }).ToList().OrderByDescending(x => x.SiparişNo).Where(x=> x.AKTIF == false);
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[8].Visible = false;
+                               }).ToList().OrderByDescending(x => x.SiparişNo).Where(x => x.AKTIF == false);
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[8].Visible = false;
+            }
+            catch (Exception) { }
         }
 
         private void Frm_SipaktifEt_Load(object sender, EventArgs e)
@@ -69,6 +73,11 @@ namespace test_kooil.Formlar
             {
                 XtraMessageBox.Show("Bir Hata Oluştu !  ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            Btn_aktifet.Enabled = true;
         }
     }
 }

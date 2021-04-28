@@ -372,6 +372,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_hamSec
             // 
+            this.Btn_hamSec.Enabled = false;
             this.Btn_hamSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_hamSec.ImageOptions.Image")));
             this.Btn_hamSec.Location = new System.Drawing.Point(349, 555);
             this.Btn_hamSec.Name = "Btn_hamSec";

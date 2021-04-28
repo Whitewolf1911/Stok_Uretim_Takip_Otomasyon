@@ -79,6 +79,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_SiparisSil
             // 
+            this.Btn_SiparisSil.Enabled = false;
             this.Btn_SiparisSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SiparisSil.ImageOptions.Image")));
             this.Btn_SiparisSil.Location = new System.Drawing.Point(934, 559);
             this.Btn_SiparisSil.Name = "Btn_SiparisSil";
@@ -120,6 +121,7 @@ namespace test_kooil.Formlar
             // 
             // Btn_Guncelle
             // 
+            this.Btn_Guncelle.Enabled = false;
             this.Btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guncelle.ImageOptions.Image")));
             this.Btn_Guncelle.Location = new System.Drawing.Point(680, 559);
             this.Btn_Guncelle.Name = "Btn_Guncelle";

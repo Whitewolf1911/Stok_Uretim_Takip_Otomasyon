@@ -19,21 +19,24 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void listele() {
+            try
+            {
+                var veriler = (from x in db.TBL_URUNSTOKLOG
+                               select new
+                               {
+                                   İşlem = x.ISLEM,
+                                   Adet = x.MIKTAR,
+                                   Ürün = x.URUN,
+                                   Tarih = x.TARIH,
+                                   İşlemiYapan = x.RAPORLAYAN
 
-            var veriler = (from x in db.TBL_URUNSTOKLOG
-                           select new
-                           {
-                               İşlem = x.ISLEM,
-                               Adet = x.MIKTAR,
-                               Ürün = x.URUN,
-                               Tarih = x.TARIH,
-                               İşlemiYapan = x.RAPORLAYAN
-
-                           }).ToList().OrderByDescending(x => x.Tarih);
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.Cyan;
+                               }).ToList().OrderByDescending(x => x.Tarih);
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.Cyan;
+            }
+            catch (Exception) { }
         }
         private void Frm_UrunStokLog_Load(object sender, EventArgs e)
         {

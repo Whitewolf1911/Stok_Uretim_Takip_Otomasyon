@@ -24,27 +24,30 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void listele() {
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
+                                   Tür = x.TBL_IGNELER.TUR,
+                                   ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                   Ham = x.TBL_IGNELER.HAMMADDETIPI,
+                                   Sipariş = x.URUNADETI,
+                                   Preslenen = x.PRESSAYI,
+                                   Sarfiyat = x.TBL_IGNELER.SARFIYATORAN,
+                                   x.AKTIF
 
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
-                               Tür = x.TBL_IGNELER.TUR,
-                               ÜrünKodu=x.TBL_IGNELER.IGNEKOD,
-                               Ham = x.TBL_IGNELER.HAMMADDETIPI,
-                               Sipariş = x.URUNADETI,
-                               Preslenen = x.PRESSAYI,
-                               Sarfiyat = x.TBL_IGNELER.SARFIYATORAN,
-                               x.AKTIF
+
+                               }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Tür);
+
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[2].Visible = false;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[5].Visible = false;
+            }
+            catch (Exception) { }
 
 
-                           }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Tür);
-
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[2].Visible = false;
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[5].Visible = false;
-
-            
 
             gridView1.BestFitColumns();
            // gridView1.Columns[7].GroupIndex = 1;
@@ -52,23 +55,27 @@ namespace test_kooil.Formlar
         }
         private void Frm_Sarfiyat_Load(object sender, EventArgs e)
         {
-            XtraMessageBox.Show("En Son Kullanılan Hammaddelerin Sistemden Azaltıldığına Emin Olun !", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            listele();
-            GridColumn unbColumn = gridView1.Columns.AddField("Hammadde");
-            unbColumn.VisibleIndex = gridView1.Columns.Count;
-            unbColumn.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            unbColumn.OptionsColumn.AllowEdit = false;
-            unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            unbColumn.AppearanceCell.BackColor = Color.LemonChiffon;
+            try
+            {
+                XtraMessageBox.Show("En Son Kullanılan Hammaddelerin Sistemden Azaltıldığına Emin Olun !", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                listele();
+                GridColumn unbColumn = gridView1.Columns.AddField("Hammadde");
+                unbColumn.VisibleIndex = gridView1.Columns.Count;
+                unbColumn.UnboundType = DevExpress.Data.UnboundColumnType.String;
+                unbColumn.OptionsColumn.AllowEdit = false;
+                unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                unbColumn.AppearanceCell.BackColor = Color.LemonChiffon;
 
-            GridColumn unbColumn2 = gridView1.Columns.AddField("TahminiKalanHarcamaKG");
-            unbColumn2.VisibleIndex = gridView1.Columns.Count;
-            unbColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            unbColumn2.OptionsColumn.AllowEdit = false;
-            unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            unbColumn2.AppearanceCell.BackColor = Color.Yellow;
-            gridView1.BestFitColumns();
-            gridView1.Columns[7].GroupIndex = 1;
+                GridColumn unbColumn2 = gridView1.Columns.AddField("TahminiKalanHarcamaKG");
+                unbColumn2.VisibleIndex = gridView1.Columns.Count;
+                unbColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+                unbColumn2.OptionsColumn.AllowEdit = false;
+                unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                unbColumn2.AppearanceCell.BackColor = Color.Yellow;
+                gridView1.BestFitColumns();
+                gridView1.Columns[7].GroupIndex = 1;
+            }
+            catch (Exception) { }
 
         }
 
@@ -107,76 +114,79 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-
-            if (gridView1.GetFocusedRowCellValue("Ham") != null && gridView1.GetFocusedRowCellValue("Preslenen") != null &&
-            gridView1.GetFocusedRowCellValue("Sipariş") != null && gridView1.GetFocusedRowCellValue("TahminiKalanHarcamaKG") != null)
+            try
             {
-                int hamID = int.Parse(gridView1.GetFocusedRowCellValue("Ham").ToString());
-                var ham = db.TBL_HAMMADDE.Find(hamID);
-                string hamTur = ham.KALINLIK.ToString() + " x " + ham.GENISLIK.ToString() + " " + ham.OZELLIK.ToString() + " " + ham.MENSEI.ToString();
-
-
-
-                txt_ham.Text = hamTur;
-
-                int toplamKalanPres = 0;
-                int ihtiyac = 0;
-                for (int i = 0; i <= gridView1.DataRowCount; i++)
+                if (gridView1.GetFocusedRowCellValue("Ham") != null && gridView1.GetFocusedRowCellValue("Preslenen") != null &&
+                gridView1.GetFocusedRowCellValue("Sipariş") != null && gridView1.GetFocusedRowCellValue("TahminiKalanHarcamaKG") != null)
                 {
-                    if (gridView1.GetRowCellValue(i, "Ham") != null)
+                    int hamID = int.Parse(gridView1.GetFocusedRowCellValue("Ham").ToString());
+                    var ham = db.TBL_HAMMADDE.Find(hamID);
+                    string hamTur = ham.KALINLIK.ToString() + " x " + ham.GENISLIK.ToString() + " " + ham.OZELLIK.ToString() + " " + ham.MENSEI.ToString();
+
+
+
+                    txt_ham.Text = hamTur;
+
+                    int toplamKalanPres = 0;
+                    int ihtiyac = 0;
+                    for (int i = 0; i <= gridView1.DataRowCount; i++)
                     {
-                        if ((int)gridView1.GetRowCellValue(i, "Ham") == hamID)
+                        if (gridView1.GetRowCellValue(i, "Ham") != null)
                         {
-                            if (gridView1.GetRowCellValue(i, "Sipariş") != null && gridView1.GetRowCellValue(i, "Preslenen") != null)
+                            if ((int)gridView1.GetRowCellValue(i, "Ham") == hamID)
                             {
-                                toplamKalanPres += (int)gridView1.GetRowCellValue(i, "Sipariş") - (int)gridView1.GetRowCellValue(i, "Preslenen");
+                                if (gridView1.GetRowCellValue(i, "Sipariş") != null && gridView1.GetRowCellValue(i, "Preslenen") != null)
+                                {
+                                    toplamKalanPres += (int)gridView1.GetRowCellValue(i, "Sipariş") - (int)gridView1.GetRowCellValue(i, "Preslenen");
+                                }
                             }
                         }
                     }
-                }
 
-                for (int i = 0; i <= gridView1.DataRowCount; i++)
-                {
-                    if (gridView1.GetRowCellValue(i, "Ham") != null)
+                    for (int i = 0; i <= gridView1.DataRowCount; i++)
                     {
-                        if ((int)gridView1.GetRowCellValue(i, "Ham") == hamID)
+                        if (gridView1.GetRowCellValue(i, "Ham") != null)
                         {
-                            if (gridView1.GetRowCellValue(i, "TahminiKalanHarcamaKG") != null)
+                            if ((int)gridView1.GetRowCellValue(i, "Ham") == hamID)
                             {
-                                ihtiyac += (int)gridView1.GetRowCellValue(i, "TahminiKalanHarcamaKG");
+                                if (gridView1.GetRowCellValue(i, "TahminiKalanHarcamaKG") != null)
+                                {
+                                    ihtiyac += (int)gridView1.GetRowCellValue(i, "TahminiKalanHarcamaKG");
+                                }
                             }
                         }
                     }
-                }
 
-                txt_pres.Text = toplamKalanPres.ToString();
-                txt_ihtiyac.Text = ihtiyac.ToString();
-                txt_stok.Text = ham.MIKTAR.ToString();
+                    txt_pres.Text = toplamKalanPres.ToString();
+                    txt_ihtiyac.Text = ihtiyac.ToString();
+                    txt_stok.Text = ham.MIKTAR.ToString();
 
-                int fark = (int)ham.MIKTAR - ihtiyac;
-                string durum = "";
-                txt_fark.Text = fark.ToString();
-                 
-                if (fark <= 0)
-                {
-                    durum = "Yetersiz Hammadde ! Hammadde Siparişi Veriniz.";
-                    txt_durum.Text = durum;
-                    txt_durum.BackColor = Color.Red;
-                }
-                else if (fark < 80 && fark > 0)
-                {
-                    durum = "Hammadde Kritik Seviyede. Hammadde Yetersiz Gelebilir.";
-                    txt_durum.Text = durum;
-                    txt_durum.BackColor = Color.Orange;
-                }
+                    int fark = (int)ham.MIKTAR - ihtiyac;
+                    string durum = "";
+                    txt_fark.Text = fark.ToString();
 
-                else
-                {
-                    durum = "Hammadde Yeterli Seviyede ";
-                    txt_durum.Text = durum;
-                    txt_durum.BackColor = Color.LightGreen;
+                    if (fark <= 0)
+                    {
+                        durum = "Yetersiz Hammadde ! Hammadde Siparişi Veriniz.";
+                        txt_durum.Text = durum;
+                        txt_durum.BackColor = Color.Red;
+                    }
+                    else if (fark < 80 && fark > 0)
+                    {
+                        durum = "Hammadde Kritik Seviyede. Hammadde Yetersiz Gelebilir.";
+                        txt_durum.Text = durum;
+                        txt_durum.BackColor = Color.Orange;
+                    }
+
+                    else
+                    {
+                        durum = "Hammadde Yeterli Seviyede ";
+                        txt_durum.Text = durum;
+                        txt_durum.BackColor = Color.LightGreen;
+                    }
                 }
             }
+            catch (Exception) { }
         }
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)

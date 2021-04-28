@@ -24,62 +24,64 @@ namespace test_kooil.Formlar
         Frm_SevkiyatSil frmSevkSil;
         Frm_SipaktifEt frmSipAktifEt;
         void sipListele() {
+            try
+            {
+                var veriler = (from x in db.TBL_SIPARIS
+                               select new
+                               {
 
-            var veriler = (from x in db.TBL_SIPARIS
-                           select new
-                           {
+                                   SiparişNo = x.SIPARISNOID,
+                                   Müşteri = x.MUSTERI,
+                                   Tür = x.TBL_IGNELER.TUR,
+                                   ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                   SiparişTarih = x.SIPARISTARIHI,
+                                   İstenilenTarih = x.ISTENILENTARIH,
+                                   x.ARKASIYIRSAYI, //6
+                                   x.BILEMESAYI,
+                                   x.DILCAKMASAYI,
+                                   x.ISILISLEMSAYI,
+                                   x.KANALACMASAYI,
+                                   x.KANALBUYUTSAYI,
+                                   x.KONTROLSAYI,
+                                   x.NOTLAR,
+                                   x.POLI1SAYI,
+                                   x.POLI2SAYI,
+                                   x.PRESSAYI,
+                                   x.SEVKIYATSAYI,
+                                   x.TEMPERSAYI,
+                                   x.UCSIYIRMASAYI,
+                                   SiparişAdet = x.URUNADETI,
+                                   x.YIKAMASAYI,
+                                   x.YOLKOPYASAYI,
 
-                               SiparişNo = x.SIPARISNOID,
-                               Müşteri = x.MUSTERI,
-                               Tür = x.TBL_IGNELER.TUR,
-                               ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
-                               SiparişTarih = x.SIPARISTARIHI,
-                               İstenilenTarih = x.ISTENILENTARIH,
-                               x.ARKASIYIRSAYI, //6
-                               x.BILEMESAYI,
-                               x.DILCAKMASAYI,
-                               x.ISILISLEMSAYI,
-                               x.KANALACMASAYI,
-                               x.KANALBUYUTSAYI,
-                               x.KONTROLSAYI,
-                               x.NOTLAR,
-                               x.POLI1SAYI,
-                               x.POLI2SAYI,
-                               x.PRESSAYI,
-                               x.SEVKIYATSAYI,
-                               x.TEMPERSAYI,
-                               x.UCSIYIRMASAYI,
-                               SiparişAdet=x.URUNADETI,
-                               x.YIKAMASAYI,
-                               x.YOLKOPYASAYI,
-                               
 
-                           }).ToList().OrderByDescending(x => x.SiparişNo);
+                               }).ToList().OrderByDescending(x => x.SiparişNo);
 
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[8].Visible = false;
-            gridView1.Columns[9].Visible = false;
-            gridView1.Columns[10].Visible = false;
-            gridView1.Columns[11].Visible = false;
-            gridView1.Columns[12].Visible = false;
-            gridView1.Columns[13].Visible = false;
-            gridView1.Columns[14].Visible = false;
-            gridView1.Columns[15].Visible = false;
-            gridView1.Columns[16].Visible = false;
-            gridView1.Columns[17].Visible = false;
-            gridView1.Columns[18].Visible = false;
-            gridView1.Columns[19].Visible = false;
-            //gridView1.Columns[20].Visible = false;
-            gridView1.Columns[22].Visible = false;
-            gridView1.Columns[21].Visible = false;
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[9].Visible = false;
+                gridView1.Columns[10].Visible = false;
+                gridView1.Columns[11].Visible = false;
+                gridView1.Columns[12].Visible = false;
+                gridView1.Columns[13].Visible = false;
+                gridView1.Columns[14].Visible = false;
+                gridView1.Columns[15].Visible = false;
+                gridView1.Columns[16].Visible = false;
+                gridView1.Columns[17].Visible = false;
+                gridView1.Columns[18].Visible = false;
+                gridView1.Columns[19].Visible = false;
+                //gridView1.Columns[20].Visible = false;
+                gridView1.Columns[22].Visible = false;
+                gridView1.Columns[21].Visible = false;
 
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
-            gridView1.Columns[4].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[5].AppearanceCell.BackColor = Color.Orange;
-
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.Orange;
+            }
+            catch (Exception) { }
         }
 
         private void Frm_HataDuzeltme_Load(object sender, EventArgs e)
@@ -89,6 +91,8 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_Guncelle.Enabled = true;
+            Btn_SiparisSil.Enabled = true;
             num_ArkaSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ARKASIYIRSAYI"));
             num_bileme.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("BILEMESAYI"));
             num_dilCakma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("DILCAKMASAYI"));
@@ -116,55 +120,63 @@ namespace test_kooil.Formlar
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Güncellemek İstediğinize Emin Misiniz ? .", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
+                DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Güncellemek İstediğinize Emin Misiniz ? .", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
 
-                var sip = db.TBL_SIPARIS.Find(sipID);
+                    var sip = db.TBL_SIPARIS.Find(sipID);
 
-                sip.ARKASIYIRSAYI = (int)num_ArkaSiyirma.Value;
-                sip.BILEMESAYI = (int)num_bileme.Value;
-                sip.DILCAKMASAYI = (int)num_dilCakma.Value;
-                sip.ISILISLEMSAYI = (int)num_IsilIslem.Value;
-                sip.ISTENILENTARIH = dateEdit2.DateTime;
-                sip.KANALACMASAYI = (int)num_KanalAcma.Value;
-                sip.KANALBUYUTSAYI = (int)num_KanalBuyut.Value;
-                sip.KONTROLSAYI = (int)num_kontrol.Value;
-                sip.NOTLAR = txt_not.Text;
-                sip.POLI1SAYI = (int)num_Polisaj1.Value;
-                sip.POLI2SAYI = (int)num_Polisaj2.Value;
-                sip.PRESSAYI = (int)num_Pres.Value;
-                sip.SEVKIYATSAYI = (int)num_SevkEdilen.Value;
-                sip.SIPARISTARIHI = date_siparis.DateTime;
-                sip.TEMPERSAYI = (int)num_temper.Value;
-                sip.UCSIYIRMASAYI = (int)num_ucSiyirma.Value;
-                sip.URUNADETI = (int)num_Siparis.Value;
-                sip.YIKAMASAYI = (int)num_yikama.Value;
-                sip.YOLKOPYASAYI = (int)num_YolKopyala.Value;
+                    sip.ARKASIYIRSAYI = (int)num_ArkaSiyirma.Value;
+                    sip.BILEMESAYI = (int)num_bileme.Value;
+                    sip.DILCAKMASAYI = (int)num_dilCakma.Value;
+                    sip.ISILISLEMSAYI = (int)num_IsilIslem.Value;
+                    sip.ISTENILENTARIH = dateEdit2.DateTime;
+                    sip.KANALACMASAYI = (int)num_KanalAcma.Value;
+                    sip.KANALBUYUTSAYI = (int)num_KanalBuyut.Value;
+                    sip.KONTROLSAYI = (int)num_kontrol.Value;
+                    sip.NOTLAR = txt_not.Text;
+                    sip.POLI1SAYI = (int)num_Polisaj1.Value;
+                    sip.POLI2SAYI = (int)num_Polisaj2.Value;
+                    sip.PRESSAYI = (int)num_Pres.Value;
+                    sip.SEVKIYATSAYI = (int)num_SevkEdilen.Value;
+                    sip.SIPARISTARIHI = date_siparis.DateTime;
+                    sip.TEMPERSAYI = (int)num_temper.Value;
+                    sip.UCSIYIRMASAYI = (int)num_ucSiyirma.Value;
+                    sip.URUNADETI = (int)num_Siparis.Value;
+                    sip.YIKAMASAYI = (int)num_yikama.Value;
+                    sip.YOLKOPYASAYI = (int)num_YolKopyala.Value;
 
-                db.SaveChanges();
-                XtraMessageBox.Show("Seçilen Sipariş Güncellendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                sipListele();
-                
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Seçilen Sipariş Güncellendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sipListele();
+
+                }
             }
+            catch (Exception) { }
 
         }
 
         private void Btn_SiparisSil_Click(object sender, EventArgs e)
         {
-            DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz !", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (Sorgu == DialogResult.Yes)
+            try
             {
-                var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
+                DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Silmek İstediğinize Emin Misiniz ? Bu İşlem Geri Alınamaz !", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
 
-                var sip = db.TBL_SIPARIS.Find(sipID);
-                db.TBL_SIPARIS.Remove(sip);
-                db.SaveChanges();
-                XtraMessageBox.Show("Seçilen Sipariş Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                sipListele();
+                    var sip = db.TBL_SIPARIS.Find(sipID);
+                    db.TBL_SIPARIS.Remove(sip);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Seçilen Sipariş Sistemden Silindi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sipListele();
 
+                }
             }
+            catch (Exception) { }
         }
 
         private void Btn_hamRapSil_Click(object sender, EventArgs e)

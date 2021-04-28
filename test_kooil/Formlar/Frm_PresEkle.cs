@@ -100,28 +100,31 @@ namespace test_kooil.Formlar
 
         private void Frm_PresEkle_Load(object sender, EventArgs e)
         {
-            var preslencekUrunler = (from x in db.TBL_SIPARIS
-                                     select new
-                                     {
-                                         x.SIPARISNOID,
-                                         Tur = x.TBL_IGNELER.TUR,
-                                         IgneKodu = x.TBL_IGNELER.IGNEKOD,
-                                         IstenilenMiktar = x.URUNADETI,
-                                         x.SIPARISASAMASI,
-                                         x.AKTIF
+            try
+            {
+                var preslencekUrunler = (from x in db.TBL_SIPARIS
+                                         select new
+                                         {
+                                             SiparişNo = x.SIPARISNOID,
+                                             Tur = x.TBL_IGNELER.TUR,
+                                             ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
+                                             IstenilenMiktar = x.URUNADETI,
+                                             x.SIPARISASAMASI,
+                                             x.AKTIF
 
-                                     }).ToList().OrderByDescending(x => x.SIPARISNOID).Where(x => x.AKTIF == true);
+                                         }).ToList().OrderByDescending(x => x.SiparişNo).Where(x => x.AKTIF == true);
 
-            lookUp_Siparis.Properties.ValueMember = "SIPARISNOID";
-            lookUp_Siparis.Properties.DisplayMember = "IgneKodu";
-            lookUp_Siparis.Properties.DataSource = preslencekUrunler;
-            lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
-            lookUp_Siparis.Properties.BestFit();
-            lookUp_Siparis.Properties.Columns[1].Visible = false;
-            lookUp_Siparis.Properties.Columns[5].Visible = false;
-            lookUp_Siparis.Properties.Columns[4].Visible = false;
-            text_Raporlayan.Text = Frm_Login.user.AdSoyad;
-
+                lookUp_Siparis.Properties.ValueMember = "SiparişNo";
+                lookUp_Siparis.Properties.DisplayMember = "ÜrünKodu";
+                lookUp_Siparis.Properties.DataSource = preslencekUrunler;
+                lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
+                lookUp_Siparis.Properties.BestFit();
+                lookUp_Siparis.Properties.Columns[1].Visible = false;
+                lookUp_Siparis.Properties.Columns[5].Visible = false;
+                lookUp_Siparis.Properties.Columns[4].Visible = false;
+                text_Raporlayan.Text = Frm_Login.user.AdSoyad;
+            }
+            catch (Exception) { }
 
 
         }

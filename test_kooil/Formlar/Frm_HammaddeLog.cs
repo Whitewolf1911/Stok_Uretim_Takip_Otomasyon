@@ -21,23 +21,26 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void logListele() {
+            try
+            {
+                var veriler = (from x in db.TBL_HAMLOG
+                               select new
+                               {
+                                   İşlem = x.ISLEM,
+                                   Kilogram = x.MIKTAR,
+                                   Neden = x.SEBEP,
+                                   Kalınlık = x.KALINLIK,
+                                   Genişlik = x.GENISLIK,
+                                   Özellik = x.OZELLIK,
+                                   Menşei = x.MENSEI,
+                                   Tarih = x.TARIH,
+                                   Raporlayan = x.RAPORLAYAN
 
-            var veriler = (from x in db.TBL_HAMLOG
-                           select new
-                           {
-                               İşlem = x.ISLEM,
-                               Kilogram = x.MIKTAR,
-                               Neden = x.SEBEP,
-                               Kalınlık = x.KALINLIK,
-                               Genişlik = x.GENISLIK,
-                               Özellik = x.OZELLIK,
-                               Menşei = x.MENSEI,
-                               Tarih = x.TARIH,
-                               Raporlayan = x.RAPORLAYAN
+                               }).ToList().OrderByDescending(x => x.Tarih);
+                gridControl1.DataSource = veriler;
+            }
+            catch (Exception) { }
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
-            gridControl1.DataSource = veriler;
-        
         }
         private void ShowGridPreview(GridControl grid)
         {

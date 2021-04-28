@@ -42,7 +42,7 @@ namespace test_kooil.Formlar
                 this.Close();
 
             }
-            catch {
+            catch (Exception){
                 XtraMessageBox.Show("Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyiniz. ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             

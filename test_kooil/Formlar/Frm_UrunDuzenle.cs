@@ -23,51 +23,59 @@ namespace test_kooil.Formlar
 
         void hamListele()
         {
+            try
+            {
+                var hammaddeler = (from x in db.TBL_HAMMADDE
+                                   select new
+                                   {
+                                       Kalınlık = x.KALINLIK,
+                                       Genişlik = x.GENISLIK,
+                                       Menşei = x.MENSEI,
+                                       Özellik = x.OZELLIK,
+                                       x.ID,
+                                       x.AKTIF
 
-            var hammaddeler = (from x in db.TBL_HAMMADDE
-                               select new
-                               {
-                                   Kalınlık = x.KALINLIK,
-                                   Genişlik = x.GENISLIK,
-                                   Menşei = x.MENSEI,
-                                   Özellik = x.OZELLIK,
-                                   x.ID
+                                   }).ToList().OrderBy(x => x.Kalınlık).Where(x=> x.AKTIF == true);
 
-                               }).ToList().OrderBy(x => x.Kalınlık);
-
-            gridControl2.DataSource = hammaddeler;
-            gridView2.Columns[4].Visible = false;
-            gridView2.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
+                gridControl2.DataSource = hammaddeler;
+                gridView2.Columns[4].Visible = false;
+                gridView2.Columns[5].Visible = false;
+                gridView2.Columns[0].AppearanceCell.BackColor = Color.LightBlue;
+            }
+            catch (Exception) { }
         }
 
         void urunListele()
         {
-            var igneler = (from x in db.TBL_IGNELER
-                           select new
-                           {
-                               Tür = x.TUR,
-                               ÜrünKodu=x.IGNEKOD,
-                               Gramaj=x.GRAMAJ,
-                               Sarfiyat=x.SARFIYATORAN,
-                               x.ISILISLEMFORMUL,
-                               Not=x.NOT,
-                               x.FOTO,
-                               x.HAMMADDETIPI,
-                               x.ID
-                           }
-                           ).ToList() ;
-            gridControl1.DataSource = igneler;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+            try
+            {
+                var igneler = (from x in db.TBL_IGNELER
+                               select new
+                               {
+                                   Tür = x.TUR,
+                                   ÜrünKodu = x.IGNEKOD,
+                                   Gramaj = x.GRAMAJ,
+                                   Sarfiyat = x.SARFIYATORAN,
+                                   x.ISILISLEMFORMUL,
+                                   Not = x.NOT,
+                                   x.FOTO,
+                                   x.HAMMADDETIPI,
+                                   x.ID
+                               }
+                               ).ToList();
+                gridControl1.DataSource = igneler;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
 
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
 
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[5].Visible = false;
-            gridView1.Columns[6].Visible = false;
-            gridView1.Columns[7].Visible = false;
-            gridView1.Columns[8].Visible = false;
-
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[4].Visible = false;
+                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
+            }
+            catch (Exception) { }
 
 
         }
@@ -153,33 +161,38 @@ namespace test_kooil.Formlar
             DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen Ürünü Güncellemek İstediğinize Emin Misiniz ? ", " Güncelleme Onay", MessageBoxButtons.YesNo);
             if (siradakiAsamaSorgu == DialogResult.Yes)
             {
-                int id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                var igne = db.TBL_IGNELER.Find(id);
-
-                igne.IGNEKOD = txt_IgneKod.Text;
-                igne.ISILISLEMFORMUL = txt_IsilIslem.Text;
-                igne.GRAMAJ = num_Gramaj.Value;
-                igne.HAMMADDETIPI = int.Parse(gridView2.GetFocusedRowCellValue("ID").ToString());
-                igne.SARFIYATORAN = num_SarfiyatOrani.Value;
-                igne.NOT = txt_Not.Text;
-
-                igne.TUR = comboBoxEdit1.SelectedItem.ToString();
-
-                if (picBox_Igne.Image != null && fotoSwitch)
+                try
                 {
-                    var foto = ImageToByteArray(picBox_Igne.Image);
-                    igne.FOTO = foto;
-                }
+                    int id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                    var igne = db.TBL_IGNELER.Find(id);
 
-                db.SaveChanges();
-                XtraMessageBox.Show("Ürün Güncellendi .", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                urunListele();
+                    igne.IGNEKOD = txt_IgneKod.Text;
+                    igne.ISILISLEMFORMUL = txt_IsilIslem.Text;
+                    igne.GRAMAJ = num_Gramaj.Value;
+                    igne.HAMMADDETIPI = int.Parse(gridView2.GetFocusedRowCellValue("ID").ToString());
+                    igne.SARFIYATORAN = num_SarfiyatOrani.Value;
+                    igne.NOT = txt_Not.Text;
+
+                    igne.TUR = comboBoxEdit1.SelectedItem.ToString();
+
+                    if (picBox_Igne.Image != null && fotoSwitch)
+                    {
+                        var foto = ImageToByteArray(picBox_Igne.Image);
+                        igne.FOTO = foto;
+                    }
+
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Ürün Güncellendi .", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    urunListele();
+                }
+                catch (Exception) { }
             }
             
         }
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            Btn_hamSec.Enabled = true;
             string hammaddeAd = gridView2.GetFocusedRowCellValue("Kalınlık").ToString() + " x " + gridView2.GetFocusedRowCellValue("Genişlik").ToString() +
                 " " + gridView2.GetFocusedRowCellValue("Özellik").ToString() + " " + gridView2.GetFocusedRowCellValue("Menşei").ToString();
             txt_secilenHam.Text = hammaddeAd;

@@ -21,26 +21,29 @@ namespace test_kooil.Formlar
         DB_kooil_testEntities db = new DB_kooil_testEntities();
 
         void listele() {
+            try
+            {
+                var veriler = (from x in db.TBL_SEVKIYAT
+                               select new
+                               {
+                                   Sevkiyat = x.SEVKIYATTUR,
+                                   Firma = x.MUSTERI,
+                                   Tür = x.URUNTUR,
+                                   ÜrünKodu = x.URUNKOD,
+                                   Adet = x.ADET,
+                                   Tarih = x.TARIH,
+                                   SiparişNo = x.SIPARISNO
 
-            var veriler = (from x in db.TBL_SEVKIYAT
-                           select new
-                           {
-                               Sevkiyat = x.SEVKIYATTUR,
-                               Firma = x.MUSTERI,
-                               Tür = x.URUNTUR,
-                               ÜrünKodu = x.URUNKOD,
-                               Adet = x.ADET,
-                               Tarih = x.TARIH,
-                               SiparişNo = x.SIPARISNO
 
+                               }).ToList().OrderByDescending(x => x.Tarih);
 
-                           }).ToList().OrderByDescending(x => x.Tarih);
-
-            gridControl1.DataSource = veriler;
-            gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
-            gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
-            gridView1.Columns[2].AppearanceCell.BackColor = Color.LightYellow;
-            gridView1.Columns[3].AppearanceCell.BackColor = Color.Aquamarine;
+                gridControl1.DataSource = veriler;
+                gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Aquamarine;
+            }
+            catch (Exception) { }
 
 
 
