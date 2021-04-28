@@ -244,6 +244,7 @@ namespace test_kooil.Formlar
             // txt_konum
             // 
             this.txt_konum.Location = new System.Drawing.Point(365, 343);
+            this.txt_konum.MaxLength = 50;
             this.txt_konum.Name = "txt_konum";
             this.txt_konum.Size = new System.Drawing.Size(160, 104);
             this.txt_konum.TabIndex = 45;

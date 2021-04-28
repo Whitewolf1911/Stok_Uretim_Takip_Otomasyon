@@ -87,8 +87,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KALINLIK" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="GENISLIK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KALINLIK" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="GENISLIK" Type="decimal" Precision="18" Scale="3" />
           <Property Name="OZELLIK" Type="varchar" MaxLength="20" />
           <Property Name="MENSEI" Type="varchar" MaxLength="30" />
           <Property Name="MIKTAR" Type="int" />
@@ -730,8 +730,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KALINLIK" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="GENISLIK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KALINLIK" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="GENISLIK" Type="Decimal" Precision="18" Scale="3" />
           <Property Name="OZELLIK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MENSEI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="MIKTAR" Type="Int32" />

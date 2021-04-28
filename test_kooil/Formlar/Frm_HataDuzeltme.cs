@@ -91,30 +91,35 @@ namespace test_kooil.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            Btn_Guncelle.Enabled = true;
-            Btn_SiparisSil.Enabled = true;
-            num_ArkaSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ARKASIYIRSAYI"));
-            num_bileme.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("BILEMESAYI"));
-            num_dilCakma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("DILCAKMASAYI"));
-            num_IsilIslem.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ISILISLEMSAYI"));
-            num_KanalAcma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALACMASAYI"));
-            num_KanalBuyut.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALBUYUTSAYI"));
-            num_kontrol.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KONTROLSAYI"));
-            num_Polisaj1.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI1SAYI"));
-            num_Polisaj2.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI2SAYI"));
-            num_Pres.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("PRESSAYI"));
-            num_SevkEdilen.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SEVKIYATSAYI"));
-            num_Siparis.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SiparişAdet"));
-            num_temper.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("TEMPERSAYI"));
-            num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
-            num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
-            num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
-            date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
-            dateEdit2.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("İstenilenTarih");
+            try
+            {
+                Btn_Guncelle.Enabled = true;
+                Btn_SiparisSil.Enabled = true;
+                num_ArkaSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ARKASIYIRSAYI"));
+                num_bileme.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("BILEMESAYI"));
+                num_dilCakma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("DILCAKMASAYI"));
+                num_IsilIslem.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("ISILISLEMSAYI"));
+                num_KanalAcma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALACMASAYI"));
+                num_KanalBuyut.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KANALBUYUTSAYI"));
+                num_kontrol.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("KONTROLSAYI"));
+                num_Polisaj1.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI1SAYI"));
+                num_Polisaj2.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("POLI2SAYI"));
+                num_Pres.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("PRESSAYI"));
+                num_SevkEdilen.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SEVKIYATSAYI"));
+                num_Siparis.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("SiparişAdet"));
+                num_temper.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("TEMPERSAYI"));
+                num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
+                num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
+                num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
+                date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
+                dateEdit2.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("İstenilenTarih");
 
-            if (gridView1.GetFocusedRowCellValue("NOTLAR") != null) {
-                txt_not.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+                if (gridView1.GetFocusedRowCellValue("NOTLAR") != null)
+                {
+                    txt_not.Text = gridView1.GetFocusedRowCellValue("NOTLAR").ToString();
+                }
             }
+            catch (Exception) { }
 
         }
 
