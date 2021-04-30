@@ -111,8 +111,14 @@ namespace test_kooil.Formlar
                 num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
                 num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
                 num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
-                date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
-                dateEdit2.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("İstenilenTarih");
+                if(gridView1.GetFocusedRowCellValue("SiparişTarih") != null)
+                {
+                    date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
+                }
+                if(gridView1.GetFocusedRowCellValue("İstenilenTarih") != null)
+                {
+                    dateEdit2.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("İstenilenTarih");
+                }
 
                 if (gridView1.GetFocusedRowCellValue("NOTLAR") != null)
                 {

@@ -153,12 +153,16 @@ namespace test_kooil.Formlar
         {
             try
             {
-                var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-                var madde = db.TBL_HAMMADDE.Find(maddeID);
-                madde.KONUM = txt_konum.Text;
-                db.SaveChanges();
-                XtraMessageBox.Show("Konum Güncellendi.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                hamListele();
+                DialogResult siradakiAsamaSorgu = MessageBox.Show("Seçilen hammaddenin konumunu değiştirmek istediğinize emin misiniz ? ", "Konum", MessageBoxButtons.YesNo);
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    var maddeID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                    var madde = db.TBL_HAMMADDE.Find(maddeID);
+                    madde.KONUM = txt_konum.Text;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Konum Güncellendi.", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    hamListele();
+                }
 
             }
             catch (Exception) {
