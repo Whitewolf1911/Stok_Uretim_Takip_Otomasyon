@@ -65,69 +65,76 @@ namespace test_kooil.Formlar
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1126, 98);
+            this.listView1.Location = new System.Drawing.Point(844, 80);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(324, 392);
+            this.listView1.Size = new System.Drawing.Size(244, 319);
             this.listView1.TabIndex = 36;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // num_Adet
             // 
-            this.num_Adet.Location = new System.Drawing.Point(977, 169);
+            this.num_Adet.Location = new System.Drawing.Point(733, 137);
+            this.num_Adet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_Adet.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.num_Adet.Name = "num_Adet";
-            this.num_Adet.Size = new System.Drawing.Size(134, 22);
+            this.num_Adet.Size = new System.Drawing.Size(100, 20);
             this.num_Adet.TabIndex = 35;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(1126, 76);
+            this.labelControl5.Location = new System.Drawing.Point(844, 62);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(71, 16);
+            this.labelControl5.Size = new System.Drawing.Size(60, 13);
             this.labelControl5.TabIndex = 34;
             this.labelControl5.Text = "Sevkiyatlar :";
             // 
             // Btn_Iptal
             // 
             this.Btn_Iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Iptal.ImageOptions.Image")));
-            this.Btn_Iptal.Location = new System.Drawing.Point(1132, 557);
+            this.Btn_Iptal.Location = new System.Drawing.Point(849, 453);
+            this.Btn_Iptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Iptal.Name = "Btn_Iptal";
-            this.Btn_Iptal.Size = new System.Drawing.Size(184, 63);
+            this.Btn_Iptal.Size = new System.Drawing.Size(138, 51);
             this.Btn_Iptal.TabIndex = 30;
             this.Btn_Iptal.Text = "İptal";
             this.Btn_Iptal.Click += new System.EventHandler(this.Btn_Iptal_Click);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(927, 113);
+            this.labelControl3.Location = new System.Drawing.Point(695, 92);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(39, 16);
+            this.labelControl3.Size = new System.Drawing.Size(31, 13);
             this.labelControl3.TabIndex = 29;
             this.labelControl3.Text = "Tarih :";
             // 
             // date_Tarih
             // 
             this.date_Tarih.EditValue = null;
-            this.date_Tarih.Location = new System.Drawing.Point(977, 110);
+            this.date_Tarih.Location = new System.Drawing.Point(733, 89);
+            this.date_Tarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.date_Tarih.Name = "date_Tarih";
             this.date_Tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_Tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_Tarih.Properties.NullText = "Tarih Seçiniz";
-            this.date_Tarih.Size = new System.Drawing.Size(134, 22);
+            this.date_Tarih.Size = new System.Drawing.Size(100, 20);
             this.date_Tarih.TabIndex = 28;
             // 
             // Btn_Yazdir
             // 
             this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
-            this.Btn_Yazdir.Location = new System.Drawing.Point(524, 458);
+            this.Btn_Yazdir.Location = new System.Drawing.Point(393, 372);
+            this.Btn_Yazdir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Yazdir.Name = "Btn_Yazdir";
-            this.Btn_Yazdir.Size = new System.Drawing.Size(184, 63);
+            this.Btn_Yazdir.Size = new System.Drawing.Size(138, 51);
             this.Btn_Yazdir.TabIndex = 26;
             this.Btn_Yazdir.Text = "Yazdır";
             this.Btn_Yazdir.Click += new System.EventHandler(this.Btn_Yazdir_Click);
@@ -135,18 +142,20 @@ namespace test_kooil.Formlar
             // Btn_Tamamla
             // 
             this.Btn_Tamamla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Tamamla.ImageOptions.Image")));
-            this.Btn_Tamamla.Location = new System.Drawing.Point(524, 541);
+            this.Btn_Tamamla.Location = new System.Drawing.Point(393, 440);
+            this.Btn_Tamamla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Tamamla.Name = "Btn_Tamamla";
-            this.Btn_Tamamla.Size = new System.Drawing.Size(184, 63);
+            this.Btn_Tamamla.Size = new System.Drawing.Size(138, 51);
             this.Btn_Tamamla.TabIndex = 25;
             this.Btn_Tamamla.Text = "Sevkiyatı Tamamla";
             this.Btn_Tamamla.Click += new System.EventHandler(this.Btn_Tamamla_Click);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(927, 169);
+            this.labelControl1.Location = new System.Drawing.Point(695, 137);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(35, 16);
+            this.labelControl1.Size = new System.Drawing.Size(30, 13);
             this.labelControl1.TabIndex = 24;
             this.labelControl1.Text = "Adet :";
             // 
@@ -154,9 +163,10 @@ namespace test_kooil.Formlar
             // 
             this.Btn_SepeteEkle.Enabled = false;
             this.Btn_SepeteEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SepeteEkle.ImageOptions.Image")));
-            this.Btn_SepeteEkle.Location = new System.Drawing.Point(927, 307);
+            this.Btn_SepeteEkle.Location = new System.Drawing.Point(695, 249);
+            this.Btn_SepeteEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_SepeteEkle.Name = "Btn_SepeteEkle";
-            this.Btn_SepeteEkle.Size = new System.Drawing.Size(184, 59);
+            this.Btn_SepeteEkle.Size = new System.Drawing.Size(138, 48);
             this.Btn_SepeteEkle.TabIndex = 23;
             this.Btn_SepeteEkle.Text = "Sevkiyat Ekle";
             this.Btn_SepeteEkle.Click += new System.EventHandler(this.Btn_SepeteEkle_Click);
@@ -165,25 +175,30 @@ namespace test_kooil.Formlar
             // 
             this.pic_Urun.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pic_Urun.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic_Urun.Location = new System.Drawing.Point(12, 384);
+            this.pic_Urun.Location = new System.Drawing.Point(9, 312);
+            this.pic_Urun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Urun.Name = "pic_Urun";
-            this.pic_Urun.Size = new System.Drawing.Size(492, 234);
+            this.pic_Urun.Size = new System.Drawing.Size(370, 191);
             this.pic_Urun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Urun.TabIndex = 22;
             this.pic_Urun.TabStop = false;
+            this.pic_Urun.DoubleClick += new System.EventHandler(this.pic_Urun_DoubleClick);
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(294, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(220, 2);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(627, 364);
+            this.gridControl1.Size = new System.Drawing.Size(470, 296);
             this.gridControl1.TabIndex = 21;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -192,16 +207,19 @@ namespace test_kooil.Formlar
             // 
             // gridControl2
             // 
-            this.gridControl2.Location = new System.Drawing.Point(26, 2);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl2.Location = new System.Drawing.Point(20, 2);
             this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(262, 293);
+            this.gridControl2.Size = new System.Drawing.Size(196, 238);
             this.gridControl2.TabIndex = 37;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
+            this.gridView2.DetailHeight = 284;
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -212,9 +230,10 @@ namespace test_kooil.Formlar
             // 
             this.Btn_FirmaSec.Enabled = false;
             this.Btn_FirmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_FirmaSec.ImageOptions.Image")));
-            this.Btn_FirmaSec.Location = new System.Drawing.Point(60, 311);
+            this.Btn_FirmaSec.Location = new System.Drawing.Point(45, 253);
+            this.Btn_FirmaSec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_FirmaSec.Name = "Btn_FirmaSec";
-            this.Btn_FirmaSec.Size = new System.Drawing.Size(184, 59);
+            this.Btn_FirmaSec.Size = new System.Drawing.Size(138, 48);
             this.Btn_FirmaSec.TabIndex = 38;
             this.Btn_FirmaSec.Text = "Firma Seç";
             this.Btn_FirmaSec.Click += new System.EventHandler(this.Btn_FirmaSec_Click);
@@ -241,27 +260,29 @@ namespace test_kooil.Formlar
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(927, 58);
+            this.labelControl2.Location = new System.Drawing.Point(695, 47);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(42, 16);
+            this.labelControl2.Size = new System.Drawing.Size(33, 13);
             this.labelControl2.TabIndex = 39;
             this.labelControl2.Text = "Firma :";
             // 
             // txt_firma
             // 
-            this.txt_firma.Location = new System.Drawing.Point(977, 58);
+            this.txt_firma.Location = new System.Drawing.Point(733, 47);
+            this.txt_firma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_firma.Name = "txt_firma";
             this.txt_firma.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txt_firma.Properties.Appearance.Options.UseBackColor = true;
             this.txt_firma.Properties.ReadOnly = true;
-            this.txt_firma.Size = new System.Drawing.Size(134, 22);
+            this.txt_firma.Size = new System.Drawing.Size(100, 20);
             this.txt_firma.TabIndex = 40;
             // 
             // Frm_SiparisSevkiyat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1462, 632);
+            this.ClientSize = new System.Drawing.Size(1096, 514);
             this.Controls.Add(this.txt_firma);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.Btn_FirmaSec);
@@ -278,6 +299,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.Btn_SepeteEkle);
             this.Controls.Add(this.pic_Urun);
             this.Controls.Add(this.gridControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Frm_SiparisSevkiyat";
             this.Text = "Yeni Sipariş Sevkiyat";

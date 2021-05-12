@@ -30,7 +30,7 @@ namespace test_kooil.Formlar
                                {
                                    Tür = x.TUR,
                                    ÜrünKodu = x.IGNEKOD,
-                                   x.GRAMAJ,
+                                   Gramaj = x.GRAMAJ,
                                    SarfiyatGr = x.SARFIYATORAN,
                                    x.HAMMADDETIPI,
                                    x.ISILISLEMFORMUL,
@@ -44,12 +44,13 @@ namespace test_kooil.Formlar
                 gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
 
                 gridView1.Columns[2].AppearanceCell.BackColor = Color.LightGreen;
-                gridView1.Columns[2].Visible = false;
+                //gridView1.Columns[2].Visible = false;
                 //gridView1.Columns[3].Visible = false;
                 gridView1.Columns[4].Visible = false;
                 gridView1.Columns[5].Visible = false;
                 gridView1.Columns[6].Visible = false;
                 gridView1.Columns[7].Visible = false;
+                gridView1.BestFitColumns();
             }
             catch (Exception) { }
         }
@@ -89,9 +90,9 @@ namespace test_kooil.Formlar
                     txt_IgneKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
                 }
 
-                if (gridView1.GetFocusedRowCellValue("GRAMAJ") != null)
+                if (gridView1.GetFocusedRowCellValue("Gramaj") != null)
                 {
-                    txt_Gramaj.Text = gridView1.GetFocusedRowCellValue("GRAMAJ").ToString();
+                    txt_Gramaj.Text = gridView1.GetFocusedRowCellValue("Gramaj").ToString();
                 }
 
                 if (gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL") != null)
@@ -136,6 +137,21 @@ namespace test_kooil.Formlar
         private void labelControl3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pic_IgneFoto_DoubleClick(object sender, EventArgs e)
+        {
+            if (pic_IgneFoto.Image != null)
+            {
+                Form frm = new Form();
+                PictureBox pb = new PictureBox();
+                pb.Image = pic_IgneFoto.Image;
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                pb.Dock = DockStyle.Fill;
+                frm.Controls.Add(pb);
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -192,5 +192,20 @@ namespace test_kooil.Formlar
                 picBoxUrun.Image = null;
             }
         }
+
+        private void picBoxUrun_DoubleClick(object sender, EventArgs e)
+        {
+            if (picBoxUrun.Image != null)
+            {
+                Form frm = new Form();
+                PictureBox pb = new PictureBox();
+                pb.Image = picBoxUrun.Image;
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                pb.Dock = DockStyle.Fill;
+                frm.Controls.Add(pb);
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+        }
     }
 }

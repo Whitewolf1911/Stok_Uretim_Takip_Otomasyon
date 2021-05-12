@@ -120,5 +120,20 @@ namespace test_kooil.Formlar
                 frmStokLog.Show();
             }
         }
+
+        private void pic_IgneFoto_DoubleClick(object sender, EventArgs e)
+        {
+            if (pic_IgneFoto.Image != null)
+            {
+                Form frm = new Form();
+                PictureBox pb = new PictureBox();
+                pb.Image = pic_IgneFoto.Image;
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                pb.Dock = DockStyle.Fill;
+                frm.Controls.Add(pb);
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+        }
     }
 }

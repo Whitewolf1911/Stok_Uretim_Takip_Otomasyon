@@ -72,9 +72,10 @@ namespace test_kooil.Formlar
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(114, 49);
+            this.labelControl1.Location = new System.Drawing.Point(86, 40);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(51, 16);
+            this.labelControl1.Size = new System.Drawing.Size(42, 13);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Müşteri :";
             // 
@@ -82,9 +83,10 @@ namespace test_kooil.Formlar
             // 
             this.simpleButton1.Enabled = false;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(44, 572);
+            this.simpleButton1.Location = new System.Drawing.Point(33, 465);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(140, 46);
+            this.simpleButton1.Size = new System.Drawing.Size(105, 37);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Ekle";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -92,183 +94,202 @@ namespace test_kooil.Formlar
             // date_IstenilenTarih
             // 
             this.date_IstenilenTarih.EditValue = null;
-            this.date_IstenilenTarih.Location = new System.Drawing.Point(234, 295);
+            this.date_IstenilenTarih.Location = new System.Drawing.Point(176, 240);
+            this.date_IstenilenTarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.date_IstenilenTarih.Name = "date_IstenilenTarih";
             this.date_IstenilenTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_IstenilenTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date_IstenilenTarih.Size = new System.Drawing.Size(159, 22);
+            this.date_IstenilenTarih.Size = new System.Drawing.Size(119, 20);
             this.date_IstenilenTarih.TabIndex = 4;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(114, 102);
+            this.labelControl2.Location = new System.Drawing.Point(86, 83);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(81, 16);
+            this.labelControl2.Size = new System.Drawing.Size(66, 13);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Seçilen Ürün :";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(114, 224);
+            this.labelControl3.Location = new System.Drawing.Point(86, 182);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(85, 16);
+            this.labelControl3.Size = new System.Drawing.Size(67, 13);
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Sipariş Tarihi :";
             this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(114, 160);
+            this.labelControl4.Location = new System.Drawing.Point(86, 130);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(35, 16);
+            this.labelControl4.Size = new System.Drawing.Size(30, 13);
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "Adet :";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(114, 298);
+            this.labelControl5.Location = new System.Drawing.Point(86, 242);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(91, 16);
+            this.labelControl5.Size = new System.Drawing.Size(75, 13);
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "İstenilen Tarih :";
             // 
             // num_Adet
             // 
-            this.num_Adet.Location = new System.Drawing.Point(234, 158);
+            this.num_Adet.Location = new System.Drawing.Point(176, 128);
+            this.num_Adet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_Adet.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
             this.num_Adet.Name = "num_Adet";
-            this.num_Adet.Size = new System.Drawing.Size(159, 22);
+            this.num_Adet.Size = new System.Drawing.Size(119, 20);
             this.num_Adet.TabIndex = 9;
             // 
             // date_SiparisTarih
             // 
             this.date_SiparisTarih.EditValue = null;
-            this.date_SiparisTarih.Location = new System.Drawing.Point(234, 221);
+            this.date_SiparisTarih.Location = new System.Drawing.Point(176, 180);
+            this.date_SiparisTarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.date_SiparisTarih.Name = "date_SiparisTarih";
             this.date_SiparisTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_SiparisTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date_SiparisTarih.Size = new System.Drawing.Size(159, 22);
+            this.date_SiparisTarih.Size = new System.Drawing.Size(119, 20);
             this.date_SiparisTarih.TabIndex = 10;
             // 
             // Btn_Vazgec
             // 
             this.Btn_Vazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Vazgec.ImageOptions.Image")));
-            this.Btn_Vazgec.Location = new System.Drawing.Point(253, 572);
+            this.Btn_Vazgec.Location = new System.Drawing.Point(190, 465);
+            this.Btn_Vazgec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Vazgec.Name = "Btn_Vazgec";
-            this.Btn_Vazgec.Size = new System.Drawing.Size(140, 46);
+            this.Btn_Vazgec.Size = new System.Drawing.Size(105, 37);
             this.Btn_Vazgec.TabIndex = 11;
             this.Btn_Vazgec.Text = "İptal";
             this.Btn_Vazgec.Click += new System.EventHandler(this.Btn_Vazgec_Click);
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(177, 371);
+            this.labelControl6.Location = new System.Drawing.Point(133, 301);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(28, 16);
+            this.labelControl6.Size = new System.Drawing.Size(24, 13);
             this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "Not :";
             // 
             // txt_Not
             // 
-            this.txt_Not.Location = new System.Drawing.Point(234, 368);
+            this.txt_Not.Location = new System.Drawing.Point(176, 299);
+            this.txt_Not.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Not.MaxLength = 74;
             this.txt_Not.Name = "txt_Not";
-            this.txt_Not.Size = new System.Drawing.Size(159, 143);
+            this.txt_Not.Size = new System.Drawing.Size(120, 117);
             this.txt_Not.TabIndex = 13;
             this.txt_Not.Text = "";
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(44, 92);
+            this.pictureEdit1.Location = new System.Drawing.Point(33, 75);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit1.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit1.TabIndex = 28;
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(44, 151);
+            this.pictureEdit2.Location = new System.Drawing.Point(33, 123);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit2.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit2.TabIndex = 29;
             // 
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(44, 28);
+            this.pictureEdit3.Location = new System.Drawing.Point(33, 23);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit3.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit3.TabIndex = 30;
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(44, 215);
+            this.pictureEdit4.Location = new System.Drawing.Point(33, 175);
+            this.pictureEdit4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit4.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit4.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit4.TabIndex = 31;
             // 
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(44, 287);
+            this.pictureEdit5.Location = new System.Drawing.Point(33, 233);
+            this.pictureEdit5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit5.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit5.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit5.TabIndex = 32;
             // 
             // pictureEdit6
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(44, 368);
+            this.pictureEdit6.Location = new System.Drawing.Point(33, 299);
+            this.pictureEdit6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Size = new System.Drawing.Size(45, 40);
+            this.pictureEdit6.Size = new System.Drawing.Size(34, 32);
             this.pictureEdit6.TabIndex = 33;
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(455, 12);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(341, 10);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(553, 301);
+            this.gridControl1.Size = new System.Drawing.Size(415, 245);
             this.gridControl1.TabIndex = 34;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -279,37 +300,41 @@ namespace test_kooil.Formlar
             // 
             this.picBoxUrun.BackColor = System.Drawing.SystemColors.Highlight;
             this.picBoxUrun.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxUrun.Location = new System.Drawing.Point(455, 333);
+            this.picBoxUrun.Location = new System.Drawing.Point(341, 271);
+            this.picBoxUrun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBoxUrun.Name = "picBoxUrun";
-            this.picBoxUrun.Size = new System.Drawing.Size(553, 285);
+            this.picBoxUrun.Size = new System.Drawing.Size(416, 232);
             this.picBoxUrun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxUrun.TabIndex = 35;
             this.picBoxUrun.TabStop = false;
+            this.picBoxUrun.DoubleClick += new System.EventHandler(this.picBoxUrun_DoubleClick);
             // 
             // txt_urunCesit
             // 
             this.txt_urunCesit.BackColor = System.Drawing.SystemColors.Info;
-            this.txt_urunCesit.Location = new System.Drawing.Point(234, 99);
+            this.txt_urunCesit.Location = new System.Drawing.Point(176, 80);
+            this.txt_urunCesit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_urunCesit.Name = "txt_urunCesit";
             this.txt_urunCesit.ReadOnly = true;
-            this.txt_urunCesit.Size = new System.Drawing.Size(159, 22);
+            this.txt_urunCesit.Size = new System.Drawing.Size(120, 20);
             this.txt_urunCesit.TabIndex = 36;
             // 
             // lookUp_Musteri
             // 
-            this.lookUp_Musteri.Location = new System.Drawing.Point(234, 49);
+            this.lookUp_Musteri.Location = new System.Drawing.Point(176, 40);
+            this.lookUp_Musteri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lookUp_Musteri.Name = "lookUp_Musteri";
             this.lookUp_Musteri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUp_Musteri.Properties.NullText = "";
-            this.lookUp_Musteri.Size = new System.Drawing.Size(159, 22);
+            this.lookUp_Musteri.Size = new System.Drawing.Size(119, 20);
             this.lookUp_Musteri.TabIndex = 37;
             // 
             // Frm_YeniSiparis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 646);
+            this.ClientSize = new System.Drawing.Size(789, 525);
             this.Controls.Add(this.lookUp_Musteri);
             this.Controls.Add(this.txt_urunCesit);
             this.Controls.Add(this.picBoxUrun);
@@ -332,6 +357,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.date_IstenilenTarih);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Frm_YeniSiparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
