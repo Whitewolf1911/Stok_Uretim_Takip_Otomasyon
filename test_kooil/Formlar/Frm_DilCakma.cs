@@ -33,6 +33,7 @@ namespace test_kooil.Formlar
                                             Tür = x.TBL_IGNELER.TUR,
                                             ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                             SiparişMiktarı = x.URUNADETI,
+                                            DilÇakma = x.DILCAKMASAYI,
                                             Not = x.NOTLAR,
                                             x.AKTIF
 
@@ -43,7 +44,7 @@ namespace test_kooil.Formlar
                 gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
                 gridView1.Columns[3].AppearanceCell.BackColor = Color.Orange;
                 gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
             }
             catch (Exception) { }
 
