@@ -285,6 +285,7 @@
           <Property Name="BILEMESAYI" Type="int" />
           <Property Name="KONTROLSAYI" Type="int" />
           <Property Name="SEVKIYATSAYI" Type="int" />
+          <Property Name="GERILIMGIDERMESAYI" Type="int" />
         </EntityType>
         <EntityType Name="TBL_TEMPER">
           <Key>
@@ -367,6 +368,7 @@
           <Property Name="ayarlar" Type="bit" />
           <Property Name="hataduzelt" Type="bit" />
           <Property Name="iade" Type="bit" />
+          <Property Name="gerilimGiderme" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
@@ -496,6 +498,7 @@
           <Property Name="BILEMESAYI" Type="Int32" />
           <Property Name="KONTROLSAYI" Type="Int32" />
           <Property Name="SEVKIYATSAYI" Type="Int32" />
+          <Property Name="GERILIMGIDERMESAYI" Type="Int32" />
         </EntityType>
         <Association Name="FK_TBL_SIPARIS_TBL_IGNELER">
           <End Role="TBL_IGNELER" Type="Self.TBL_IGNELER" Multiplicity="0..1" />
@@ -831,6 +834,7 @@
           <Property Name="ayarlar" Type="Boolean" />
           <Property Name="hataduzelt" Type="Boolean" />
           <Property Name="iade" Type="Boolean" />
+          <Property Name="gerilimGiderme" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_HAMLOG">
           <Key>
@@ -909,6 +913,7 @@
           <EntitySetMapping Name="TBL_SIPARIS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SIPARIS">
               <MappingFragment StoreEntitySet="TBL_SIPARIS">
+                <ScalarProperty Name="GERILIMGIDERMESAYI" ColumnName="GERILIMGIDERMESAYI" />
                 <ScalarProperty Name="SEVKIYATSAYI" ColumnName="SEVKIYATSAYI" />
                 <ScalarProperty Name="KONTROLSAYI" ColumnName="KONTROLSAYI" />
                 <ScalarProperty Name="BILEMESAYI" ColumnName="BILEMESAYI" />
@@ -1203,6 +1208,7 @@
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="gerilimGiderme" ColumnName="gerilimGiderme" />
                 <ScalarProperty Name="iade" ColumnName="iade" />
                 <ScalarProperty Name="hataduzelt" ColumnName="hataduzelt" />
                 <ScalarProperty Name="ayarlar" ColumnName="ayarlar" />

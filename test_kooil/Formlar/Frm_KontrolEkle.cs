@@ -92,9 +92,9 @@ namespace test_kooil.Formlar
 
 
                     urunStok.STOK += int.Parse(num_IslenenAdet.Value.ToString());
-                    if (deger.SIPARISASAMASI < 14)
+                    if (deger.SIPARISASAMASI < 15)
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 14; //siparis asamasini guncelle 
+                        deger.SIPARISASAMASI = 15; //siparis asamasini guncelle 
 
 
                         // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune geceriz

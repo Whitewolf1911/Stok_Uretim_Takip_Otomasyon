@@ -60,7 +60,7 @@ namespace test_kooil
         Frm_Ayarlar frmAyarlar;
         Frm_HataDuzeltme frmHataDuzelt;
         Frm_Iade frmIade;
-
+        Frm_GerilimGiderme frmGerilim;
 
         void InitializeButtons() {
 
@@ -273,6 +273,12 @@ namespace test_kooil
                 Btn_Iadeler.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             }
             else { Btn_Iadeler.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.gerilimGiderme == true)
+            {
+                Btn_GerilimGiderme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_GerilimGiderme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
 
         }
 
@@ -706,6 +712,14 @@ namespace test_kooil
             frmIade.MdiParent = this;
             DisposeAllButThis(frmIade);
             frmIade.Show();
+        }
+
+        private void Btn_GerilimGiderme_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGerilim = new Frm_GerilimGiderme();
+            frmGerilim.MdiParent = this;
+            DisposeAllButThis(frmGerilim);
+            frmGerilim.Show();
         }
     }
 }

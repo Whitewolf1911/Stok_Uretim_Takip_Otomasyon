@@ -53,6 +53,7 @@ namespace test_kooil.Formlar
                                    SiparişAdet = x.URUNADETI,
                                    x.YIKAMASAYI,
                                    x.YOLKOPYASAYI,
+                                   x.GERILIMGIDERMESAYI
 
 
                                }).ToList().OrderByDescending(x => x.SiparişNo);
@@ -75,6 +76,7 @@ namespace test_kooil.Formlar
                 //gridView1.Columns[20].Visible = false;
                 gridView1.Columns[22].Visible = false;
                 gridView1.Columns[21].Visible = false;
+                gridView1.Columns[22].Visible = false;
 
                 gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
                 gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
@@ -111,7 +113,9 @@ namespace test_kooil.Formlar
                 num_ucSiyirma.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("UCSIYIRMASAYI"));
                 num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
                 num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
-                if(gridView1.GetFocusedRowCellValue("SiparişTarih") != null)
+                num_gerilim.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("GERILIMGIDERMESAYI"));
+
+                if (gridView1.GetFocusedRowCellValue("SiparişTarih") != null)
                 {
                     date_siparis.DateTime = (DateTime)gridView1.GetFocusedRowCellValue("SiparişTarih");
                 }
@@ -159,6 +163,7 @@ namespace test_kooil.Formlar
                     sip.URUNADETI = (int)num_Siparis.Value;
                     sip.YIKAMASAYI = (int)num_yikama.Value;
                     sip.YOLKOPYASAYI = (int)num_YolKopyala.Value;
+                    sip.GERILIMGIDERMESAYI = (int)num_gerilim.Value;
 
                     db.SaveChanges();
                     XtraMessageBox.Show("Seçilen Sipariş Güncellendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);

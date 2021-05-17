@@ -57,10 +57,10 @@ namespace test_kooil.Formlar
                     var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
                     deger.BILEMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                    if (deger.SIPARISASAMASI < 13)
+                    if (deger.SIPARISASAMASI < 14)
 
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 13; //siparis asamasini guncelle                  
+                        deger.SIPARISASAMASI = 14; //siparis asamasini guncelle                  
                     }
                     db.SaveChanges();
 

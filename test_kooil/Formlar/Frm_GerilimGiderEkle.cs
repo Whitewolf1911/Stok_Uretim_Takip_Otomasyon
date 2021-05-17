@@ -12,32 +12,26 @@ using test_kooil.Entity;
 
 namespace test_kooil.Formlar
 {
-    public partial class Frm_TemperEkle : Form
+    public partial class Frm_GerilimGiderEkle : Form
     {
-        public Frm_TemperEkle()
+        public Frm_GerilimGiderEkle()
         {
             InitializeComponent();
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
+        private void Btn_iptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
             try
             {
                 if (lookUp_Siparis.EditValue != null && date_BasimTarihi.EditValue != null)
                 {
-                    //TBL_TEMPER islenenUrun = new TBL_TEMPER();
-                    //islenenUrun.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
-                    //var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == islenenUrun.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-                    //islenenUrun.IGNEKODU = igneKodu.ToString();
-                    //islenenUrun.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
-                    //islenenUrun.TARIH = date_BasimTarihi.DateTime;
-                    //islenenUrun.NOT = text_Not.Text;
-                    //islenenUrun.RAPORLAYAN = text_Raporlayan.Text;
-                    //db.TBL_TEMPER.Add(islenenUrun);
-                    //db.SaveChanges();
 
-                    // ADDING TO TBL_RAPORLAR
-
+            
                     TBL_RAPOR rapor = new TBL_RAPOR();
                     rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
                     var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == rapor.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
@@ -47,25 +41,22 @@ namespace test_kooil.Formlar
                     rapor.TARIH = date_BasimTarihi.DateTime;
                     rapor.NOT = text_Not.Text;
                     rapor.RAPORLAYAN = text_Raporlayan.Text;
+                    rapor.ISLEM = "Gerilim Giderme";
                     rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
-                    rapor.ISLEM = "Temper";
                     db.TBL_RAPOR.Add(rapor);
                     db.SaveChanges();
 
-                    XtraMessageBox.Show("Temper Raporu Eklendi.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Gerilim Giderme Raporu Eklendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
+                    deger.GERILIMGIDERMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
+                    if (deger.SIPARISASAMASI < 10)
 
-                    var deger = db.TBL_SIPARIS.Find( rapor.SIPARISNO);
-                    deger.TEMPERSAYI += int.Parse(num_IslenenAdet.Value.ToString());
-
-                    if (deger.SIPARISASAMASI < 12)
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 12; //siparis asamasini guncelle 
-
-
-
+                        deger.SIPARISASAMASI = 10; //siparis asamasini guncelle                  
                     }
                     db.SaveChanges();
+
 
                     this.Close();
                 }
@@ -91,12 +82,7 @@ namespace test_kooil.Formlar
 
         }
 
-        private void Btn_iptal_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Frm_TemperEkle_Load(object sender, EventArgs e)
+        private void Frm_GerilimGiderEkle_Load(object sender, EventArgs e)
         {
             try
             {

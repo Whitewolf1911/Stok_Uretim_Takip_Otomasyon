@@ -44,6 +44,7 @@ namespace test_kooil.Formlar
                                    Polisaj1 = x.POLI1SAYI,
                                    DilÇakma = x.DILCAKMASAYI,
                                    Polisaj2 = x.POLI2SAYI,
+                                   GerilimGiderme = x.GERILIMGIDERMESAYI,
                                    Isılİşlem = x.ISILISLEMSAYI,
                                    Temper = x.TEMPERSAYI,
                                    Yıkama = x.YIKAMASAYI,
@@ -69,9 +70,9 @@ namespace test_kooil.Formlar
 
 
 
-                gridView1.Columns[22].Visible = false;
                 gridView1.Columns[23].Visible = false;
                 gridView1.Columns[24].Visible = false;
+                gridView1.Columns[25].Visible = false;
             }
             catch (Exception) { }
             //

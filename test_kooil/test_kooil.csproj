@@ -300,6 +300,18 @@
     <Compile Include="Formlar\Frm_GecmisSevkiyat.Designer.cs">
       <DependentUpon>Frm_GecmisSevkiyat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderEkle.Designer.cs">
+      <DependentUpon>Frm_GerilimGiderEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderme.Designer.cs">
+      <DependentUpon>Frm_GerilimGiderme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_HammaddeLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -739,6 +751,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_GecmisSevkiyat.resx">
       <DependentUpon>Frm_GecmisSevkiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_GerilimGiderEkle.resx">
+      <DependentUpon>Frm_GerilimGiderEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_GerilimGiderme.resx">
+      <DependentUpon>Frm_GerilimGiderme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_HammaddeLog.resx">
       <DependentUpon>Frm_HammaddeLog.cs</DependentUpon>

@@ -77,6 +77,8 @@ namespace test_kooil.Formlar
             this.Btn_urunStokDuzen = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_SevkiyatSil = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_sipAktifEt = new DevExpress.XtraEditors.SimpleButton();
+            this.num_gerilim = new System.Windows.Forms.NumericUpDown();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Siparis)).BeginInit();
@@ -99,6 +101,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.date_siparis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_gerilim)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -216,7 +219,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(315, 158);
+            this.labelControl10.Location = new System.Drawing.Point(315, 186);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(60, 16);
@@ -387,7 +390,7 @@ namespace test_kooil.Formlar
             // 
             // num_IsilIslem
             // 
-            this.num_IsilIslem.Location = new System.Drawing.Point(427, 153);
+            this.num_IsilIslem.Location = new System.Drawing.Point(427, 181);
             this.num_IsilIslem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.num_IsilIslem.Maximum = new decimal(new int[] {
             9999999,
@@ -615,11 +618,35 @@ namespace test_kooil.Formlar
             this.Btn_sipAktifEt.Text = "Siparişi Aktif Et";
             this.Btn_sipAktifEt.Click += new System.EventHandler(this.Btn_sipAktifEt_Click);
             // 
+            // num_gerilim
+            // 
+            this.num_gerilim.Location = new System.Drawing.Point(427, 139);
+            this.num_gerilim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.num_gerilim.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.num_gerilim.Name = "num_gerilim";
+            this.num_gerilim.Size = new System.Drawing.Size(120, 22);
+            this.num_gerilim.TabIndex = 47;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(315, 139);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(101, 16);
+            this.labelControl18.TabIndex = 46;
+            this.labelControl18.Text = "Gerilim Giderme :";
+            // 
             // Frm_HataDuzeltme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1464, 628);
+            this.Controls.Add(this.num_gerilim);
+            this.Controls.Add(this.labelControl18);
             this.Controls.Add(this.Btn_sipAktifEt);
             this.Controls.Add(this.Btn_SevkiyatSil);
             this.Controls.Add(this.Btn_urunStokDuzen);
@@ -692,6 +719,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.date_siparis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_gerilim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,5 +774,7 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.SimpleButton Btn_urunStokDuzen;
         private DevExpress.XtraEditors.SimpleButton Btn_SevkiyatSil;
         private DevExpress.XtraEditors.SimpleButton Btn_sipAktifEt;
+        private System.Windows.Forms.NumericUpDown num_gerilim;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
     }
 }

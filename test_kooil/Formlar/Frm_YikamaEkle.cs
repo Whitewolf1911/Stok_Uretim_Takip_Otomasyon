@@ -94,9 +94,9 @@ namespace test_kooil.Formlar
                     var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
                     deger.YIKAMASAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                    if (deger.SIPARISASAMASI < 12)
+                    if (deger.SIPARISASAMASI < 13)
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 12; //siparis asamasini guncelle 
+                        deger.SIPARISASAMASI = 13; //siparis asamasini guncelle 
 
 
                         // siparis asamasina eklemek yerine direk deger atarsan karisikligin onune geceriz

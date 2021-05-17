@@ -135,18 +135,21 @@ namespace test_kooil.Formlar
                             txt_asama.Text = "Polisaj2 de";
                             break;
                         case 10:
-                            txt_asama.Text = "Isıl İşlemde";
+                            txt_asama.Text = "Gerilim Gidermede";
                             break;
                         case 11:
-                            txt_asama.Text = "Temperde";
+                            txt_asama.Text = "Isıl İşlemde";
                             break;
                         case 12:
-                            txt_asama.Text = "Yıkamada";
+                            txt_asama.Text = "Temperde";
                             break;
                         case 13:
-                            txt_asama.Text = "Bilemede";
+                            txt_asama.Text = "Yıkamada";
                             break;
                         case 14:
+                            txt_asama.Text = "Bilemede";
+                            break;
+                        case 15:
                             txt_asama.Text = "Kontrolde";
                             break;
                     }

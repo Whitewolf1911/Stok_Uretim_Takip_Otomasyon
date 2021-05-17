@@ -78,6 +78,7 @@ namespace test_kooil.Formlar
             this.Btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
             this.chHataDuzelt = new DevExpress.XtraEditors.CheckEdit();
             this.ch_iade = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_gerilim = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chAnasayfa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_userName.Properties)).BeginInit();
@@ -122,6 +123,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // chAnasayfa
@@ -524,11 +526,20 @@ namespace test_kooil.Formlar
             this.ch_iade.Size = new System.Drawing.Size(177, 24);
             this.ch_iade.TabIndex = 49;
             // 
+            // ch_gerilim
+            // 
+            this.ch_gerilim.Location = new System.Drawing.Point(1031, 319);
+            this.ch_gerilim.Name = "ch_gerilim";
+            this.ch_gerilim.Properties.Caption = "Gerilim Giderme";
+            this.ch_gerilim.Size = new System.Drawing.Size(144, 24);
+            this.ch_gerilim.TabIndex = 50;
+            // 
             // Frm_YeniKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 459);
+            this.Controls.Add(this.ch_gerilim);
             this.Controls.Add(this.ch_iade);
             this.Controls.Add(this.chHataDuzelt);
             this.Controls.Add(this.Btn_Kaydet);
@@ -624,6 +635,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -679,5 +691,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.SimpleButton Btn_Kaydet;
         private DevExpress.XtraEditors.CheckEdit chHataDuzelt;
         private DevExpress.XtraEditors.CheckEdit ch_iade;
+        private DevExpress.XtraEditors.CheckEdit ch_gerilim;
     }
 }

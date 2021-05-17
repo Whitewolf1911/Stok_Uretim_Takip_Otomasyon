@@ -45,14 +45,15 @@ namespace test_kooil.Formlar
                                    Polisaj1 = x.POLI1SAYI,
                                    DilÇakma = x.DILCAKMASAYI,
                                    Polisaj2 = x.POLI2SAYI,
+                                   GerilimGiderme = x.GERILIMGIDERMESAYI,
                                    Isılİşlem = x.ISILISLEMSAYI,
                                    Temper = x.TEMPERSAYI,
                                    Yıkama = x.YIKAMASAYI,
                                    Bileme = x.BILEMESAYI,
                                    Paketlenen = x.KONTROLSAYI,
-                                   x.AKTIF,// 21
-                                   x.NOTLAR,// 22 
-                                   x.SIPARISASAMASI,// 23
+                                   x.AKTIF,// 22
+                                   x.NOTLAR,// 23 
+                                   x.SIPARISASAMASI,// 24
                                    Giden = x.SEVKIYATSAYI
 
                                }).ToList().OrderByDescending(x => x.SiparisNo);
@@ -71,7 +72,7 @@ namespace test_kooil.Formlar
                 gridView1.Columns[5].Visible = false;
                 gridView1.Columns[6].Visible = false;
                 gridView1.Columns[23].Visible = false;
-                gridView1.Columns[21].Visible = false;
+                gridView1.Columns[24].Visible = false;
                 gridView1.Columns[22].Visible = false;
                 //
 
