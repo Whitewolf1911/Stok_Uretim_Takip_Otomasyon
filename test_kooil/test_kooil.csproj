@@ -246,6 +246,24 @@
     <Compile Include="Formlar\Frm_ArkaSiyirma.Designer.cs">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_AyakKesme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_AyakKesme.Designer.cs">
+      <DependentUpon>Frm_AyakKesme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_AyakKesmeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_AyakKesmeEkle.Designer.cs">
+      <DependentUpon>Frm_AyakKesmeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_AyakKesmeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_AyakKesmeRapor.Designer.cs">
+      <DependentUpon>Frm_AyakKesmeRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_Ayarlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +329,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_GerilimGiderme.Designer.cs">
       <DependentUpon>Frm_GerilimGiderme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_GerilimGiderRapor.Designer.cs">
+      <DependentUpon>Frm_GerilimGiderRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_HammaddeLog.cs">
       <SubType>Form</SubType>
@@ -431,6 +455,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_Kontrol.Designer.cs">
       <DependentUpon>Frm_Kontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_kontrolDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_kontrolDuzenle.Designer.cs">
+      <DependentUpon>Frm_kontrolDuzenle.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_KontrolEkle.cs">
       <SubType>Form</SubType>
@@ -725,6 +755,15 @@
     <EmbeddedResource Include="Formlar\Frm_ArkaSiyirma.resx">
       <DependentUpon>Frm_ArkaSiyirma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_AyakKesme.resx">
+      <DependentUpon>Frm_AyakKesme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_AyakKesmeEkle.resx">
+      <DependentUpon>Frm_AyakKesmeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_AyakKesmeRapor.resx">
+      <DependentUpon>Frm_AyakKesmeRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Ayarlar.resx">
       <DependentUpon>Frm_Ayarlar.cs</DependentUpon>
     </EmbeddedResource>
@@ -757,6 +796,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_GerilimGiderme.resx">
       <DependentUpon>Frm_GerilimGiderme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_GerilimGiderRapor.resx">
+      <DependentUpon>Frm_GerilimGiderRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_HammaddeLog.resx">
       <DependentUpon>Frm_HammaddeLog.cs</DependentUpon>
@@ -817,6 +859,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Kontrol.resx">
       <DependentUpon>Frm_Kontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_kontrolDuzenle.resx">
+      <DependentUpon>Frm_kontrolDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_KontrolEkle.resx">
       <DependentUpon>Frm_KontrolEkle.cs</DependentUpon>

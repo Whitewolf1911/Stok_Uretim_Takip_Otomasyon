@@ -81,6 +81,8 @@ namespace test_kooil.Formlar
                         if (chHataDuzelt.Checked) { new_user.hataduzelt = true; } else { new_user.hataduzelt = false; }
                         if (ch_iade.Checked) { new_user.iade = true; } else { new_user.iade = false; }
                         if (ch_gerilim.Checked) { new_user.gerilimGiderme = true; } else { new_user.gerilimGiderme = false; }
+                        if (ch_ayakKesme.Checked) { new_user.ayakKesme = true; } else { new_user.ayakKesme = false; }
+
 
 
                         db.TBL_USERS.Add(new_user);

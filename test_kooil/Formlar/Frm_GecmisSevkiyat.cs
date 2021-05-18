@@ -32,7 +32,8 @@ namespace test_kooil.Formlar
                                    ÜrünKodu = x.URUNKOD,
                                    Adet = x.ADET,
                                    Tarih = x.TARIH,
-                                   SiparişNo = x.SIPARISNO
+                                   SiparişNo = x.SIPARISNO,
+                                   PartiNo = x.PARTINO
 
 
                                }).ToList().OrderByDescending(x => x.Tarih);

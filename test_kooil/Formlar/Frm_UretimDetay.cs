@@ -28,13 +28,13 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparisNo = x.SIPARISNOID,
-                                   Musteri = x.MUSTERI,
-                                   UrunKodu = x.TBL_IGNELER.IGNEKOD,
+                                   PartiNo = x.PARTINO,
+                                   Müşteri = x.MUSTERI,
                                    UrunTuru = x.TBL_IGNELER.TUR,
+                                   UrunKodu = x.TBL_IGNELER.IGNEKOD,
                                    Siparis = x.URUNADETI,
                                    SiparisTarihi = x.SIPARISTARIHI,
                                    IstenilenTarih = x.ISTENILENTARIH,
-
                                    Pres = x.PRESSAYI,
                                    ArkaSıyırma = x.ARKASIYIRSAYI,
                                    YolKopyalama = x.YOLKOPYASAYI,
@@ -65,14 +65,15 @@ namespace test_kooil.Formlar
                 gridView1.Columns[3].AppearanceCell.BackColor = Color.LightGreen;
                 gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
                 gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
-                gridView1.Columns[20].AppearanceCell.BackColor = Color.Yellow;
-                gridView1.Columns[21].AppearanceCell.BackColor = Color.LightGreen;
+                gridView1.Columns[6].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[21].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[22].AppearanceCell.BackColor = Color.LightGreen;
 
 
 
-                gridView1.Columns[23].Visible = false;
                 gridView1.Columns[24].Visible = false;
                 gridView1.Columns[25].Visible = false;
+                gridView1.Columns[26].Visible = false;
             }
             catch (Exception) { }
             //
@@ -129,7 +130,7 @@ namespace test_kooil.Formlar
             if (gridView1.GetFocusedRowCellValue("SiparisNo") != null) { txt_sipNo.Text = gridView1.GetFocusedRowCellValue("SiparisNo").ToString(); }
             if (gridView1.GetFocusedRowCellValue("UrunTuru") != null) { txt_sipUrunTip.Text = gridView1.GetFocusedRowCellValue("UrunTuru").ToString(); }
             if (gridView1.GetFocusedRowCellValue("UrunKodu") != null) { txt_sipUrunKod.Text = gridView1.GetFocusedRowCellValue("UrunKodu").ToString(); }
-            if (gridView1.GetFocusedRowCellValue("Musteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Musteri").ToString(); }
+            if (gridView1.GetFocusedRowCellValue("Müşteri") != null) { txt_musteri.Text = gridView1.GetFocusedRowCellValue("Müşteri").ToString(); }
             if (gridView1.GetFocusedRowCellValue("SiparisTarihi") != null) { date_sipTarih.EditValue =  gridView1.GetFocusedRowCellValue("SiparisTarihi"); }
             if (gridView1.GetFocusedRowCellValue("IstenilenTarih") != null) { date_Ist_tarih.EditValue = gridView1.GetFocusedRowCellValue("IstenilenTarih"); }
             if (gridView1.GetFocusedRowCellValue("Giden") != null) { txt_paketlenen.Text = gridView1.GetFocusedRowCellValue("Giden").ToString(); }

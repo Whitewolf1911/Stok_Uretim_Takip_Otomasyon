@@ -41,7 +41,7 @@ namespace test_kooil.Formlar
                     TBL_RAPOR rapor = new TBL_RAPOR();
                     rapor.SIPARISNO = int.Parse(lookUp_Siparis.EditValue.ToString());
                     var igneKodu = db.TBL_SIPARIS.Where(x => x.SIPARISNOID == rapor.SIPARISNO).Select(x => x.TBL_IGNELER.IGNEKOD).FirstOrDefault();
-
+                    rapor.PARTINO = int.Parse(lookUp_Siparis.GetColumnValue("PartiNo").ToString());
                     rapor.IGNEKODU = igneKodu.ToString();
                     rapor.ISLENENMIKTAR = int.Parse(num_IslenenAdet.Value.ToString());
                     rapor.TARIH = date_BasimTarihi.DateTime;
@@ -58,9 +58,9 @@ namespace test_kooil.Formlar
                     var deger = db.TBL_SIPARIS.Find( rapor.SIPARISNO);
                     deger.TEMPERSAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                    if (deger.SIPARISASAMASI < 12)
+                    if (deger.SIPARISASAMASI < 13)
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 12; //siparis asamasini guncelle 
+                        deger.SIPARISASAMASI = 13; //siparis asamasini guncelle 
 
 
 
@@ -104,6 +104,7 @@ namespace test_kooil.Formlar
                                         select new
                                         {
                                             SiparişNo = x.SIPARISNOID,
+                                            PartiNo = x.PARTINO,
                                             Tur = x.TBL_IGNELER.TUR,
                                             ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                             Sipariş = x.URUNADETI,
@@ -118,9 +119,9 @@ namespace test_kooil.Formlar
 
                 lookUp_Siparis.Properties.PopulateColumns(); // to hide unwanted columns you need to populate columns manually first.
                 lookUp_Siparis.Properties.BestFit();
-                lookUp_Siparis.Properties.Columns[1].Visible = false;
+                //lookUp_Siparis.Properties.Columns[1].Visible = false;
                 lookUp_Siparis.Properties.Columns[5].Visible = false;
-                lookUp_Siparis.Properties.Columns[4].Visible = false;
+                lookUp_Siparis.Properties.Columns[6].Visible = false;
                 text_Raporlayan.Text = Frm_Login.user.AdSoyad;
             }
             catch (Exception) { }

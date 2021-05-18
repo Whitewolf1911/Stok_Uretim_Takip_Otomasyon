@@ -41,7 +41,7 @@ namespace test_kooil.Formlar
                     rapor.TARIH = date_BasimTarihi.DateTime;
                     rapor.NOT = text_Not.Text;
                     rapor.RAPORLAYAN = text_Raporlayan.Text;
-                    rapor.ISLEM = "Gerilim Giderme";
+                    rapor.ISLEM = "GerilimGiderme";
                     rapor.URUNTUR = lookUp_Siparis.GetColumnValue("Tur").ToString();
                     db.TBL_RAPOR.Add(rapor);
                     db.SaveChanges();
@@ -50,10 +50,10 @@ namespace test_kooil.Formlar
                     var deger = db.TBL_SIPARIS.Find(rapor.SIPARISNO);
                     deger.GERILIMGIDERMESAYI += int.Parse(num_IslenenAdet.Value.ToString());
 
-                    if (deger.SIPARISASAMASI < 10)
+                    if (deger.SIPARISASAMASI < 11)
 
                     {  // bu asamadan bir kere rapor ciktiysa tekrar sayiyi yukseltmesin.
-                        deger.SIPARISASAMASI = 10; //siparis asamasini guncelle                  
+                        deger.SIPARISASAMASI = 11; //siparis asamasini guncelle                  
                     }
                     db.SaveChanges();
 

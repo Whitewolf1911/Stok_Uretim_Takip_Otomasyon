@@ -27,6 +27,7 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparişNo = x.SIPARISNO,
+                                   PartiNo = x.PARTINO,
                                    Raporlayan = x.RAPORLAYAN,
                                    Tür = x.URUNTUR,
                                    ÜrünKodu = x.IGNEKODU,
@@ -38,7 +39,7 @@ namespace test_kooil.Formlar
                                }).ToList().OrderByDescending(x => x.Tarih).Where(x => x.ISLEM == "Yol Kopyalama");
 
                 gridControl1.DataSource = veriler;
-                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
             }
             catch (Exception) { }
         }

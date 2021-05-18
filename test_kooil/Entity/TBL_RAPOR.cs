@@ -23,5 +23,6 @@ namespace test_kooil.Entity
         public Nullable<int> SIPARISNO { get; set; }
         public string NOT { get; set; }
         public string URUNTUR { get; set; }
+        public Nullable<int> PARTINO { get; set; }
     }
 }

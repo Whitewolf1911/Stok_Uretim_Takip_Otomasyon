@@ -21,5 +21,8 @@ namespace test_kooil.Entity
         public string NOT { get; set; }
         public int RAPORID { get; set; }
         public Nullable<int> SIPARISNO { get; set; }
+        public string BARKODKOD { get; set; }
+        public Nullable<int> PARTINO { get; set; }
+        public string URUNTUR { get; set; }
     }
 }

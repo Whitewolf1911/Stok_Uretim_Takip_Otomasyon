@@ -42,6 +42,8 @@ namespace test_kooil.Formlar
             this.txt_raporlayan = new DevExpress.XtraEditors.TextEdit();
             this.btn_guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.num_miktar = new System.Windows.Forms.NumericUpDown();
+            this.txt_not = new System.Windows.Forms.RichTextBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_islem.Properties)).BeginInit();
@@ -52,16 +54,19 @@ namespace test_kooil.Formlar
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(321, 12);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(241, 10);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(864, 571);
+            this.gridControl1.Size = new System.Drawing.Size(648, 464);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -72,9 +77,10 @@ namespace test_kooil.Formlar
             // 
             this.Btn_RaporSil.Enabled = false;
             this.Btn_RaporSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_RaporSil.ImageOptions.Image")));
-            this.Btn_RaporSil.Location = new System.Drawing.Point(8, 526);
+            this.Btn_RaporSil.Location = new System.Drawing.Point(6, 427);
+            this.Btn_RaporSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_RaporSil.Name = "Btn_RaporSil";
-            this.Btn_RaporSil.Size = new System.Drawing.Size(210, 57);
+            this.Btn_RaporSil.Size = new System.Drawing.Size(158, 46);
             this.Btn_RaporSil.TabIndex = 3;
             this.Btn_RaporSil.Text = "Seçili Raporu Sil";
             this.Btn_RaporSil.Click += new System.EventHandler(this.Btn_RaporSil_Click);
@@ -82,72 +88,80 @@ namespace test_kooil.Formlar
             // txt_islem
             // 
             this.txt_islem.Enabled = false;
-            this.txt_islem.Location = new System.Drawing.Point(138, 83);
+            this.txt_islem.Location = new System.Drawing.Point(101, 38);
+            this.txt_islem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_islem.Name = "txt_islem";
             this.txt_islem.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_islem.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_islem.Size = new System.Drawing.Size(158, 22);
+            this.txt_islem.Size = new System.Drawing.Size(118, 20);
             this.txt_islem.TabIndex = 4;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 86);
+            this.labelControl1.Location = new System.Drawing.Point(6, 41);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(40, 16);
+            this.labelControl1.Size = new System.Drawing.Size(32, 13);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "İşlem :";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 142);
+            this.labelControl2.Location = new System.Drawing.Point(6, 86);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(68, 16);
+            this.labelControl2.Size = new System.Drawing.Size(57, 13);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Ürün Kodu :";
             // 
             // txt_urunKod
             // 
             this.txt_urunKod.Enabled = false;
-            this.txt_urunKod.Location = new System.Drawing.Point(138, 139);
+            this.txt_urunKod.Location = new System.Drawing.Point(101, 84);
+            this.txt_urunKod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_urunKod.Name = "txt_urunKod";
             this.txt_urunKod.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_urunKod.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_urunKod.Size = new System.Drawing.Size(158, 22);
+            this.txt_urunKod.Size = new System.Drawing.Size(118, 20);
             this.txt_urunKod.TabIndex = 6;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(8, 272);
+            this.labelControl3.Location = new System.Drawing.Point(3, 192);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(44, 16);
+            this.labelControl3.Size = new System.Drawing.Size(36, 13);
             this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "Miktar: ";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(8, 204);
+            this.labelControl4.Location = new System.Drawing.Point(3, 137);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(73, 16);
+            this.labelControl4.Size = new System.Drawing.Size(62, 13);
             this.labelControl4.TabIndex = 11;
             this.labelControl4.Text = "Raporlayan :";
             // 
             // txt_raporlayan
             // 
             this.txt_raporlayan.Enabled = false;
-            this.txt_raporlayan.Location = new System.Drawing.Point(138, 201);
+            this.txt_raporlayan.Location = new System.Drawing.Point(101, 134);
+            this.txt_raporlayan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_raporlayan.Name = "txt_raporlayan";
             this.txt_raporlayan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_raporlayan.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_raporlayan.Size = new System.Drawing.Size(158, 22);
+            this.txt_raporlayan.Size = new System.Drawing.Size(118, 20);
             this.txt_raporlayan.TabIndex = 10;
             // 
             // btn_guncelle
             // 
             this.btn_guncelle.Enabled = false;
             this.btn_guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_guncelle.ImageOptions.Image")));
-            this.btn_guncelle.Location = new System.Drawing.Point(8, 449);
+            this.btn_guncelle.Location = new System.Drawing.Point(6, 365);
+            this.btn_guncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(210, 57);
+            this.btn_guncelle.Size = new System.Drawing.Size(158, 46);
             this.btn_guncelle.TabIndex = 12;
             this.btn_guncelle.Text = "Raporu Güncelle";
             this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
@@ -155,21 +169,43 @@ namespace test_kooil.Formlar
             // num_miktar
             // 
             this.num_miktar.BackColor = System.Drawing.SystemColors.Info;
-            this.num_miktar.Location = new System.Drawing.Point(138, 272);
+            this.num_miktar.Location = new System.Drawing.Point(101, 192);
+            this.num_miktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_miktar.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
             this.num_miktar.Name = "num_miktar";
-            this.num_miktar.Size = new System.Drawing.Size(158, 22);
+            this.num_miktar.Size = new System.Drawing.Size(118, 20);
             this.num_miktar.TabIndex = 13;
+            // 
+            // txt_not
+            // 
+            this.txt_not.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_not.Location = new System.Drawing.Point(101, 235);
+            this.txt_not.MaxLength = 100;
+            this.txt_not.Name = "txt_not";
+            this.txt_not.Size = new System.Drawing.Size(118, 80);
+            this.txt_not.TabIndex = 14;
+            this.txt_not.Text = "";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(3, 235);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(27, 13);
+            this.labelControl5.TabIndex = 15;
+            this.labelControl5.Text = "Not : ";
             // 
             // Frm_HataliRaporSil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 595);
+            this.ClientSize = new System.Drawing.Size(898, 483);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.txt_not);
             this.Controls.Add(this.num_miktar);
             this.Controls.Add(this.btn_guncelle);
             this.Controls.Add(this.labelControl4);
@@ -181,6 +217,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_islem);
             this.Controls.Add(this.Btn_RaporSil);
             this.Controls.Add(this.gridControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Frm_HataliRaporSil";
             this.Text = "Hatalı Rapor Sil";
@@ -210,5 +247,7 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.TextEdit txt_raporlayan;
         private DevExpress.XtraEditors.SimpleButton btn_guncelle;
         private System.Windows.Forms.NumericUpDown num_miktar;
+        private System.Windows.Forms.RichTextBox txt_not;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

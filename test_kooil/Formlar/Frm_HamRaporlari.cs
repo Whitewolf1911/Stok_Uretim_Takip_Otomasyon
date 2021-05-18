@@ -27,6 +27,7 @@ namespace test_kooil.Formlar
                                 select new
                                 {
                                     SiparişNo = x.SIPARISNO,
+                                    PartiNo = x.PARTINO,
                                     Müşteri = x.MUSTERI,
                                     Tür = x.URUNTIPI,
                                     ÜrünKodu = x.URUNKODU,

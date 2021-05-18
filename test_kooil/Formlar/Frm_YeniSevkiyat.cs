@@ -122,7 +122,7 @@ namespace test_kooil.Formlar
                             yeniSevk.TARIH = date_Tarih.DateTime;
                             yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
                             yeniSevk.SEVKIYATTUR = "PERAKENDE";
-
+                            yeniSevk.PARTINO = num_partiNo.Value.ToString();
                             db.TBL_SEVKIYAT.Add(yeniSevk);
 
                             //add to listview
@@ -147,6 +147,7 @@ namespace test_kooil.Formlar
                         yeniSevk.TARIH = date_Tarih.DateTime;
                         yeniSevk.MUSTERI = gridView2.GetFocusedRowCellValue("Firma").ToString();
                         yeniSevk.SEVKIYATTUR = "PERAKENDE";
+                        yeniSevk.PARTINO = num_partiNo.Value.ToString();
 
                         db.TBL_SEVKIYAT.Add(yeniSevk);
 

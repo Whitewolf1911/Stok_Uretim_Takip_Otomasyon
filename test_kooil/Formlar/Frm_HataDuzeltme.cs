@@ -23,6 +23,7 @@ namespace test_kooil.Formlar
         Frm_UrunStokDuzenle frmUrunStokDuzenle;
         Frm_SevkiyatSil frmSevkSil;
         Frm_SipaktifEt frmSipAktifEt;
+        Frm_kontrolDuzenle frmKontrolDuzenle;
         void sipListele() {
             try
             {
@@ -31,12 +32,13 @@ namespace test_kooil.Formlar
                                {
 
                                    SiparişNo = x.SIPARISNOID,
+                                   PartiNo = x.PARTINO,
                                    Müşteri = x.MUSTERI,
                                    Tür = x.TBL_IGNELER.TUR,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                    SiparişTarih = x.SIPARISTARIHI,
                                    İstenilenTarih = x.ISTENILENTARIH,
-                                   x.ARKASIYIRSAYI, //6
+                                   x.ARKASIYIRSAYI, //7
                                    x.BILEMESAYI,
                                    x.DILCAKMASAYI,
                                    x.ISILISLEMSAYI,
@@ -53,12 +55,15 @@ namespace test_kooil.Formlar
                                    SiparişAdet = x.URUNADETI,
                                    x.YIKAMASAYI,
                                    x.YOLKOPYASAYI,
-                                   x.GERILIMGIDERMESAYI
+                                   x.GERILIMGIDERMESAYI,
+                                   x.AYAKKESMESAYI,
 
 
                                }).ToList().OrderByDescending(x => x.SiparişNo);
 
                 gridControl1.DataSource = veriler;
+                gridView1.Columns[5].Visible = false;
+
                 gridView1.Columns[6].Visible = false;
                 gridView1.Columns[7].Visible = false;
                 gridView1.Columns[8].Visible = false;
@@ -73,10 +78,14 @@ namespace test_kooil.Formlar
                 gridView1.Columns[17].Visible = false;
                 gridView1.Columns[18].Visible = false;
                 gridView1.Columns[19].Visible = false;
-                //gridView1.Columns[20].Visible = false;
+                gridView1.Columns[20].Visible = false;
                 gridView1.Columns[22].Visible = false;
                 gridView1.Columns[21].Visible = false;
                 gridView1.Columns[22].Visible = false;
+                gridView1.Columns[23].Visible = false;
+                gridView1.Columns[24].Visible = false;
+                gridView1.Columns[25].Visible = false;
+
 
                 gridView1.Columns[0].AppearanceCell.BackColor = Color.Cyan;
                 gridView1.Columns[1].AppearanceCell.BackColor = Color.Yellow;
@@ -114,6 +123,9 @@ namespace test_kooil.Formlar
                 num_yikama.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YIKAMASAYI"));
                 num_YolKopyala.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("YOLKOPYASAYI"));
                 num_gerilim.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("GERILIMGIDERMESAYI"));
+                num_partiNo.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("PartiNo"));
+                num_ayakKesme.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("AYAKKESMESAYI"));
+
 
                 if (gridView1.GetFocusedRowCellValue("SiparişTarih") != null)
                 {
@@ -164,6 +176,8 @@ namespace test_kooil.Formlar
                     sip.YIKAMASAYI = (int)num_yikama.Value;
                     sip.YOLKOPYASAYI = (int)num_YolKopyala.Value;
                     sip.GERILIMGIDERMESAYI = (int)num_gerilim.Value;
+                    sip.PARTINO = (int)num_partiNo.Value;
+                    sip.AYAKKESMESAYI = (int)num_ayakKesme.Value;
 
                     db.SaveChanges();
                     XtraMessageBox.Show("Seçilen Sipariş Güncellendi", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -238,6 +252,15 @@ namespace test_kooil.Formlar
             {
                 frmSipAktifEt = new Frm_SipaktifEt();
                 frmSipAktifEt.Show();
+            }
+        }
+
+        private void Btn_paketlemeDuzenle_Click(object sender, EventArgs e)
+        {
+            if (frmKontrolDuzenle == null || frmKontrolDuzenle.IsDisposed)
+            {
+                frmKontrolDuzenle = new Frm_kontrolDuzenle();
+                frmKontrolDuzenle.Show();
             }
         }
     }

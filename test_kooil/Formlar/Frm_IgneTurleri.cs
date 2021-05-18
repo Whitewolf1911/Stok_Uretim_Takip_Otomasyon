@@ -34,7 +34,7 @@ namespace test_kooil.Formlar
                                    SarfiyatGr = x.SARFIYATORAN,
                                    x.HAMMADDETIPI,
                                    x.ISILISLEMFORMUL,
-                                   x.NOT,
+                                   Not = x.NOT,
                                    x.FOTO
                                }
                                );
@@ -48,7 +48,7 @@ namespace test_kooil.Formlar
                 //gridView1.Columns[3].Visible = false;
                 gridView1.Columns[4].Visible = false;
                 gridView1.Columns[5].Visible = false;
-                gridView1.Columns[6].Visible = false;
+                //gridView1.Columns[6].Visible = false;
                 gridView1.Columns[7].Visible = false;
                 gridView1.BestFitColumns();
             }
@@ -99,9 +99,9 @@ namespace test_kooil.Formlar
                 {
                     txt_IsilIslem.Text = gridView1.GetFocusedRowCellValue("ISILISLEMFORMUL").ToString();
                 }
-                if (gridView1.GetFocusedRowCellValue("NOT") != null)
+                if (gridView1.GetFocusedRowCellValue("Not") != null)
                 {
-                    txt_Not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+                    txt_Not.Text = gridView1.GetFocusedRowCellValue("Not").ToString();
                 }
                 if (gridView1.GetFocusedRowCellValue("FOTO") != null)
                 {

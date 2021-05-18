@@ -68,7 +68,8 @@ namespace test_kooil.Formlar
                                    x.yolKopyala,
                                    x.hataduzelt,
                                    x.iade,
-                                   x.gerilimGiderme
+                                   x.gerilimGiderme,
+                                   x.ayakKesme
 
                                }).ToList();
 
@@ -116,6 +117,7 @@ namespace test_kooil.Formlar
                 gridView1.Columns[40].Visible = false;
                 gridView1.Columns[41].Visible = false;
                 gridView1.Columns[42].Visible = false;
+                gridView1.Columns[43].Visible = false;
             }
             catch (Exception) { }
 
@@ -173,6 +175,7 @@ namespace test_kooil.Formlar
             ch_iade.Checked = (bool)gridView1.GetFocusedRowCellValue("iade");
             chHataDuzelt.Checked = (bool)gridView1.GetFocusedRowCellValue("hataduzelt");
             ch_gerilim.Checked = (bool)gridView1.GetFocusedRowCellValue("gerilimGiderme");
+            ch_ayakKesme.Checked = (bool)gridView1.GetFocusedRowCellValue("ayakKesme");
 
 
         }
@@ -245,6 +248,8 @@ namespace test_kooil.Formlar
                             if (chHataDuzelt.Checked) { new_user.hataduzelt = true; } else { new_user.hataduzelt = false; }
                             if (ch_iade.Checked) { new_user.iade = true; } else { new_user.iade = false; }
                             if (ch_gerilim.Checked) { new_user.gerilimGiderme = true; } else { new_user.gerilimGiderme = false; }
+                            if (ch_ayakKesme.Checked) { new_user.ayakKesme = true; } else { new_user.ayakKesme = false; }
+
 
 
 

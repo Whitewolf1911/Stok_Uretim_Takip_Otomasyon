@@ -66,6 +66,7 @@ namespace test_kooil.Formlar
                                       select new
                                       {
                                           SiparişNo = x.SIPARISNOID,
+                                          PartiNo = x.PARTINO,
                                           Firma = x.MUSTERI,
                                           Tür = x.TBL_IGNELER.TUR,
                                           Sipariş = x.URUNADETI,
@@ -81,10 +82,10 @@ namespace test_kooil.Formlar
 
                     gridControl1.DataSource = siparisler;
 
-                    gridView1.Columns[1].Visible = false;
-                    gridView1.Columns[5].Visible = false;
-                    gridView1.Columns[7].Visible = false;
-                    gridView1.Columns[10].Visible = false;
+                    gridView1.Columns[2].Visible = false;
+                    gridView1.Columns[6].Visible = false;
+                    gridView1.Columns[8].Visible = false;
+                    gridView1.Columns[11].Visible = false;
 
                     gridView1.Columns[0].AppearanceCell.BackColor = Color.LightGreen;
                     gridView1.Columns[1].AppearanceCell.BackColor = Color.Cyan;
@@ -156,6 +157,7 @@ namespace test_kooil.Formlar
                 yeniSevk.TARIH = date_Tarih.DateTime;
                 yeniSevk.MUSTERI = gridView1.GetFocusedRowCellValue("Firma").ToString();
                 yeniSevk.SEVKIYATTUR = "SİPARİŞ";
+                yeniSevk.PARTINO = gridView1.GetFocusedRowCellValue("PartiNo").ToString();
 
                 db.TBL_SEVKIYAT.Add(yeniSevk);
 
@@ -204,13 +206,17 @@ namespace test_kooil.Formlar
         private void Btn_Tamamla_Click(object sender, EventArgs e)
         {
             DialogResult siradakiAsamaSorgu = MessageBox.Show("Sevkiyatı Tamamlamak İstediğinize Emin Misiniz ? ", "Sevkiyat Onay", MessageBoxButtons.YesNo);
-            if (siradakiAsamaSorgu == DialogResult.Yes)
+            try
             {
-                db.SaveChanges();
-                siparisListele();
-                XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Btn_Yazdir.PerformClick();
+                if (siradakiAsamaSorgu == DialogResult.Yes)
+                {
+                    db.SaveChanges();
+                    siparisListele();
+                    XtraMessageBox.Show("Sevkiyat Tamamlandı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Btn_Yazdir.PerformClick();
+                }
             }
+            catch (Exception) { }
         }
 
         private void Btn_Iptal_Click(object sender, EventArgs e)

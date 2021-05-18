@@ -112,6 +112,7 @@
           <Property Name="OZELLIK" Type="varchar" MaxLength="15" />
           <Property Name="MENSEI" Type="varchar" MaxLength="25" />
           <Property Name="RAPORLAYAN" Type="varchar" MaxLength="50" />
+          <Property Name="PARTINO" Type="int" />
         </EntityType>
         <EntityType Name="TBL_IADE">
           <Key>
@@ -190,6 +191,9 @@
           <Property Name="TARIH" Type="date" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
+          <Property Name="BARKODKOD" Type="varchar" MaxLength="20" />
+          <Property Name="PARTINO" Type="int" />
+          <Property Name="URUNTUR" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="TBL_POLISAJ1">
           <Key>
@@ -228,6 +232,7 @@
           <Property Name="SIPARISNO" Type="int" />
           <Property Name="HAMMADDE" Type="varchar" MaxLength="15" />
           <Property Name="URUNTUR" Type="varchar" MaxLength="25" />
+          <Property Name="PARTINO" Type="int" />
         </EntityType>
         <EntityType Name="TBL_RAPOR">
           <Key>
@@ -242,6 +247,7 @@
           <Property Name="SIPARISNO" Type="int" />
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="URUNTUR" Type="varchar" MaxLength="25" />
+          <Property Name="PARTINO" Type="int" />
         </EntityType>
         <EntityType Name="TBL_SEVKIYAT">
           <Key>
@@ -255,6 +261,7 @@
           <Property Name="ADET" Type="int" />
           <Property Name="SEVKIYATTUR" Type="varchar" MaxLength="11" />
           <Property Name="SIPARISNO" Type="varchar" MaxLength="30" />
+          <Property Name="PARTINO" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
@@ -286,6 +293,8 @@
           <Property Name="KONTROLSAYI" Type="int" />
           <Property Name="SEVKIYATSAYI" Type="int" />
           <Property Name="GERILIMGIDERMESAYI" Type="int" />
+          <Property Name="PARTINO" Type="int" />
+          <Property Name="AYAKKESMESAYI" Type="int" />
         </EntityType>
         <EntityType Name="TBL_TEMPER">
           <Key>
@@ -369,6 +378,7 @@
           <Property Name="hataduzelt" Type="bit" />
           <Property Name="iade" Type="bit" />
           <Property Name="gerilimGiderme" Type="bit" />
+          <Property Name="ayakKesme" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
@@ -499,6 +509,8 @@
           <Property Name="KONTROLSAYI" Type="Int32" />
           <Property Name="SEVKIYATSAYI" Type="Int32" />
           <Property Name="GERILIMGIDERMESAYI" Type="Int32" />
+          <Property Name="PARTINO" Type="Int32" />
+          <Property Name="AYAKKESMESAYI" Type="Int32" />
         </EntityType>
         <Association Name="FK_TBL_SIPARIS_TBL_IGNELER">
           <End Role="TBL_IGNELER" Type="Self.TBL_IGNELER" Multiplicity="0..1" />
@@ -567,6 +579,9 @@
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RAPORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SIPARISNO" Type="Int32" />
+          <Property Name="BARKODKOD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PARTINO" Type="Int32" />
+          <Property Name="URUNTUR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_PRES">
           <Key>
@@ -581,6 +596,7 @@
           <Property Name="SIPARISNO" Type="Int32" />
           <Property Name="HAMMADDE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PARTINO" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_ARKASIYIR">
           <Key>
@@ -607,6 +623,7 @@
           <Property Name="SIPARISNO" Type="Int32" />
           <Property Name="NOT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="URUNTUR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PARTINO" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_YOLKOPYALA">
           <Key>
@@ -758,6 +775,7 @@
           <Property Name="OZELLIK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="MENSEI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="RAPORLAYAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARTINO" Type="Int32" />
         </EntityType>
         <EntityType Name="TBL_FIRMALAR">
           <Key>
@@ -787,6 +805,7 @@
           <Property Name="ADET" Type="Int32" />
           <Property Name="SEVKIYATTUR" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="SIPARISNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PARTINO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_USERS">
           <Key>
@@ -835,6 +854,7 @@
           <Property Name="hataduzelt" Type="Boolean" />
           <Property Name="iade" Type="Boolean" />
           <Property Name="gerilimGiderme" Type="Boolean" />
+          <Property Name="ayakKesme" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_HAMLOG">
           <Key>
@@ -913,6 +933,8 @@
           <EntitySetMapping Name="TBL_SIPARIS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SIPARIS">
               <MappingFragment StoreEntitySet="TBL_SIPARIS">
+                <ScalarProperty Name="AYAKKESMESAYI" ColumnName="AYAKKESMESAYI" />
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="GERILIMGIDERMESAYI" ColumnName="GERILIMGIDERMESAYI" />
                 <ScalarProperty Name="SEVKIYATSAYI" ColumnName="SEVKIYATSAYI" />
                 <ScalarProperty Name="KONTROLSAYI" ColumnName="KONTROLSAYI" />
@@ -958,6 +980,9 @@
           <EntitySetMapping Name="TBL_KONTROL">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_KONTROL">
               <MappingFragment StoreEntitySet="TBL_KONTROL">
+                <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
+                <ScalarProperty Name="BARKODKOD" ColumnName="BARKODKOD" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="RAPORID" ColumnName="RAPORID" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
@@ -971,6 +996,7 @@
           <EntitySetMapping Name="TBL_PRES">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_PRES">
               <MappingFragment StoreEntitySet="TBL_PRES">
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
                 <ScalarProperty Name="HAMMADDE" ColumnName="HAMMADDE" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
@@ -999,6 +1025,7 @@
           <EntitySetMapping Name="TBL_RAPOR">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_RAPOR">
               <MappingFragment StoreEntitySet="TBL_RAPOR">
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="URUNTUR" ColumnName="URUNTUR" />
                 <ScalarProperty Name="NOT" ColumnName="NOT" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
@@ -1158,6 +1185,7 @@
           <EntitySetMapping Name="TBL_HAMRAPOR">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_HAMRAPOR">
               <MappingFragment StoreEntitySet="TBL_HAMRAPOR">
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="RAPORLAYAN" ColumnName="RAPORLAYAN" />
                 <ScalarProperty Name="MENSEI" ColumnName="MENSEI" />
                 <ScalarProperty Name="OZELLIK" ColumnName="OZELLIK" />
@@ -1194,6 +1222,7 @@
           <EntitySetMapping Name="TBL_SEVKIYAT">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SEVKIYAT">
               <MappingFragment StoreEntitySet="TBL_SEVKIYAT">
+                <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="SEVKIYATTUR" ColumnName="SEVKIYATTUR" />
                 <ScalarProperty Name="ADET" ColumnName="ADET" />
@@ -1208,6 +1237,7 @@
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="ayakKesme" ColumnName="ayakKesme" />
                 <ScalarProperty Name="gerilimGiderme" ColumnName="gerilimGiderme" />
                 <ScalarProperty Name="iade" ColumnName="iade" />
                 <ScalarProperty Name="hataduzelt" ColumnName="hataduzelt" />

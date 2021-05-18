@@ -19,6 +19,7 @@ namespace test_kooil.Formlar
         }
         DB_kooil_testEntities db = new DB_kooil_testEntities();
         Frm_GerilimGiderEkle frmEkle;
+        Frm_GerilimGiderRapor frmRapor;
         void listele()
         {
             try
@@ -71,6 +72,16 @@ namespace test_kooil.Formlar
         {
             frmEkle = new Frm_GerilimGiderEkle();
             frmEkle.Show();
+        }
+
+        private void Btn_Raporlar_Click(object sender, EventArgs e)
+        {
+            if (frmRapor == null || frmRapor.IsDisposed)
+            {
+                frmRapor = new Frm_GerilimGiderRapor();
+                frmRapor.MdiParent = this.ParentForm;
+                frmRapor.Show();
+            }
         }
     }
 }

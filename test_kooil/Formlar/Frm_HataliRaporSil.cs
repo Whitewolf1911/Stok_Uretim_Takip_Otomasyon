@@ -33,11 +33,14 @@ namespace test_kooil.Formlar
                                    Tarih = x.TARIH,
                                    Raporlayan = x.RAPORLAYAN,
                                    x.RAPORID,
+                                   x.NOT,
 
                                }).ToList().OrderByDescending(x => x.Tarih);
 
                 gridControl1.DataSource = veriler;
                 gridView1.Columns[6].Visible = false;
+                gridView1.Columns[7].Visible = false;
+
             }
             catch (Exception) { }
         }
@@ -50,10 +53,30 @@ namespace test_kooil.Formlar
         {
             btn_guncelle.Enabled = true;
             Btn_RaporSil.Enabled = true;
-            txt_islem.Text = gridView1.GetFocusedRowCellValue("İşlem").ToString();
-            txt_urunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
-            txt_raporlayan.Text = gridView1.GetFocusedRowCellValue("Raporlayan").ToString();
-            num_miktar.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("İşlenenMiktar"));
+            try
+            {
+                if(gridView1.GetFocusedRowCellValue("İşlem") != null)
+                {
+                    txt_islem.Text = gridView1.GetFocusedRowCellValue("İşlem").ToString();
+                }
+                if(gridView1.GetFocusedRowCellValue("ÜrünKodu")!= null)
+                {
+                    txt_urunKod.Text = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
+                }
+                if(gridView1.GetFocusedRowCellValue("Raporlayan") != null)
+                {
+                    txt_raporlayan.Text = gridView1.GetFocusedRowCellValue("Raporlayan").ToString();
+                }
+                if(gridView1.GetFocusedRowCellValue("İşlenenMiktar")!= null){
+                    num_miktar.Value = Convert.ToDecimal(gridView1.GetFocusedRowCellValue("İşlenenMiktar"));
+
+                }
+                if(gridView1.GetFocusedRowCellValue("NOT")!= null)
+                {
+                    txt_not.Text = gridView1.GetFocusedRowCellValue("NOT").ToString();
+                }
+            }
+            catch (Exception) { }
         }
 
         private void btn_guncelle_Click(object sender, EventArgs e)
@@ -66,6 +89,7 @@ namespace test_kooil.Formlar
                     int repID = (int)gridView1.GetFocusedRowCellValue("RAPORID");
                     var rep = db.TBL_RAPOR.Find(repID);
                     rep.ISLENENMIKTAR = (int)num_miktar.Value;
+                    rep.NOT = txt_not.Text;
                     db.SaveChanges();
                     XtraMessageBox.Show("Rapor Güncellendi. ", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     raporListele();

@@ -80,6 +80,7 @@ namespace test_kooil
             this.Btn_hataDuzeltme = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_Iadeler = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_GerilimGiderme = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_AyakKesme = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -154,19 +155,20 @@ namespace test_kooil
             this.barButtonItem1,
             this.Btn_hataDuzeltme,
             this.Btn_Iadeler,
-            this.Btn_GerilimGiderme});
+            this.Btn_GerilimGiderme,
+            this.Btn_AyakKesme});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 52;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.ribbonControl1.MaxItemId = 53;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 329;
+            this.ribbonControl1.OptionsMenuMinWidth = 247;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4,
             this.ribbonPage3});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1105, 150);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // Btn_AnaSayfa
@@ -326,7 +328,7 @@ namespace test_kooil
             // 
             // Btn_Temper
             // 
-            this.Btn_Temper.Caption = "12. Temper";
+            this.Btn_Temper.Caption = "13. Temper";
             this.Btn_Temper.Id = 19;
             this.Btn_Temper.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Temper.ImageOptions.Image")));
             this.Btn_Temper.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Temper.ImageOptions.LargeImage")));
@@ -335,7 +337,7 @@ namespace test_kooil
             // 
             // Btn_Yikama
             // 
-            this.Btn_Yikama.Caption = "13. Yıkama";
+            this.Btn_Yikama.Caption = "14. Yıkama";
             this.Btn_Yikama.Id = 20;
             this.Btn_Yikama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yikama.ImageOptions.Image")));
             this.Btn_Yikama.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Yikama.ImageOptions.LargeImage")));
@@ -344,7 +346,7 @@ namespace test_kooil
             // 
             // Btn_Bileme
             // 
-            this.Btn_Bileme.Caption = "14. Bileme";
+            this.Btn_Bileme.Caption = "15. Bileme";
             this.Btn_Bileme.Id = 21;
             this.Btn_Bileme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Bileme.ImageOptions.Image")));
             this.Btn_Bileme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Bileme.ImageOptions.LargeImage")));
@@ -353,7 +355,7 @@ namespace test_kooil
             // 
             // Btn_Kontrol
             // 
-            this.Btn_Kontrol.Caption = "15. Kontrol";
+            this.Btn_Kontrol.Caption = "16. Kontrol";
             this.Btn_Kontrol.Id = 22;
             this.Btn_Kontrol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kontrol.ImageOptions.Image")));
             this.Btn_Kontrol.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Kontrol.ImageOptions.LargeImage")));
@@ -455,7 +457,7 @@ namespace test_kooil
             // 
             // Btn_IsilIslem
             // 
-            this.Btn_IsilIslem.Caption = "11. Isıl İşlem";
+            this.Btn_IsilIslem.Caption = "12. Isıl İşlem";
             this.Btn_IsilIslem.Id = 36;
             this.Btn_IsilIslem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_IsilIslem.ImageOptions.Image")));
             this.Btn_IsilIslem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_IsilIslem.ImageOptions.LargeImage")));
@@ -576,12 +578,21 @@ namespace test_kooil
             // 
             // Btn_GerilimGiderme
             // 
-            this.Btn_GerilimGiderme.Caption = "10 . Gerilim Giderme";
+            this.Btn_GerilimGiderme.Caption = "11 . Gerilim Giderme";
             this.Btn_GerilimGiderme.Id = 51;
             this.Btn_GerilimGiderme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_GerilimGiderme.ImageOptions.Image")));
             this.Btn_GerilimGiderme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_GerilimGiderme.ImageOptions.LargeImage")));
             this.Btn_GerilimGiderme.Name = "Btn_GerilimGiderme";
             this.Btn_GerilimGiderme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_GerilimGiderme_ItemClick);
+            // 
+            // Btn_AyakKesme
+            // 
+            this.Btn_AyakKesme.Caption = "10. Ayak Kesme";
+            this.Btn_AyakKesme.Id = 52;
+            this.Btn_AyakKesme.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_AyakKesme.ImageOptions.Image")));
+            this.Btn_AyakKesme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_AyakKesme.ImageOptions.LargeImage")));
+            this.Btn_AyakKesme.Name = "Btn_AyakKesme";
+            this.Btn_AyakKesme.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_AyakKesme_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -636,6 +647,7 @@ namespace test_kooil
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Polisaj1);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_DilCakma);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_polisaj2);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_AyakKesme);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_GerilimGiderme);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_IsilIslem);
             this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Temper);
@@ -725,13 +737,13 @@ namespace test_kooil
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1473, 846);
+            this.ClientSize = new System.Drawing.Size(1105, 687);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -813,6 +825,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_hataDuzeltme;
         private DevExpress.XtraBars.BarButtonItem Btn_Iadeler;
         private DevExpress.XtraBars.BarButtonItem Btn_GerilimGiderme;
+        private DevExpress.XtraBars.BarButtonItem Btn_AyakKesme;
     }
 }
 

@@ -33,7 +33,8 @@ namespace test_kooil.Formlar
                                    Adet = x.ADET,
                                    SevkiyatTürü = x.SEVKIYATTUR,
                                    Tarih = x.TARIH,
-                                   SiparişNo = x.SIPARISNO
+                                   SiparişNo = x.SIPARISNO,
+                                   PartiNo = x.PARTINO
 
                                }).ToList().OrderByDescending(x => x.Tarih);
                 gridControl1.DataSource = veriler;

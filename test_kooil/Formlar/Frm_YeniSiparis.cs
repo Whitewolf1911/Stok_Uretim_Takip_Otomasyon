@@ -70,8 +70,24 @@ namespace test_kooil.Formlar
 
         private void Frm_YeniSiparis_Load(object sender, EventArgs e)
         {
-            urunListele();
-            musteriListele();
+            try
+            {
+                urunListele();
+                musteriListele();
+
+                var lastPartynum = (from x in db.TBL_SIPARIS
+                                    select new
+                                    {
+                                        x.PARTINO
+
+                                    }).ToList().Max(x => x.PARTINO);
+                if (lastPartynum != null)
+                {
+                    label_lastPartyNum.Text = lastPartynum.ToString();
+                }
+            }
+            catch (Exception) { }
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -109,7 +125,9 @@ namespace test_kooil.Formlar
                     yeniSiparis.YIKAMASAYI = 0;
                     yeniSiparis.YOLKOPYASAYI = 0;
                     yeniSiparis.SEVKIYATSAYI = 0;
-
+                    yeniSiparis.GERILIMGIDERMESAYI = 0;
+                    yeniSiparis.AYAKKESMESAYI = 0;
+                    yeniSiparis.PARTINO = (int)num_partiNo.Value;
                     //var igneFiyati = db.TBL_IGNELER.Where(x => x.ID == ignetipi).Select(x => x.ADETFIYATI).FirstOrDefault();
                     //igneFiyati.ToString();
                     //yeniSiparis.TOPLAMTUTAR = int.Parse(num_Adet.Value.ToString()) * Convert.ToDecimal(igneFiyati);

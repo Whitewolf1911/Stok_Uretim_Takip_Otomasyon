@@ -170,21 +170,24 @@ namespace test_kooil.Formlar
                     durum = "Polisaj2 de";
                     break;
                 case 10:
-                    durum = "Gerilim Gidermede";
+                    durum = "Ayak Kesmede";
                     break;
                 case 11:
-                    durum = "Isıl İşlemde";
+                    durum = "Gerilim Gidermede";
                     break;
                 case 12:
-                    durum = "Temperde";
+                    durum = "Isıl İşlemde";
                     break;
                 case 13:
-                    durum = "Yıkamada";
+                    durum = "Temperde";
                     break;
                 case 14:
-                    durum = "Bilemede";
+                    durum = "Yıkamada";
                     break;
                 case 15:
+                    durum = "Bilemede";
+                    break;
+                case 16:
                     durum = "Kontrolde";
                     break;
             }

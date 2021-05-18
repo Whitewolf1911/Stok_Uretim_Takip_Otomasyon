@@ -26,6 +26,7 @@ namespace test_kooil.Formlar
                                   select new
                                   {
                                       SiparişNo = x.SIPARISNOID,
+                                      PartiNo = x.PARTINO,
                                       Müşteri = x.MUSTERI,
                                       Tür = x.TBL_IGNELER.TUR,
                                       ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
@@ -36,7 +37,7 @@ namespace test_kooil.Formlar
                                   }).ToList().Where(x => x.AKTIF == true);
 
                 gridControl1.DataSource = siparisler;
-                gridView1.Columns[5].Visible = false;
+                gridView1.Columns[6].Visible = false;
             }
             catch (Exception) { }
         }
@@ -103,6 +104,7 @@ namespace test_kooil.Formlar
                     rapor.HAMKALINLIK = Convert.ToDecimal(gridView2.GetFocusedRowCellValue("Kalınlık").ToString());
                     rapor.HAMGENISLIK = Convert.ToDecimal(gridView2.GetFocusedRowCellValue("Genişlik").ToString());
                     rapor.MENSEI = gridView2.GetFocusedRowCellValue("Menşei").ToString();
+                    rapor.PARTINO = (int)gridView1.GetFocusedRowCellValue("PartiNo");
                     rapor.MUSTERI = gridView1.GetFocusedRowCellValue("Müşteri").ToString();
                     rapor.SIPARISNO = int.Parse(gridView1.GetFocusedRowCellValue("SiparişNo").ToString());
                     rapor.URUNTIPI = gridView1.GetFocusedRowCellValue("Tür").ToString();

@@ -53,6 +53,8 @@ namespace test_kooil.Formlar
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.Btn_firmaSec = new DevExpress.XtraEditors.SimpleButton();
+            this.num_partiNo = new System.Windows.Forms.NumericUpDown();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Urun)).BeginInit();
@@ -63,14 +65,15 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_firma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_partiNo)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(9, 10);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(369, 296);
             this.gridControl1.TabIndex = 1;
@@ -91,7 +94,7 @@ namespace test_kooil.Formlar
             this.pic_Urun.BackColor = System.Drawing.SystemColors.Highlight;
             this.pic_Urun.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pic_Urun.Location = new System.Drawing.Point(9, 310);
-            this.pic_Urun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Urun.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Urun.Name = "pic_Urun";
             this.pic_Urun.Size = new System.Drawing.Size(370, 191);
             this.pic_Urun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,8 +106,8 @@ namespace test_kooil.Formlar
             // 
             this.Btn_SepeteEkle.Enabled = false;
             this.Btn_SepeteEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_SepeteEkle.ImageOptions.Image")));
-            this.Btn_SepeteEkle.Location = new System.Drawing.Point(389, 285);
-            this.Btn_SepeteEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_SepeteEkle.Location = new System.Drawing.Point(389, 320);
+            this.Btn_SepeteEkle.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_SepeteEkle.Name = "Btn_SepeteEkle";
             this.Btn_SepeteEkle.Size = new System.Drawing.Size(138, 48);
             this.Btn_SepeteEkle.TabIndex = 3;
@@ -114,7 +117,7 @@ namespace test_kooil.Formlar
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(396, 243);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(30, 13);
             this.labelControl1.TabIndex = 5;
@@ -125,7 +128,7 @@ namespace test_kooil.Formlar
             this.Btn_Tamamla.Enabled = false;
             this.Btn_Tamamla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Tamamla.ImageOptions.Image")));
             this.Btn_Tamamla.Location = new System.Drawing.Point(389, 450);
-            this.Btn_Tamamla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Tamamla.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Tamamla.Name = "Btn_Tamamla";
             this.Btn_Tamamla.Size = new System.Drawing.Size(138, 51);
             this.Btn_Tamamla.TabIndex = 6;
@@ -136,7 +139,7 @@ namespace test_kooil.Formlar
             // 
             this.Btn_Yazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yazdir.ImageOptions.Image")));
             this.Btn_Yazdir.Location = new System.Drawing.Point(389, 383);
-            this.Btn_Yazdir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Yazdir.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Yazdir.Name = "Btn_Yazdir";
             this.Btn_Yazdir.Size = new System.Drawing.Size(138, 51);
             this.Btn_Yazdir.TabIndex = 7;
@@ -146,7 +149,7 @@ namespace test_kooil.Formlar
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(396, 18);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(33, 13);
             this.labelControl2.TabIndex = 9;
@@ -155,21 +158,21 @@ namespace test_kooil.Formlar
             // date_Tarih
             // 
             this.date_Tarih.EditValue = null;
-            this.date_Tarih.Location = new System.Drawing.Point(434, 195);
-            this.date_Tarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_Tarih.Location = new System.Drawing.Point(441, 194);
+            this.date_Tarih.Margin = new System.Windows.Forms.Padding(2);
             this.date_Tarih.Name = "date_Tarih";
             this.date_Tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_Tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_Tarih.Properties.NullText = "Tarih Seçiniz";
-            this.date_Tarih.Size = new System.Drawing.Size(94, 20);
+            this.date_Tarih.Size = new System.Drawing.Size(108, 20);
             this.date_Tarih.TabIndex = 10;
             // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(396, 197);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(31, 13);
             this.labelControl3.TabIndex = 11;
@@ -179,7 +182,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(992, 10);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -193,7 +196,7 @@ namespace test_kooil.Formlar
             // 
             this.Btn_Iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Iptal.ImageOptions.Image")));
             this.Btn_Iptal.Location = new System.Drawing.Point(900, 449);
-            this.Btn_Iptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Iptal.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Iptal.Name = "Btn_Iptal";
             this.Btn_Iptal.Size = new System.Drawing.Size(138, 51);
             this.Btn_Iptal.TabIndex = 14;
@@ -202,10 +205,10 @@ namespace test_kooil.Formlar
             // 
             // gridControl2
             // 
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl2.Location = new System.Drawing.Point(436, 10);
             this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(316, 164);
             this.gridControl2.TabIndex = 15;
@@ -225,7 +228,7 @@ namespace test_kooil.Formlar
             // txt_firma
             // 
             this.txt_firma.Location = new System.Drawing.Point(838, 15);
-            this.txt_firma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_firma.Margin = new System.Windows.Forms.Padding(2);
             this.txt_firma.Name = "txt_firma";
             this.txt_firma.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_firma.Properties.Appearance.Options.UseBackColor = true;
@@ -236,7 +239,7 @@ namespace test_kooil.Formlar
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(766, 18);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(69, 13);
             this.labelControl4.TabIndex = 17;
@@ -245,7 +248,7 @@ namespace test_kooil.Formlar
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(766, 72);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(35, 13);
             this.labelControl5.TabIndex = 18;
@@ -253,22 +256,22 @@ namespace test_kooil.Formlar
             // 
             // num_Adet
             // 
-            this.num_Adet.Location = new System.Drawing.Point(434, 243);
-            this.num_Adet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.num_Adet.Location = new System.Drawing.Point(441, 242);
+            this.num_Adet.Margin = new System.Windows.Forms.Padding(2);
             this.num_Adet.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.num_Adet.Name = "num_Adet";
-            this.num_Adet.Size = new System.Drawing.Size(94, 20);
+            this.num_Adet.Size = new System.Drawing.Size(108, 20);
             this.num_Adet.TabIndex = 19;
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(766, 105);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(266, 319);
             this.listView1.TabIndex = 20;
@@ -299,18 +302,42 @@ namespace test_kooil.Formlar
             this.Btn_firmaSec.Enabled = false;
             this.Btn_firmaSec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_firmaSec.ImageOptions.Image")));
             this.Btn_firmaSec.Location = new System.Drawing.Point(615, 187);
-            this.Btn_firmaSec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_firmaSec.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_firmaSec.Name = "Btn_firmaSec";
             this.Btn_firmaSec.Size = new System.Drawing.Size(138, 48);
             this.Btn_firmaSec.TabIndex = 21;
             this.Btn_firmaSec.Text = "Firma Seç";
             this.Btn_firmaSec.Click += new System.EventHandler(this.Btn_firmaSec_Click);
             // 
+            // num_partiNo
+            // 
+            this.num_partiNo.Location = new System.Drawing.Point(441, 286);
+            this.num_partiNo.Margin = new System.Windows.Forms.Padding(2);
+            this.num_partiNo.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.num_partiNo.Name = "num_partiNo";
+            this.num_partiNo.Size = new System.Drawing.Size(108, 20);
+            this.num_partiNo.TabIndex = 23;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(395, 286);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(42, 13);
+            this.labelControl6.TabIndex = 22;
+            this.labelControl6.Text = "PartiNo :";
+            // 
             // Frm_YeniSevkiyat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 514);
+            this.Controls.Add(this.num_partiNo);
+            this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.Btn_firmaSec);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.num_Adet);
@@ -330,7 +357,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.pic_Urun);
             this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Frm_YeniSevkiyat";
             this.Text = "Yeni Perakende Sevkiyat";
@@ -345,6 +372,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_firma.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Adet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_partiNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +402,7 @@ namespace test_kooil.Formlar
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private DevExpress.XtraEditors.SimpleButton Btn_firmaSec;
+        private System.Windows.Forms.NumericUpDown num_partiNo;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

@@ -30,12 +30,13 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparisNo = x.SIPARISNOID, // 0
+                                   PartiNo = x.PARTINO,
                                    Musteri = x.MUSTERI,
                                    UrunTuru = x.TBL_IGNELER.TUR,
                                    UrunKodu = x.TBL_IGNELER.IGNEKOD,
                                    Siparis = x.URUNADETI,
-                                   SiparisTarihi = x.SIPARISTARIHI,// 5
-                                   IstenilenTarih = x.ISTENILENTARIH,//6
+                                   SiparisTarihi = x.SIPARISTARIHI,// 6
+                                   IstenilenTarih = x.ISTENILENTARIH,//7
                                    Pres = x.PRESSAYI,
                                    ArkaSıyırma = x.ARKASIYIRSAYI,
                                    YolKopyalama = x.YOLKOPYASAYI,
@@ -51,9 +52,9 @@ namespace test_kooil.Formlar
                                    Yıkama = x.YIKAMASAYI,
                                    Bileme = x.BILEMESAYI,
                                    Paketlenen = x.KONTROLSAYI,
-                                   x.AKTIF,// 22
-                                   x.NOTLAR,// 23 
-                                   x.SIPARISASAMASI,// 24
+                                   x.AKTIF,// 23
+                                   x.NOTLAR,// 24 
+                                   x.SIPARISASAMASI,// 25
                                    Giden = x.SEVKIYATSAYI
 
                                }).ToList().OrderByDescending(x => x.SiparisNo);
@@ -68,12 +69,12 @@ namespace test_kooil.Formlar
                 gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
                 gridView1.Columns[24].AppearanceCell.BackColor = Color.LightGreen;
 
-                gridView1.Columns[0].Visible = false;
-                gridView1.Columns[5].Visible = false;
+                //gridView1.Columns[0].Visible = false;
+                //gridView1.Columns[5].Visible = false;
                 gridView1.Columns[6].Visible = false;
                 gridView1.Columns[23].Visible = false;
                 gridView1.Columns[24].Visible = false;
-                gridView1.Columns[22].Visible = false;
+                gridView1.Columns[25].Visible = false;
                 //
 
 

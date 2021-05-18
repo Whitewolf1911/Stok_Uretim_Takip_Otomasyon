@@ -28,6 +28,7 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparişNo = x.SIPARISNOID,
+                                   PartiNo = x.PARTINO,
                                    Müşteri = x.MUSTERI,
                                    Tür = x.TBL_IGNELER.TUR,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
@@ -49,8 +50,8 @@ namespace test_kooil.Formlar
                 gridView1.Columns[3].AppearanceCell.BackColor = Color.LightYellow;
                 gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
                 gridView1.Columns[5].AppearanceCell.BackColor = Color.Yellow;
-                gridView1.Columns[8].Visible = false;
-                gridView1.Columns[10].Visible = false;
+                gridView1.Columns[9].Visible = false;
+                gridView1.Columns[11].Visible = false;
             }
             catch (Exception) { }
 

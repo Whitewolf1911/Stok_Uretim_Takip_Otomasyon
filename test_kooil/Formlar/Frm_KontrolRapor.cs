@@ -23,22 +23,23 @@ namespace test_kooil.Formlar
         {
             try
             {
-                var veriler = (from x in db.TBL_RAPOR  // change this !!!
+                var veriler = (from x in db.TBL_KONTROL  // change this !!!
                                select new
                                {
                                    SiparişNo = x.SIPARISNO,
+                                   PartiNo = x.PARTINO,
+                                   Barkod = x.BARKODKOD,
                                    Raporlayan = x.RAPORLAYAN,
                                    Tür = x.URUNTUR,
                                    ÜrünKodu = x.IGNEKODU,
                                    İşlenenMiktar = x.ISLENENMIKTAR,
                                    Tarih = x.TARIH,
                                    Not = x.NOT,
-                                   x.ISLEM
-
-                               }).ToList().OrderByDescending(x => x.Tarih).Where(x => x.ISLEM == "Kontrol");
+                                   
+                               }).ToList().OrderByDescending(x => x.Tarih);
 
                 gridControl1.DataSource = veriler;
-                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
             }
             catch (Exception) { }
         }

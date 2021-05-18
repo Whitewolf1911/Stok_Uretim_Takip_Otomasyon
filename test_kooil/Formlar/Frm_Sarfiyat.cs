@@ -29,6 +29,7 @@ namespace test_kooil.Formlar
                 var veriler = (from x in db.TBL_SIPARIS
                                select new
                                {
+                                   PartiNo = x.PARTINO,
                                    Tür = x.TBL_IGNELER.TUR,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                    Ham = x.TBL_IGNELER.HAMMADDETIPI,
@@ -41,9 +42,9 @@ namespace test_kooil.Formlar
                                }).ToList().Where(x => x.AKTIF == true).OrderBy(x => x.Tür);
 
                 gridControl1.DataSource = veriler;
-                gridView1.Columns[2].Visible = false;
+                gridView1.Columns[3].Visible = false;
+                gridView1.Columns[7].Visible = false;
                 gridView1.Columns[6].Visible = false;
-                gridView1.Columns[5].Visible = false;
             }
             catch (Exception) { }
 
@@ -73,7 +74,7 @@ namespace test_kooil.Formlar
                 unbColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                 unbColumn2.AppearanceCell.BackColor = Color.Yellow;
                 gridView1.BestFitColumns();
-                gridView1.Columns[7].GroupIndex = 1;
+                gridView1.Columns[8].GroupIndex = 1;
             }
             catch (Exception) { }
 

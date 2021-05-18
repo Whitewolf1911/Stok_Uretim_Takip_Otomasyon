@@ -27,5 +27,6 @@ namespace test_kooil.Entity
         public string OZELLIK { get; set; }
         public string MENSEI { get; set; }
         public string RAPORLAYAN { get; set; }
+        public Nullable<int> PARTINO { get; set; }
     }
 }

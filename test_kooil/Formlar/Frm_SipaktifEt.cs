@@ -28,6 +28,7 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparişNo = x.SIPARISNOID,
+                                   PartiNo = x.PARTINO,
                                    Müşteri = x.MUSTERI,
                                    Tür = x.TBL_IGNELER.TUR,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
@@ -39,7 +40,7 @@ namespace test_kooil.Formlar
 
                                }).ToList().OrderByDescending(x => x.SiparişNo).Where(x => x.AKTIF == false);
                 gridControl1.DataSource = veriler;
-                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[9].Visible = false;
             }
             catch (Exception) { }
         }

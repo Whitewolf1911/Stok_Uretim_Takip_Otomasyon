@@ -22,5 +22,6 @@ namespace test_kooil.Entity
         public Nullable<int> ADET { get; set; }
         public string SEVKIYATTUR { get; set; }
         public string SIPARISNO { get; set; }
+        public string PARTINO { get; set; }
     }
 }

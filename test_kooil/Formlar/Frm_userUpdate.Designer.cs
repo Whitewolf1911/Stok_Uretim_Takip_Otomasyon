@@ -81,6 +81,7 @@ namespace test_kooil.Formlar
             this.chHataDuzelt = new DevExpress.XtraEditors.CheckEdit();
             this.ch_iade = new DevExpress.XtraEditors.CheckEdit();
             this.ch_gerilim = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_ayakKesme = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
@@ -128,20 +129,24 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_ayakKesme.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(28, 211);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(21, 171);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(325, 389);
+            this.gridControl1.Size = new System.Drawing.Size(244, 316);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -151,9 +156,10 @@ namespace test_kooil.Formlar
             // Btn_Kaydet
             // 
             this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
-            this.Btn_Kaydet.Location = new System.Drawing.Point(392, 545);
+            this.Btn_Kaydet.Location = new System.Drawing.Point(294, 443);
+            this.Btn_Kaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
-            this.Btn_Kaydet.Size = new System.Drawing.Size(166, 55);
+            this.Btn_Kaydet.Size = new System.Drawing.Size(124, 45);
             this.Btn_Kaydet.TabIndex = 93;
             this.Btn_Kaydet.Text = "Kaydet";
             this.Btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
@@ -161,403 +167,461 @@ namespace test_kooil.Formlar
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(28, 142);
+            this.pictureEdit3.Location = new System.Drawing.Point(21, 115);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Size = new System.Drawing.Size(40, 34);
+            this.pictureEdit3.Size = new System.Drawing.Size(30, 28);
             this.pictureEdit3.TabIndex = 92;
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(28, 82);
+            this.pictureEdit2.Location = new System.Drawing.Point(21, 67);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Size = new System.Drawing.Size(40, 34);
+            this.pictureEdit2.Size = new System.Drawing.Size(30, 28);
             this.pictureEdit2.TabIndex = 91;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(28, 18);
+            this.pictureEdit1.Location = new System.Drawing.Point(21, 15);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(40, 34);
+            this.pictureEdit1.Size = new System.Drawing.Size(30, 28);
             this.pictureEdit1.TabIndex = 90;
             // 
             // chSipSevkiyat
             // 
-            this.chSipSevkiyat.Location = new System.Drawing.Point(610, 468);
+            this.chSipSevkiyat.Location = new System.Drawing.Point(458, 380);
+            this.chSipSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chSipSevkiyat.Name = "chSipSevkiyat";
             this.chSipSevkiyat.Properties.Caption = "Yeni Sipariş Sevkiyat";
-            this.chSipSevkiyat.Size = new System.Drawing.Size(206, 24);
+            this.chSipSevkiyat.Size = new System.Drawing.Size(154, 20);
             this.chSipSevkiyat.TabIndex = 89;
             // 
             // chKontrol
             // 
-            this.chKontrol.Location = new System.Drawing.Point(1015, 335);
+            this.chKontrol.Location = new System.Drawing.Point(761, 272);
+            this.chKontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chKontrol.Name = "chKontrol";
             this.chKontrol.Properties.Caption = "Kontrol";
-            this.chKontrol.Size = new System.Drawing.Size(110, 24);
+            this.chKontrol.Size = new System.Drawing.Size(82, 20);
             this.chKontrol.TabIndex = 88;
             // 
             // chBileme
             // 
-            this.chBileme.Location = new System.Drawing.Point(1015, 289);
+            this.chBileme.Location = new System.Drawing.Point(761, 235);
+            this.chBileme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chBileme.Name = "chBileme";
             this.chBileme.Properties.Caption = "Bileme";
-            this.chBileme.Size = new System.Drawing.Size(110, 24);
+            this.chBileme.Size = new System.Drawing.Size(82, 20);
             this.chBileme.TabIndex = 87;
             // 
             // chYikama
             // 
-            this.chYikama.Location = new System.Drawing.Point(1015, 240);
+            this.chYikama.Location = new System.Drawing.Point(761, 195);
+            this.chYikama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chYikama.Name = "chYikama";
             this.chYikama.Properties.Caption = "Yıkama";
-            this.chYikama.Size = new System.Drawing.Size(110, 24);
+            this.chYikama.Size = new System.Drawing.Size(82, 20);
             this.chYikama.TabIndex = 86;
             // 
             // chTemper
             // 
-            this.chTemper.Location = new System.Drawing.Point(1015, 193);
+            this.chTemper.Location = new System.Drawing.Point(761, 157);
+            this.chTemper.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chTemper.Name = "chTemper";
             this.chTemper.Properties.Caption = "Temper";
-            this.chTemper.Size = new System.Drawing.Size(110, 24);
+            this.chTemper.Size = new System.Drawing.Size(82, 20);
             this.chTemper.TabIndex = 85;
             // 
             // chIsilIslem
             // 
-            this.chIsilIslem.Location = new System.Drawing.Point(1015, 152);
+            this.chIsilIslem.Location = new System.Drawing.Point(761, 124);
+            this.chIsilIslem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chIsilIslem.Name = "chIsilIslem";
             this.chIsilIslem.Properties.Caption = "Isıl İşlem";
-            this.chIsilIslem.Size = new System.Drawing.Size(110, 24);
+            this.chIsilIslem.Size = new System.Drawing.Size(82, 20);
             this.chIsilIslem.TabIndex = 84;
             // 
             // chPolisaj2
             // 
-            this.chPolisaj2.Location = new System.Drawing.Point(1015, 109);
+            this.chPolisaj2.Location = new System.Drawing.Point(761, 89);
+            this.chPolisaj2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chPolisaj2.Name = "chPolisaj2";
             this.chPolisaj2.Properties.Caption = "Polisaj2";
-            this.chPolisaj2.Size = new System.Drawing.Size(110, 24);
+            this.chPolisaj2.Size = new System.Drawing.Size(82, 20);
             this.chPolisaj2.TabIndex = 83;
             // 
             // chDilCakma
             // 
-            this.chDilCakma.Location = new System.Drawing.Point(1015, 68);
+            this.chDilCakma.Location = new System.Drawing.Point(761, 55);
+            this.chDilCakma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chDilCakma.Name = "chDilCakma";
             this.chDilCakma.Properties.Caption = "Dil Çakma";
-            this.chDilCakma.Size = new System.Drawing.Size(110, 24);
+            this.chDilCakma.Size = new System.Drawing.Size(82, 20);
             this.chDilCakma.TabIndex = 82;
             // 
             // chPolisaj1
             // 
-            this.chPolisaj1.Location = new System.Drawing.Point(1015, 29);
+            this.chPolisaj1.Location = new System.Drawing.Point(761, 24);
+            this.chPolisaj1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chPolisaj1.Name = "chPolisaj1";
             this.chPolisaj1.Properties.Caption = "Polisaj1";
-            this.chPolisaj1.Size = new System.Drawing.Size(110, 24);
+            this.chPolisaj1.Size = new System.Drawing.Size(82, 20);
             this.chPolisaj1.TabIndex = 81;
             // 
             // chKanalBuyutme
             // 
-            this.chKanalBuyutme.Location = new System.Drawing.Point(865, 259);
+            this.chKanalBuyutme.Location = new System.Drawing.Point(649, 210);
+            this.chKanalBuyutme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chKanalBuyutme.Name = "chKanalBuyutme";
             this.chKanalBuyutme.Properties.Caption = "Kanal Büyütme";
-            this.chKanalBuyutme.Size = new System.Drawing.Size(120, 24);
+            this.chKanalBuyutme.Size = new System.Drawing.Size(108, 20);
             this.chKanalBuyutme.TabIndex = 80;
             // 
             // chKanalAcma
             // 
-            this.chKanalAcma.Location = new System.Drawing.Point(865, 212);
+            this.chKanalAcma.Location = new System.Drawing.Point(649, 172);
+            this.chKanalAcma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chKanalAcma.Name = "chKanalAcma";
             this.chKanalAcma.Properties.Caption = "Kanal Açma";
-            this.chKanalAcma.Size = new System.Drawing.Size(111, 24);
+            this.chKanalAcma.Size = new System.Drawing.Size(83, 20);
             this.chKanalAcma.TabIndex = 79;
             // 
             // chUcSiyirma
             // 
-            this.chUcSiyirma.Location = new System.Drawing.Point(865, 166);
+            this.chUcSiyirma.Location = new System.Drawing.Point(649, 135);
+            this.chUcSiyirma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chUcSiyirma.Name = "chUcSiyirma";
             this.chUcSiyirma.Properties.Caption = "Uç Sıyırma";
-            this.chUcSiyirma.Size = new System.Drawing.Size(111, 24);
+            this.chUcSiyirma.Size = new System.Drawing.Size(83, 20);
             this.chUcSiyirma.TabIndex = 78;
             // 
             // chYolKopyala
             // 
-            this.chYolKopyala.Location = new System.Drawing.Point(865, 117);
+            this.chYolKopyala.Location = new System.Drawing.Point(649, 95);
+            this.chYolKopyala.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chYolKopyala.Name = "chYolKopyala";
             this.chYolKopyala.Properties.Caption = "Yol Kopyalama";
-            this.chYolKopyala.Size = new System.Drawing.Size(120, 24);
+            this.chYolKopyala.Size = new System.Drawing.Size(90, 20);
             this.chYolKopyala.TabIndex = 77;
             // 
             // chArkaSiyirma
             // 
-            this.chArkaSiyirma.Location = new System.Drawing.Point(865, 70);
+            this.chArkaSiyirma.Location = new System.Drawing.Point(649, 57);
+            this.chArkaSiyirma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chArkaSiyirma.Name = "chArkaSiyirma";
             this.chArkaSiyirma.Properties.Caption = "Arka Sıyırma";
-            this.chArkaSiyirma.Size = new System.Drawing.Size(111, 24);
+            this.chArkaSiyirma.Size = new System.Drawing.Size(83, 20);
             this.chArkaSiyirma.TabIndex = 76;
             // 
             // chPres
             // 
-            this.chPres.Location = new System.Drawing.Point(865, 29);
+            this.chPres.Location = new System.Drawing.Point(649, 24);
+            this.chPres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chPres.Name = "chPres";
             this.chPres.Properties.Caption = "Pres";
-            this.chPres.Size = new System.Drawing.Size(94, 24);
+            this.chPres.Size = new System.Drawing.Size(70, 20);
             this.chPres.TabIndex = 75;
             // 
             // chAyarlar
             // 
-            this.chAyarlar.Location = new System.Drawing.Point(1015, 429);
+            this.chAyarlar.Location = new System.Drawing.Point(761, 349);
+            this.chAyarlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chAyarlar.Name = "chAyarlar";
             this.chAyarlar.Properties.Caption = "Ayarlar";
-            this.chAyarlar.Size = new System.Drawing.Size(144, 24);
+            this.chAyarlar.Size = new System.Drawing.Size(108, 20);
             this.chAyarlar.TabIndex = 74;
             // 
             // chGecmisSevkiyat
             // 
-            this.chGecmisSevkiyat.Location = new System.Drawing.Point(610, 509);
+            this.chGecmisSevkiyat.Location = new System.Drawing.Point(458, 414);
+            this.chGecmisSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chGecmisSevkiyat.Name = "chGecmisSevkiyat";
             this.chGecmisSevkiyat.Properties.Caption = "Geçmiş Sevkiyatlar";
-            this.chGecmisSevkiyat.Size = new System.Drawing.Size(206, 24);
+            this.chGecmisSevkiyat.Size = new System.Drawing.Size(154, 20);
             this.chGecmisSevkiyat.TabIndex = 73;
             // 
             // chPeraSevkiyat
             // 
-            this.chPeraSevkiyat.Location = new System.Drawing.Point(610, 429);
+            this.chPeraSevkiyat.Location = new System.Drawing.Point(458, 349);
+            this.chPeraSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chPeraSevkiyat.Name = "chPeraSevkiyat";
             this.chPeraSevkiyat.Properties.Caption = "Yeni Perakende Sevkiyat";
-            this.chPeraSevkiyat.Size = new System.Drawing.Size(229, 24);
+            this.chPeraSevkiyat.Size = new System.Drawing.Size(172, 20);
             this.chPeraSevkiyat.TabIndex = 72;
             // 
             // chFirmaEkle
             // 
-            this.chFirmaEkle.Location = new System.Drawing.Point(610, 381);
+            this.chFirmaEkle.Location = new System.Drawing.Point(458, 310);
+            this.chFirmaEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chFirmaEkle.Name = "chFirmaEkle";
             this.chFirmaEkle.Properties.Caption = "Firma Ekle";
-            this.chFirmaEkle.Size = new System.Drawing.Size(141, 24);
+            this.chFirmaEkle.Size = new System.Drawing.Size(106, 20);
             this.chFirmaEkle.TabIndex = 71;
             // 
             // chFirmalar
             // 
-            this.chFirmalar.Location = new System.Drawing.Point(610, 334);
+            this.chFirmalar.Location = new System.Drawing.Point(458, 271);
+            this.chFirmalar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chFirmalar.Name = "chFirmalar";
             this.chFirmalar.Properties.Caption = "Firmalar";
-            this.chFirmalar.Size = new System.Drawing.Size(131, 24);
+            this.chFirmalar.Size = new System.Drawing.Size(98, 20);
             this.chFirmalar.TabIndex = 70;
             // 
             // chHamRaporEkle
             // 
-            this.chHamRaporEkle.Location = new System.Drawing.Point(610, 288);
+            this.chHamRaporEkle.Location = new System.Drawing.Point(458, 234);
+            this.chHamRaporEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHamRaporEkle.Name = "chHamRaporEkle";
             this.chHamRaporEkle.Properties.Caption = "Hammadde Raporu Ekle";
-            this.chHamRaporEkle.Size = new System.Drawing.Size(222, 24);
+            this.chHamRaporEkle.Size = new System.Drawing.Size(166, 20);
             this.chHamRaporEkle.TabIndex = 69;
             // 
             // chHamKullanimRap
             // 
-            this.chHamKullanimRap.Location = new System.Drawing.Point(610, 239);
+            this.chHamKullanimRap.Location = new System.Drawing.Point(458, 194);
+            this.chHamKullanimRap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHamKullanimRap.Name = "chHamKullanimRap";
             this.chHamKullanimRap.Properties.Caption = "Hammadde Kullanım Raporları";
-            this.chHamKullanimRap.Size = new System.Drawing.Size(248, 24);
+            this.chHamKullanimRap.Size = new System.Drawing.Size(186, 20);
             this.chHamKullanimRap.TabIndex = 68;
             // 
             // chHamStokGuncelle
             // 
-            this.chHamStokGuncelle.Location = new System.Drawing.Point(610, 192);
+            this.chHamStokGuncelle.Location = new System.Drawing.Point(458, 156);
+            this.chHamStokGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHamStokGuncelle.Name = "chHamStokGuncelle";
             this.chHamStokGuncelle.Properties.Caption = "Hammadde Stok Güncelle";
-            this.chHamStokGuncelle.Size = new System.Drawing.Size(222, 24);
+            this.chHamStokGuncelle.Size = new System.Drawing.Size(166, 20);
             this.chHamStokGuncelle.TabIndex = 67;
             // 
             // chHamSil
             // 
-            this.chHamSil.Location = new System.Drawing.Point(610, 151);
+            this.chHamSil.Location = new System.Drawing.Point(458, 123);
+            this.chHamSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHamSil.Name = "chHamSil";
             this.chHamSil.Properties.Caption = "Hammadde Sil";
-            this.chHamSil.Size = new System.Drawing.Size(179, 24);
+            this.chHamSil.Size = new System.Drawing.Size(134, 20);
             this.chHamSil.TabIndex = 66;
             // 
             // chYeniHamEkle
             // 
-            this.chYeniHamEkle.Location = new System.Drawing.Point(610, 108);
+            this.chYeniHamEkle.Location = new System.Drawing.Point(458, 88);
+            this.chYeniHamEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chYeniHamEkle.Name = "chYeniHamEkle";
             this.chYeniHamEkle.Properties.Caption = "Yeni Hammadde Ekle";
-            this.chYeniHamEkle.Size = new System.Drawing.Size(198, 24);
+            this.chYeniHamEkle.Size = new System.Drawing.Size(148, 20);
             this.chYeniHamEkle.TabIndex = 65;
             // 
             // chHammaddeStok
             // 
-            this.chHammaddeStok.Location = new System.Drawing.Point(610, 67);
+            this.chHammaddeStok.Location = new System.Drawing.Point(458, 54);
+            this.chHammaddeStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHammaddeStok.Name = "chHammaddeStok";
             this.chHammaddeStok.Properties.Caption = "Hammadde Stok";
-            this.chHammaddeStok.Size = new System.Drawing.Size(179, 24);
+            this.chHammaddeStok.Size = new System.Drawing.Size(134, 20);
             this.chHammaddeStok.TabIndex = 64;
             // 
             // chUrunStok
             // 
-            this.chUrunStok.Location = new System.Drawing.Point(610, 28);
+            this.chUrunStok.Location = new System.Drawing.Point(458, 23);
+            this.chUrunStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chUrunStok.Name = "chUrunStok";
             this.chUrunStok.Properties.Caption = "Ürün Stok";
-            this.chUrunStok.Size = new System.Drawing.Size(141, 24);
+            this.chUrunStok.Size = new System.Drawing.Size(106, 20);
             this.chUrunStok.TabIndex = 63;
             // 
             // chUrunDuzenle
             // 
-            this.chUrunDuzenle.Location = new System.Drawing.Point(401, 381);
+            this.chUrunDuzenle.Location = new System.Drawing.Point(301, 310);
+            this.chUrunDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chUrunDuzenle.Name = "chUrunDuzenle";
             this.chUrunDuzenle.Properties.Caption = "Ürün Düzenle";
-            this.chUrunDuzenle.Size = new System.Drawing.Size(133, 24);
+            this.chUrunDuzenle.Size = new System.Drawing.Size(100, 20);
             this.chUrunDuzenle.TabIndex = 62;
             // 
             // chYeniUrunEkle
             // 
-            this.chYeniUrunEkle.Location = new System.Drawing.Point(401, 334);
+            this.chYeniUrunEkle.Location = new System.Drawing.Point(301, 271);
+            this.chYeniUrunEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chYeniUrunEkle.Name = "chYeniUrunEkle";
             this.chYeniUrunEkle.Properties.Caption = "Yeni Ürün Ekle";
-            this.chYeniUrunEkle.Size = new System.Drawing.Size(155, 24);
+            this.chYeniUrunEkle.Size = new System.Drawing.Size(116, 20);
             this.chYeniUrunEkle.TabIndex = 61;
             // 
             // chUrunTur
             // 
-            this.chUrunTur.Location = new System.Drawing.Point(401, 288);
+            this.chUrunTur.Location = new System.Drawing.Point(301, 234);
+            this.chUrunTur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chUrunTur.Name = "chUrunTur";
             this.chUrunTur.Properties.Caption = "Ürün Türleri";
-            this.chUrunTur.Size = new System.Drawing.Size(133, 24);
+            this.chUrunTur.Size = new System.Drawing.Size(100, 20);
             this.chUrunTur.TabIndex = 60;
             // 
             // chIslemRapor
             // 
-            this.chIslemRapor.Location = new System.Drawing.Point(401, 239);
+            this.chIslemRapor.Location = new System.Drawing.Point(301, 194);
+            this.chIslemRapor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chIslemRapor.Name = "chIslemRapor";
             this.chIslemRapor.Properties.Caption = "İşlem Raporları";
-            this.chIslemRapor.Size = new System.Drawing.Size(145, 24);
+            this.chIslemRapor.Size = new System.Drawing.Size(109, 20);
             this.chIslemRapor.TabIndex = 59;
             // 
             // chTamamlananSip
             // 
-            this.chTamamlananSip.Location = new System.Drawing.Point(401, 192);
+            this.chTamamlananSip.Location = new System.Drawing.Point(301, 156);
+            this.chTamamlananSip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chTamamlananSip.Name = "chTamamlananSip";
             this.chTamamlananSip.Properties.Caption = "Tamamlanan Siparişler";
-            this.chTamamlananSip.Size = new System.Drawing.Size(187, 24);
+            this.chTamamlananSip.Size = new System.Drawing.Size(140, 20);
             this.chTamamlananSip.TabIndex = 58;
             // 
             // chSipDurumKontrol
             // 
-            this.chSipDurumKontrol.Location = new System.Drawing.Point(401, 151);
+            this.chSipDurumKontrol.Location = new System.Drawing.Point(301, 123);
+            this.chSipDurumKontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chSipDurumKontrol.Name = "chSipDurumKontrol";
             this.chSipDurumKontrol.Properties.Caption = "Sipariş Durum Kontrol";
-            this.chSipDurumKontrol.Size = new System.Drawing.Size(187, 24);
+            this.chSipDurumKontrol.Size = new System.Drawing.Size(140, 20);
             this.chSipDurumKontrol.TabIndex = 57;
             // 
             // chAktifSiparisler
             // 
-            this.chAktifSiparisler.Location = new System.Drawing.Point(401, 108);
+            this.chAktifSiparisler.Location = new System.Drawing.Point(301, 88);
+            this.chAktifSiparisler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chAktifSiparisler.Name = "chAktifSiparisler";
             this.chAktifSiparisler.Properties.Caption = "Aktif Siparişler";
-            this.chAktifSiparisler.Size = new System.Drawing.Size(133, 24);
+            this.chAktifSiparisler.Size = new System.Drawing.Size(100, 20);
             this.chAktifSiparisler.TabIndex = 56;
             // 
             // chYeniSiparis
             // 
-            this.chYeniSiparis.Location = new System.Drawing.Point(401, 67);
+            this.chYeniSiparis.Location = new System.Drawing.Point(301, 54);
+            this.chYeniSiparis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chYeniSiparis.Name = "chYeniSiparis";
             this.chYeniSiparis.Properties.Caption = "Yeni Sipariş";
-            this.chYeniSiparis.Size = new System.Drawing.Size(112, 24);
+            this.chYeniSiparis.Size = new System.Drawing.Size(84, 20);
             this.chYeniSiparis.TabIndex = 55;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(79, 153);
+            this.labelControl3.Location = new System.Drawing.Point(59, 124);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(36, 16);
+            this.labelControl3.Size = new System.Drawing.Size(29, 13);
             this.labelControl3.TabIndex = 54;
             this.labelControl3.Text = "Şifre :";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(79, 93);
+            this.labelControl2.Location = new System.Drawing.Point(59, 76);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 16);
+            this.labelControl2.Size = new System.Drawing.Size(62, 13);
             this.labelControl2.TabIndex = 53;
             this.labelControl2.Text = "Kullanıcı Adı :";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(79, 32);
+            this.labelControl1.Location = new System.Drawing.Point(59, 26);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 16);
+            this.labelControl1.Size = new System.Drawing.Size(53, 13);
             this.labelControl1.TabIndex = 52;
             this.labelControl1.Text = "Ad Soyad :";
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(169, 150);
+            this.txt_password.Location = new System.Drawing.Point(127, 122);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(184, 22);
+            this.txt_password.Size = new System.Drawing.Size(138, 20);
             this.txt_password.TabIndex = 51;
             // 
             // txt_userName
             // 
             this.txt_userName.Enabled = false;
-            this.txt_userName.Location = new System.Drawing.Point(169, 90);
+            this.txt_userName.Location = new System.Drawing.Point(127, 73);
+            this.txt_userName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_userName.Name = "txt_userName";
-            this.txt_userName.Size = new System.Drawing.Size(184, 22);
+            this.txt_userName.Size = new System.Drawing.Size(138, 20);
             this.txt_userName.TabIndex = 50;
             // 
             // txt_AdSoyad
             // 
-            this.txt_AdSoyad.Location = new System.Drawing.Point(169, 30);
+            this.txt_AdSoyad.Location = new System.Drawing.Point(127, 24);
+            this.txt_AdSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_AdSoyad.Name = "txt_AdSoyad";
-            this.txt_AdSoyad.Size = new System.Drawing.Size(184, 22);
+            this.txt_AdSoyad.Size = new System.Drawing.Size(138, 20);
             this.txt_AdSoyad.TabIndex = 49;
             // 
             // chAnasayfa
             // 
             this.chAnasayfa.Enabled = false;
-            this.chAnasayfa.Location = new System.Drawing.Point(401, 28);
+            this.chAnasayfa.Location = new System.Drawing.Point(301, 23);
+            this.chAnasayfa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chAnasayfa.Name = "chAnasayfa";
             this.chAnasayfa.Properties.Caption = "Ana Sayfa";
-            this.chAnasayfa.Size = new System.Drawing.Size(112, 24);
+            this.chAnasayfa.Size = new System.Drawing.Size(84, 20);
             this.chAnasayfa.TabIndex = 48;
             // 
             // chHataDuzelt
             // 
-            this.chHataDuzelt.Location = new System.Drawing.Point(1015, 478);
+            this.chHataDuzelt.Location = new System.Drawing.Point(761, 388);
+            this.chHataDuzelt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chHataDuzelt.Name = "chHataDuzelt";
             this.chHataDuzelt.Properties.Caption = "Hata Düzelt";
-            this.chHataDuzelt.Size = new System.Drawing.Size(156, 24);
+            this.chHataDuzelt.Size = new System.Drawing.Size(117, 20);
             this.chHataDuzelt.TabIndex = 94;
             // 
             // ch_iade
             // 
-            this.ch_iade.Location = new System.Drawing.Point(1015, 527);
+            this.ch_iade.Location = new System.Drawing.Point(761, 428);
+            this.ch_iade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ch_iade.Name = "ch_iade";
             this.ch_iade.Properties.Caption = "İade";
-            this.ch_iade.Size = new System.Drawing.Size(156, 24);
+            this.ch_iade.Size = new System.Drawing.Size(117, 20);
             this.ch_iade.TabIndex = 95;
             // 
             // ch_gerilim
             // 
-            this.ch_gerilim.Location = new System.Drawing.Point(865, 315);
+            this.ch_gerilim.Location = new System.Drawing.Point(649, 290);
+            this.ch_gerilim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ch_gerilim.Name = "ch_gerilim";
             this.ch_gerilim.Properties.Caption = "Gerilim Giderme";
-            this.ch_gerilim.Size = new System.Drawing.Size(144, 24);
+            this.ch_gerilim.Size = new System.Drawing.Size(108, 20);
             this.ch_gerilim.TabIndex = 96;
+            // 
+            // ch_ayakKesme
+            // 
+            this.ch_ayakKesme.Location = new System.Drawing.Point(649, 244);
+            this.ch_ayakKesme.Margin = new System.Windows.Forms.Padding(2);
+            this.ch_ayakKesme.Name = "ch_ayakKesme";
+            this.ch_ayakKesme.Properties.Caption = "Ayak Kesme";
+            this.ch_ayakKesme.Size = new System.Drawing.Size(108, 20);
+            this.ch_ayakKesme.TabIndex = 97;
             // 
             // Frm_userUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 628);
+            this.ClientSize = new System.Drawing.Size(880, 510);
+            this.Controls.Add(this.ch_ayakKesme);
             this.Controls.Add(this.ch_gerilim);
             this.Controls.Add(this.ch_iade);
             this.Controls.Add(this.chHataDuzelt);
@@ -608,6 +672,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_AdSoyad);
             this.Controls.Add(this.chAnasayfa);
             this.Controls.Add(this.gridControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Frm_userUpdate";
             this.Text = "Kullanıcı Güncelle";
@@ -659,6 +724,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.chHataDuzelt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_ayakKesme.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,5 +783,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.CheckEdit chHataDuzelt;
         private DevExpress.XtraEditors.CheckEdit ch_iade;
         private DevExpress.XtraEditors.CheckEdit ch_gerilim;
+        private DevExpress.XtraEditors.CheckEdit ch_ayakKesme;
     }
 }

@@ -40,6 +40,8 @@ namespace test_kooil.Entity
         public Nullable<int> KONTROLSAYI { get; set; }
         public Nullable<int> SEVKIYATSAYI { get; set; }
         public Nullable<int> GERILIMGIDERMESAYI { get; set; }
+        public Nullable<int> PARTINO { get; set; }
+        public Nullable<int> AYAKKESMESAYI { get; set; }
     
         public virtual TBL_IGNELER TBL_IGNELER { get; set; }
     }

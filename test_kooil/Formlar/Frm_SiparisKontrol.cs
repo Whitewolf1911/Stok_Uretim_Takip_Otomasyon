@@ -31,6 +31,7 @@ namespace test_kooil.Formlar
                                select new
                                {
                                    SiparişNo = x.SIPARISNOID,
+                                   PartiNo = x.PARTINO,
                                    Müşteri = x.MUSTERI,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                    SiparişAdet = x.URUNADETI,
@@ -45,15 +46,15 @@ namespace test_kooil.Formlar
                 gridControl1.DataSource = veriler.Where(x => x.AKTIF == true);
 
                 //renklendirmeler ve sutun gizlemeler
-                gridView1.Columns[1].AppearanceCell.BackColor = Color.LightYellow;
-                gridView1.Columns[2].AppearanceCell.BackColor = Color.Aquamarine;
-                gridView1.Columns[3].AppearanceCell.BackColor = Color.Yellow;
-                gridView1.Columns[4].AppearanceCell.BackColor = Color.Cyan;
-                gridView1.Columns[5].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[2].AppearanceCell.BackColor = Color.LightYellow;
+                gridView1.Columns[3].AppearanceCell.BackColor = Color.Aquamarine;
+                gridView1.Columns[4].AppearanceCell.BackColor = Color.Yellow;
+                gridView1.Columns[5].AppearanceCell.BackColor = Color.Cyan;
+                gridView1.Columns[6].AppearanceCell.BackColor = Color.LightYellow;
 
 
-                gridView1.Columns[6].Visible = false;
-                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[7].Visible = false;
+                gridView1.Columns[9].Visible = false;
             }
             catch (Exception) { }
 
@@ -135,21 +136,24 @@ namespace test_kooil.Formlar
                             txt_asama.Text = "Polisaj2 de";
                             break;
                         case 10:
-                            txt_asama.Text = "Gerilim Gidermede";
+                            txt_asama.Text = "Ayak Kesmede";
                             break;
                         case 11:
-                            txt_asama.Text = "Isıl İşlemde";
+                            txt_asama.Text = "Gerilim Gidermede";
                             break;
                         case 12:
-                            txt_asama.Text = "Temperde";
+                            txt_asama.Text = "Isıl İşlemde";
                             break;
                         case 13:
-                            txt_asama.Text = "Yıkamada";
+                            txt_asama.Text = "Temperde";
                             break;
                         case 14:
-                            txt_asama.Text = "Bilemede";
+                            txt_asama.Text = "Yıkamada";
                             break;
                         case 15:
+                            txt_asama.Text = "Bilemede";
+                            break;
+                        case 16:
                             txt_asama.Text = "Kontrolde";
                             break;
                     }

@@ -57,5 +57,6 @@ namespace test_kooil.Entity
         public Nullable<bool> hataduzelt { get; set; }
         public Nullable<bool> iade { get; set; }
         public Nullable<bool> gerilimGiderme { get; set; }
+        public Nullable<bool> ayakKesme { get; set; }
     }
 }
