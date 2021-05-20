@@ -24,6 +24,7 @@ namespace test_kooil.Formlar
         Frm_SevkiyatSil frmSevkSil;
         Frm_SipaktifEt frmSipAktifEt;
         Frm_kontrolDuzenle frmKontrolDuzenle;
+        Frm_PresRaporSil frmPresSil;
         void sipListele() {
             try
             {
@@ -261,6 +262,15 @@ namespace test_kooil.Formlar
             {
                 frmKontrolDuzenle = new Frm_kontrolDuzenle();
                 frmKontrolDuzenle.Show();
+            }
+        }
+
+        private void Btn_presRaporuSil_Click(object sender, EventArgs e)
+        {
+            if (frmPresSil == null || frmPresSil.IsDisposed)
+            {
+                frmPresSil = new Frm_PresRaporSil();
+                frmPresSil.Show();
             }
         }
     }

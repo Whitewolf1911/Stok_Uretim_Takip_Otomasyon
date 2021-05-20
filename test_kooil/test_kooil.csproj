@@ -528,6 +528,12 @@
     <Compile Include="Formlar\Frm_PresRaporlari.Designer.cs">
       <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_PresRaporSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_PresRaporSil.Designer.cs">
+      <DependentUpon>Frm_PresRaporSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_RaporOzet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -895,6 +901,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_PresRaporlari.resx">
       <DependentUpon>Frm_PresRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_PresRaporSil.resx">
+      <DependentUpon>Frm_PresRaporSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_RaporOzet.resx">
       <DependentUpon>Frm_RaporOzet.cs</DependentUpon>
