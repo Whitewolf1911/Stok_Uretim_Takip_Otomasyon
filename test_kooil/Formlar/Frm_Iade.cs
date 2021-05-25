@@ -33,6 +33,7 @@ namespace test_kooil.Formlar
                                    ÜrünKod = x.URUNKOD,
                                    Adet = x.ADET,
                                    SiparişNo = x.SIPNO,
+                                   Barkod = x.BARKOD,
                                    Tarih = x.TARIH,
                                    Neden = x.NEDEN,
                                    Sonuç = x.SONUC,

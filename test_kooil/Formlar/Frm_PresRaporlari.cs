@@ -32,6 +32,7 @@ namespace test_kooil.Formlar
                                    Tür = x.URUNTUR,
                                    ÜrünKodu = x.IGNEKODU,
                                    İşlenenMiktar = x.ISLENENMIKTAR,
+                                   Hammadde = x.HAMMADDE,
                                    Tarih = x.TARIH,
                                    Not = x.NOT,
 

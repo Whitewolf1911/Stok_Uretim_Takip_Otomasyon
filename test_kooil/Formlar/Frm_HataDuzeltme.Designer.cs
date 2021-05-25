@@ -85,6 +85,7 @@ namespace test_kooil.Formlar
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.Btn_paketlemeDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_presRaporuSil = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_pasifYap = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Siparis)).BeginInit();
@@ -596,7 +597,7 @@ namespace test_kooil.Formlar
             // Btn_urunStokDuzen
             // 
             this.Btn_urunStokDuzen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_urunStokDuzen.ImageOptions.Image")));
-            this.Btn_urunStokDuzen.Location = new System.Drawing.Point(336, 577);
+            this.Btn_urunStokDuzen.Location = new System.Drawing.Point(362, 577);
             this.Btn_urunStokDuzen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_urunStokDuzen.Name = "Btn_urunStokDuzen";
             this.Btn_urunStokDuzen.Size = new System.Drawing.Size(211, 57);
@@ -705,8 +706,8 @@ namespace test_kooil.Formlar
             // 
             // Btn_presRaporuSil
             // 
-            this.Btn_presRaporuSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_presRaporuSil.Location = new System.Drawing.Point(336, 655);
+            this.Btn_presRaporuSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_presRaporuSil.ImageOptions.Image")));
+            this.Btn_presRaporuSil.Location = new System.Drawing.Point(362, 655);
             this.Btn_presRaporuSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_presRaporuSil.Name = "Btn_presRaporuSil";
             this.Btn_presRaporuSil.Size = new System.Drawing.Size(211, 57);
@@ -714,11 +715,23 @@ namespace test_kooil.Formlar
             this.Btn_presRaporuSil.Text = "Pres Raporu Sil";
             this.Btn_presRaporuSil.Click += new System.EventHandler(this.Btn_presRaporuSil_Click);
             // 
+            // Btn_pasifYap
+            // 
+            this.Btn_pasifYap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_pasifYap.Location = new System.Drawing.Point(210, 655);
+            this.Btn_pasifYap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_pasifYap.Name = "Btn_pasifYap";
+            this.Btn_pasifYap.Size = new System.Drawing.Size(127, 57);
+            this.Btn_pasifYap.TabIndex = 54;
+            this.Btn_pasifYap.Text = "Pasif Yap";
+            this.Btn_pasifYap.Click += new System.EventHandler(this.Btn_pasifYap_Click);
+            // 
             // Frm_HataDuzeltme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1511, 736);
+            this.Controls.Add(this.Btn_pasifYap);
             this.Controls.Add(this.Btn_presRaporuSil);
             this.Controls.Add(this.Btn_paketlemeDuzenle);
             this.Controls.Add(this.num_ayakKesme);
@@ -865,5 +878,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.SimpleButton Btn_paketlemeDuzenle;
         private DevExpress.XtraEditors.SimpleButton Btn_presRaporuSil;
+        private DevExpress.XtraEditors.SimpleButton Btn_pasifYap;
     }
 }

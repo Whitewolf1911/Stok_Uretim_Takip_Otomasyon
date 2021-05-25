@@ -24,5 +24,6 @@ namespace test_kooil.Entity
         public string NEDEN { get; set; }
         public string SONUC { get; set; }
         public string URUNTUR { get; set; }
+        public string BARKOD { get; set; }
     }
 }

@@ -74,7 +74,7 @@ namespace test_kooil.Formlar
                 //gridView1.Columns[5].Visible = false;
                 //gridView1.Columns[6].Visible = false;
                 gridView1.Columns[24].Visible = false;
-               // gridView1.Columns[25].Visible = false;
+                gridView1.Columns[25].Visible = false;
                 gridView1.Columns[26].Visible = false;
                 //
 

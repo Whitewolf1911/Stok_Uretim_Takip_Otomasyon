@@ -35,6 +35,7 @@ namespace test_kooil.Formlar
                                    Müşteri = x.MUSTERI,
                                    ÜrünKodu = x.TBL_IGNELER.IGNEKOD,
                                    SiparişAdet = x.URUNADETI,
+                                   Giden = x.SEVKIYATSAYI,
                                    SiparişTarihi = x.SIPARISTARIHI,
                                    İstenilenTarih = x.ISTENILENTARIH,
                                    x.AKTIF,
@@ -53,8 +54,8 @@ namespace test_kooil.Formlar
                 gridView1.Columns[6].AppearanceCell.BackColor = Color.LightYellow;
 
 
-                gridView1.Columns[7].Visible = false;
-                gridView1.Columns[9].Visible = false;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[10].Visible = false;
             }
             catch (Exception) { }
 

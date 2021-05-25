@@ -273,5 +273,24 @@ namespace test_kooil.Formlar
                 frmPresSil.Show();
             }
         }
+
+        private void Btn_pasifYap_Click(object sender, EventArgs e)
+        {
+            try {
+
+                DialogResult Sorgu = MessageBox.Show("Seçilen Siparişi Pasif Yapmak İstediğinize Emin Misiniz ?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Sorgu == DialogResult.Yes)
+                {
+                    var sipID = (int)gridView1.GetFocusedRowCellValue("SiparişNo");
+                    var sip = db.TBL_SIPARIS.Find(sipID);
+                    sip.AKTIF = false;
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Seçilen Sipariş Pasife Yapıldı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sipListele();
+
+                }
+            }
+            catch (Exception) { }
+        }
     }
 }

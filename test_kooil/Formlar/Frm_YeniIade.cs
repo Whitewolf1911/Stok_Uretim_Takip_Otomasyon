@@ -81,6 +81,7 @@ namespace test_kooil.Formlar
                     yeniIade.URUNTUR = gridView1.GetFocusedRowCellValue("Tür").ToString();
                     yeniIade.URUNKOD = gridView1.GetFocusedRowCellValue("ÜrünKodu").ToString();
                     yeniIade.ADET = (int)num_adet.Value;
+                    yeniIade.BARKOD = txt_barkod.Text;
                     yeniIade.SIPNO = (int)num_sipNo.Value;
                     yeniIade.TARIH = date_tarih.DateTime;
                     yeniIade.RAPORLAYAN = Frm_Login.user.AdSoyad;

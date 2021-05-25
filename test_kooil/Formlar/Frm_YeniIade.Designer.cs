@@ -31,6 +31,9 @@ namespace test_kooil.Formlar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_YeniIade));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txt_barkod = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.num_adet = new System.Windows.Forms.NumericUpDown();
             this.lookUp_firma = new DevExpress.XtraEditors.LookUpEdit();
             this.num_sipNo = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +58,8 @@ namespace test_kooil.Formlar
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_barkod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_adet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).BeginInit();
@@ -73,6 +78,9 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txt_barkod);
+            this.groupControl1.Controls.Add(this.pictureEdit7);
+            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.num_adet);
             this.groupControl1.Controls.Add(this.lookUp_firma);
             this.groupControl1.Controls.Add(this.num_sipNo);
@@ -95,9 +103,40 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(429, 533);
+            this.groupControl1.Size = new System.Drawing.Size(429, 580);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "İade";
+            // 
+            // txt_barkod
+            // 
+            this.txt_barkod.Location = new System.Drawing.Point(171, 267);
+            this.txt_barkod.Name = "txt_barkod";
+            this.txt_barkod.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txt_barkod.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_barkod.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_barkod.Properties.MaxLength = 25;
+            this.txt_barkod.Size = new System.Drawing.Size(185, 22);
+            this.txt_barkod.TabIndex = 116;
+            // 
+            // pictureEdit7
+            // 
+            this.pictureEdit7.EditValue = ((object)(resources.GetObject("pictureEdit7.EditValue")));
+            this.pictureEdit7.Location = new System.Drawing.Point(5, 251);
+            this.pictureEdit7.Name = "pictureEdit7";
+            this.pictureEdit7.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit7.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit7.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit7.Size = new System.Drawing.Size(63, 59);
+            this.pictureEdit7.TabIndex = 115;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(81, 270);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(48, 16);
+            this.labelControl7.TabIndex = 114;
+            this.labelControl7.Text = "Barkod :";
             // 
             // num_adet
             // 
@@ -136,7 +175,7 @@ namespace test_kooil.Formlar
             // pictureEdit6
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(5, 256);
+            this.pictureEdit6.Location = new System.Drawing.Point(5, 307);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
@@ -147,7 +186,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(81, 275);
+            this.labelControl6.Location = new System.Drawing.Point(81, 326);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(39, 16);
             this.labelControl6.TabIndex = 109;
@@ -156,7 +195,7 @@ namespace test_kooil.Formlar
             // date_tarih
             // 
             this.date_tarih.EditValue = null;
-            this.date_tarih.Location = new System.Drawing.Point(171, 274);
+            this.date_tarih.Location = new System.Drawing.Point(171, 325);
             this.date_tarih.Name = "date_tarih";
             this.date_tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -168,7 +207,7 @@ namespace test_kooil.Formlar
             // Btn_iptal
             // 
             this.Btn_iptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_iptal.ImageOptions.Image")));
-            this.Btn_iptal.Location = new System.Drawing.Point(276, 467);
+            this.Btn_iptal.Location = new System.Drawing.Point(276, 514);
             this.Btn_iptal.Name = "Btn_iptal";
             this.Btn_iptal.Size = new System.Drawing.Size(148, 61);
             this.Btn_iptal.TabIndex = 107;
@@ -179,7 +218,7 @@ namespace test_kooil.Formlar
             // 
             this.Btn_Kaydet.Enabled = false;
             this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
-            this.Btn_Kaydet.Location = new System.Drawing.Point(5, 467);
+            this.Btn_Kaydet.Location = new System.Drawing.Point(5, 514);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
             this.Btn_Kaydet.Size = new System.Drawing.Size(144, 61);
             this.Btn_Kaydet.TabIndex = 106;
@@ -189,7 +228,7 @@ namespace test_kooil.Formlar
             // txt_neden
             // 
             this.txt_neden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txt_neden.Location = new System.Drawing.Point(171, 331);
+            this.txt_neden.Location = new System.Drawing.Point(171, 382);
             this.txt_neden.MaxLength = 99;
             this.txt_neden.Name = "txt_neden";
             this.txt_neden.Size = new System.Drawing.Size(185, 100);
@@ -199,7 +238,7 @@ namespace test_kooil.Formlar
             // pictureEdit5
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(5, 312);
+            this.pictureEdit5.Location = new System.Drawing.Point(5, 363);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -210,7 +249,7 @@ namespace test_kooil.Formlar
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(81, 331);
+            this.labelControl5.Location = new System.Drawing.Point(81, 382);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(45, 16);
             this.labelControl5.TabIndex = 103;
@@ -329,7 +368,7 @@ namespace test_kooil.Formlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 557);
+            this.ClientSize = new System.Drawing.Size(915, 604);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Name = "Frm_YeniIade";
@@ -338,6 +377,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_barkod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_adet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUp_firma.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_sipNo)).EndInit();
@@ -375,11 +416,14 @@ namespace test_kooil.Formlar
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.NumericUpDown num_adet;
         private DevExpress.XtraEditors.LookUpEdit lookUp_firma;
-        private System.Windows.Forms.NumericUpDown num_sipNo;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.DateEdit date_tarih;
         private DevExpress.XtraEditors.SimpleButton Btn_iptal;
         private DevExpress.XtraEditors.SimpleButton Btn_Kaydet;
+        private DevExpress.XtraEditors.TextEdit txt_barkod;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit7;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.NumericUpDown num_sipNo;
     }
 }
