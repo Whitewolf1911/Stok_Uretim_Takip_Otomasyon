@@ -82,6 +82,7 @@ namespace test_kooil.Formlar
             this.ch_iade = new DevExpress.XtraEditors.CheckEdit();
             this.ch_gerilim = new DevExpress.XtraEditors.CheckEdit();
             this.ch_ayakKesme = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_testere = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
@@ -130,14 +131,15 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_ayakKesme.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_testere.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(21, 171);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(244, 316);
             this.gridControl1.TabIndex = 3;
@@ -157,7 +159,7 @@ namespace test_kooil.Formlar
             // 
             this.Btn_Kaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kaydet.ImageOptions.Image")));
             this.Btn_Kaydet.Location = new System.Drawing.Point(294, 443);
-            this.Btn_Kaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Kaydet.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Kaydet.Name = "Btn_Kaydet";
             this.Btn_Kaydet.Size = new System.Drawing.Size(124, 45);
             this.Btn_Kaydet.TabIndex = 93;
@@ -168,7 +170,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
             this.pictureEdit3.Location = new System.Drawing.Point(21, 115);
-            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -181,7 +183,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(21, 67);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -194,7 +196,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(21, 15);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -206,7 +208,7 @@ namespace test_kooil.Formlar
             // chSipSevkiyat
             // 
             this.chSipSevkiyat.Location = new System.Drawing.Point(458, 380);
-            this.chSipSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chSipSevkiyat.Margin = new System.Windows.Forms.Padding(2);
             this.chSipSevkiyat.Name = "chSipSevkiyat";
             this.chSipSevkiyat.Properties.Caption = "Yeni Sipariş Sevkiyat";
             this.chSipSevkiyat.Size = new System.Drawing.Size(154, 20);
@@ -215,7 +217,7 @@ namespace test_kooil.Formlar
             // chKontrol
             // 
             this.chKontrol.Location = new System.Drawing.Point(761, 272);
-            this.chKontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chKontrol.Margin = new System.Windows.Forms.Padding(2);
             this.chKontrol.Name = "chKontrol";
             this.chKontrol.Properties.Caption = "Kontrol";
             this.chKontrol.Size = new System.Drawing.Size(82, 20);
@@ -224,7 +226,7 @@ namespace test_kooil.Formlar
             // chBileme
             // 
             this.chBileme.Location = new System.Drawing.Point(761, 235);
-            this.chBileme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chBileme.Margin = new System.Windows.Forms.Padding(2);
             this.chBileme.Name = "chBileme";
             this.chBileme.Properties.Caption = "Bileme";
             this.chBileme.Size = new System.Drawing.Size(82, 20);
@@ -233,7 +235,7 @@ namespace test_kooil.Formlar
             // chYikama
             // 
             this.chYikama.Location = new System.Drawing.Point(761, 195);
-            this.chYikama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chYikama.Margin = new System.Windows.Forms.Padding(2);
             this.chYikama.Name = "chYikama";
             this.chYikama.Properties.Caption = "Yıkama";
             this.chYikama.Size = new System.Drawing.Size(82, 20);
@@ -242,7 +244,7 @@ namespace test_kooil.Formlar
             // chTemper
             // 
             this.chTemper.Location = new System.Drawing.Point(761, 157);
-            this.chTemper.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chTemper.Margin = new System.Windows.Forms.Padding(2);
             this.chTemper.Name = "chTemper";
             this.chTemper.Properties.Caption = "Temper";
             this.chTemper.Size = new System.Drawing.Size(82, 20);
@@ -251,7 +253,7 @@ namespace test_kooil.Formlar
             // chIsilIslem
             // 
             this.chIsilIslem.Location = new System.Drawing.Point(761, 124);
-            this.chIsilIslem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chIsilIslem.Margin = new System.Windows.Forms.Padding(2);
             this.chIsilIslem.Name = "chIsilIslem";
             this.chIsilIslem.Properties.Caption = "Isıl İşlem";
             this.chIsilIslem.Size = new System.Drawing.Size(82, 20);
@@ -260,7 +262,7 @@ namespace test_kooil.Formlar
             // chPolisaj2
             // 
             this.chPolisaj2.Location = new System.Drawing.Point(761, 89);
-            this.chPolisaj2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chPolisaj2.Margin = new System.Windows.Forms.Padding(2);
             this.chPolisaj2.Name = "chPolisaj2";
             this.chPolisaj2.Properties.Caption = "Polisaj2";
             this.chPolisaj2.Size = new System.Drawing.Size(82, 20);
@@ -269,7 +271,7 @@ namespace test_kooil.Formlar
             // chDilCakma
             // 
             this.chDilCakma.Location = new System.Drawing.Point(761, 55);
-            this.chDilCakma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chDilCakma.Margin = new System.Windows.Forms.Padding(2);
             this.chDilCakma.Name = "chDilCakma";
             this.chDilCakma.Properties.Caption = "Dil Çakma";
             this.chDilCakma.Size = new System.Drawing.Size(82, 20);
@@ -278,7 +280,7 @@ namespace test_kooil.Formlar
             // chPolisaj1
             // 
             this.chPolisaj1.Location = new System.Drawing.Point(761, 24);
-            this.chPolisaj1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chPolisaj1.Margin = new System.Windows.Forms.Padding(2);
             this.chPolisaj1.Name = "chPolisaj1";
             this.chPolisaj1.Properties.Caption = "Polisaj1";
             this.chPolisaj1.Size = new System.Drawing.Size(82, 20);
@@ -287,7 +289,7 @@ namespace test_kooil.Formlar
             // chKanalBuyutme
             // 
             this.chKanalBuyutme.Location = new System.Drawing.Point(649, 210);
-            this.chKanalBuyutme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chKanalBuyutme.Margin = new System.Windows.Forms.Padding(2);
             this.chKanalBuyutme.Name = "chKanalBuyutme";
             this.chKanalBuyutme.Properties.Caption = "Kanal Büyütme";
             this.chKanalBuyutme.Size = new System.Drawing.Size(108, 20);
@@ -296,7 +298,7 @@ namespace test_kooil.Formlar
             // chKanalAcma
             // 
             this.chKanalAcma.Location = new System.Drawing.Point(649, 172);
-            this.chKanalAcma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chKanalAcma.Margin = new System.Windows.Forms.Padding(2);
             this.chKanalAcma.Name = "chKanalAcma";
             this.chKanalAcma.Properties.Caption = "Kanal Açma";
             this.chKanalAcma.Size = new System.Drawing.Size(83, 20);
@@ -305,7 +307,7 @@ namespace test_kooil.Formlar
             // chUcSiyirma
             // 
             this.chUcSiyirma.Location = new System.Drawing.Point(649, 135);
-            this.chUcSiyirma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chUcSiyirma.Margin = new System.Windows.Forms.Padding(2);
             this.chUcSiyirma.Name = "chUcSiyirma";
             this.chUcSiyirma.Properties.Caption = "Uç Sıyırma";
             this.chUcSiyirma.Size = new System.Drawing.Size(83, 20);
@@ -314,7 +316,7 @@ namespace test_kooil.Formlar
             // chYolKopyala
             // 
             this.chYolKopyala.Location = new System.Drawing.Point(649, 95);
-            this.chYolKopyala.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chYolKopyala.Margin = new System.Windows.Forms.Padding(2);
             this.chYolKopyala.Name = "chYolKopyala";
             this.chYolKopyala.Properties.Caption = "Yol Kopyalama";
             this.chYolKopyala.Size = new System.Drawing.Size(90, 20);
@@ -323,7 +325,7 @@ namespace test_kooil.Formlar
             // chArkaSiyirma
             // 
             this.chArkaSiyirma.Location = new System.Drawing.Point(649, 57);
-            this.chArkaSiyirma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chArkaSiyirma.Margin = new System.Windows.Forms.Padding(2);
             this.chArkaSiyirma.Name = "chArkaSiyirma";
             this.chArkaSiyirma.Properties.Caption = "Arka Sıyırma";
             this.chArkaSiyirma.Size = new System.Drawing.Size(83, 20);
@@ -332,7 +334,7 @@ namespace test_kooil.Formlar
             // chPres
             // 
             this.chPres.Location = new System.Drawing.Point(649, 24);
-            this.chPres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chPres.Margin = new System.Windows.Forms.Padding(2);
             this.chPres.Name = "chPres";
             this.chPres.Properties.Caption = "Pres";
             this.chPres.Size = new System.Drawing.Size(70, 20);
@@ -341,7 +343,7 @@ namespace test_kooil.Formlar
             // chAyarlar
             // 
             this.chAyarlar.Location = new System.Drawing.Point(761, 349);
-            this.chAyarlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chAyarlar.Margin = new System.Windows.Forms.Padding(2);
             this.chAyarlar.Name = "chAyarlar";
             this.chAyarlar.Properties.Caption = "Ayarlar";
             this.chAyarlar.Size = new System.Drawing.Size(108, 20);
@@ -350,7 +352,7 @@ namespace test_kooil.Formlar
             // chGecmisSevkiyat
             // 
             this.chGecmisSevkiyat.Location = new System.Drawing.Point(458, 414);
-            this.chGecmisSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chGecmisSevkiyat.Margin = new System.Windows.Forms.Padding(2);
             this.chGecmisSevkiyat.Name = "chGecmisSevkiyat";
             this.chGecmisSevkiyat.Properties.Caption = "Geçmiş Sevkiyatlar";
             this.chGecmisSevkiyat.Size = new System.Drawing.Size(154, 20);
@@ -359,7 +361,7 @@ namespace test_kooil.Formlar
             // chPeraSevkiyat
             // 
             this.chPeraSevkiyat.Location = new System.Drawing.Point(458, 349);
-            this.chPeraSevkiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chPeraSevkiyat.Margin = new System.Windows.Forms.Padding(2);
             this.chPeraSevkiyat.Name = "chPeraSevkiyat";
             this.chPeraSevkiyat.Properties.Caption = "Yeni Perakende Sevkiyat";
             this.chPeraSevkiyat.Size = new System.Drawing.Size(172, 20);
@@ -368,7 +370,7 @@ namespace test_kooil.Formlar
             // chFirmaEkle
             // 
             this.chFirmaEkle.Location = new System.Drawing.Point(458, 310);
-            this.chFirmaEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chFirmaEkle.Margin = new System.Windows.Forms.Padding(2);
             this.chFirmaEkle.Name = "chFirmaEkle";
             this.chFirmaEkle.Properties.Caption = "Firma Ekle";
             this.chFirmaEkle.Size = new System.Drawing.Size(106, 20);
@@ -377,7 +379,7 @@ namespace test_kooil.Formlar
             // chFirmalar
             // 
             this.chFirmalar.Location = new System.Drawing.Point(458, 271);
-            this.chFirmalar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chFirmalar.Margin = new System.Windows.Forms.Padding(2);
             this.chFirmalar.Name = "chFirmalar";
             this.chFirmalar.Properties.Caption = "Firmalar";
             this.chFirmalar.Size = new System.Drawing.Size(98, 20);
@@ -386,7 +388,7 @@ namespace test_kooil.Formlar
             // chHamRaporEkle
             // 
             this.chHamRaporEkle.Location = new System.Drawing.Point(458, 234);
-            this.chHamRaporEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHamRaporEkle.Margin = new System.Windows.Forms.Padding(2);
             this.chHamRaporEkle.Name = "chHamRaporEkle";
             this.chHamRaporEkle.Properties.Caption = "Hammadde Raporu Ekle";
             this.chHamRaporEkle.Size = new System.Drawing.Size(166, 20);
@@ -395,7 +397,7 @@ namespace test_kooil.Formlar
             // chHamKullanimRap
             // 
             this.chHamKullanimRap.Location = new System.Drawing.Point(458, 194);
-            this.chHamKullanimRap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHamKullanimRap.Margin = new System.Windows.Forms.Padding(2);
             this.chHamKullanimRap.Name = "chHamKullanimRap";
             this.chHamKullanimRap.Properties.Caption = "Hammadde Kullanım Raporları";
             this.chHamKullanimRap.Size = new System.Drawing.Size(186, 20);
@@ -404,7 +406,7 @@ namespace test_kooil.Formlar
             // chHamStokGuncelle
             // 
             this.chHamStokGuncelle.Location = new System.Drawing.Point(458, 156);
-            this.chHamStokGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHamStokGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.chHamStokGuncelle.Name = "chHamStokGuncelle";
             this.chHamStokGuncelle.Properties.Caption = "Hammadde Stok Güncelle";
             this.chHamStokGuncelle.Size = new System.Drawing.Size(166, 20);
@@ -413,7 +415,7 @@ namespace test_kooil.Formlar
             // chHamSil
             // 
             this.chHamSil.Location = new System.Drawing.Point(458, 123);
-            this.chHamSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHamSil.Margin = new System.Windows.Forms.Padding(2);
             this.chHamSil.Name = "chHamSil";
             this.chHamSil.Properties.Caption = "Hammadde Sil";
             this.chHamSil.Size = new System.Drawing.Size(134, 20);
@@ -422,7 +424,7 @@ namespace test_kooil.Formlar
             // chYeniHamEkle
             // 
             this.chYeniHamEkle.Location = new System.Drawing.Point(458, 88);
-            this.chYeniHamEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chYeniHamEkle.Margin = new System.Windows.Forms.Padding(2);
             this.chYeniHamEkle.Name = "chYeniHamEkle";
             this.chYeniHamEkle.Properties.Caption = "Yeni Hammadde Ekle";
             this.chYeniHamEkle.Size = new System.Drawing.Size(148, 20);
@@ -431,7 +433,7 @@ namespace test_kooil.Formlar
             // chHammaddeStok
             // 
             this.chHammaddeStok.Location = new System.Drawing.Point(458, 54);
-            this.chHammaddeStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHammaddeStok.Margin = new System.Windows.Forms.Padding(2);
             this.chHammaddeStok.Name = "chHammaddeStok";
             this.chHammaddeStok.Properties.Caption = "Hammadde Stok";
             this.chHammaddeStok.Size = new System.Drawing.Size(134, 20);
@@ -440,7 +442,7 @@ namespace test_kooil.Formlar
             // chUrunStok
             // 
             this.chUrunStok.Location = new System.Drawing.Point(458, 23);
-            this.chUrunStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chUrunStok.Margin = new System.Windows.Forms.Padding(2);
             this.chUrunStok.Name = "chUrunStok";
             this.chUrunStok.Properties.Caption = "Ürün Stok";
             this.chUrunStok.Size = new System.Drawing.Size(106, 20);
@@ -449,7 +451,7 @@ namespace test_kooil.Formlar
             // chUrunDuzenle
             // 
             this.chUrunDuzenle.Location = new System.Drawing.Point(301, 310);
-            this.chUrunDuzenle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chUrunDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.chUrunDuzenle.Name = "chUrunDuzenle";
             this.chUrunDuzenle.Properties.Caption = "Ürün Düzenle";
             this.chUrunDuzenle.Size = new System.Drawing.Size(100, 20);
@@ -458,7 +460,7 @@ namespace test_kooil.Formlar
             // chYeniUrunEkle
             // 
             this.chYeniUrunEkle.Location = new System.Drawing.Point(301, 271);
-            this.chYeniUrunEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chYeniUrunEkle.Margin = new System.Windows.Forms.Padding(2);
             this.chYeniUrunEkle.Name = "chYeniUrunEkle";
             this.chYeniUrunEkle.Properties.Caption = "Yeni Ürün Ekle";
             this.chYeniUrunEkle.Size = new System.Drawing.Size(116, 20);
@@ -467,7 +469,7 @@ namespace test_kooil.Formlar
             // chUrunTur
             // 
             this.chUrunTur.Location = new System.Drawing.Point(301, 234);
-            this.chUrunTur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chUrunTur.Margin = new System.Windows.Forms.Padding(2);
             this.chUrunTur.Name = "chUrunTur";
             this.chUrunTur.Properties.Caption = "Ürün Türleri";
             this.chUrunTur.Size = new System.Drawing.Size(100, 20);
@@ -476,7 +478,7 @@ namespace test_kooil.Formlar
             // chIslemRapor
             // 
             this.chIslemRapor.Location = new System.Drawing.Point(301, 194);
-            this.chIslemRapor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chIslemRapor.Margin = new System.Windows.Forms.Padding(2);
             this.chIslemRapor.Name = "chIslemRapor";
             this.chIslemRapor.Properties.Caption = "İşlem Raporları";
             this.chIslemRapor.Size = new System.Drawing.Size(109, 20);
@@ -485,7 +487,7 @@ namespace test_kooil.Formlar
             // chTamamlananSip
             // 
             this.chTamamlananSip.Location = new System.Drawing.Point(301, 156);
-            this.chTamamlananSip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chTamamlananSip.Margin = new System.Windows.Forms.Padding(2);
             this.chTamamlananSip.Name = "chTamamlananSip";
             this.chTamamlananSip.Properties.Caption = "Tamamlanan Siparişler";
             this.chTamamlananSip.Size = new System.Drawing.Size(140, 20);
@@ -494,7 +496,7 @@ namespace test_kooil.Formlar
             // chSipDurumKontrol
             // 
             this.chSipDurumKontrol.Location = new System.Drawing.Point(301, 123);
-            this.chSipDurumKontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chSipDurumKontrol.Margin = new System.Windows.Forms.Padding(2);
             this.chSipDurumKontrol.Name = "chSipDurumKontrol";
             this.chSipDurumKontrol.Properties.Caption = "Sipariş Durum Kontrol";
             this.chSipDurumKontrol.Size = new System.Drawing.Size(140, 20);
@@ -503,7 +505,7 @@ namespace test_kooil.Formlar
             // chAktifSiparisler
             // 
             this.chAktifSiparisler.Location = new System.Drawing.Point(301, 88);
-            this.chAktifSiparisler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chAktifSiparisler.Margin = new System.Windows.Forms.Padding(2);
             this.chAktifSiparisler.Name = "chAktifSiparisler";
             this.chAktifSiparisler.Properties.Caption = "Aktif Siparişler";
             this.chAktifSiparisler.Size = new System.Drawing.Size(100, 20);
@@ -512,7 +514,7 @@ namespace test_kooil.Formlar
             // chYeniSiparis
             // 
             this.chYeniSiparis.Location = new System.Drawing.Point(301, 54);
-            this.chYeniSiparis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chYeniSiparis.Margin = new System.Windows.Forms.Padding(2);
             this.chYeniSiparis.Name = "chYeniSiparis";
             this.chYeniSiparis.Properties.Caption = "Yeni Sipariş";
             this.chYeniSiparis.Size = new System.Drawing.Size(84, 20);
@@ -521,7 +523,7 @@ namespace test_kooil.Formlar
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(59, 124);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(29, 13);
             this.labelControl3.TabIndex = 54;
@@ -530,7 +532,7 @@ namespace test_kooil.Formlar
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(59, 76);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(62, 13);
             this.labelControl2.TabIndex = 53;
@@ -539,7 +541,7 @@ namespace test_kooil.Formlar
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(59, 26);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(53, 13);
             this.labelControl1.TabIndex = 52;
@@ -548,7 +550,7 @@ namespace test_kooil.Formlar
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(127, 122);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(138, 20);
             this.txt_password.TabIndex = 51;
@@ -557,7 +559,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_userName.Enabled = false;
             this.txt_userName.Location = new System.Drawing.Point(127, 73);
-            this.txt_userName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_userName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_userName.Name = "txt_userName";
             this.txt_userName.Size = new System.Drawing.Size(138, 20);
             this.txt_userName.TabIndex = 50;
@@ -565,7 +567,7 @@ namespace test_kooil.Formlar
             // txt_AdSoyad
             // 
             this.txt_AdSoyad.Location = new System.Drawing.Point(127, 24);
-            this.txt_AdSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AdSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AdSoyad.Name = "txt_AdSoyad";
             this.txt_AdSoyad.Size = new System.Drawing.Size(138, 20);
             this.txt_AdSoyad.TabIndex = 49;
@@ -574,7 +576,7 @@ namespace test_kooil.Formlar
             // 
             this.chAnasayfa.Enabled = false;
             this.chAnasayfa.Location = new System.Drawing.Point(301, 23);
-            this.chAnasayfa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chAnasayfa.Margin = new System.Windows.Forms.Padding(2);
             this.chAnasayfa.Name = "chAnasayfa";
             this.chAnasayfa.Properties.Caption = "Ana Sayfa";
             this.chAnasayfa.Size = new System.Drawing.Size(84, 20);
@@ -583,7 +585,7 @@ namespace test_kooil.Formlar
             // chHataDuzelt
             // 
             this.chHataDuzelt.Location = new System.Drawing.Point(761, 388);
-            this.chHataDuzelt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chHataDuzelt.Margin = new System.Windows.Forms.Padding(2);
             this.chHataDuzelt.Name = "chHataDuzelt";
             this.chHataDuzelt.Properties.Caption = "Hata Düzelt";
             this.chHataDuzelt.Size = new System.Drawing.Size(117, 20);
@@ -592,7 +594,7 @@ namespace test_kooil.Formlar
             // ch_iade
             // 
             this.ch_iade.Location = new System.Drawing.Point(761, 428);
-            this.ch_iade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ch_iade.Margin = new System.Windows.Forms.Padding(2);
             this.ch_iade.Name = "ch_iade";
             this.ch_iade.Properties.Caption = "İade";
             this.ch_iade.Size = new System.Drawing.Size(117, 20);
@@ -601,7 +603,7 @@ namespace test_kooil.Formlar
             // ch_gerilim
             // 
             this.ch_gerilim.Location = new System.Drawing.Point(649, 290);
-            this.ch_gerilim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ch_gerilim.Margin = new System.Windows.Forms.Padding(2);
             this.ch_gerilim.Name = "ch_gerilim";
             this.ch_gerilim.Properties.Caption = "Gerilim Giderme";
             this.ch_gerilim.Size = new System.Drawing.Size(108, 20);
@@ -616,11 +618,21 @@ namespace test_kooil.Formlar
             this.ch_ayakKesme.Size = new System.Drawing.Size(108, 20);
             this.ch_ayakKesme.TabIndex = 97;
             // 
+            // ch_testere
+            // 
+            this.ch_testere.Location = new System.Drawing.Point(649, 349);
+            this.ch_testere.Margin = new System.Windows.Forms.Padding(2);
+            this.ch_testere.Name = "ch_testere";
+            this.ch_testere.Properties.Caption = "Testere";
+            this.ch_testere.Size = new System.Drawing.Size(90, 20);
+            this.ch_testere.TabIndex = 98;
+            // 
             // Frm_userUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 510);
+            this.Controls.Add(this.ch_testere);
             this.Controls.Add(this.ch_ayakKesme);
             this.Controls.Add(this.ch_gerilim);
             this.Controls.Add(this.ch_iade);
@@ -672,7 +684,7 @@ namespace test_kooil.Formlar
             this.Controls.Add(this.txt_AdSoyad);
             this.Controls.Add(this.chAnasayfa);
             this.Controls.Add(this.gridControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Frm_userUpdate";
             this.Text = "Kullanıcı Güncelle";
@@ -725,6 +737,7 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.ch_iade.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_gerilim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_ayakKesme.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_testere.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,5 +797,6 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.CheckEdit ch_iade;
         private DevExpress.XtraEditors.CheckEdit ch_gerilim;
         private DevExpress.XtraEditors.CheckEdit ch_ayakKesme;
+        private DevExpress.XtraEditors.CheckEdit ch_testere;
     }
 }

@@ -201,6 +201,9 @@
     <Compile Include="Entity\TBL_TEMPER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBL_TESTERE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBL_UCSIYIRMA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -618,6 +621,18 @@
     <Compile Include="Formlar\Frm_TemperRapor.Designer.cs">
       <DependentUpon>Frm_TemperRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\Frm_Testere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_Testere.Designer.cs">
+      <DependentUpon>Frm_Testere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_testereTanimla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_testereTanimla.Designer.cs">
+      <DependentUpon>Frm_testereTanimla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\Frm_UcSiyirma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -707,6 +722,12 @@
     </Compile>
     <Compile Include="Formlar\Frm_YeniSiparis.Designer.cs">
       <DependentUpon>Frm_YeniSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Frm_YeniTestere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Frm_YeniTestere.Designer.cs">
+      <DependentUpon>Frm_YeniTestere.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Frm_Yikama.cs">
       <SubType>Form</SubType>
@@ -947,6 +968,12 @@
     <EmbeddedResource Include="Formlar\Frm_TemperRapor.resx">
       <DependentUpon>Frm_TemperRapor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_Testere.resx">
+      <DependentUpon>Frm_Testere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_testereTanimla.resx">
+      <DependentUpon>Frm_testereTanimla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_UcSiyirma.resx">
       <DependentUpon>Frm_UcSiyirma.cs</DependentUpon>
     </EmbeddedResource>
@@ -991,6 +1018,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_YeniSiparis.resx">
       <DependentUpon>Frm_YeniSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Frm_YeniTestere.resx">
+      <DependentUpon>Frm_YeniTestere.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Frm_Yikama.resx">
       <DependentUpon>Frm_Yikama.cs</DependentUpon>

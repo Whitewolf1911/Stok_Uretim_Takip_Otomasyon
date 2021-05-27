@@ -82,6 +82,8 @@ namespace test_kooil.Formlar
                         if (ch_iade.Checked) { new_user.iade = true; } else { new_user.iade = false; }
                         if (ch_gerilim.Checked) { new_user.gerilimGiderme = true; } else { new_user.gerilimGiderme = false; }
                         if (ch_ayakKesme.Checked) { new_user.ayakKesme = true; } else { new_user.ayakKesme = false; }
+                        if (ch_testere.Checked) { new_user.testere = true; } else { new_user.testere = false; }
+
 
 
 

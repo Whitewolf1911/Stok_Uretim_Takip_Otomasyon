@@ -62,6 +62,7 @@ namespace test_kooil
         Frm_Iade frmIade;
         Frm_GerilimGiderme frmGerilim;
         Frm_AyakKesme frmAyakKesme;
+        Frm_Testere frmTestere;
         void InitializeButtons() {
 
             if (Frm_Login.user.akfifSiparis == true)
@@ -285,6 +286,12 @@ namespace test_kooil
                 Btn_AyakKesme.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             }
             else { Btn_AyakKesme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
+
+            if (Frm_Login.user.testere == true)
+            {
+                Btn_testere.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else { Btn_testere.Visibility = DevExpress.XtraBars.BarItemVisibility.Never; }
 
         }
 
@@ -737,6 +744,14 @@ namespace test_kooil
             frmAyakKesme.MdiParent = this;
             DisposeAllButThis(frmAyakKesme);
             frmAyakKesme.Show();
+        }
+
+        private void Btn_testere_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmTestere = new Frm_Testere();
+            frmTestere.MdiParent = this;
+            DisposeAllButThis(frmTestere);
+            frmTestere.Show();
         }
     }
 }

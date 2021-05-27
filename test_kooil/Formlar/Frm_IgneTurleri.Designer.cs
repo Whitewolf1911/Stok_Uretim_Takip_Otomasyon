@@ -53,6 +53,10 @@ namespace test_kooil.Formlar
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Btn_Yenile = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_testere1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_testere2 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -68,14 +72,16 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Gramaj.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_testere1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_testere2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(2, 10);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(542, 491);
             this.gridControl1.TabIndex = 0;
@@ -96,6 +102,10 @@ namespace test_kooil.Formlar
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txt_testere2);
+            this.groupControl1.Controls.Add(this.labelControl8);
+            this.groupControl1.Controls.Add(this.txt_testere1);
+            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.txt_hammadde);
             this.groupControl1.Controls.Add(this.labelControl6);
@@ -117,7 +127,7 @@ namespace test_kooil.Formlar
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.Btn_Yenile);
             this.groupControl1.Location = new System.Drawing.Point(548, 10);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(550, 491);
             this.groupControl1.TabIndex = 1;
@@ -127,7 +137,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
             this.pictureEdit6.Location = new System.Drawing.Point(11, 70);
-            this.pictureEdit6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit6.Name = "pictureEdit6";
             this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
@@ -139,7 +149,7 @@ namespace test_kooil.Formlar
             // txt_hammadde
             // 
             this.txt_hammadde.Location = new System.Drawing.Point(128, 84);
-            this.txt_hammadde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_hammadde.Margin = new System.Windows.Forms.Padding(2);
             this.txt_hammadde.Name = "txt_hammadde";
             this.txt_hammadde.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_hammadde.Properties.Appearance.Options.UseBackColor = true;
@@ -150,7 +160,7 @@ namespace test_kooil.Formlar
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(56, 87);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(63, 13);
             this.labelControl6.TabIndex = 21;
@@ -160,7 +170,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
             this.pictureEdit3.Location = new System.Drawing.Point(12, 173);
-            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -172,7 +182,7 @@ namespace test_kooil.Formlar
             // txt_sarfiyat
             // 
             this.txt_sarfiyat.Location = new System.Drawing.Point(127, 181);
-            this.txt_sarfiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_sarfiyat.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sarfiyat.Name = "txt_sarfiyat";
             this.txt_sarfiyat.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txt_sarfiyat.Properties.Appearance.Options.UseBackColor = true;
@@ -183,7 +193,7 @@ namespace test_kooil.Formlar
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(55, 184);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(69, 13);
             this.labelControl3.TabIndex = 18;
@@ -194,7 +204,7 @@ namespace test_kooil.Formlar
             this.pic_IgneFoto.BackColor = System.Drawing.SystemColors.Highlight;
             this.pic_IgneFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pic_IgneFoto.Location = new System.Drawing.Point(260, 223);
-            this.pic_IgneFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_IgneFoto.Margin = new System.Windows.Forms.Padding(2);
             this.pic_IgneFoto.Name = "pic_IgneFoto";
             this.pic_IgneFoto.Size = new System.Drawing.Size(282, 229);
             this.pic_IgneFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,7 +217,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
             this.pictureEdit5.Location = new System.Drawing.Point(11, 238);
-            this.pictureEdit5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
@@ -220,7 +230,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
             this.pictureEdit4.Location = new System.Drawing.Point(321, 25);
-            this.pictureEdit4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
@@ -233,7 +243,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(11, 122);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -246,7 +256,7 @@ namespace test_kooil.Formlar
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(12, 32);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -258,7 +268,7 @@ namespace test_kooil.Formlar
             // txt_Gramaj
             // 
             this.txt_Gramaj.Location = new System.Drawing.Point(128, 130);
-            this.txt_Gramaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Gramaj.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Gramaj.Name = "txt_Gramaj";
             this.txt_Gramaj.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txt_Gramaj.Properties.Appearance.Options.UseBackColor = true;
@@ -270,7 +280,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_IsilIslem.BackColor = System.Drawing.SystemColors.Info;
             this.txt_IsilIslem.Location = new System.Drawing.Point(417, 38);
-            this.txt_IsilIslem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IsilIslem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IsilIslem.Name = "txt_IsilIslem";
             this.txt_IsilIslem.ReadOnly = true;
             this.txt_IsilIslem.Size = new System.Drawing.Size(120, 73);
@@ -280,7 +290,7 @@ namespace test_kooil.Formlar
             // txt_IgneKod
             // 
             this.txt_IgneKod.Location = new System.Drawing.Point(127, 42);
-            this.txt_IgneKod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IgneKod.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IgneKod.Name = "txt_IgneKod";
             this.txt_IgneKod.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_IgneKod.Properties.Appearance.Options.UseBackColor = true;
@@ -292,7 +302,7 @@ namespace test_kooil.Formlar
             // 
             this.txt_Not.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txt_Not.Location = new System.Drawing.Point(127, 255);
-            this.txt_Not.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Not.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Not.Name = "txt_Not";
             this.txt_Not.ReadOnly = true;
             this.txt_Not.Size = new System.Drawing.Size(119, 128);
@@ -302,7 +312,7 @@ namespace test_kooil.Formlar
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(54, 255);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(27, 13);
             this.labelControl5.TabIndex = 6;
@@ -311,7 +321,7 @@ namespace test_kooil.Formlar
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(359, 38);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(45, 13);
             this.labelControl4.TabIndex = 5;
@@ -320,7 +330,7 @@ namespace test_kooil.Formlar
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(56, 132);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(44, 13);
             this.labelControl2.TabIndex = 3;
@@ -329,7 +339,7 @@ namespace test_kooil.Formlar
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(55, 45);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(54, 13);
             this.labelControl1.TabIndex = 2;
@@ -340,12 +350,52 @@ namespace test_kooil.Formlar
             // 
             this.Btn_Yenile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yenile.ImageOptions.Image")));
             this.Btn_Yenile.Location = new System.Drawing.Point(4, 448);
-            this.Btn_Yenile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Yenile.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Yenile.Name = "Btn_Yenile";
             this.Btn_Yenile.Size = new System.Drawing.Size(107, 38);
             this.Btn_Yenile.TabIndex = 1;
             this.Btn_Yenile.Text = "Listeyi Yenile";
             this.Btn_Yenile.Click += new System.EventHandler(this.Btn_Yenile_Click);
+            // 
+            // txt_testere1
+            // 
+            this.txt_testere1.Location = new System.Drawing.Point(381, 126);
+            this.txt_testere1.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_testere1.Name = "txt_testere1";
+            this.txt_testere1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_testere1.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_testere1.Properties.ReadOnly = true;
+            this.txt_testere1.Size = new System.Drawing.Size(154, 20);
+            this.txt_testere1.TabIndex = 25;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(302, 129);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(53, 13);
+            this.labelControl7.TabIndex = 24;
+            this.labelControl7.Text = "Testere 1 :";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(302, 173);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(53, 13);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "Testere 2 :";
+            // 
+            // txt_testere2
+            // 
+            this.txt_testere2.Location = new System.Drawing.Point(381, 170);
+            this.txt_testere2.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_testere2.Name = "txt_testere2";
+            this.txt_testere2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_testere2.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_testere2.Properties.ReadOnly = true;
+            this.txt_testere2.Size = new System.Drawing.Size(154, 20);
+            this.txt_testere2.TabIndex = 27;
             // 
             // Frm_IgneTurleri
             // 
@@ -354,7 +404,7 @@ namespace test_kooil.Formlar
             this.ClientSize = new System.Drawing.Size(1098, 510);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_IgneTurleri";
             this.Text = "İğne Türleri";
             this.Load += new System.EventHandler(this.Frm_IgneTurleri_Load);
@@ -374,6 +424,8 @@ namespace test_kooil.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Gramaj.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_IgneKod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_testere1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_testere2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +455,9 @@ namespace test_kooil.Formlar
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private DevExpress.XtraEditors.TextEdit txt_hammadde;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txt_testere2;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txt_testere1;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

@@ -98,6 +98,7 @@ namespace test_kooil
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.Btn_testere = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -156,19 +157,20 @@ namespace test_kooil
             this.Btn_hataDuzeltme,
             this.Btn_Iadeler,
             this.Btn_GerilimGiderme,
-            this.Btn_AyakKesme});
+            this.Btn_AyakKesme,
+            this.Btn_testere});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.ribbonControl1.MaxItemId = 53;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonControl1.MaxItemId = 54;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 247;
+            this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4,
             this.ribbonPage3});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1105, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1473, 183);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // Btn_AnaSayfa
@@ -627,6 +629,7 @@ namespace test_kooil
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_HamStokGuncelle);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamKullanim);
             this.ribbonPageGroup7.ItemLinks.Add(this.Btn_hamRaporEkle);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_testere);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // ribbonPage2
@@ -735,15 +738,23 @@ namespace test_kooil
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // Btn_testere
+            // 
+            this.Btn_testere.Caption = "Testere";
+            this.Btn_testere.Id = 53;
+            this.Btn_testere.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.Btn_testere.Name = "Btn_testere";
+            this.Btn_testere.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_testere_ItemClick);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 687);
+            this.ClientSize = new System.Drawing.Size(1473, 846);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -826,6 +837,7 @@ namespace test_kooil
         private DevExpress.XtraBars.BarButtonItem Btn_Iadeler;
         private DevExpress.XtraBars.BarButtonItem Btn_GerilimGiderme;
         private DevExpress.XtraBars.BarButtonItem Btn_AyakKesme;
+        private DevExpress.XtraBars.BarButtonItem Btn_testere;
     }
 }
 

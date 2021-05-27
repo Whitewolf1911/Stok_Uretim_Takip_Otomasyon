@@ -35,7 +35,9 @@ namespace test_kooil.Formlar
                                    x.HAMMADDETIPI,
                                    x.ISILISLEMFORMUL,
                                    Not = x.NOT,
-                                   x.FOTO
+                                   x.FOTO,
+                                   x.TESTERE1,
+                                   x.TESTERE2,
                                }
                                );
                 gridControl1.DataSource = igneler.ToList();
@@ -50,6 +52,8 @@ namespace test_kooil.Formlar
                 gridView1.Columns[5].Visible = false;
                 //gridView1.Columns[6].Visible = false;
                 gridView1.Columns[7].Visible = false;
+                gridView1.Columns[8].Visible = false;
+                gridView1.Columns[9].Visible = false;
                 gridView1.BestFitColumns();
             }
             catch (Exception) { }
@@ -115,6 +119,22 @@ namespace test_kooil.Formlar
                 if (gridView1.GetFocusedRowCellValue("SarfiyatGr") != null)
                 {
                     txt_sarfiyat.Text = gridView1.GetFocusedRowCellValue("SarfiyatGr").ToString();
+                }
+                if (gridView1.GetFocusedRowCellValue("TESTERE1") != null)
+                {
+                    txt_testere1.Text = gridView1.GetFocusedRowCellValue("TESTERE1").ToString();
+                }
+                else if (gridView1.GetFocusedRowCellValue("TESTERE1") == null)
+                {
+                    txt_testere1.ResetText();
+                }
+                if (gridView1.GetFocusedRowCellValue("TESTERE2") != null)
+                {
+                    txt_testere2.Text = gridView1.GetFocusedRowCellValue("TESTERE2").ToString();
+                }
+                else if (gridView1.GetFocusedRowCellValue("TESTERE2") == null)
+                {
+                    txt_testere2.ResetText();
                 }
             }
             catch (Exception) { 

@@ -30,6 +30,8 @@ namespace test_kooil.Entity
         public Nullable<int> STOK { get; set; }
         public Nullable<int> HAMMADDETIPI { get; set; }
         public Nullable<decimal> SARFIYATORAN { get; set; }
+        public string TESTERE1 { get; set; }
+        public string TESTERE2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SIPARIS> TBL_SIPARIS { get; set; }

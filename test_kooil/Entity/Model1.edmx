@@ -144,6 +144,8 @@
           <Property Name="STOK" Type="int" />
           <Property Name="HAMMADDETIPI" Type="int" />
           <Property Name="SARFIYATORAN" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TESTERE1" Type="varchar" MaxLength="25" />
+          <Property Name="TESTERE2" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBL_ISILISLEM">
           <Key>
@@ -309,6 +311,14 @@
           <Property Name="NOT" Type="varchar" MaxLength="100" />
           <Property Name="SIPARISNO" Type="int" />
         </EntityType>
+        <EntityType Name="TBL_TESTERE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TESTEREKOD" Type="varchar" MaxLength="25" />
+          <Property Name="ADET" Type="int" />
+        </EntityType>
         <EntityType Name="TBL_UCSIYIRMA">
           <Key>
             <PropertyRef Name="RAPORID" />
@@ -380,6 +390,7 @@
           <Property Name="iade" Type="bit" />
           <Property Name="gerilimGiderme" Type="bit" />
           <Property Name="ayakKesme" Type="bit" />
+          <Property Name="testere" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_YIKAMA">
           <Key>
@@ -439,6 +450,7 @@
           <EntitySet Name="TBL_SEVKIYAT" EntityType="Self.TBL_SEVKIYAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_SIPARIS" EntityType="Self.TBL_SIPARIS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_TEMPER" EntityType="Self.TBL_TEMPER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_TESTERE" EntityType="Self.TBL_TESTERE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_UCSIYIRMA" EntityType="Self.TBL_UCSIYIRMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_URUNSTOKLOG" EntityType="Self.TBL_URUNSTOKLOG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" Schema="dbo" store:Type="Tables" />
@@ -478,6 +490,8 @@
           <Property Name="STOK" Type="Int32" />
           <Property Name="HAMMADDETIPI" Type="Int32" />
           <Property Name="SARFIYATORAN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TESTERE1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TESTERE2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
@@ -556,6 +570,7 @@
           <EntitySet Name="TBL_HAMLOG" EntityType="DB_kooil_testModel.TBL_HAMLOG" />
           <EntitySet Name="TBL_IADE" EntityType="DB_kooil_testModel.TBL_IADE" />
           <EntitySet Name="TBL_URUNSTOKLOG" EntityType="DB_kooil_testModel.TBL_URUNSTOKLOG" />
+          <EntitySet Name="TBL_TESTERE" EntityType="DB_kooil_testModel.TBL_TESTERE" />
         </EntityContainer>
         <EntityType Name="TBL_KANALACMA">
           <Key>
@@ -856,6 +871,7 @@
           <Property Name="iade" Type="Boolean" />
           <Property Name="gerilimGiderme" Type="Boolean" />
           <Property Name="ayakKesme" Type="Boolean" />
+          <Property Name="testere" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_HAMLOG">
           <Key>
@@ -899,6 +915,14 @@
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="RAPORLAYAN" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="TBL_TESTERE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TESTEREKOD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ADET" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -919,6 +943,8 @@
           <EntitySetMapping Name="TBL_IGNELER">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_IGNELER">
               <MappingFragment StoreEntitySet="TBL_IGNELER">
+                <ScalarProperty Name="TESTERE2" ColumnName="TESTERE2" />
+                <ScalarProperty Name="TESTERE1" ColumnName="TESTERE1" />
                 <ScalarProperty Name="SARFIYATORAN" ColumnName="SARFIYATORAN" />
                 <ScalarProperty Name="HAMMADDETIPI" ColumnName="HAMMADDETIPI" />
                 <ScalarProperty Name="STOK" ColumnName="STOK" />
@@ -1239,6 +1265,7 @@
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
+                <ScalarProperty Name="testere" ColumnName="testere" />
                 <ScalarProperty Name="ayakKesme" ColumnName="ayakKesme" />
                 <ScalarProperty Name="gerilimGiderme" ColumnName="gerilimGiderme" />
                 <ScalarProperty Name="iade" ColumnName="iade" />
@@ -1327,6 +1354,15 @@
                 <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
                 <ScalarProperty Name="URUN" ColumnName="URUN" />
                 <ScalarProperty Name="ISLEM" ColumnName="ISLEM" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_TESTERE">
+            <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_TESTERE">
+              <MappingFragment StoreEntitySet="TBL_TESTERE">
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+                <ScalarProperty Name="TESTEREKOD" ColumnName="TESTEREKOD" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
