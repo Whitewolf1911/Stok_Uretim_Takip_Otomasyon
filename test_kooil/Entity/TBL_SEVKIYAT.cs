@@ -23,5 +23,6 @@ namespace test_kooil.Entity
         public string SEVKIYATTUR { get; set; }
         public string SIPARISNO { get; set; }
         public string PARTINO { get; set; }
+        public string BARKOD { get; set; }
     }
 }

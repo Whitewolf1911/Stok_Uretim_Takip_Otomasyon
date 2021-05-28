@@ -158,6 +158,7 @@ namespace test_kooil.Formlar
                 yeniSevk.MUSTERI = gridView1.GetFocusedRowCellValue("Firma").ToString();
                 yeniSevk.SEVKIYATTUR = "SİPARİŞ";
                 yeniSevk.PARTINO = gridView1.GetFocusedRowCellValue("PartiNo").ToString();
+                yeniSevk.BARKOD = txt_barkod.Text;
 
                 db.TBL_SEVKIYAT.Add(yeniSevk);
 

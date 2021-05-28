@@ -265,6 +265,7 @@
           <Property Name="SEVKIYATTUR" Type="varchar" MaxLength="11" />
           <Property Name="SIPARISNO" Type="varchar" MaxLength="30" />
           <Property Name="PARTINO" Type="varchar" MaxLength="15" />
+          <Property Name="BARKOD" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBL_SIPARIS">
           <Key>
@@ -822,6 +823,7 @@
           <Property Name="SEVKIYATTUR" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="SIPARISNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="PARTINO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="BARKOD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBL_USERS">
           <Key>
@@ -1250,6 +1252,7 @@
           <EntitySetMapping Name="TBL_SEVKIYAT">
             <EntityTypeMapping TypeName="DB_kooil_testModel.TBL_SEVKIYAT">
               <MappingFragment StoreEntitySet="TBL_SEVKIYAT">
+                <ScalarProperty Name="BARKOD" ColumnName="BARKOD" />
                 <ScalarProperty Name="PARTINO" ColumnName="PARTINO" />
                 <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
                 <ScalarProperty Name="SEVKIYATTUR" ColumnName="SEVKIYATTUR" />

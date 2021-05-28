@@ -160,6 +160,64 @@ namespace test_kooil.Formlar
 
                     }
 
+                    // testere bilgisi goster.
+                    string t1 = igne.TESTERE1;
+                    string t2 = igne.TESTERE2;
+                    string t1N = "";
+                    string t2N = "";
+                    int t1A = 0;
+                    int t2A = 0;
+
+                    int t1count = (from x in db.TBL_TESTERE
+                                   select new
+                                   {
+                                       x.TESTEREKOD
+                                   }).ToList().Where(x => x.TESTEREKOD == t1).Count();
+                    if(t1count> 0)
+                    {
+                        var testere1s  = (from x in db.TBL_TESTERE
+                                       select new
+                                       {
+                                           x.TESTEREKOD,
+                                           x.ADET
+                                       }).ToList().Where(x => x.TESTEREKOD == t1).Select(x => x.TESTEREKOD).First();
+                        t1N = testere1s;
+
+                        var testere1a = (from x in db.TBL_TESTERE
+                                         select new
+                                         {
+                                             x.TESTEREKOD,
+                                             x.ADET
+                                         }).ToList().Where(x => x.TESTEREKOD == t1).Select(x => x.ADET).FirstOrDefault();
+                        t1A = (int)testere1a;
+
+                    }
+                    int t2count = (from x in db.TBL_TESTERE
+                                   select new
+                                   {
+                                       x.TESTEREKOD
+                                   }).ToList().Where(x => x.TESTEREKOD == t2).Count();
+                    if (t2count > 0)
+                    {
+                        var testere2s = (from x in db.TBL_TESTERE
+                                         select new
+                                         {
+                                             x.TESTEREKOD,
+                                             x.ADET
+                                         }).ToList().Where(x => x.TESTEREKOD == t2).Select(x => x.TESTEREKOD).First();
+                        t2N = testere2s;
+                        var testere2a = (from x in db.TBL_TESTERE
+                                         select new
+                                         {
+                                             x.TESTEREKOD,
+                                             x.ADET
+                                         }).ToList().Where(x => x.TESTEREKOD == t2).Select(x => x.ADET).FirstOrDefault();
+                        t2A = (int)testere2a;
+                    }
+
+                    XtraMessageBox.Show("Ürünün testere bilgileri:\nTestere1: " + t1N +" -- " + t1A +"\nTestere2: "+ t2N+ " -- "+ t2A , "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
                     this.Close();
                 }
                 else
